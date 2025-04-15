@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+    
+    /* Custom Jaydai theme colors from pasted_content_3.txt */
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    
+    /* Primary Colors */
+    --primary: 240 80% 60%; /* Jaydai indigo */
+    --primary-foreground: 0 0% 100%;
+    
+    /* Secondary Colors */
+    --secondary: 220 20% 16%; /* Dark blue-gray */
+    --secondary-foreground: 210 40% 98%;
+    
+    /* Accent Colors */
+    --accent: 225 30% 19%; /* Deep indigo accent */
+    --accent-foreground: 210 40% 98%;
+    
+    /* Supporting Colors */
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    
+    /* Feedback Colors */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    
+    /* Border & UI Elements */
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 240 80% 60%; /* Jaydai indigo */
+    
+    /* Chart Colors */
+    --chart-1: 240 80% 60%; /* Jaydai indigo */
+    --chart-2: 175 70% 55%; /* Teal */
+    --chart-3: 340 80% 65%; /* Rose */
+    --chart-4: 45 90% 65%; /* Gold */
+    --chart-5: 270 70% 65%; /* Purple */
+  }
+  
+  .dark {
+    /* Custom Jaydai dark theme colors from pasted_content_3.txt */
+    --background: 230 80% 5%; /* Dark background */
+    --foreground: 220 15% 95%; /* Off-white with blue hint */
+    
+    /* Primary Colors */
+    --primary: 240 70% 65%; /* Lighter indigo for dark mode */
+    --primary-foreground: 230 80% 5%;
+    
+    /* Secondary Colors */
+    --secondary: 225 35% 16%; /* Dark blue-gray */
+    --secondary-foreground: 220 15% 95%;
+    
+    /* Accent Colors */
+    --accent: 225 40% 19%; /* Deep indigo accent */
+    --accent-foreground: 220 15% 95%;
+    
+    /* Supporting Colors */
+    --muted: 225 30% 15%;
+    --muted-foreground: 220 15% 70%;
+    --card: 230 85% 7%;
+    --card-foreground: 220 15% 95%;
+    --popover: 230 85% 7%;
+    --popover-foreground: 220 15% 95%;
+    
+    /* Feedback Colors */
+    --destructive: 350 80% 65%; /* Brighter red for dark mode */
+    --destructive-foreground: 230 80% 5%;
+    
+    /* Border & UI Elements */
+    --border: 225 35% 16%;
+    --input: 225 35% 16%;
+    --ring: 240 70% 65%; /* Lighter indigo */
+    
+    /* Chart Colors */
+    --chart-1: 240 70% 65%; /* Lighter indigo */
+    --chart-2: 175 70% 60%; /* Brighter teal */
+    --chart-3: 340 70% 65%; /* Lighter rose */
+    --chart-4: 45 90% 65%; /* Brighter gold */
+    --chart-5: 270 70% 65%; /* Lighter purple */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Animation utilities */
+@layer utilities {
+  .animation-delay-200 {
+    animation-delay: 0.2s;
+  }
+  .animation-delay-400 {
+    animation-delay: 0.4s;
+  }
+  .animation-delay-600 {
+    animation-delay: 0.6s;
+  }
+}
+
+/* Custom animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
