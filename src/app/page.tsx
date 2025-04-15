@@ -1,14 +1,19 @@
 "use client"
 
 import React, { useState } from "react"
-import HeroSection from "@/components/HeroSection"
-import HeroVideoDialog from "@/components/HeroVideoDialog"
 import TestimonialsSection from "@/components/TestimonialsSection"
 import BeforeAfterComparison from "@/components/BeforeAfterComparison"
 import FAQSection from "@/components/FAQSection"
 import TemplatesSection from "@/components/TemplatesSection"
-import FeaturesSection from "@/components/FeaturesSection"
 import ContactSection from "@/components/ContactSection"
+import HowItWorksSection from "@/components/HowItWorksSection"
+import UseCasesSection from "@/components/UseCasesSection"
+import AnalyticsDashboardSection from "@/components/AnalyticsDashboardSection"
+import EnterpriseSolutionsSection from "@/components/EnterpriseSolutionsSection"
+import PricingSection from "@/components/PricingSection"
+import HeroSection from "@/components/HeroSection"
+import SubtleBackgroundEffect from "@/components/SubtleBackgroundEffect"
+import FeaturesSection from "@/components/FeaturesSection"
 
 export default function Home() {
   // State for video dialog
@@ -24,6 +29,9 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
+      {/* Subtle background effect that follows cursor */}
+      <SubtleBackgroundEffect />
+      
       {/* Hero Section */}
       <HeroSection openVideoDialog={openVideoDialog} />
       
@@ -60,14 +68,29 @@ export default function Home() {
         </div>
       )}
       
-      {/* Features Section */}
+      {/* How It Works Section */}
+      <HowItWorksSection />
+      
+      {/* Redesigned Features Section */}
       <FeaturesSection />
+      
+      {/* Use Cases Section */}
+      <UseCasesSection />
       
       {/* Templates Section */}
       <TemplatesSection />
       
       {/* Before/After Comparison */}
       <BeforeAfterComparison />
+      
+      {/* Analytics Dashboard Section */}
+      <AnalyticsDashboardSection />
+      
+      {/* Pricing Section */}
+      <PricingSection />
+      
+      {/* Enterprise Solutions Section */}
+      <EnterpriseSolutionsSection />
       
       {/* Testimonials Section */}
       <TestimonialsSection />
