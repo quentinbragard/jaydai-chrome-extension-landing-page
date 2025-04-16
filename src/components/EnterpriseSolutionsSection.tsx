@@ -14,33 +14,7 @@ import {
   ArrowRight
 } from "lucide-react"
 
-const enterprises = [
-  {
-    name: "Tech Innovators Inc.",
-    logo: "/images/company1.png",
-    industry: "Technology"
-  },
-  {
-    name: "Global Finance Ltd.",
-    logo: "/images/company2.png",
-    industry: "Finance"
-  },
-  {
-    name: "HealthPlus Systems",
-    logo: "/images/company3.png",
-    industry: "Healthcare"
-  },
-  {
-    name: "EduSmart Solutions",
-    logo: "/images/company4.png",
-    industry: "Education"
-  },
-  {
-    name: "Retail Dynamics",
-    logo: "/images/company5.png",
-    industry: "Retail"
-  }
-]
+
 
 const services = [
   {
@@ -155,31 +129,7 @@ const EnterpriseSolutionsSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="flex flex-wrap justify-center items-center gap-8 md:gap-16 mb-16"
-        >
-          <div className="flex flex-col items-center">
-            <Building className="text-primary" size={28} />
-            <span className="text-foreground/50 text-sm mt-2">Trusted by enterprises</span>
-          </div>
-          
-          {enterprises.map((company, index) => (
-            <motion.div
-              key={company.name}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
-              className="flex flex-col items-center"
-            >
-              <div className="w-12 h-12 rounded-full bg-secondary/30 flex items-center justify-center">
-                {company.logo ? (
-                  <img src={company.logo} alt={company.name} className="w-10 h-10 object-contain" />
-                ) : (
-                  <span className="text-lg font-bold text-foreground/70">{company.name.charAt(0)}</span>
-                )}
-              </div>
-              <span className="text-foreground/70 text-xs mt-1">{company.industry}</span>
-            </motion.div>
-          ))}
+        > 
         </motion.div>
         
         {/* Services section with tabs navigation */}

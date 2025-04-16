@@ -4,6 +4,7 @@ import React from "react"
 import { motion } from "framer-motion"
 import Link from "next/link"
 import { Play } from "lucide-react"
+import { ShimmerButton } from "./ui/shimmer-button"
 
 const HeroSection = ({ openVideoDialog }: { openVideoDialog: () => void }) => {
   return (
@@ -61,13 +62,17 @@ const HeroSection = ({ openVideoDialog }: { openVideoDialog: () => void }) => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <Link
-              href="https://chrome.google.com/webstore"
-              target="_blank"
-              className="px-8 py-3 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium"
-            >
-              Download Extension
-            </Link>
+          <ShimmerButton
+            onClick={() => window.open("https://chrome.google.com/webstore", "_blank")}
+            className="px-8 py-3 rounded-md text-primary-foreground font-black"
+            shimmerColor="#FFCD00" // Gold shimmer effect
+            shimmerSize="0.05em"
+            shimmerDuration="3s"
+            borderRadius="0.375rem"
+            background="hsl(var(--primary))"
+          >
+            Get Chrome Extension
+          </ShimmerButton>
             <button
               onClick={openVideoDialog}
               className="px-8 py-3 rounded-md bg-secondary/50 text-foreground hover:bg-secondary/70 transition-colors font-medium inline-flex items-center"

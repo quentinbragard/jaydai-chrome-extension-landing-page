@@ -67,33 +67,37 @@ export default function Home() {
           </div>
         </div>
       )}
+
+      {/* Redesigned Features Section */}
+      <FeaturesSection />
+
+      {/* Pricing Section */}
+      <PricingSection />
       
       {/* How It Works Section */}
       <HowItWorksSection />
       
-      {/* Redesigned Features Section */}
-      <FeaturesSection />
       
-      {/* Use Cases Section */}
-      <UseCasesSection />
+
+      {/* Before/After Comparison */}
+      <BeforeAfterComparison />
       
       {/* Templates Section */}
       <TemplatesSection />
       
-      {/* Before/After Comparison */}
-      <BeforeAfterComparison />
+      
+
       
       {/* Analytics Dashboard Section */}
       <AnalyticsDashboardSection />
       
-      {/* Pricing Section */}
-      <PricingSection />
+      {/* Testimonials Section */}
+      <TestimonialsSection />
+      
       
       {/* Enterprise Solutions Section */}
       <EnterpriseSolutionsSection />
       
-      {/* Testimonials Section */}
-      <TestimonialsSection />
       
       {/* FAQ Section */}
       <FAQSection />

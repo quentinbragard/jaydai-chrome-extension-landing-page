@@ -18,6 +18,8 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
   const pathname = usePathname()
   const isEnterprisePage = pathname === "/enterprise"
+  const darkLogo = "/images/full-logo-dark.png"
+  const lightLogo = "/images/full-logo-light.png"
   
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
@@ -31,7 +33,7 @@ const Navbar = () => {
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
               <Image 
-                src="/images/full-logo-dark.png" 
+                src={theme === "dark" ? darkLogo : lightLogo} 
                 alt="Jaydai Logo" 
                 width={120} 
                 height={40} 
@@ -72,7 +74,7 @@ const Navbar = () => {
           
           {/* Desktop Navigation */}
           <div className="hidden md:block flex-1">
-            <div className="ml-10 flex items-center justify-end space-x-8">
+            <div className="ml-10 flex items-center justify-center space-x-8">
               {/* Navigation items differ based on whether we're on the enterprise page */}
               {isEnterprisePage ? (
                 <>
@@ -114,7 +116,7 @@ const Navbar = () => {
           </div>
           
           {/* Right side buttons */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-4 pl-8">
             <button
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               className="p-2 rounded-full bg-secondary/50 text-foreground hover:bg-secondary transition-colors"
@@ -126,8 +128,15 @@ const Navbar = () => {
             <Link 
               href="https://chrome.google.com/webstore" 
               target="_blank"
-              className="px-4 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+              className="flex items-center gap-2 font-black px-4 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
             >
+              <Image
+                src="/images/google_chrome_icon.png"
+                alt="Google Chrome"
+                width={20}
+                height={20}
+                className="w-5 h-5"
+              />
               {isEnterprisePage ? "Request Demo" : "Download Extension"}
             </Link>
           </div>
@@ -266,9 +275,15 @@ const Navbar = () => {
             <Link 
               href="https://chrome.google.com/webstore" 
               target="_blank"
-              className="block px-3 py-2 mt-4 text-center rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
-              onClick={toggleMenu}
+              className="flex items-center gap-2 font-black px-4 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
             >
+              <Image
+                src="/images/google_chrome_icon.png"
+                alt="Google Chrome"
+                width={20}
+                height={20}
+                className="w-5 h-5"
+              />
               {isEnterprisePage ? "Request Demo" : "Download Extension"}
             </Link>
           </div>

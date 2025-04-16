@@ -1,7 +1,9 @@
 "use client"
 
-import React, { useState } from "react"
-import { motion } from "framer-motion"
+import React, { useState, useEffect } from "react"
+import Image from "next/image"
+import { motion, AnimatePresence } from "framer-motion"
+import { useTheme } from "next-themes"
 import { 
   Search, 
   MousePointer, 
@@ -9,46 +11,109 @@ import {
   Monitor, 
   ArrowRight,
   Brain,
-  FileText
+  FileText,
+  ZoomIn,
+  X
 } from "lucide-react"
 
-const steps = [
-  {
-    id: 1,
-    title: "Install the Extension",
-    description: "Add Jaydai to Chrome in just one click from the Chrome Web Store",
-    icon: Monitor,
-    color: "bg-blue-500/10 text-blue-500",
-    image: "/images/step1-install.png" // Placeholder image paths
-  },
-  {
-    id: 2,
-    title: "Navigate to Any AI Tool",
-    description: "Open your favorite AI tool like ChatGPT or Claude",
-    icon: Search,
-    color: "bg-purple-500/10 text-purple-500",
-    image: "/images/step2-navigate.png"
-  },
-  {
-    id: 3,
-    title: "Choose Your Prompt",
-    description: "Select from our library of expert prompts or use your saved templates",
-    icon: FileText,
-    color: "bg-amber-500/10 text-amber-500",
-    image: "/images/step3-choose.png"
-  },
-  {
-    id: 4,
-    title: "Watch AI Do the Work",
-    description: "Get superior results thanks to expertly crafted prompts",
-    icon: Brain,
-    color: "bg-green-500/10 text-green-500",
-    image: "/images/step4-results.png"
-  }
-]
-
 const HowItWorksSection = () => {
+  const { resolvedTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
   const [activeStep, setActiveStep] = useState(1)
+  const [isImageModalOpen, setIsImageModalOpen] = useState(false)
+  const [modalImage, setModalImage] = useState("")
+  const [imageTitle, setImageTitle] = useState("")
+  
+  // Only access the theme after mounting to avoid hydration mismatch
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+  
+  // Helper function to get correct image path based on theme
+  const getThemeAwareImagePath = (basePath) => {
+    if (!mounted) return basePath; // Default during SSR
+    
+    // Insert -dark or -light before the file extension
+    const lastDotIndex = basePath.lastIndexOf('.');
+    if (lastDotIndex === -1) return basePath;
+    
+    const prefix = basePath.substring(0, lastDotIndex);
+    const extension = basePath.substring(lastDotIndex);
+    const themeSuffix = resolvedTheme === "dark" ? "-dark" : "-light";
+    
+    return `${prefix}${themeSuffix}${extension}`;
+  };
+  
+  // Define steps with base image paths
+  const steps = [
+    {
+      id: 1,
+      title: "Install the Extension",
+      description: "Add Jaydai to Chrome in just one click from the Chrome Web Store",
+      icon: Monitor,
+      color: "bg-blue-500/10 text-blue-500",
+      image: "/images/step1-install.png"
+    },
+    {
+      id: 2,
+      title: "Create your account",
+      description: 'Click on "Get Started" and create your account. You can sign up with Google or email.',
+      icon: Search,
+      color: "bg-purple-500/10 text-purple-500",
+      image: "/images/step2-create-account.png"
+    },
+    {
+      id: 3,
+      title: "Go to ChatGPT",
+      description: "You will see a new button to access Jaydai in the bottom right corner of the ChatGPT interface.",
+      icon: Search,
+      color: "bg-purple-500/10 text-purple-500",
+      image: "/images/step3-navigate.png"
+    },
+    {
+      id: 4,
+      title: "Choose Your Prompt",
+      description: "Select from our library of expert prompts or use your saved templates",
+      icon: FileText,
+      color: "bg-amber-500/10 text-amber-500",
+      image: "/images/step4-choose.png"
+    },
+    {
+      id: 5,
+      title: "Personalize your prompt",
+      description: "Replace the variables with your own information to create a personalized prompt",
+      icon: FileText,
+      color: "bg-amber-500/10 text-amber-500",
+      image: "/images/step5-personalize.png"
+    },
+    {
+      id: 6,
+      title: "Watch AI Do the Work",
+      description: "Get superior results thanks to expertly crafted prompts",
+      icon: Brain,
+      color: "bg-green-500/10 text-green-500",
+      image: "/images/step6-results.png"
+    },
+    {
+      id: 7,
+      title: "Save your best prompts",
+      description: "When you find a prompt that works, save it for future use",
+      icon: FileText,
+      color: "bg-amber-500/10 text-amber-500",
+      image: "/images/step7-save.png"
+    }
+  ];
+  
+  const openImageModal = (baseImageSrc, title) => {
+    setModalImage(getThemeAwareImagePath(baseImageSrc));
+    setImageTitle(title);
+    setIsImageModalOpen(true);
+  };
+  
+  // Get the current step's image path based on theme
+  const currentStepImage = activeStep > 0 && activeStep <= steps.length 
+    ? getThemeAwareImagePath(steps[activeStep - 1].image)
+    : "";
   
   return (
     <section id="how-it-works" className="py-20 bg-secondary/10 relative overflow-hidden">
@@ -75,7 +140,7 @@ const HowItWorksSection = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="mt-4 text-xl text-foreground/70 max-w-2xl mx-auto"
           >
-            Four simple steps to maximize your AI potential
+            Seven simple steps to maximize your AI potential
           </motion.p>
         </div>
 
@@ -142,9 +207,9 @@ const HowItWorksSection = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="relative"
           >
-            <div className="relative rounded-xl overflow-hidden border-8 border-card shadow-xl bg-card aspect-video flex items-center justify-center">
+            <div className="relative rounded-xl overflow-hidden border-8 border-card shadow-xl bg-card aspect-video">
               {/* Browser chrome simulation */}
-              <div className="absolute top-0 left-0 right-0 bg-secondary/20 h-10 flex items-center px-4">
+              <div className="absolute top-0 left-0 right-0 bg-secondary/20 h-10 flex items-center px-4 z-10">
                 <div className="flex space-x-2">
                   <div className="w-3 h-3 rounded-full bg-red-500/60"></div>
                   <div className="w-3 h-3 rounded-full bg-yellow-500/60"></div>
@@ -155,77 +220,53 @@ const HowItWorksSection = () => {
                 </div>
               </div>
               
-              {/* Visualization of current step */}
-              <div className="pt-12 px-6 pb-6 w-full">
-                {activeStep === 1 && (
-                  <div className="flex flex-col items-center text-center">
-                    <MousePointer className="text-primary animate-bounce mb-4" size={24} />
-                    <div className="bg-primary/10 text-primary px-4 py-2 rounded-lg font-medium mb-4">
-                      Add to Chrome
+              {/* Step Image - Theme Aware */}
+              <AnimatePresence mode="wait">
+                {mounted && (
+                  <motion.div
+                    key={activeStep + (resolvedTheme || "light")} // Re-render on theme change too
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="relative w-full h-full"
+                  >
+                    <div className="absolute inset-0 flex items-center justify-center pt-10">
+                      <div 
+                        className="relative w-full h-full cursor-pointer group"
+                        onClick={() => openImageModal(steps[activeStep-1].image, steps[activeStep-1].title)}
+                      >
+                        <Image 
+                          src={currentStepImage}
+                          alt={steps[activeStep-1].title}
+                          fill
+                          className="object-contain p-6 pt-8"
+                        />
+                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                          <div className="bg-primary/80 rounded-full p-2">
+                            <ZoomIn className="text-primary-foreground" size={20} />
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <p className="text-foreground/70">One-click installation, no configuration needed</p>
-                  </div>
+                  </motion.div>
                 )}
-                
-                {activeStep === 2 && (
-                  <div className="flex flex-col items-center text-center">
-                    <div className="bg-secondary/20 w-full rounded-md py-8 flex flex-col items-center gap-4">
-                      <Search className="text-primary" size={24} />
-                      <div className="bg-primary/10 text-primary px-4 py-2 rounded-lg font-medium">
-                        ChatGPT Interface
-                      </div>
-                      <div className="absolute top-28 right-8 w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center border border-primary/30 animate-pulse">
-                        <Settings size={20} className="text-primary" />
-                      </div>
-                    </div>
+              </AnimatePresence>
+              
+              {/* Loading state - shown before mounting */}
+              {!mounted && (
+                <div className="absolute inset-0 flex items-center justify-center pt-10">
+                  <div className="w-full h-full bg-secondary/10 animate-pulse flex items-center justify-center">
+                    <div className="text-secondary/30">Loading...</div>
                   </div>
-                )}
-                
-                {activeStep === 3 && (
-                  <div className="flex flex-col items-center text-center">
-                    <div className="bg-secondary/10 w-full rounded-md p-4 border border-border">
-                      <div className="text-lg font-medium mb-2">Prompt Library</div>
-                      <div className="space-y-2">
-                        <div className="bg-primary/5 rounded p-2 border border-primary/20 flex items-center">
-                          <div className="w-4 h-4 rounded bg-primary/20 mr-2"></div>
-                          <span className="text-sm">Data Analysis Template</span>
-                        </div>
-                        <div className="bg-secondary/5 rounded p-2 border border-secondary/10 flex items-center">
-                          <div className="w-4 h-4 rounded bg-secondary/20 mr-2"></div>
-                          <span className="text-sm">Marketing Copy Generator</span>
-                        </div>
-                        <div className="bg-secondary/5 rounded p-2 border border-secondary/10 flex items-center">
-                          <div className="w-4 h-4 rounded bg-secondary/20 mr-2"></div>
-                          <span className="text-sm">Code Debugger Helper</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                )}
-                
-                {activeStep === 4 && (
-                  <div className="flex flex-col items-center text-center">
-                    <div className="bg-secondary/5 w-full rounded-md p-4 border border-border">
-                      <div className="mb-4 flex items-center">
-                        <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center mr-2">
-                          <span className="text-xs text-primary">AI</span>
-                        </div>
-                        <div className="text-left">
-                          <div className="text-sm font-medium">Assistant</div>
-                        </div>
-                      </div>
-                      <div className="space-y-2 text-left">
-                        <div className="h-2 bg-primary/10 rounded w-full"></div>
-                        <div className="h-2 bg-primary/10 rounded w-3/4"></div>
-                        <div className="h-2 bg-primary/10 rounded w-5/6"></div>
-                        <div className="h-2 bg-primary/10 rounded w-2/3"></div>
-                        <div className="h-2 bg-primary/10 rounded w-full"></div>
-                        <div className="h-2 bg-primary/10 rounded w-4/5"></div>
-                      </div>
-                      <div className="mt-4 text-xs text-right text-primary font-medium">
-                        Optimized with Jaydai
-                      </div>
-                    </div>
+                </div>
+              )}
+              
+              {/* Custom overlay for specific steps (optional) */}
+              <div className="absolute bottom-4 right-4 z-10">
+                {activeStep === 6 && (
+                  <div className="bg-primary/80 text-primary-foreground text-xs px-2 py-1 rounded-md">
+                    Optimized with Jaydai
                   </div>
                 )}
               </div>
@@ -235,8 +276,8 @@ const HowItWorksSection = () => {
             <motion.div
               initial={{ x: -50, y: 100, opacity: 0 }}
               animate={{ 
-                x: activeStep === 1 ? 0 : activeStep === 2 ? 100 : activeStep === 3 ? 30 : 50,
-                y: activeStep === 1 ? 50 : activeStep === 2 ? 70 : activeStep === 3 ? 120 : 90,
+                x: activeStep === 1 ? 0 : activeStep === 2 ? 100 : activeStep === 3 ? 30 : activeStep === 4 ? 50 : activeStep === 5 ? 70 : activeStep === 6 ? 90 : 110,
+                y: activeStep === 1 ? 50 : activeStep === 2 ? 70 : activeStep === 3 ? 120 : activeStep === 4 ? 90 : activeStep === 5 ? 120 : activeStep === 6 ? 150 : 180,
                 opacity: 1
               }}
               transition={{ duration: 0.5 }}
@@ -264,6 +305,66 @@ const HowItWorksSection = () => {
           </a>
         </motion.div>
       </div>
+      
+      {/* Image Modal - Theme Aware with Larger Image */}
+      <AnimatePresence>
+        {isImageModalOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/90 backdrop-blur-md z-50 flex items-center justify-center p-2 sm:p-4"
+            onClick={() => setIsImageModalOpen(false)}
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              className="bg-card rounded-xl overflow-hidden shadow-2xl max-w-[95vw] w-[2000px] h-[90vh] max-h-[90vh] relative"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Header with title */}
+              <div className="absolute top-0 left-0 right-0 py-3 px-4 bg-card/90 backdrop-blur-sm border-b border-border z-30 flex items-center justify-between">
+                <h3 className="font-semibold text-lg">{imageTitle}</h3>
+                <div className="flex items-center gap-2">
+                  <span className="px-3 py-1 rounded-full text-xs bg-primary/90 text-primary-foreground">
+                    Step {activeStep}
+                  </span>
+                </div>
+              </div>
+              
+              {/* Image container */}
+              <div className="absolute inset-0 mt-12 overflow-auto flex items-center justify-center bg-black/20">
+                <div className="relative w-full h-full flex items-center justify-center p-4">
+                  <Image
+                    src={modalImage}
+                    alt={imageTitle}
+                    width={2400}
+                    height={1600}
+                    className="max-w-full max-h-full object-contain"
+                    priority
+                  />
+                </div>
+              </div>
+              
+              {/* Close button */}
+              <button
+                onClick={() => setIsImageModalOpen(false)}
+                className="absolute top-3 right-4 z-40 bg-primary text-primary-foreground rounded-full p-2 hover:bg-primary/90 transition-colors"
+                aria-label="Close image viewer"
+              >
+                <X size={22} />
+              </button>
+              
+              {/* Instruction hint */}
+              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-secondary/80 backdrop-blur-sm text-foreground/90 rounded-full px-4 py-1.5 text-sm flex items-center shadow-lg">
+                <span>Click anywhere outside the image to close</span>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   )
 }

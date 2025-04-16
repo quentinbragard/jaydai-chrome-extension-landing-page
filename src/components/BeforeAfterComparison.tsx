@@ -54,78 +54,55 @@ const BeforeAfterComparison = () => {
           className="max-w-4xl mx-auto"
         >
           <div 
-            className="relative h-[500px] rounded-xl overflow-hidden border border-border shadow-lg cursor-ew-resize"
+            className="relative rounded-xl overflow-hidden border border-border shadow-lg cursor-ew-resize"
+            style={{ height: "600px" }} // Adjust based on your image aspect ratio
             onMouseMove={handleMove}
             onTouchMove={handleMove}
           >
-            {/* Before image - basic prompt */}
+            {/* Before image - without Jaydai */}
             <div className="absolute inset-0 w-full h-full">
-              <div className="absolute top-4 left-4 z-10 bg-black/70 text-white px-3 py-1 rounded-full text-sm font-medium">
+              <div className="absolute top-4 left-4 z-20 bg-black/70 text-white px-3 py-1 rounded-full text-sm font-medium">
                 Without Jaydai
               </div>
-              <div className="w-full h-full bg-secondary/30 flex items-center justify-center">
-                <div className="bg-card p-6 rounded-lg max-w-md shadow-md">
-                  <div className="flex items-center mb-4">
-                    <div className="w-8 h-8 rounded-full bg-secondary"></div>
-                    <div className="ml-3">
-                      <div className="h-4 w-32 bg-secondary rounded"></div>
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    <div className="h-4 w-full bg-secondary rounded"></div>
-                    <div className="h-4 w-5/6 bg-secondary rounded"></div>
-                    <div className="h-4 w-full bg-secondary rounded"></div>
-                    <div className="h-4 w-4/6 bg-secondary rounded"></div>
-                  </div>
-                </div>
-              </div>
+              <Image
+                src="/images/comparison-before.png"
+                alt="AI response without Jaydai"
+                fill
+                className="object-cover object-center"
+                priority
+              />
             </div>
             
-            {/* After image - Jaydai optimized prompt */}
+            {/* After image - with Jaydai */}
             <div 
-              className="absolute inset-0 w-full h-full clip-path-inset"
+              className="absolute inset-0 w-full h-full"
               style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }}
             >
-              <div className="absolute top-4 right-4 z-10 bg-primary/90 text-white px-3 py-1 rounded-full text-sm font-medium">
+              <div className="absolute top-4 right-4 z-20 bg-primary/90 text-white px-3 py-1 rounded-full text-sm font-medium">
                 With Jaydai
               </div>
-              <div className="w-full h-full bg-secondary/10 flex items-center justify-center">
-                <div className="bg-card p-6 rounded-lg max-w-md shadow-md border border-primary/30">
-                  <div className="flex items-center mb-4">
-                    <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
-                      <span className="text-primary font-bold">AI</span>
-                    </div>
-                    <div className="ml-3">
-                      <div className="h-4 w-32 bg-primary/20 rounded"></div>
-                    </div>
-                  </div>
-                  <div className="space-y-3">
-                    <div className="h-4 w-full bg-primary/20 rounded"></div>
-                    <div className="h-4 w-5/6 bg-primary/20 rounded"></div>
-                    <div className="h-4 w-full bg-primary/20 rounded"></div>
-                    <div className="h-4 w-4/6 bg-primary/20 rounded"></div>
-                    <div className="h-4 w-full bg-primary/20 rounded"></div>
-                    <div className="h-4 w-3/4 bg-primary/20 rounded"></div>
-                    <div className="h-4 w-5/6 bg-primary/20 rounded"></div>
-                    <div className="h-4 w-full bg-primary/20 rounded"></div>
-                  </div>
-                </div>
-              </div>
+              <Image
+                src="/images/comparison-after.png"
+                alt="AI response with Jaydai"
+                fill
+                className="object-cover object-center"
+                priority
+              />
             </div>
             
             {/* Slider handle */}
             <div 
-              className="absolute top-0 bottom-0 w-1 bg-white shadow-lg z-10 cursor-ew-resize flex items-center justify-center"
+              className="absolute top-0 bottom-0 w-1 bg-white shadow-lg z-20 cursor-ew-resize flex items-center justify-center"
               style={{ left: `${position}%` }}
             >
-              <div className="w-8 h-8 rounded-full bg-white shadow-lg flex items-center justify-center">
-                <ArrowLeftRight size={16} className="text-primary" />
+              <div className="w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center">
+                <ArrowLeftRight size={18} className="text-primary" />
               </div>
             </div>
           </div>
           
           <div className="mt-8 text-center">
-            <div className="flex justify-between mb-4">
+            <div className="flex flex-col md:flex-row justify-between mb-4 space-y-3 md:space-y-0">
               <div className="text-foreground/70">
                 <span className="font-semibold">Basic prompt:</span> "Write about AI benefits"
               </div>
