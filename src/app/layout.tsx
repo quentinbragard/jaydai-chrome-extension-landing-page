@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
-import Navbar from '@/components/Navbar'
+import Navbar from '@/components/common/Navbar'
 import Footer from '@/components/Footer'
 import { ThemeProvider } from '@/components/ThemeProvider'
 
@@ -22,12 +22,15 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({
-  children
+  children,
+  params
 }: Readonly<{
   children: React.ReactNode
+  params?: { locale?: string }
 }>) {
+  const locale = params?.locale || 'en'
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}>
         <ThemeProvider
           attribute="class"
@@ -35,11 +38,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Navbar />
-          <main className="flex-grow">
-            {children}
-          </main>
-          <Footer />
+          {children}
         </ThemeProvider>
       </body>
     </html>

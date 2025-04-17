@@ -1,23 +1,22 @@
 "use client"
 
 import * as React from "react"
-import Link from "next/link"
 import Image from "next/image"
 import { useTheme } from "next-themes"
 import { usePathname } from "next/navigation"
-import { Menu, X, Moon, Sun, Building, Sparkles, ChevronDown } from "lucide-react"
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+import { Menu, X, Moon, Sun, Building, Sparkles } from "lucide-react"
+import { useTranslations } from 'next-intl'
+import { Link } from '@/lib/navigation'
+import { useLocale } from 'next-intl'
+import LanguageSwitcher from "@/components/common/LanguageSwitcher"
 
 const Navbar = () => {
+  const t = useTranslations('nav')
+  const locale = useLocale()
   const { theme, setTheme } = useTheme()
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
   const pathname = usePathname()
-  const isEnterprisePage = pathname === "/enterprise"
+  const isEnterprisePage = pathname.includes("/enterprise")
   const darkLogo = "/images/full-logo-dark.png"
   const lightLogo = "/images/full-logo-light.png"
   
@@ -54,7 +53,7 @@ const Navbar = () => {
             >
               <span className="flex items-center gap-1.5">
                 <Sparkles size={14} />
-                <span>Personal</span>
+                <span>{t('personal')}</span>
               </span>
             </Link>
             <Link
@@ -67,7 +66,7 @@ const Navbar = () => {
             >
               <span className="flex items-center gap-1.5">
                 <Building size={14} />
-                <span>Enterprise</span>
+                <span>{t('enterprise')}</span>
               </span>
             </Link>
           </div>
@@ -79,44 +78,48 @@ const Navbar = () => {
               {isEnterprisePage ? (
                 <>
                   <Link href="/enterprise#services" className="text-foreground/80 hover:text-primary transition-colors">
-                    Services
+                    {t('services')}
                   </Link>
                   <Link href="/enterprise#case-studies" className="text-foreground/80 hover:text-primary transition-colors">
-                    Case Studies
+                    {t('caseStudies')}
                   </Link>
                   <Link href="/enterprise#team" className="text-foreground/80 hover:text-primary transition-colors">
-                    Team
+                    {t('team')}
                   </Link>
                 </>
               ) : (
                 <>
                   <Link href="#features" className="text-foreground/80 hover:text-primary transition-colors">
-                    Features
+                    {t('features')}
                   </Link>
                   <Link href="#testimonials" className="text-foreground/80 hover:text-primary transition-colors">
-                    Testimonials
+                    {t('testimonials')}
                   </Link>
                   <Link href="#templates" className="text-foreground/80 hover:text-primary transition-colors">
-                    Templates
+                    {t('templates')}
                   </Link>
                 </>
               )}
               
               {/* Common links for both pages */}
               <Link href={`${isEnterprisePage ? "/enterprise" : ""}#pricing`} className="text-foreground/80 hover:text-primary transition-colors">
-                Pricing
+                {t('pricing')}
               </Link>
               <Link href={`${isEnterprisePage ? "/enterprise" : ""}#faq`} className="text-foreground/80 hover:text-primary transition-colors">
-                FAQ
+                {t('faq')}
               </Link>
               <Link href={`${isEnterprisePage ? "/enterprise" : ""}#contact`} className="text-foreground/80 hover:text-primary transition-colors">
-                Contact
+                {t('contact')}
               </Link>
             </div>
           </div>
           
           {/* Right side buttons */}
           <div className="hidden md:flex items-center space-x-4 pl-8">
+            {/* Language Switcher */}
+            <LanguageSwitcher />
+            
+            {/* Theme Toggle */}
             <button
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               className="p-2 rounded-full bg-secondary/50 text-foreground hover:bg-secondary transition-colors"
@@ -137,12 +140,16 @@ const Navbar = () => {
                 height={20}
                 className="w-5 h-5"
               />
-              {isEnterprisePage ? "Request Demo" : "Download Extension"}
+              {isEnterprisePage ? t('requestDemo') : t('downloadExtension')}
             </Link>
           </div>
           
           {/* Mobile menu button */}
           <div className="flex md:hidden">
+            {/* Mobile Language Switcher */}
+            <LanguageSwitcher className="mr-2" />
+            
+            {/* Mobile Theme Toggle */}
             <button
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               className="p-2 mr-2 rounded-full bg-secondary/50 text-foreground hover:bg-secondary transition-colors"
@@ -150,6 +157,7 @@ const Navbar = () => {
             >
               {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
             </button>
+            
             <button
               onClick={toggleMenu}
               className="inline-flex items-center justify-center p-2 rounded-md text-foreground hover:bg-secondary/50 transition-colors"
@@ -179,7 +187,7 @@ const Navbar = () => {
               >
                 <span className="flex items-center justify-center gap-1.5">
                   <Sparkles size={14} />
-                  <span>Personal</span>
+                  <span>{t('personal')}</span>
                 </span>
               </Link>
               <Link 
@@ -193,7 +201,7 @@ const Navbar = () => {
               >
                 <span className="flex items-center justify-center gap-1.5">
                   <Building size={14} />
-                  <span>Enterprise</span>
+                  <span>{t('enterprise')}</span>
                 </span>
               </Link>
             </div>
@@ -206,21 +214,21 @@ const Navbar = () => {
                   className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-secondary/50 transition-colors"
                   onClick={toggleMenu}
                 >
-                  Services
+                  {t('services')}
                 </Link>
                 <Link 
                   href="/enterprise#case-studies" 
                   className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-secondary/50 transition-colors"
                   onClick={toggleMenu}
                 >
-                  Case Studies
+                  {t('caseStudies')}
                 </Link>
                 <Link 
                   href="/enterprise#team" 
                   className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-secondary/50 transition-colors"
                   onClick={toggleMenu}
                 >
-                  Team
+                  {t('team')}
                 </Link>
               </>
             ) : (
@@ -230,21 +238,21 @@ const Navbar = () => {
                   className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-secondary/50 transition-colors"
                   onClick={toggleMenu}
                 >
-                  Features
+                  {t('features')}
                 </Link>
                 <Link 
                   href="#testimonials" 
                   className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-secondary/50 transition-colors"
                   onClick={toggleMenu}
                 >
-                  Testimonials
+                  {t('testimonials')}
                 </Link>
                 <Link 
                   href="#templates" 
                   className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-secondary/50 transition-colors"
                   onClick={toggleMenu}
                 >
-                  Templates
+                  {t('templates')}
                 </Link>
               </>
             )}
@@ -255,21 +263,21 @@ const Navbar = () => {
               className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-secondary/50 transition-colors"
               onClick={toggleMenu}
             >
-              Pricing
+              {t('pricing')}
             </Link>
             <Link 
               href={`${isEnterprisePage ? "/enterprise" : ""}#faq`} 
               className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-secondary/50 transition-colors"
               onClick={toggleMenu}
             >
-              FAQ
+              {t('faq')}
             </Link>
             <Link 
               href={`${isEnterprisePage ? "/enterprise" : ""}#contact`} 
               className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-secondary/50 transition-colors"
               onClick={toggleMenu}
             >
-              Contact
+              {t('contact')}
             </Link>
             
             <Link 
@@ -284,7 +292,7 @@ const Navbar = () => {
                 height={20}
                 className="w-5 h-5"
               />
-              {isEnterprisePage ? "Request Demo" : "Download Extension"}
+              {isEnterprisePage ? t('requestDemo') : t('downloadExtension')}
             </Link>
           </div>
         </div>
