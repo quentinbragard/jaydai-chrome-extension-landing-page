@@ -1,199 +1,109 @@
-"use client";
+"use client"
+import React, { useState } from "react"
+import { Check } from "lucide-react"
+import SectionWrapper from "./common/SectionWrapper"
+import SectionHeading from "./common/SectionHeading"
+import PricingCard from "./common/PricingCard"
+import GridContainer from "./common/GridContainer"
 
-import React from "react";
-import { motion } from "framer-motion";
-import { Check, ArrowRight, Building2 } from "lucide-react";
-import { ShimmerButton } from "./ShimmerButton";
-
-export default function PricingSection() {
+const PricingSection = () => {
+  const [isAnnual, setIsAnnual] = useState(true)
+  
+  const togglePricing = () => {
+    setIsAnnual(!isAnnual)
+  }
+  
   return (
-    <section
-      id="pricing"
-      className="py-20 bg-background relative overflow-hidden"
-    >
-      {/* Background gradient decoration */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 blur-[120px] rounded-full opacity-30 translate-x-1/2 -translate-y-1/2 pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary/5 blur-[120px] rounded-full opacity-30 -translate-x-1/2 translate-y-1/2 pointer-events-none" />
-
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-12">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ type: "spring", stiffness: 80, damping: 15 }}
-            className="text-3xl md:text-4xl font-bold text-foreground tracking-tight"
+    <SectionWrapper id="pricing" className="bg-muted">
+      <SectionHeading 
+        title="Simple, Transparent Pricing"
+        description="Choose the plan that's right for you"
+      />
+      
+      {/* Pricing toggle */}
+      <div className="flex justify-center mb-12">
+        <div className="bg-card border border-border rounded-full p-1 flex items-center">
+          <button
+            onClick={() => setIsAnnual(true)}
+            className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+              isAnnual 
+                ? 'bg-primary text-primary-foreground' 
+                : 'text-foreground hover:bg-secondary/50'
+            }`}
           >
-            Completely Free for Everyone
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ type: "spring", stiffness: 80, damping: 15, delay: 0.1 }}
-            className="mt-4 text-xl text-foreground/70 max-w-2xl mx-auto"
+            Annual
+            <span className="ml-1 text-xs opacity-80">
+              (Save 20%)
+            </span>
+          </button>
+          <button
+            onClick={() => setIsAnnual(false)}
+            className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+              !isAnnual 
+                ? 'bg-primary text-primary-foreground' 
+                : 'text-foreground hover:bg-secondary/50'
+            }`}
           >
-            Get started today at no cost with all the essential features
-          </motion.p>
+            Monthly
+          </button>
         </div>
-
-        <div className="max-w-4xl mx-auto">
-          {/* Main Free Tier Card */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ type: "spring", stiffness: 80, damping: 15, delay: 0.2 }}
-            className="relative rounded-2xl overflow-hidden border border-primary/30 
-            bg-gradient-to-br from-primary/10 to-background shadow-[0_0_0_1px_rgba(255,255,255,0.05)] 
-            backdrop-blur-xl transition-all duration-300 hover:scale-[1.01] before:absolute 
-            before:inset-0 before:rounded-2xl before:p-[1px] before:bg-gradient-to-br 
-            before:from-primary/40 before:to-primary/10 before:content-[''] before:z-[-1]"
-          >
-            <div className="absolute -top-10 -right-10">
-              <div className="w-40 h-40 bg-primary/10 rounded-full blur-xl" />
-            </div>
-            <div className="absolute -bottom-8 -left-8">
-              <div className="w-32 h-32 bg-primary/10 rounded-full blur-lg" />
-            </div>
-
-            <div className="p-8 md:p-10 relative z-10">
-              <div className="absolute top-6 right-6 bg-primary text-primary-foreground text-sm font-bold px-4 py-2 rounded-full shadow-md animate-pulse">
-                100% FREE
-              </div>
-
-              <div className="md:flex justify-between items-start gap-8">
-                <div className="md:flex-1">
-                  <h3 className="text-3xl font-bold text-foreground">
-                    Jaydai Free
-                  </h3>
-                  <p className="mt-3 text-foreground/70 max-w-md">
-                    Everything you need to supercharge your AI interactions with expertly crafted prompts.
-                  </p>
-
-                  <div className="mt-8">
-                    <h4 className="text-sm font-semibold text-foreground mb-4">
-                      Included in Free Plan:
-                    </h4>
-                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-3">
-                      {[
-                        "30+ expert prompt templates",
-                        "Save up to 10 custom prompts",
-                        "Basic usage analytics",
-                        "Chrome extension access",
-                        "Regular feature updates",
-                        "Community support",
-                        "Works with ChatGPT & Claude",
-                        "Full prompt customization",
-                      ].map((feature, i) => (
-                        <li key={i} className="flex items-start">
-                          <Check className="h-5 w-5 text-green-500 mr-2 shrink-0" />
-                          <span className="text-foreground/80 text-sm">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-
-                <div className="mt-8 md:mt-0 md:w-64 flex flex-col">
-                  <div className="text-center mb-6">
-                    <div className="text-5xl font-extrabold text-foreground tracking-tight">
-                      $0
-                    </div>
-                    <div className="text-sm text-foreground/60 mt-1 uppercase tracking-wide">
-                      Forever free
-                    </div>
-                  </div>
-
-                  <ShimmerButton
-                    className="w-full py-6 text-lg hover:shadow-[0_4px_30px_rgba(0,0,0,0.1)] transition-shadow"
-                    background="hsl(var(--primary))"
-                    shimmerColor="#ffffff"
-                    shimmerDuration="1.5s"
-                    shimmerSize="0.1em"
-                    shimmerSpread="180deg"
-                  >
-                    Get Started Now
-                  </ShimmerButton>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Enterprise Option */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ type: "spring", stiffness: 80, damping: 15, delay: 0.3 }}
-            className="relative rounded-xl overflow-hidden border border-muted bg-card shadow-xl hover:shadow-2xl transition-shadow"
-          >
-            <div className="p-6 md:p-8">
-              <div className="flex items-start gap-4">
-                <div className="bg-secondary/10 rounded-full p-3 w-12 h-12 flex items-center justify-center shrink-0">
-                  <Building2 className="text-secondary" size={24} />
-                </div>
-
-                <div className="flex-1">
-                  <div className="flex flex-wrap items-center justify-between gap-4">
-                    <div>
-                      <h3 className="text-xl font-bold text-foreground">
-                        Enterprise Solution
-                      </h3>
-                      <p className="mt-1 text-foreground/70">
-                        For teams and organizations needing advanced features and support
-                      </p>
-                    </div>
-
-                    <a
-                      href="/enterprise"
-                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg 
-                      bg-primary text-primary-foreground hover:bg-primary/90 
-                      transition-colors duration-200 shadow-md"
-                    >
-                      <span>Learn More</span>
-                      <ArrowRight size={16} />
-                    </a>
-                  </div>
-
-                  <div className="mt-4 flex flex-wrap gap-2.5">
-                    {[
-                      "Team collaboration",
-                      "Admin controls",
-                      "Custom prompt libraries",
-                      "Dedicated support",
-                      "Training & onboarding",
-                    ].map((feature, i) => (
-                      <span
-                        key={i}
-                        className="px-3 py-1 rounded-full text-xs font-medium bg-muted text-muted-foreground"
-                      >
-                        {feature}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-
-        {/* FAQ */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ type: "spring", stiffness: 80, damping: 15, delay: 0.5 }}
-          className="mt-16 text-center"
-        >
-          <p className="text-foreground/70 mb-2">
-            Have questions about our offering?
-          </p>
-          <a href="#faq" className="text-primary hover:underline">
-            Check our FAQ section
-          </a>
-        </motion.div>
       </div>
-    </section>
-  );
+      
+      <GridContainer columns={3} gap="lg" className="max-w-6xl mx-auto">
+        {/* Free Plan */}
+        <PricingCard
+          title="Free"
+          price="$0"
+          description="Perfect for getting started with AI prompts"
+          features={[
+            "Basic prompt templates",
+            "5 custom templates",
+            "Basic analytics",
+            "Chrome extension"
+          ]}
+          ctaText="Get Started"
+          ctaHref="https://chrome.google.com/webstore"
+          delay={0.1}
+        />
+        
+        {/* Pro Plan */}
+        <PricingCard
+          title="Pro"
+          price={isAnnual ? "$8/mo" : "$10/mo"}
+          description="For professionals who want to maximize their AI potential"
+          features={[
+            "All Free features",
+            "Unlimited custom templates",
+            "Advanced analytics",
+            "Template sharing",
+            "Priority support"
+          ]}
+          ctaText="Upgrade to Pro"
+          ctaHref="https://chrome.google.com/webstore"
+          popular={true}
+          delay={0.2}
+        />
+        
+        {/* Team Plan */}
+        <PricingCard
+          title="Team"
+          price={isAnnual ? "$20/mo" : "$25/mo"}
+          description="For teams who want to collaborate with AI"
+          features={[
+            "All Pro features",
+            "Team template library",
+            "Admin dashboard",
+            "Usage reporting",
+            "Team training",
+            "API access"
+          ]}
+          ctaText="Contact Sales"
+          ctaHref="#contact"
+          delay={0.3}
+        />
+      </GridContainer>
+    </SectionWrapper>
+  )
 }
+
+export default PricingSection

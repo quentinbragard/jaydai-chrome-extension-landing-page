@@ -1,0 +1,395 @@
+{
+  "meta": {
+    "title": "Jaydai - Votre Assistant IA Intelligent pour ChatGPT",
+    "description": "Maximisez votre expérience d'IA générative avec Jaydai, l'extension Chrome qui transforme votre utilisation de ChatGPT avec des prompts experts, des modèles personnalisés et des analyses détaillées."
+  },
+  "common": {
+    "getStarted": "Commencer",
+    "learnMore": "En savoir plus",
+    "downloadNow": "Télécharger maintenant",
+    "contactUs": "Nous contacter",
+    "viewPricing": "Voir les tarifs",
+    "requestDemo": "Demander une démo"
+  },
+  "nav": {
+    "features": "Fonctionnalités",
+    "testimonials": "Témoignages",
+    "templates": "Modèles",
+    "pricing": "Tarifs",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "personal": "Personnel",
+    "enterprise": "Entreprise",
+    "downloadExtension": "Télécharger l'extension",
+    "learn": "Apprendre"
+  },
+  "hero": {
+    "badge": "Maximisez votre potentiel IA avec Jaydai",
+    "title": "Votre Assistant IA Intelligent pour ChatGPT",
+    "subtitle": "Transformez votre utilisation de ChatGPT avec notre bibliothèque de prompts experts, de modèles personnalisés et d'analyses détaillées.",
+    "cta": {
+      "primary": "Obtenir l'extension Chrome",
+      "secondary": "Voir la démo"
+    },
+    "stats": {
+      "responses": "+50% de réponses plus efficaces",
+      "timeSaved": "70% de temps économisé sur la rédaction de prompts",
+      "control": "100% de contrôle des statistiques d'utilisation"
+    }
+  },
+  "features": {
+    "title": "Fonctionnalités Puissantes",
+    "subtitle": "Tout ce dont vous avez besoin pour maximiser votre potentiel IA",
+    "cta": "Découvrez toutes ces fonctionnalités et plus encore avec notre extension Chrome gratuite.",
+    "items": {
+      "promptLibrary": {
+        "title": "Bibliothèque de Prompts Experts",
+        "description": "Accédez à une collection organisée de prompts créés par des experts pour divers cas d'utilisation. Gagnez du temps et obtenez de meilleurs résultats avec des structures de prompts éprouvées."
+      },
+      "companyTemplates": {
+        "title": "Modèles d'Entreprise",
+        "description": "Partagez une banque de prompts personnalisés avec toute votre équipe pour des cas d'utilisation spécifiques. Standardisez les interactions IA dans votre organisation et assurez des résultats cohérents."
+      },
+      "customTemplates": {
+        "title": "Créez des Modèles Personnalisés",
+        "description": "Créez et enregistrez vos propres modèles de prompts pour gagner du temps sur des projets récurrents. Organisez-les par catégorie et accédez-y en un seul clic."
+      },
+      "analytics": {
+        "title": "Analyses Détaillées",
+        "description": "Suivez votre utilisation de l'IA avec des analyses complètes. Surveillez le temps économisé, l'empreinte énergétique et l'efficacité des différents types de prompts pour optimiser votre flux de travail."
+      },
+      "updates": {
+        "title": "Mises à Jour sur les Avancées IA",
+        "description": "Restez informé des derniers développements en IA et de la façon de les exploiter. Nous mettons continuellement à jour nos bibliothèques de prompts pour intégrer de nouvelles capacités et techniques."
+      },
+      "learning": {
+        "title": "École d'Apprentissage",
+        "description": "Accédez à notre plateforme d'apprentissage en ligne avec des simulations réelles pour maîtriser l'ingénierie de prompts IA. Apprenez à créer des prompts efficaces pour toute situation."
+      }
+    }
+  },
+  "pricing": {
+    "title": "Tarification Simple et Transparente",
+    "subtitle": "Choisissez le forfait qui vous convient",
+    "toggles": {
+      "annual": "Annuel",
+      "monthly": "Mensuel",
+      "save": "Économisez 20%"
+    },
+    "plans": {
+      "free": {
+        "title": "Gratuit",
+        "price": "0€",
+        "description": "Parfait pour débuter avec les prompts IA",
+        "features": [
+          "Modèles de prompts basiques",
+          "5 modèles personnalisés",
+          "Analyses basiques",
+          "Extension Chrome"
+        ],
+        "cta": "Commencer"
+      },
+      "pro": {
+        "title": "Pro",
+        "priceMonthly": "10€/mois",
+        "priceAnnual": "8€/mois",
+        "description": "Pour les professionnels qui veulent maximiser leur potentiel IA",
+        "features": [
+          "Toutes les fonctionnalités gratuites",
+          "Modèles personnalisés illimités",
+          "Analyses avancées",
+          "Partage de modèles",
+          "Support prioritaire"
+        ],
+        "cta": "Passer à Pro",
+        "popular": "Populaire"
+      },
+      "team": {
+        "title": "Équipe",
+        "priceMonthly": "25€/mois",
+        "priceAnnual": "20€/mois",
+        "description": "Pour les équipes qui veulent collaborer avec l'IA",
+        "features": [
+          "Toutes les fonctionnalités Pro",
+          "Bibliothèque de modèles d'équipe",
+          "Tableau de bord administrateur",
+          "Rapports d'utilisation",
+          "Formation d'équipe",
+          "Accès API"
+        ],
+        "cta": "Contacter les ventes"
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "Comment Fonctionne Jaydai",
+    "subtitle": "Intégration transparente avec ChatGPT pour améliorer votre expérience IA",
+    "steps": {
+      "install": {
+        "title": "Installez l'Extension",
+        "description": "Ajoutez Jaydai à votre navigateur Chrome en un seul clic. Aucune création de compte requise pour commencer."
+      },
+      "access": {
+        "title": "Accédez aux Modèles",
+        "description": "Parcourez notre bibliothèque de prompts créés par des experts ou créez vos propres modèles personnalisés pour des tâches récurrentes."
+      },
+      "results": {
+        "title": "Obtenez de Meilleurs Résultats",
+        "description": "Utilisez nos modèles pour générer des réponses plus précises et pertinentes de ChatGPT tout en suivant votre utilisation."
+      }
+    },
+    "integration": {
+      "title": "Intégration Transparente",
+      "description": "Jaydai fonctionne directement dans l'interface ChatGPT, offrant une expérience non intrusive qui améliore votre flux de travail sans le perturber.",
+      "features": [
+        "Insertion de modèles en un clic",
+        "Formatage automatique des prompts",
+        "Suivi de la qualité des réponses",
+        "Compatible avec ChatGPT Gratuit et Plus"
+      ],
+      "cta": "Commencer maintenant"
+    }
+  },
+  "comparison": {
+    "title": "Avant & Après Jaydai",
+    "subtitle": "Découvrez la différence que notre assistant IA apporte à votre expérience ChatGPT",
+    "before": {
+      "title": "Sans Jaydai",
+      "points": [
+        "Passez du temps à créer des prompts à partir de zéro",
+        "Résultats incohérents dus à des prompts mal structurés",
+        "Aucun moyen de sauvegarder ou réutiliser les prompts réussis",
+        "Aucune information sur vos habitudes d'utilisation de l'IA",
+        "Connaissance limitée des meilleures pratiques d'ingénierie de prompts"
+      ],
+      "quote": "Je passais tellement de temps à essayer de faire comprendre à ChatGPT ce que je voulais. C'était frustrant et inefficace."
+    },
+    "after": {
+      "title": "Avec Jaydai",
+      "points": [
+        "Accédez à des prompts experts en un clic",
+        "Réponses cohérentes et de haute qualité à chaque fois",
+        "Sauvegardez et organisez des modèles pour une utilisation future",
+        "Analyses détaillées sur votre utilisation et l'efficacité de l'IA",
+        "Apprenez l'ingénierie de prompts grâce à notre plateforme d'apprentissage"
+      ],
+      "quote": "Jaydai a réduit mon temps de rédaction de prompts de 70% et la qualité des réponses que j'obtiens de ChatGPT s'est considérablement améliorée !"
+    }
+  },
+  "templates": {
+    "title": "Modèles Créés par des Experts",
+    "subtitle": "Accédez à notre bibliothèque croissante de modèles conçus pour divers cas d'utilisation",
+    "categories": {
+      "content": {
+        "title": "Rédaction de Contenu",
+        "description": "Créez des articles de blog, des articles et du contenu pour les réseaux sociaux avec des prompts structurés qui guident l'IA pour correspondre à la voix de votre marque.",
+        "count": "12 modèles",
+        "category": "Marketing",
+        "badge": "Populaire"
+      },
+      "code": {
+        "title": "Assistant de Code",
+        "description": "Déboguez, refactorisez et optimisez votre code avec des modèles conçus pour différents langages de programmation et tâches de développement courantes.",
+        "count": "18 modèles",
+        "category": "Développement",
+        "badge": "Nouveau"
+      },
+      "data": {
+        "title": "Analyse de Données",
+        "description": "Transformez des données brutes en insights avec des modèles pour le nettoyage de données, des suggestions de visualisation et des analyses statistiques.",
+        "count": "15 modèles",
+        "category": "Analytique",
+        "badge": "Pro"
+      }
+    },
+    "cta": "Ce ne sont que quelques exemples de notre bibliothèque de plus de 100 modèles. Débloquez la collection complète avec notre forfait Pro."
+  },
+  "analytics": {
+    "title": "Tableau de Bord d'Analyses Détaillées",
+    "subtitle": "Suivez et optimisez votre utilisation de l'IA avec des analyses complètes",
+    "heading": "Prenez des décisions basées sur les données",
+    "description": "Notre tableau de bord d'analyses vous donne des aperçus sans précédent de vos habitudes d'utilisation de l'IA, vous aidant à comprendre comment tirer le meilleur parti de ChatGPT.",
+    "features": {
+      "timeSaved": {
+        "title": "Temps Économisé",
+        "description": "Suivez le temps que vous économisez avec les modèles par rapport à la rédaction de prompts à partir de zéro."
+      },
+      "usagePatterns": {
+        "title": "Habitudes d'Utilisation",
+        "description": "Identifiez quels modèles et types de prompts vous utilisez le plus fréquemment."
+      },
+      "effectiveness": {
+        "title": "Efficacité",
+        "description": "Évaluez et suivez quels prompts génèrent les réponses les plus utiles."
+      },
+      "insights": {
+        "title": "Insights",
+        "description": "Obtenez des recommandations personnalisées pour améliorer vos interactions avec l'IA."
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Ce que Disent Nos Utilisateurs",
+    "subtitle": "Rejoignez des milliers de professionnels qui maximisent leur potentiel IA avec Jaydai",
+    "items": [
+      {
+        "quote": "Jaydai a complètement transformé ma façon d'utiliser ChatGPT. Les modèles de prompts me font gagner des heures chaque semaine, et les analyses m'aident à comprendre où j'obtiens le plus de valeur.",
+        "author": "Sarah Johnson",
+        "role": "Stratège de Contenu",
+        "company": "CreativeMinds"
+      },
+      {
+        "quote": "En tant que développeur, j'étais sceptique à propos des outils d'IA, mais les modèles personnalisés de Jaydai sont devenus une partie essentielle de mon flux de travail. Les suggestions de code sont étonnamment bonnes !",
+        "author": "Michael Chen",
+        "role": "Développeur Senior",
+        "company": "TechInnovate"
+      },
+      {
+        "quote": "Notre équipe marketing a standardisé nos prompts IA en utilisant les fonctionnalités d'équipe de Jaydai. Nous obtenons maintenant des résultats cohérents pour toutes nos campagnes, ce qui a été un véritable changement.",
+        "author": "Emma Rodriguez",
+        "role": "Directrice Marketing",
+        "company": "GrowthLabs"
+      }
+    ]
+  },
+  "enterprise": {
+    "title": "Solutions Entreprise",
+    "subtitle": "Donnez à toute votre organisation les moyens de gérer les prompts IA",
+    "badge": "Pour Équipes & Organisations",
+    "heading": "Étendez l'IA à Toute Votre Organisation",
+    "description": "Jaydai Enterprise fournit une gestion centralisée des prompts, des analyses d'utilisation et des fonctionnalités de collaboration conçues pour les équipes de toutes tailles.",
+    "features": [
+      "Bibliothèque de modèles centralisée pour des interactions IA cohérentes",
+      "Contrôles d'accès et permissions basés sur les rôles",
+      "Analyses d'utilisation et rapports de ROI",
+      "Intégration et formation personnalisées",
+      "Sécurité et conformité de niveau entreprise"
+    ],
+    "cta": "Demander une Démo Entreprise",
+    "trustedBy": {
+      "title": "Utilisé par des Entreprises Leaders",
+      "subtitle": "Rejoignez des centaines d'organisations qui utilisent Jaydai pour standardiser leurs flux de travail IA"
+    }
+  },
+  "faq": {
+    "title": "Questions Fréquemment Posées",
+    "subtitle": "Tout ce que vous devez savoir sur Jaydai",
+    "cta": "Vous avez encore des questions ? Nous sommes là pour vous aider.",
+    "items": [
+      {
+        "question": "Qu'est-ce que Jaydai ?",
+        "answer": "Jaydai est une extension Chrome qui améliore votre expérience ChatGPT avec des prompts experts, des modèles personnalisés et des analyses détaillées. Elle vous aide à obtenir de meilleurs résultats de l'IA tout en gagnant du temps."
+      },
+      {
+        "question": "Comment Jaydai améliore-t-il mon expérience ChatGPT ?",
+        "answer": "Jaydai fournit une bibliothèque de prompts créés par des experts, vous permet de créer et d'enregistrer vos propres modèles, et offre des analyses détaillées sur votre utilisation de l'IA. Cela vous aide à obtenir des réponses plus cohérentes et de haute qualité tout en gagnant du temps sur la rédaction de prompts."
+      },
+      {
+        "question": "Jaydai est-il compatible avec ChatGPT Plus ?",
+        "answer": "Oui, Jaydai fonctionne parfaitement avec les versions gratuites et Plus de ChatGPT. Il améliore l'expérience quel que soit votre niveau d'abonnement."
+      },
+      {
+        "question": "Puis-je partager mes modèles avec mon équipe ?",
+        "answer": "Oui, avec notre forfait Équipe, vous pouvez créer une bibliothèque de modèles partagée pour toute votre organisation, assurant des interactions IA cohérentes dans toute votre équipe."
+      },
+      {
+        "question": "Comment mes données sont-elles sécurisées avec Jaydai ?",
+        "answer": "Nous prenons la sécurité au sérieux. Jaydai ne stocke pas vos conversations ChatGPT sur nos serveurs. Vos modèles sont stockés et chiffrés en toute sécurité, et vous avez un contrôle total sur vos données."
+      },
+      {
+        "question": "Offrez-vous un essai gratuit ?",
+        "answer": "Oui, nous offrons un forfait gratuit avec des fonctionnalités limitées pour que vous puissiez découvrir les avantages de Jaydai avant de passer à nos forfaits Pro ou Équipe."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contactez-Nous",
+    "subtitle": "Vous avez des questions ? Nous sommes là pour vous aider à démarrer avec Jaydai.",
+    "info": {
+      "title": "Informations de Contact",
+      "email": "bonjour@jaydai.com",
+      "phone": "+1 (555) 123-4567",
+      "address": "123 Rue IA, San Francisco, CA 94103",
+      "followUs": "Suivez-Nous"
+    },
+    "form": {
+      "title": "Envoyez-Nous un Message",
+      "name": "Nom",
+      "email": "Email",
+      "subject": "Sujet",
+      "message": "Message",
+      "submit": "Envoyer le Message",
+      "success": {
+        "title": "Merci !",
+        "message": "Votre message a été envoyé avec succès. Nous vous répondrons bientôt."
+      }
+    }
+  },
+  "footer": {
+    "product": {
+      "title": "Produit",
+      "features": "Fonctionnalités",
+      "pricing": "Tarifs",
+      "templates": "Modèles",
+      "enterprise": "Entreprise"
+    },
+    "resources": {
+      "title": "Ressources",
+      "blog": "Blog",
+      "guides": "Guides",
+      "documentation": "Documentation",
+      "api": "API"
+    },
+    "company": {
+      "title": "Entreprise",
+      "about": "À propos",
+      "careers": "Carrières",
+      "contact": "Contact",
+      "press": "Presse"
+    },
+    "legal": {
+      "title": "Légal",
+      "terms": "Conditions",
+      "privacy": "Confidentialité",
+      "cookies": "Cookies"
+    },
+    "copyright": "© 2025 Jaydai. Tous droits réservés.",
+    "madeWith": "Fait avec ❤️ pour les passionnés d'IA"
+  },
+  "learn": {
+    "title": "Apprenez à Utiliser ChatGPT Efficacement",
+    "subtitle": "Maîtrisez l'ingénierie de prompts IA et maximisez votre expérience ChatGPT",
+    "mainHeading": "Devenez un Utilisateur Avancé de ChatGPT",
+    "mainDescription": "Nos ressources d'apprentissage complètes vous aideront à maîtriser l'art de l'ingénierie de prompts et à tirer le meilleur parti de ChatGPT pour vos besoins spécifiques.",
+    "benefits": [
+      "Apprenez des structures de prompts éprouvées qui donnent de meilleurs résultats",
+      "Comprenez comment créer des prompts pour différents cas d'utilisation",
+      "Maîtrisez des techniques avancées comme le prompt en chaîne de pensée",
+      "Gagnez du temps avec des modèles conçus pour des tâches spécifiques",
+      "Restez informé des dernières capacités de l'IA et des meilleures pratiques"
+    ],
+    "mainCta": "Commencer à Apprendre",
+    "resourcesTitle": "Ressources d'Apprentissage Gratuites",
+    "resourcesSubtitle": "Explorez nos guides, tutoriels et leçons interactives",
+    "resources": [
+      {
+        "title": "Guide du Débutant pour ChatGPT",
+        "description": "Apprenez les fondamentaux pour utiliser ChatGPT efficacement, des prompts basiques aux techniques plus avancées.",
+        "link": "/fr/apprendre/guide-debutant",
+        "cta": "Lire le Guide"
+      },
+      {
+        "title": "Techniques d'Ingénierie de Prompts",
+        "description": "Découvrez des stratégies éprouvées pour créer des prompts efficaces qui génèrent des réponses pertinentes de haute qualité.",
+        "link": "/fr/apprendre/ingenierie-prompts",
+        "cta": "Explorer les Techniques"
+      },
+      {
+        "title": "Tutoriels Interactifs",
+        "description": "Pratiquez vos compétences avec nos tutoriels interactifs qui fournissent un retour en temps réel sur vos prompts.",
+        "link": "/fr/apprendre/tutoriels",
+        "cta": "Démarrer le Tutoriel"
+      }
+    ]
+  }
+}
