@@ -335,38 +335,6 @@
     ]
   }
 },
-  "faq": {
-    "title": "Questions Fréquemment Posées",
-    "subtitle": "Tout ce que vous devez savoir sur Jaydai",
-    "questions": {
-      "1": {
-        "question": "Qu'est-ce que Jaydai et comment fonctionne-t-il ?",
-        "answer": "Jaydai est une extension Chrome qui améliore votre expérience ChatGPT en fournissant une bibliothèque de prompts experts organisés par thème. Elle vous permet de sauvegarder des prompts personnalisés pour un accès instantané et fournit des analytiques détaillées sur votre utilisation. En un seul clic, vous pouvez accéder à notre écosystème conçu pour optimiser vos interactions avec ChatGPT, tant pour des projets professionnels que personnels."
-      },
-      "2": {
-        "question": "Jaydai est-il gratuit ?",
-        "answer": "Oui, Jaydai propose une version gratuite qui inclut l'accès à notre bibliothèque de prompts de base et aux fonctionnalités de sauvegarde de modèles. Nous proposons également des plans premium pour les particuliers et les équipes qui incluent des fonctionnalités supplémentaires telles que des analytiques avancées, un stockage illimité de modèles et un support prioritaire."
-      },
-      "3": {
-        "question": "Comment installer l'extension Chrome Jaydai ?",
-        "answer": "L'installation de Jaydai est simple. Visitez simplement le Chrome Web Store, recherchez 'Jaydai', et cliquez sur 'Ajouter à Chrome'. Une fois installé, vous verrez l'icône Jaydai dans la barre d'outils de votre navigateur. Cliquez dessus pour commencer à utiliser notre bibliothèque de prompts et nos modèles avec ChatGPT."
-      },
-      "4": {
-        "question": "Puis-je créer et sauvegarder mes propres modèles de prompts ?",
-        "answer": "Absolument ! Jaydai vous permet de créer, sauvegarder et organiser vos propres modèles de prompts personnalisés. Cette fonctionnalité vous aide à économiser du temps lors de projets nécessitant des interactions IA similaires. Vous pouvez catégoriser vos modèles, les modifier à tout moment et y accéder en un seul clic."
-      },
-      "5": {
-        "question": "Quels types d'analytiques Jaydai fournit-il ?",
-        "answer": "Jaydai fournit des analytiques détaillées sur votre utilisation de l'IA, incluant le nombre de prompts utilisés, le temps économisé, l'empreinte énergétique et l'efficacité des différents types de prompts. Ces insights vous aident à comprendre vos modèles d'interaction et à optimiser votre workflow IA pour de meilleurs résultats."
-      },
-      "6": {
-        "question": "Existe-t-il une version entreprise pour les équipes ?",
-        "answer": "Oui, nous proposons une version entreprise qui permet à toute votre équipe de partager une banque de prompts personnalisée pour vos cas d'utilisation métier spécifiques. Le plan entreprise inclut des fonctionnalités de gestion d'équipe, des modèles partagés, des analytiques d'utilisation à l'échelle de l'équipe et un support dédié."
-      }
-    },
-    "ctaDescription": "Vous avez encore des questions ? Nous sommes là pour vous aider.",
-    "ctaButtonText": "Contactez-nous"
-  },
   "contact": {
     "title": "Contactez-nous",
     "subtitle": "Des questions ou besoin d'assistance ? Nous sommes là pour vous aider.",
@@ -702,11 +670,11 @@
         "features": [
           "Contrôle d'accès basé sur les rôles",
           "Partage de modèles d'équipe",
-          "Analytiques d'équipe"
+          "Analyses d'équipe"
         ]
       },
       {
-        "title": "Sécurité & Conformité",
+        "title": "Sécurité et Conformité",
         "icon": "Shield",
         "color": "purple",
         "features": [
@@ -716,12 +684,12 @@
         ]
       },
       {
-        "title": "Analytiques Entreprise",
+        "title": "Analyses Entreprise",
         "icon": "BarChart3",
         "color": "green",
         "features": [
           "Suivi du ROI",
-          "Analytiques par département",
+          "Analyses par département",
           "Rapports personnalisés"
         ]
       },
@@ -730,9 +698,9 @@
         "icon": "Zap",
         "color": "amber",
         "features": [
-          "Responsable de succès dédié",
+          "Gestionnaire de succès dédié",
           "Support prioritaire 24/7",
-          "Révisions commerciales trimestrielles"
+          "Revues trimestrielles"
         ]
       },
       {
@@ -758,21 +726,21 @@
     ]
   },
   "implementation": {
-    "intro": "Nos services professionnels garantissent que votre organisation tire le maximum de valeur de Jaydai dès le premier jour.",
+    "intro": "Nos services professionnels garantissent que votre organisation tire le meilleur parti de Jaydai dès le premier jour.",
     "process": {
       "title": "Notre Processus d'Implémentation",
       "steps": [
         {
           "title": "Découverte",
-          "description": "Nous analysons vos flux de travail actuels et identifions les opportunités IA."
+          "description": "Nous analysons vos flux de travail actuels et identifions les opportunités d'IA."
         },
         {
           "title": "Planification",
-          "description": "Nous concevons une stratégie d'implémentation sur mesure pour votre organisation."
+          "description": "Nous concevons une stratégie d'implémentation adaptée à votre organisation."
         },
         {
           "title": "Déploiement",
-          "description": "Nous configurons Jaydai dans toute votre organisation avec des modèles personnalisés."
+          "description": "Nous configurons Jaydai dans votre organisation avec des modèles personnalisés."
         },
         {
           "title": "Formation",
@@ -782,27 +750,27 @@
     }
   },
   "finalCta": {
-    "text": "Besoin d'une solution personnalisée pour votre organisation ? Nous proposons des forfaits entreprise sur mesure pour répondre à vos besoins spécifiques.",
+    "text": "Besoin d'une solution personnalisée pour votre organisation ? Nous proposons des forfaits entreprise adaptés à vos besoins spécifiques.",
     "button": "Contactez Notre Équipe Entreprise"
   },
   "offerings": [
     {
       "id": "subscription",
-      "name": "Jaydai Enterprise",
+      "name": "Jaydai Entreprise",
       "description": "Solution complète d'Assistant IA pour votre organisation",
       "price": {
-        "monthly": "10 €",
-        "annually": "8 €"
+        "monthly": "10€",
+        "annually": "8€"
       },
       "unit": "par employé / mois",
       "cta": "Commencer",
       "highlight": true,
       "features": [
         "Membres d'équipe illimités",
-        "Accès avancé basé sur les rôles",
+        "Contrôle d'accès avancé basé sur les rôles",
         "Modèles personnalisés illimités",
-        "Tableau de bord analytique entreprise",
-        "Responsable de succès dédié",
+        "Tableau de bord d'analyses entreprise",
+        "Gestionnaire de succès dédié",
         "Support prioritaire 24/7"
       ],
       "notIncluded": []
@@ -812,11 +780,11 @@
       "name": "Coaching IA",
       "description": "Coaching personnalisé pour aider votre équipe à maîtriser l'IA",
       "price": {
-        "monthly": "2 000 €",
-        "annually": "2 000 €"
+        "monthly": "2 000€",
+        "annually": "2 000€"
       },
       "unit": "frais unique",
-      "cta": "Réserver Maintenant",
+      "cta": "Réserver",
       "highlight": false,
       "features": [
         "Coach IA expert",
@@ -829,39 +797,39 @@
     },
     {
       "id": "training",
-      "name": "Formation d'une Journée",
-      "description": "Formation intensive pour votre équipe sur les meilleures pratiques IA",
+      "name": "Formation Journée Complète",
+      "description": "Formation intensive pour votre équipe sur les meilleures pratiques d'IA",
       "price": {
-        "monthly": "4 500 €",
-        "annually": "4 500 €"
+        "monthly": "4 500€",
+        "annually": "4 500€"
       },
       "unit": "par jour",
       "cta": "Planifier la Formation",
       "highlight": true,
       "features": [
-        "Formation complète sur site",
+        "Formation sur site d'une journée",
         "Programme personnalisé",
         "Exercices pratiques",
-        "Matériels à emporter",
-        "Certificat de réussite"
+        "Matériel pédagogique",
+        "Certificat de complétion"
       ],
       "notIncluded": []
     },
     {
       "id": "audit",
       "name": "Audit de Maturité IA",
-      "description": "Évaluation complète de la préparation à l'IA de votre organisation",
+      "description": "Évaluation complète de la préparation IA de votre organisation",
       "price": {
-        "monthly": "1 000 €",
-        "annually": "1 000 €"
+        "monthly": "1 000€",
+        "annually": "1 000€"
       },
       "unit": "frais unique",
       "cta": "Demander un Audit",
       "highlight": false,
       "features": [
-        "Évaluation de maturité IA",
+        "Évaluation de la maturité IA",
         "Analyse des écarts",
-        "Benchmarking",
+        "Étude comparative",
         "Rapport de recommandations",
         "Présentation exécutive"
       ],
@@ -869,18 +837,18 @@
     }
   ],
   "featureTooltips": {
-    "customPrompts": "Développez des modèles de prompts sur mesure adaptés aux besoins spécifiques et aux cas d'utilisation de votre entreprise.",
+    "customPrompts": "Développez des modèles de prompts sur mesure adaptés aux besoins spécifiques de votre entreprise.",
     "teamSharing": "Partagez des modèles de prompts et des bibliothèques dans toute votre organisation avec un contrôle d'accès basé sur les rôles.",
-    "dataPrivacy": "Contrôles avancés de confidentialité des données garantissant que vos données de prompts et d'analyses restent sécurisées.",
-    "dedicatedSuccess": "Un responsable de succès client dédié vous aidera à implémenter et optimiser Jaydai dans toute votre organisation.",
-    "analytics": "Suivez l'utilisation, le ROI et les gains d'efficacité à travers les équipes et les départements.",
-    "apiAccess": "Accédez aux fonctionnalités de Jaydai par programmation via notre API d'entreprise sécurisée.",
+    "dataPrivacy": "Contrôles avancés de confidentialité des données garantissant la sécurité de vos données de prompts et analyses.",
+    "dedicatedSuccess": "Un gestionnaire de succès client dédié vous aidera à implémenter et optimiser Jaydai dans votre organisation.",
+    "analytics": "Suivez l'utilisation, le ROI et les gains d'efficacité à travers les équipes et départements.",
+    "apiAccess": "Accédez aux fonctionnalités de Jaydai programmatiquement via notre API entreprise sécurisée.",
     "prioritySupport": "Support prioritaire 24/7 avec des temps de réponse garantis.",
-    "customTraining": "Sessions de formation sur mesure pour que les équipes maîtrisent l'ingénierie des prompts et les workflows IA.",
+    "customTraining": "Sessions de formation personnalisées pour les équipes afin de maîtriser l'ingénierie de prompts et les flux de travail IA.",
     "customDomain": "Déployez Jaydai sur votre propre domaine personnalisé pour un accès à l'échelle de l'entreprise.",
     "ssoIntegration": "Intégration de l'authentification unique avec votre fournisseur d'identité existant.",
-    "promptLibrary": "Accès à notre bibliothèque complète de modèles de prompts expertement conçus pour tous les secteurs.",
-    "complianceReporting": "Rapports détaillés de conformité pour l'utilisation de l'IA dans toute votre organisation."
+    "promptLibrary": "Accès à notre bibliothèque complète de modèles de prompts créés par des experts dans tous les secteurs.",
+    "complianceReporting": "Rapports détaillés de conformité pour l'utilisation de l'IA dans votre organisation."
   }
 },
 "faq": {

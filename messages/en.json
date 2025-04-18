@@ -271,38 +271,6 @@
       "link": "https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd"
     }
   },
-  "faq": {
-    "title": "Frequently Asked Questions",
-    "subtitle": "Everything you need to know about Jaydai",
-    "questions": {
-      "1": {
-        "question": "What is Jaydai and how does it work?",
-        "answer": "Jaydai is a Chrome extension that enhances your ChatGPT experience by providing a library of expert prompts organized by topic. It allows you to save custom prompts for instant access and provides detailed analytics on your usage. With just one click, you can access our ecosystem designed to optimize your interactions with ChatGPT for both professional and personal projects."
-      },
-      "2": {
-        "question": "Is Jaydai free to use?",
-        "answer": "Yes, Jaydai offers a free version that includes access to our basic prompt library and template saving features. We also offer premium plans for individuals and teams that include additional features such as advanced analytics, unlimited template storage, and priority support."
-      },
-      "3": {
-        "question": "How do I install the Jaydai Chrome extension?",
-        "answer": "Installing Jaydai is simple. Just visit the Chrome Web Store, search for 'Jaydai', and click 'Add to Chrome'. Once installed, you'll see the Jaydai icon in your browser toolbar. Click on it to start using our prompt library and templates with ChatGPT."
-      },
-      "4": {
-        "question": "Can I create and save my own prompt templates?",
-        "answer": "Absolutely! Jaydai allows you to create, save, and organize your own custom prompt templates. This feature helps you save time when working on different projects that require similar AI interactions. You can categorize your templates, edit them anytime, and access them with just one click."
-      },
-      "5": {
-        "question": "What kind of analytics does Jaydai provide?",
-        "answer": "Jaydai provides detailed analytics on your AI usage, including the number of prompts used, time saved, energy footprint, and effectiveness of different prompt types. These insights help you understand your interaction patterns and optimize your AI workflow for better results."
-      },
-      "6": {
-        "question": "Is there an enterprise version available for teams?",
-        "answer": "Yes, we offer an enterprise version that allows your entire team to share a customized prompt bank for your specific business use cases. The enterprise plan includes team management features, shared templates, usage analytics across the team, and dedicated support."
-      }
-    },
-    "ctaDescription": "Still have questions? We're here to help.",
-    "ctaButtonText": "Contact Us"
-  },
   "contact": {
     "title": "Get In Touch",
     "subtitle": "Have questions or need assistance? We're here to help.",
@@ -668,7 +636,7 @@
       "badges": ["MIT AI", "OpenAI Contributor"]
     }
   ]
-,
+},
 "enterprisePricing": {
   "badge": "Enterprise Solutions",
   "title": "Transparent Enterprise Pricing",
@@ -883,7 +851,7 @@
     "promptLibrary": "Access to our full library of expert-crafted prompt templates across industries.",
     "complianceReporting": "Detailed compliance reporting for AI usage across your organization."
   }
-}},
+},
 "faq": {
   "title": "Frequently Asked Questions",
   "subtitle": "Everything you need to know about Jaydai",
