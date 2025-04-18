@@ -1,14 +1,33 @@
 "use client"
 
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
 import { ArrowLeftRight } from "lucide-react"
 import { useTranslations } from "next-intl"
+import { useTheme } from "next-themes"
+
 
 const BeforeAfterComparison = () => {
   const t = useTranslations('beforeAfterComparison')
   const [position, setPosition] = useState(50)
+  const { resolvedTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+  const [imageLoaded, setImageLoaded] = useState(false)
+    
+  // Only access the theme after mounting to avoid hydration mismatch
+    useEffect(() => {
+        setMounted(true)
+      }, [])
+
+  // Determine which image to display based on theme
+  const beforeImage = mounted && resolvedTheme === "dark" 
+    ? "/images/comparison-before-dark.png" 
+    : "/images/comparison-before-light.png"
+
+  const afterImage = mounted && resolvedTheme === "dark" 
+    ? "/images/comparison-after-dark.png" 
+    : "/images/comparison-after-light.png"
   
   const handleMove = (e: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>) => {
     const container = e.currentTarget.getBoundingClientRect()
@@ -67,7 +86,7 @@ const BeforeAfterComparison = () => {
                 {t('beforeLabel')}
               </div>
               <Image
-                src="/images/comparison-before.png"
+                src={beforeImage}
                 alt={t('beforeAlt')}
                 fill
                 className="object-cover object-center"
@@ -84,7 +103,7 @@ const BeforeAfterComparison = () => {
                 {t('afterLabel')}
               </div>
               <Image
-                src="/images/comparison-after.png"
+                src={afterImage}
                 alt={t('afterAlt')}
                 fill
                 className="object-cover object-center"

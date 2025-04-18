@@ -155,5 +155,299 @@
     "jaydaiPromptLabel": "Prompt Jaydai",
     "jaydaiPrompt": "\"Analysez les 5 principaux avantages commerciaux de l'implémentation de l'IA...\"",
     "instructions": "Faites glisser le curseur pour comparer la différence entre les prompts basiques et les modèles optimisés de Jaydai."
+  },
+  "templateCategories": {
+    "title": "Catégories de Modèles de Prompts",
+    "subtitle": "Accédez à des centaines de modèles de prompts expertisés organisés par catégorie",
+    "templateCount": {
+      "multiple": "{{count}}+ modèles",
+      "infinite": "∞ modèles"
+    },
+    "exploreTemplates": "Explorer les modèles",
+    "ctaDescription": "Vous ne trouvez pas ce dont vous avez besoin ? Créez vos propres modèles personnalisés ou demandez-en de nouveaux à notre équipe.",
+    "ctaButtonText": "Commencer Gratuitement",
+    "ctaLink": "https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd",
+    "businessMarketing": {
+      "title": "Business & Marketing",
+      "description": "Optimisez vos copies marketing, créez des plans d'affaires et analysez les tendances du marché"
+    },
+    "contentCreation": {
+      "title": "Création de Contenu",
+      "description": "Générez des blogs, du contenu de médias sociaux et des écritures créatives avec un ton parfait"
+    },
+    "dataAnalysis": {
+      "title": "Analyse de Données",
+      "description": "Interprétez des données, créez des rapports et extrayez des insights à partir d'informations complexes"
+    },
+    "programming": {
+      "title": "Programmation",
+      "description": "Déboguez du code, générez des fonctions et expliquez des concepts de programmation complexes"
+    },
+    "education": {
+      "title": "Éducation",
+      "description": "Créez des plans de cours, des guides d'étude et du contenu éducatif pour tous les sujets"
+    },
+    "research": {
+      "title": "Recherche",
+      "description": "Formulez des questions de recherche, analysez la littérature et résumez les résultats"
+    },
+    "personalDevelopment": {
+      "title": "Développement Personnel",
+      "description": "Créez des trackers d'habitudes, des frameworks de définition d'objectifs et des plans d'amélioration personnelle"
+    },
+    "creativeProjects": {
+      "title": "Projets Créatifs",
+      "description": "Générez des idées pour l'art, la musique, la fiction et d'autres entreprises créatives"
+    },
+    "customTemplates": {
+      "title": "Modèles Personnalisés",
+      "description": "Créez vos propres modèles adaptés à vos besoins et workflows spécifiques"
+    }
+  },
+  "analyticsDashboard": {
+    "title": "Mesurez Votre Impact IA",
+    "subtitle": "Analytiques complètes pour suivre vos gains de productivité et vos habitudes d'utilisation",
+    "dashboardAlt": "Tableau de Bord Analytique",
+    "description": "Obtenez des insights précieux sur votre utilisation de l'IA et mesurez les améliorations de productivité de votre équipe avec nos analytiques détaillées.",
+    "stats": {
+      "totalPrompts": {
+        "label": "Total des Prompts",
+        "trend": "vs période précédente"
+      },
+      "timeSaved": {
+        "label": "Temps Économisé",
+        "trend": "cette semaine"
+      },
+      "efficiencyGain": {
+        "label": "Gain d'Efficacité",
+        "trend": "d'amélioration"
+      },
+      "templatesSaved": {
+        "label": "Modèles Enregistrés",
+        "trend": "nouveaux cette semaine"
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Ce Que Disent Nos Utilisateurs",
+    "subtitle": "Rejoignez des milliers de professionnels qui maximisent leur potentiel IA avec Jaydai",
+    "users": {
+      "1": {
+        "name": "Sarah Johnson",
+        "role": "Directrice Marketing",
+        "company": "TechGrowth Inc.",
+        "content": "Jaydai a complètement transformé la façon dont notre équipe marketing utilise l'IA. Les modèles de prompts nous font gagner des heures chaque semaine, et les analytiques nous aident à comprendre quelles approches fonctionnent le mieux."
+      },
+      "2": {
+        "name": "Michael Chen",
+        "role": "Créateur de Contenu",
+        "company": "Digital Nomad",
+        "content": "En tant qu'utilisateur quotidien de ChatGPT, Jaydai est un véritable game-changer. La possibilité de sauvegarder et d'organiser mes prompts personnalisés signifie que je n'ai plus jamais à réécrire les mêmes instructions."
+      },
+      "3": {
+        "name": "Emily Rodriguez",
+        "role": "Directrice de Produit",
+        "company": "InnovateCorp",
+        "content": "La fonctionnalité d'analytique est ce qui distingue Jaydai. Pouvoir suivre l'utilisation de l'IA à travers l'équipe nous a aidés à optimiser nos workflows et à identifier les opportunités de formation."
+      },
+      "4": {
+        "name": "David Park",
+        "role": "Ingénieur Logiciel",
+        "company": "DevStack",
+        "content": "J'adore comment Jaydai me tient informé des avancées en IA. La bibliothèque de prompts sélectionnés me permet d'utiliser toujours les techniques les plus efficaces sans avoir à faire des recherches moi-même."
+      }
+    },
+    "cta": {
+      "description": "Rejoignez des milliers d'utilisateurs qui ont transformé leur expérience IA avec Jaydai. Téléchargez notre extension Chrome aujourd'hui et voyez la différence par vous-même.",
+      "buttonText": "Télécharger l'Extension",
+      "link": "https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd"
+    }
+  },
+  "enterpriseSolutions": {
+    "title": "Solutions Entreprise",
+    "subtitle": "Stratégie IA complète et mise en œuvre pour les organisations",
+    "servicesNavTitle": "Services Entreprise",
+    "learnMore": "En savoir plus",
+    "keyFeaturesTitle": "Caractéristiques Clés",
+    "workflowTitle": "Comment Ça Fonctionne",
+    "ctaTitle": "Prêt à Commencer ?",
+    "ctaDescription": "Notre équipe entreprise est prête à vous aider à implémenter des solutions IA dans votre organisation.",
+    "ctaButtonText": "Contactez-nous",
+    "successMetricsTitle": "Métriques de Succès Entreprise",
+    "requestDemoButtonText": "Demander une Démo Entreprise",
+    "services": {
+      "training": {
+        "title": "Formation et Coaching d'Équipe",
+        "description": "Équipez votre personnel des compétences pour exploiter efficacement l'IA dans leurs tâches quotidiennes.",
+        "features": [
+          "Programmes d'ateliers personnalisés",
+          "Modules de formation spécifiques aux rôles",
+          "Développement de cas d'utilisation pratiques",
+          "Sessions de coaching continues",
+          "Suivi des progrès et certification"
+        ]
+      },
+      "consulting": {
+        "title": "Conseil en Implémentation IA",
+        "description": "Orientation stratégique pour intégrer l'IA dans les workflows et processus métiers existants.",
+        "features": [
+          "Analyse des processus métiers",
+          "Évaluation des opportunités IA",
+          "Feuille de route de mise en œuvre",
+          "Cadre de mesure du ROI",
+          "Support de gestion du changement"
+        ]
+      },
+      "custom": {
+        "title": "Ingénierie de Prompts Personnalisés",
+        "description": "Développez des modèles de prompts sur mesure adaptés aux besoins spécifiques de votre entreprise.",
+        "features": [
+          "Bibliothèques de prompts spécifiques à l'industrie",
+          "Modèles adaptés aux départements",
+          "Test de performance des prompts",
+          "Mises à jour d'optimisation régulières",
+          "Documentation complète"
+        ]
+      },
+      "analytics": {
+        "title": "Tableau de Bord Analytique Entreprise",
+        "description": "Suivez le ROI et les habitudes d'utilisation dans toute votre organisation avec des rapports complets.",
+        "features": [
+          "Métriques d'utilisation à l'échelle de l'équipe",
+          "Suivi des gains de productivité",
+          "Rapports de comparaison des départements",
+          "Analytiques d'économies de coûts",
+          "Génération de rapports personnalisés"
+        ]
+      },
+      "governance": {
+        "title": "Cadre de Gouvernance IA",
+        "description": "Mettez en place des politiques d'utilisation responsable de l'IA et assurez la conformité dans votre organisation.",
+        "features": [
+          "Développement de politiques d'utilisation",
+          "Protocoles de sécurité des données",
+          "Surveillance de la conformité",
+          "Directives éthiques",
+          "Outils d'évaluation des risques"
+        ]
+      }
+    },
+    "workflow": [
+      {
+        "title": "Consultation Initiale",
+        "description": "Nous évaluons vos besoins et objectifs spécifiques"
+      },
+      {
+        "title": "Conception de Solution Personnalisée",
+        "description": "Nous créons un plan de mise en œuvre adapté"
+      },
+      {
+        "title": "Implémentation et Formation",
+        "description": "Nous déployons des solutions et formons vos équipes"
+      },
+      {
+        "title": "Support et Optimisation Continus",
+        "description": "Nous assurons une amélioration continue"
+      }
+    ],
+    "successMetrics": [
+      {
+        "value": "42%",
+        "title": "Augmentation de Productivité",
+        "description": "Gain de productivité moyen rapporté par les équipes utilisant Jaydai"
+      },
+      {
+        "value": "67%",
+        "title": "Temps Économisé",
+        "description": "Réduction du temps passé sur des interactions IA répétitives"
+      },
+      {
+        "value": "89%",
+        "title": "Satisfaction Utilisateur",
+        "description": "Membres de l'équipe rapportant une expérience IA améliorée avec Jaydai"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Questions Fréquemment Posées",
+    "subtitle": "Tout ce que vous devez savoir sur Jaydai",
+    "questions": {
+      "1": {
+        "question": "Qu'est-ce que Jaydai et comment fonctionne-t-il ?",
+        "answer": "Jaydai est une extension Chrome qui améliore votre expérience ChatGPT en fournissant une bibliothèque de prompts experts organisés par thème. Elle vous permet de sauvegarder des prompts personnalisés pour un accès instantané et fournit des analytiques détaillées sur votre utilisation. En un seul clic, vous pouvez accéder à notre écosystème conçu pour optimiser vos interactions avec ChatGPT, tant pour des projets professionnels que personnels."
+      },
+      "2": {
+        "question": "Jaydai est-il gratuit ?",
+        "answer": "Oui, Jaydai propose une version gratuite qui inclut l'accès à notre bibliothèque de prompts de base et aux fonctionnalités de sauvegarde de modèles. Nous proposons également des plans premium pour les particuliers et les équipes qui incluent des fonctionnalités supplémentaires telles que des analytiques avancées, un stockage illimité de modèles et un support prioritaire."
+      },
+      "3": {
+        "question": "Comment installer l'extension Chrome Jaydai ?",
+        "answer": "L'installation de Jaydai est simple. Visitez simplement le Chrome Web Store, recherchez 'Jaydai', et cliquez sur 'Ajouter à Chrome'. Une fois installé, vous verrez l'icône Jaydai dans la barre d'outils de votre navigateur. Cliquez dessus pour commencer à utiliser notre bibliothèque de prompts et nos modèles avec ChatGPT."
+      },
+      "4": {
+        "question": "Puis-je créer et sauvegarder mes propres modèles de prompts ?",
+        "answer": "Absolument ! Jaydai vous permet de créer, sauvegarder et organiser vos propres modèles de prompts personnalisés. Cette fonctionnalité vous aide à économiser du temps lors de projets nécessitant des interactions IA similaires. Vous pouvez catégoriser vos modèles, les modifier à tout moment et y accéder en un seul clic."
+      },
+      "5": {
+        "question": "Quels types d'analytiques Jaydai fournit-il ?",
+        "answer": "Jaydai fournit des analytiques détaillées sur votre utilisation de l'IA, incluant le nombre de prompts utilisés, le temps économisé, l'empreinte énergétique et l'efficacité des différents types de prompts. Ces insights vous aident à comprendre vos modèles d'interaction et à optimiser votre workflow IA pour de meilleurs résultats."
+      },
+      "6": {
+        "question": "Existe-t-il une version entreprise pour les équipes ?",
+        "answer": "Oui, nous proposons une version entreprise qui permet à toute votre équipe de partager une banque de prompts personnalisée pour vos cas d'utilisation métier spécifiques. Le plan entreprise inclut des fonctionnalités de gestion d'équipe, des modèles partagés, des analytiques d'utilisation à l'échelle de l'équipe et un support dédié."
+      }
+    },
+    "ctaDescription": "Vous avez encore des questions ? Nous sommes là pour vous aider.",
+    "ctaButtonText": "Contactez-nous"
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Des questions ou besoin d'assistance ? Nous sommes là pour vous aider.",
+    "emailContact": {
+      "title": "Envoyez-nous un Email",
+      "description": "Envoyez-nous un email et nous vous répondrons sous 24 heures.",
+      "email": "contact@jaydai.com"
+    },
+    "liveChat": {
+      "title": "Chat en Direct",
+      "description": "Discutez avec notre équipe de support pour une assistance immédiate.",
+      "buttonText": "Commencer le Chat"
+    },
+    "enterprise": {
+      "title": "Entreprise",
+      "description": "Contactez notre équipe commerciale pour des solutions entreprise.",
+      "email": "entreprise@jaydai.com"
+    },
+    "form": {
+      "title": "Envoyez-nous un Message",
+      "nameLabel": "Nom",
+      "namePlaceholder": "Votre nom",
+      "emailLabel": "Email",
+      "emailPlaceholder": "Votre email",
+      "subjectLabel": "Sujet",
+      "subjectPlaceholder": "Sujet du message",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Votre message",
+      "submitButton": "Envoyer le Message"
+    }
+  },
+  "footer": {
+    "description": "Maximisez votre expérience IA avec Jaydai, l'extension Chrome gratuite qui transforme la façon dont vous utilisez ChatGPT avec des prompts experts, des modèles personnalisés et des analytiques détaillées.",
+    "product": "Produit",
+    "features": "Fonctionnalités",
+    "templates": "Modèles",
+    "pricing": "Tarifs",
+    "enterprise": "Entreprise",
+    "learningSchool": "École de Formation",
+    "company": "Entreprise",
+    "aboutUs": "À Propos de Nous",
+    "blog": "Blog",
+    "contact": "Contact",
+    "privacyPolicy": "Politique de Confidentialité",
+    "termsOfService": "Conditions d'Utilisation",
+    "allRightsReserved": "Tous droits réservés.",
+    "downloadExtension": "Télécharger l'Extension",
+    "linkedin": "LinkedIn",
+    "email": "Email"
   }
 }

@@ -156,5 +156,299 @@
     "jaydaiPromptLabel": "Jaydai prompt",
     "jaydaiPrompt": "\"Analyze the top 5 business benefits of implementing AI...\"",
     "instructions": "Drag the slider to compare the difference between basic prompts and Jaydai's optimized templates."
+  },
+  "templateCategories": {
+    "title": "Prompt Template Categories",
+    "subtitle": "Access hundreds of expert-crafted prompt templates organized by category",
+    "templateCount": {
+      "multiple": "{{count}}+ templates",
+      "infinite": "∞ templates"
+    },
+    "exploreTemplates": "Explore templates",
+    "ctaDescription": "Can't find what you need? Create your own custom templates or request new ones from our team.",
+    "ctaButtonText": "Get Started Free",
+    "ctaLink": "https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd",
+    "businessMarketing": {
+      "title": "Business & Marketing",
+      "description": "Optimize your marketing copy, create business plans, and analyze market trends"
+    },
+    "contentCreation": {
+      "title": "Content Creation",
+      "description": "Generate blog posts, social media content, and creative writing with perfect tone"
+    },
+    "dataAnalysis": {
+      "title": "Data Analysis",
+      "description": "Interpret data, create reports, and extract insights from complex information"
+    },
+    "programming": {
+      "title": "Programming",
+      "description": "Debug code, generate functions, and explain complex programming concepts"
+    },
+    "education": {
+      "title": "Education",
+      "description": "Create lesson plans, study guides, and educational content for any subject"
+    },
+    "research": {
+      "title": "Research",
+      "description": "Formulate research questions, analyze literature, and summarize findings"
+    },
+    "personalDevelopment": {
+      "title": "Personal Development",
+      "description": "Create habit trackers, goal-setting frameworks, and self-improvement plans"
+    },
+    "creativeProjects": {
+      "title": "Creative Projects",
+      "description": "Generate ideas for art, music, fiction, and other creative endeavors"
+    },
+    "customTemplates": {
+      "title": "Custom Templates",
+      "description": "Create your own templates tailored to your specific needs and workflows"
+    }
+  },
+  "analyticsDashboard": {
+    "title": "Measure Your AI Impact",
+    "subtitle": "Comprehensive analytics to track your productivity gains and usage patterns",
+    "dashboardAlt": "Analytics Dashboard",
+    "description": "Gain valuable insights into your AI usage and measure the productivity improvements across your team with our detailed analytics.",
+    "stats": {
+      "totalPrompts": {
+        "label": "Total Prompts",
+        "trend": "vs previous period"
+      },
+      "timeSaved": {
+        "label": "Time Saved",
+        "trend": "this week"
+      },
+      "efficiencyGain": {
+        "label": "Efficiency Gain",
+        "trend": "improvement"
+      },
+      "templatesSaved": {
+        "label": "Templates Saved",
+        "trend": "new this week"
+      }
+    }
+  },
+  "testimonials": {
+    "title": "What Our Users Say",
+    "subtitle": "Join thousands of professionals who are maximizing their AI potential with Jaydai",
+    "users": {
+      "1": {
+        "name": "Sarah Johnson",
+        "role": "Marketing Director",
+        "company": "TechGrowth Inc.",
+        "content": "Jaydai has completely transformed how our marketing team uses AI. The prompt templates save us hours every week, and the analytics help us understand which approaches work best."
+      },
+      "2": {
+        "name": "Michael Chen",
+        "role": "Content Creator",
+        "company": "Digital Nomad",
+        "content": "As someone who uses ChatGPT daily, Jaydai is a game-changer. The ability to save and organize my custom prompts means I never have to rewrite the same instructions again."
+      },
+      "3": {
+        "name": "Emily Rodriguez",
+        "role": "Product Manager",
+        "company": "InnovateCorp",
+        "content": "The analytics feature is what sets Jaydai apart. Being able to track our AI usage across the team has helped us optimize our workflows and identify training opportunities."
+      },
+      "4": {
+        "name": "David Park",
+        "role": "Software Engineer",
+        "company": "DevStack",
+        "content": "I love how Jaydai keeps me updated with AI advancements. The curated prompt library means I'm always using the most effective techniques without having to research them myself."
+      }
+    },
+    "cta": {
+      "description": "Join thousands of users who have transformed their AI experience with Jaydai. Download our Chrome extension today and see the difference for yourself.",
+      "buttonText": "Download Extension",
+      "link": "https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd"
+    }
+  },
+  "enterpriseSolutions": {
+    "title": "Enterprise Solutions",
+    "subtitle": "Comprehensive AI strategy and implementation for organizations",
+    "servicesNavTitle": "Enterprise Services",
+    "learnMore": "Learn more",
+    "keyFeaturesTitle": "Key Features",
+    "workflowTitle": "How It Works",
+    "ctaTitle": "Ready to Get Started?",
+    "ctaDescription": "Our enterprise team is ready to help you implement AI solutions across your organization.",
+    "ctaButtonText": "Contact Us",
+    "successMetricsTitle": "Enterprise Success Metrics",
+    "requestDemoButtonText": "Request Enterprise Demo",
+    "services": {
+      "training": {
+        "title": "Team Training & Coaching",
+        "description": "Equip your workforce with the skills to leverage AI effectively in their daily tasks.",
+        "features": [
+          "Customized workshop programs",
+          "Role-specific training modules",
+          "Practical use case development",
+          "Ongoing coaching sessions",
+          "Progress tracking and certification"
+        ]
+      },
+      "consulting": {
+        "title": "AI Implementation Consulting",
+        "description": "Strategic guidance on integrating AI into existing workflows and business processes.",
+        "features": [
+          "Business process analysis",
+          "AI opportunity assessment",
+          "Implementation roadmap",
+          "ROI measurement framework",
+          "Change management support"
+        ]
+      },
+      "custom": {
+        "title": "Custom Prompt Engineering",
+        "description": "Develop bespoke prompt templates tailored to your company's specific needs and use cases.",
+        "features": [
+          "Industry-specific prompt libraries",
+          "Department-tailored templates",
+          "Prompt performance testing",
+          "Regular optimization updates",
+          "Comprehensive documentation"
+        ]
+      },
+      "analytics": {
+        "title": "Enterprise Analytics Dashboard",
+        "description": "Track ROI and usage patterns across your organization with comprehensive reporting.",
+        "features": [
+          "Team-wide usage metrics",
+          "Productivity gain tracking",
+          "Department comparison reports",
+          "Cost-saving analytics",
+          "Custom report generation"
+        ]
+      },
+      "governance": {
+        "title": "AI Governance Framework",
+        "description": "Implement responsible AI usage policies and ensure compliance across your organization.",
+        "features": [
+          "Usage policy development",
+          "Data security protocols",
+          "Compliance monitoring",
+          "Ethical guidelines",
+          "Risk assessment tools"
+        ]
+      }
+    },
+    "workflow": [
+      {
+        "title": "Initial Consultation",
+        "description": "We assess your specific needs and objectives"
+      },
+      {
+        "title": "Custom Solution Design",
+        "description": "We create a tailored implementation plan"
+      },
+      {
+        "title": "Implementation & Training",
+        "description": "We deploy solutions and train your teams"
+      },
+      {
+        "title": "Ongoing Support & Optimization",
+        "description": "We provide continuous improvement"
+      }
+    ],
+    "successMetrics": [
+      {
+        "value": "42%",
+        "title": "Productivity Increase",
+        "description": "Average productivity gain reported by teams using Jaydai"
+      },
+      {
+        "value": "67%",
+        "title": "Time Saved",
+        "description": "Reduction in time spent on repetitive AI interactions"
+      },
+      {
+        "value": "89%",
+        "title": "User Satisfaction",
+        "description": "Team members reporting improved AI experience with Jaydai"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about Jaydai",
+    "questions": {
+      "1": {
+        "question": "What is Jaydai and how does it work?",
+        "answer": "Jaydai is a Chrome extension that enhances your ChatGPT experience by providing a library of expert prompts organized by topic. It allows you to save custom prompts for instant access and provides detailed analytics on your usage. With just one click, you can access our ecosystem designed to optimize your interactions with ChatGPT for both professional and personal projects."
+      },
+      "2": {
+        "question": "Is Jaydai free to use?",
+        "answer": "Yes, Jaydai offers a free version that includes access to our basic prompt library and template saving features. We also offer premium plans for individuals and teams that include additional features such as advanced analytics, unlimited template storage, and priority support."
+      },
+      "3": {
+        "question": "How do I install the Jaydai Chrome extension?",
+        "answer": "Installing Jaydai is simple. Just visit the Chrome Web Store, search for 'Jaydai', and click 'Add to Chrome'. Once installed, you'll see the Jaydai icon in your browser toolbar. Click on it to start using our prompt library and templates with ChatGPT."
+      },
+      "4": {
+        "question": "Can I create and save my own prompt templates?",
+        "answer": "Absolutely! Jaydai allows you to create, save, and organize your own custom prompt templates. This feature helps you save time when working on different projects that require similar AI interactions. You can categorize your templates, edit them anytime, and access them with just one click."
+      },
+      "5": {
+        "question": "What kind of analytics does Jaydai provide?",
+        "answer": "Jaydai provides detailed analytics on your AI usage, including the number of prompts used, time saved, energy footprint, and effectiveness of different prompt types. These insights help you understand your interaction patterns and optimize your AI workflow for better results."
+      },
+      "6": {
+        "question": "Is there an enterprise version available for teams?",
+        "answer": "Yes, we offer an enterprise version that allows your entire team to share a customized prompt bank for your specific business use cases. The enterprise plan includes team management features, shared templates, usage analytics across the team, and dedicated support."
+      }
+    },
+    "ctaDescription": "Still have questions? We're here to help.",
+    "ctaButtonText": "Contact Us"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Have questions or need assistance? We're here to help.",
+    "emailContact": {
+      "title": "Email Us",
+      "description": "Send us an email and we'll get back to you within 24 hours.",
+      "email": "contact@jaydai.com"
+    },
+    "liveChat": {
+      "title": "Live Chat",
+      "description": "Chat with our support team for immediate assistance.",
+      "buttonText": "Start Chat"
+    },
+    "enterprise": {
+      "title": "Enterprise",
+      "description": "Contact our sales team for enterprise solutions.",
+      "email": "enterprise@jaydai.com"
+    },
+    "form": {
+      "title": "Send Us a Message",
+      "nameLabel": "Name",
+      "namePlaceholder": "Your name",
+      "emailLabel": "Email",
+      "emailPlaceholder": "Your email",
+      "subjectLabel": "Subject",
+      "subjectPlaceholder": "Message subject",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Your message",
+      "submitButton": "Send Message"
+    }
+  },
+  "footer": {
+    "description": "Maximize your generative AI experience with Jaydai, the free Chrome extension that transforms how you use ChatGPT with expert prompts, custom templates, and detailed analytics.",
+    "product": "Product",
+    "features": "Features",
+    "templates": "Templates",
+    "pricing": "Pricing",
+    "enterprise": "Enterprise",
+    "learningSchool": "Learning School",
+    "company": "Company",
+    "aboutUs": "About Us",
+    "blog": "Blog",
+    "contact": "Contact",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "allRightsReserved": "All rights reserved.",
+    "downloadExtension": "Download Extension",
+    "linkedin": "LinkedIn",
+    "email": "Email"
   }
 }

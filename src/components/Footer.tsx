@@ -4,8 +4,10 @@ import * as React from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Github, Twitter, Linkedin, Mail } from "lucide-react"
+import { useTranslations } from 'next-intl'
 
 const Footer = () => {
+  const t = useTranslations('footer')
   return (
     <footer className="bg-secondary/30 border-t border-border">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -22,55 +24,47 @@ const Footer = () => {
               />
             </Link>
             <p className="text-foreground/70 mt-4 max-w-md">
-              Maximize your generative AI experience with Jaydai, the free Chrome extension that transforms how you use ChatGPT with expert prompts, custom templates, and detailed analytics.
+              {t('description')}
             </p>
             <div className="flex space-x-4 mt-6">
-              <Link href="https://twitter.com" target="_blank" className="text-foreground/70 hover:text-primary transition-colors">
-                <Twitter size={20} />
-                <span className="sr-only">Twitter</span>
-              </Link>
-              <Link href="https://github.com" target="_blank" className="text-foreground/70 hover:text-primary transition-colors">
-                <Github size={20} />
-                <span className="sr-only">GitHub</span>
-              </Link>
               <Link href="https://linkedin.com" target="_blank" className="text-foreground/70 hover:text-primary transition-colors">
                 <Linkedin size={20} />
-                <span className="sr-only">LinkedIn</span>
+                <span className="sr-only">{t('linkedin')}</span>
               </Link>
               <Link href="mailto:contact@jaydai.com" className="text-foreground/70 hover:text-primary transition-colors">
                 <Mail size={20} />
-                <span className="sr-only">Email</span>
+                <span className="sr-only">{t('email')}</span>
               </Link>
             </div>
           </div>
 
           {/* Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Product</h3>
+            <h3 className="text-lg font-semibold mb-4">{t('product')}</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="#features" className="text-foreground/70 hover:text-primary transition-colors">
-                  Features
+                  {t('features')}
                 </Link>
               </li>
               <li>
                 <Link href="#templates" className="text-foreground/70 hover:text-primary transition-colors">
-                  Templates
+                  {t('templates')}
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-foreground/70 hover:text-primary transition-colors">
-                  Pricing
+                  {t('pricing')}
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-foreground/70 hover:text-primary transition-colors">
-                  Enterprise
+                  {t('enterprise')}
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-foreground/70 hover:text-primary transition-colors">
-                  Learning School
+                  {t('learningSchool')}
                 </Link>
               </li>
             </ul>
@@ -78,31 +72,31 @@ const Footer = () => {
 
           {/* More links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
+            <h3 className="text-lg font-semibold mb-4">{t('company')}</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="#" className="text-foreground/70 hover:text-primary transition-colors">
-                  About Us
+                  {t('aboutUs')}
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-foreground/70 hover:text-primary transition-colors">
-                  Blog
+                  {t('blog')}
                 </Link>
               </li>
               <li>
                 <Link href="#contact" className="text-foreground/70 hover:text-primary transition-colors">
-                  Contact
+                  {t('contact')}
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-foreground/70 hover:text-primary transition-colors">
-                  Privacy Policy
+                  {t('privacyPolicy')}
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-foreground/70 hover:text-primary transition-colors">
-                  Terms of Service
+                  {t('termsOfService')}
                 </Link>
               </li>
             </ul>
@@ -111,7 +105,7 @@ const Footer = () => {
 
         <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-foreground/60 text-sm">
-            &copy; {new Date().getFullYear()} Jaydai. All rights reserved.
+            &copy; {new Date().getFullYear()} Jaydai. {t('allRightsReserved')}
           </p>
           <div className="mt-4 md:mt-0">
             <Link 
@@ -119,7 +113,7 @@ const Footer = () => {
               target="_blank"
               className="px-4 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
             >
-              Download Extension
+              {t('downloadExtension')}
             </Link>
           </div>
         </div>
