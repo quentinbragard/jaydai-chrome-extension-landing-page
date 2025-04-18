@@ -266,7 +266,7 @@ const UseCasesSection = () => {
             Access hundreds of expertly-crafted prompts for your specific needs
           </p>
           <a
-            href="https://chrome.google.com/webstore"
+            href="https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd"
             target="_blank"
             className="px-8 py-3 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium"
           >

@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react"
 import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
 import { useTheme } from "next-themes"
+import { useTranslations } from "next-intl"
 import { 
   Search, 
   MousePointer, 
@@ -17,6 +18,7 @@ import {
 } from "lucide-react"
 
 const HowItWorksSection = () => {
+  const t = useTranslations('howItWorks')
   const { resolvedTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
   const [activeStep, setActiveStep] = useState(1)
@@ -30,7 +32,7 @@ const HowItWorksSection = () => {
   }, [])
   
   // Helper function to get correct image path based on theme
-  const getThemeAwareImagePath = (basePath) => {
+  const getThemeAwareImagePath = (basePath: string) => {
     if (!mounted) return basePath; // Default during SSR
     
     // Insert -dark or -light before the file extension
@@ -48,63 +50,63 @@ const HowItWorksSection = () => {
   const steps = [
     {
       id: 1,
-      title: "Install the Extension",
-      description: "Add Jaydai to Chrome in just one click from the Chrome Web Store",
+      title: t('steps.1.title'),
+      description: t('steps.1.description'),
       icon: Monitor,
       color: "bg-blue-500/10 text-blue-500",
       image: "/images/step1-install.png"
     },
     {
       id: 2,
-      title: "Create your account",
-      description: 'Click on "Get Started" and create your account. You can sign up with Google or email.',
+      title: t('steps.2.title'),
+      description: t('steps.2.description'),
       icon: Search,
       color: "bg-purple-500/10 text-purple-500",
       image: "/images/step2-create-account.png"
     },
     {
       id: 3,
-      title: "Go to ChatGPT",
-      description: "You will see a new button to access Jaydai in the bottom right corner of the ChatGPT interface.",
+      title: t('steps.3.title'),
+      description: t('steps.3.description'),
       icon: Search,
       color: "bg-purple-500/10 text-purple-500",
       image: "/images/step3-navigate.png"
     },
     {
       id: 4,
-      title: "Choose Your Prompt",
-      description: "Select from our library of expert prompts or use your saved templates",
+      title: t('steps.4.title'),
+      description: t('steps.4.description'),
       icon: FileText,
       color: "bg-amber-500/10 text-amber-500",
       image: "/images/step4-choose.png"
     },
     {
       id: 5,
-      title: "Personalize your prompt",
-      description: "Replace the variables with your own information to create a personalized prompt",
+      title: t('steps.5.title'),
+      description: t('steps.5.description'),
       icon: FileText,
       color: "bg-amber-500/10 text-amber-500",
       image: "/images/step5-personalize.png"
     },
     {
       id: 6,
-      title: "Watch AI Do the Work",
-      description: "Get superior results thanks to expertly crafted prompts",
+      title: t('steps.6.title'),
+      description: t('steps.6.description'),
       icon: Brain,
       color: "bg-green-500/10 text-green-500",
       image: "/images/step6-results.png"
     },
     {
       id: 7,
-      title: "Save your best prompts",
-      description: "When you find a prompt that works, save it for future use",
+      title: t('steps.7.title'),
+      description: t('steps.7.description'),
       icon: FileText,
       color: "bg-amber-500/10 text-amber-500",
       image: "/images/step7-save.png"
     }
   ];
   
-  const openImageModal = (baseImageSrc, title) => {
+  const openImageModal = (baseImageSrc: string, title: string) => {
     setModalImage(getThemeAwareImagePath(baseImageSrc));
     setImageTitle(title);
     setIsImageModalOpen(true);
@@ -131,7 +133,7 @@ const HowItWorksSection = () => {
             transition={{ duration: 0.6 }}
             className="text-3xl md:text-4xl font-bold text-foreground"
           >
-            How Jaydai Works
+            {t('title')}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -140,7 +142,7 @@ const HowItWorksSection = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="mt-4 text-xl text-foreground/70 max-w-2xl mx-auto"
           >
-            Seven simple steps to maximize your AI potential
+            {t('subtitle')}
           </motion.p>
         </div>
 
@@ -216,7 +218,7 @@ const HowItWorksSection = () => {
                   <div className="w-3 h-3 rounded-full bg-green-500/60"></div>
                 </div>
                 <div className="mx-auto bg-secondary/30 rounded-md w-1/2 h-6 flex items-center justify-center text-xs text-foreground/50">
-                  chat.openai.com
+                {t('ctaText')}
                 </div>
               </div>
               

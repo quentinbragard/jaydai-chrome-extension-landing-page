@@ -2,18 +2,18 @@
 
 import React, { useState } from "react"
 import TestimonialsSection from "@/components/TestimonialsSection"
-import BeforeAfterComparison from "@/components/BeforeAfterComparison"
+import BeforeAfterComparison from "@/sections/home/BeforeAfterComparison"
 import FAQSection from "@/components/FAQSection"
 import TemplatesSection from "@/components/TemplatesSection"
 import ContactSection from "@/components/ContactSection"
-import HowItWorksSection from "@/components/HowItWorksSection"
+import HowItWorksSection from "@/sections/home/HowItWorksSection"
 import UseCasesSection from "@/components/UseCasesSection"
 import AnalyticsDashboardSection from "@/components/AnalyticsDashboardSection"
 import EnterpriseSolutionsSection from "@/components/EnterpriseSolutionsSection"
-import PricingSection from "@/components/PricingSection"
-import HeroSection from "@/components/HeroSection"
+import PricingSection from "@/sections/home/PricingSection"
+import HeroSection from "@/sections/home/HeroSection"
 import SubtleBackgroundEffect from "@/components/SubtleBackgroundEffect"
-import FeaturesSection from "@/components/FeaturesSection"
+import FeaturesSection from "@/sections/home/FeaturesSection"
 
 export default function Home() {
   // State for video dialog

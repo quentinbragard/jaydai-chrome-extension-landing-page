@@ -63,7 +63,7 @@ const HeroSection = ({ openVideoDialog }: { openVideoDialog: () => void }) => {
             className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
           >
           <ShimmerButton
-            onClick={() => window.open("https://chrome.google.com/webstore", "_blank")}
+            onClick={() => window.open("https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd", "_blank")}
             className="px-8 py-3 rounded-md text-primary-foreground font-black"
             shimmerColor="#FFCD00" // Gold shimmer effect
             shimmerSize="0.05em"

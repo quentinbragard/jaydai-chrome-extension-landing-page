@@ -15,5 +15,146 @@
   "caseStudies": "Case Studies",
   "team": "Team",
   "requestDemo": "Request Demo"
+  },
+  "hero": {
+    "badge": "Maximize your AI potential with Jaydai",
+    "title": "Your Smart AI Assistant for",
+    "titleHighlight": "ChatGPT",
+    "subtitle": "Transform how you use ChatGPT with our library of expert prompts, custom templates, and detailed analytics.",
+    "ctaExtension": "Get Chrome Extension",
+    "ctaDemo": "Watch Demo",
+    "stats": [
+      {
+        "value": "+50%",
+        "label": "More effective responses"
+      },
+      {
+        "value": "70%",
+        "label": "Time saved writing prompts"
+      },
+      {
+        "value": "100%",
+        "label": "Usage statistics control"
+      }
+    ]
+  },
+  "features": {
+    "title": "Powerful Features",
+    "subtitle": "Everything you need to maximize your AI potential",
+    "libraries": {
+      "title": "Official Prompt Libraries",
+      "description": "Access curated collections of expert-crafted prompts organized by use case and industry. Our libraries are constantly updated with the latest techniques and best practices."
+    },
+    "companyTemplates": {
+      "title": "Company Templates",
+      "description": "Share a customized prompt bank with your entire team for specific business use cases. Standardize AI interactions across your organization and ensure consistent results."
+    },
+    "customTemplates": {
+      "title": "Create Custom Templates",
+      "description": "Build and save your own prompt templates to save time when working on recurring projects. Organize them by category and access them with a single click."
+    },
+    "analytics": {
+      "title": "Detailed Analytics",
+      "description": "Track your AI usage with comprehensive analytics. Monitor time saved, energy footprint, and effectiveness of different prompt types to optimize your workflow."
+    },
+    "aiUpdates": {
+      "title": "AI Advancement Updates",
+      "description": "Stay informed about the latest AI developments and how to leverage them. We continuously update our prompt libraries to incorporate new capabilities and techniques."
+    },
+    "learningSchool": {
+      "title": "Learning School",
+      "description": "Access our online learning platform with real-world simulations to master AI prompt engineering. Learn how to craft effective prompts for any situation."
+    },
+    "cta": {
+      "description": "Experience all these features and more with our free Chrome extension.",
+      "buttonText": "Download Now",
+      "link": "https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd"
     }
+  },
+  "pricing": {
+    "title": "Completely Free for Everyone",
+    "subtitle": "Get started today at no cost with all the essential features",
+    "freePlan": {
+      "badge": "100% FREE",
+      "name": "Jaydai Free",
+      "description": "Everything you need to supercharge your AI interactions with expertly crafted prompts.",
+      "featuresTitle": "Included in Free Plan:",
+      "features": [
+        "30+ expert prompt templates",
+        "Save up to 10 custom prompts",
+        "Basic usage analytics",
+        "Chrome extension access",
+        "Regular feature updates",
+        "Community support",
+        "Works with ChatGPT & Claude",
+        "Full prompt customization"
+      ],
+      "price": "$0",
+      "priceSubtext": "Forever free",
+      "ctaText": "Get Started Now"
+    },
+    "enterprise": {
+      "title": "Enterprise Solution",
+      "description": "For teams and organizations needing advanced features and support",
+      "ctaText": "Learn More",
+      "features": [
+        "Team collaboration",
+        "Admin controls", 
+        "Custom prompt libraries",
+        "Dedicated support",
+        "Training & onboarding"
+      ]
+    },
+    "faqPrompt": "Have questions about our offering?",
+    "faqLink": "Check our FAQ section"
+  },
+  "howItWorks": {
+    "title": "How Jaydai Works",
+    "subtitle": "Seven simple steps to maximize your AI potential",
+    "ctaText": "Try It Now",
+    "ctaLink": "https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd",
+    "steps": {
+      "1": {
+        "title": "Install the Extension",
+        "description": "Add Jaydai to Chrome in just one click from the Chrome Web Store"
+      },
+      "2": {
+        "title": "Create your account",
+        "description": "Click on \"Get Started\" and create your account. You can sign up with Google or email."
+      },
+      "3": {
+        "title": "Go to ChatGPT",
+        "description": "You will see a new button to access Jaydai in the bottom right corner of the ChatGPT interface."
+      },
+      "4": {
+        "title": "Choose Your Prompt",
+        "description": "Select from our library of expert prompts or use your saved templates"
+      },
+      "5": {
+        "title": "Personalize your prompt",
+        "description": "Replace the variables with your own information to create a personalized prompt"
+      },
+      "6": {
+        "title": "Watch AI Do the Work",
+        "description": "Get superior results thanks to expertly crafted prompts"
+      },
+      "7": {
+        "title": "Save your best prompts",
+        "description": "When you find a prompt that works, save it for future use"
+      }
+    }
+  },
+  "beforeAfterComparison": {
+    "title": "See the Difference",
+    "subtitle": "Compare AI responses with and without Jaydai's optimized prompts",
+    "beforeLabel": "Without Jaydai",
+    "afterLabel": "With Jaydai",
+    "beforeAlt": "AI response without Jaydai",
+    "afterAlt": "AI response with Jaydai",
+    "basicPromptLabel": "Basic prompt",
+    "basicPrompt": "\"Write about AI benefits\"",
+    "jaydaiPromptLabel": "Jaydai prompt",
+    "jaydaiPrompt": "\"Analyze the top 5 business benefits of implementing AI...\"",
+    "instructions": "Drag the slider to compare the difference between basic prompts and Jaydai's optimized templates."
+  }
 }

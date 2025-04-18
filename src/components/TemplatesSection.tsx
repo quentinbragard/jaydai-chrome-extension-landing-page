@@ -171,7 +171,7 @@ const TemplatesSection = () => {
             Can't find what you need? Create your own custom templates or request new ones from our team.
           </p>
           <a
-            href="https://chrome.google.com/webstore"
+            href="https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd"
             target="_blank"
             className="px-8 py-3 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium"
           >

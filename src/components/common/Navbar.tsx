@@ -129,7 +129,7 @@ const Navbar = () => {
             </button>
             
             <Link 
-              href="https://chrome.google.com/webstore" 
+              href="https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd" 
               target="_blank"
               className="flex items-center gap-2 font-black px-4 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
             >
@@ -281,7 +281,7 @@ const Navbar = () => {
             </Link>
             
             <Link 
-              href="https://chrome.google.com/webstore" 
+              href="https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd" 
               target="_blank"
               className="flex items-center gap-2 font-black px-4 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
             >
