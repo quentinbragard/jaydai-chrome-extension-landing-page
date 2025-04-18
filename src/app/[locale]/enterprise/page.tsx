@@ -1,7 +1,7 @@
 "use client"
 
 import React from "react"
-import HeroEnterpriseSection from "@/components/enterprise/HeroEnterpriseSection"
+import HeroEnterpriseSection from "@/sections/enterprise/HeroSection"
 import EnterpriseValuePropsSection from "@/components/enterprise/EnterpriseValuePropsSection"
 import EnterpriseServicesSection from "@/components/enterprise/EnterpriseServicesSection"
 import EnterpriseAnalyticsSection from "@/components/enterprise/EnterpriseAnalyticsSection"

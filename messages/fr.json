@@ -449,5 +449,107 @@
     "downloadExtension": "Télécharger l'Extension",
     "linkedin": "LinkedIn",
     "email": "Email"
+  },
+  "enterpriseHero": {
+  "badge": "Solutions IA pour Entreprise",
+  "title": "Transformez Votre",
+  "titleHighlight": "Organisation",
+  "titleSuffix": "avec l'IA d'Entreprise",
+  "subtitle": "Donnez à vos équipes les moyens d'agir avec des prompts IA expertement conçus, des modèles personnalisés et des analyses adaptées au déploiement à l'échelle de l'entreprise.",
+  "ctaDemo": "Demander une Démo Entreprise",
+  "ctaVideo": "Voir les Témoignages",
+  "trustedBy": "Adopté par les leaders du marché :",
+  "companies": ["Acme Inc", "Globex", "TechCorp", "Initech"],
+  "tabs": {
+    "title": "Solutions Entreprise",
+    "teams": "Équipes",
+    "analytics": "Analytiques",
+    "prompts": "Prompts"
+  },
+  "teamsTab": {
+    "title": "Collaboration d'Équipe Entreprise",
+    "subtitle": "Gestion centralisée des prompts",
+    "status": "Actif",
+    "activities": [
+      {
+        "user": "MB",
+        "action": "Ajout d'un nouveau prompt : Modèle d'Analyse Financière",
+        "time": "il y a 2min"
+      },
+      {
+        "user": "KL",
+        "action": "Mise à jour du Modèle de Campagne Marketing",
+        "time": "il y a 1h"
+      },
+      {
+        "user": "TJ",
+        "action": "Partage des Modèles de Service Client avec l'Équipe Commerciale",
+        "time": "il y a 3h"
+      }
+    ],
+    "stats": {
+      "users": {
+        "title": "Utilisateurs Totaux",
+        "value": "248",
+        "trend": "+12% ce mois-ci"
+      },
+      "templates": {
+        "title": "Modèles Partagés",
+        "value": "1 204",
+        "trend": "+85 nouveaux modèles"
+      }
+    }
+  },
+  "analyticsTab": {
+    "title": "Tableau de Bord Analytique Entreprise",
+    "subtitle": "Métriques de performance en temps réel",
+    "chartTitle": "Utilisation des Prompts IA par Département",
+    "period": "30 derniers jours",
+    "departments": ["Marketing", "Ventes", "Ingénierie", "RH", "Finance"],
+    "metrics": {
+      "timeSaved": {
+        "title": "Temps Économisé",
+        "value": "356 h"
+      },
+      "roi": {
+        "title": "ROI",
+        "value": "287%"
+      },
+      "engagement": {
+        "title": "Engagement",
+        "value": "92%"
+      }
+    }
+  },
+  "promptsTab": {
+    "title": "Bibliothèque de Prompts Entreprise",
+    "subtitle": "Personnalisée pour vos besoins métier",
+    "templates": [
+      {
+        "title": "Générateur de Rapports Financiers",
+        "category": "Finance",
+        "description": "Crée automatiquement des rapports financiers détaillés avec analyses à partir de données brutes..."
+      },
+      {
+        "title": "Modèle de Support Client",
+        "category": "Support",
+        "description": "Générez des réponses personnalisées et bienveillantes aux demandes des clients avec..."
+      },
+      {
+        "title": "Assistant de Recherche de Marché",
+        "category": "Marketing",
+        "description": "Analysez les concurrents, identifiez les tendances du marché et générez des insights exploitables..."
+      }
+    ],
+    "creator": {
+      "title": "Créateur de Modèles Personnalisés",
+      "subtitle": "Concevez vos propres prompts spécifiques à votre entreprise",
+      "button": "Créer Nouveau"
+    }
+  },
+  "videoModal": {
+    "title": "Transformez Votre Organisation avec Jaydai",
+    "description": "Découvrez comment les entreprises maximisent leur potentiel IA avec des bibliothèques de prompts personnalisées, la collaboration d'équipe et des analyses."
   }
+}
 }

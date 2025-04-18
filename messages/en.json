@@ -450,5 +450,107 @@
     "downloadExtension": "Download Extension",
     "linkedin": "LinkedIn",
     "email": "Email"
+  },
+  "enterpriseHero": {
+  "badge": "Enterprise AI Solutions",
+  "title": "Transform Your",
+  "titleHighlight": "Organization",
+  "titleSuffix": "with Enterprise AI",
+  "subtitle": "Empower your teams with expert-crafted AI prompts, custom templates, and analytics designed for enterprise-scale deployment.",
+  "ctaDemo": "Request Enterprise Demo",
+  "ctaVideo": "Watch Success Stories",
+  "trustedBy": "Trusted by industry leaders:",
+  "companies": ["Acme Inc", "Globex", "TechCorp", "Initech"],
+  "tabs": {
+    "title": "Enterprise Solutions",
+    "teams": "Teams",
+    "analytics": "Analytics",
+    "prompts": "Prompts"
+  },
+  "teamsTab": {
+    "title": "Enterprise Team Collaboration",
+    "subtitle": "Centralized prompt management",
+    "status": "Active",
+    "activities": [
+      {
+        "user": "MB",
+        "action": "Added new prompt: Financial Analysis Template",
+        "time": "2m ago"
+      },
+      {
+        "user": "KL",
+        "action": "Updated Marketing Campaign Template",
+        "time": "1h ago"
+      },
+      {
+        "user": "TJ",
+        "action": "Shared Customer Service Templates with Sales Team",
+        "time": "3h ago"
+      }
+    ],
+    "stats": {
+      "users": {
+        "title": "Total Users",
+        "value": "248",
+        "trend": "+12% this month"
+      },
+      "templates": {
+        "title": "Shared Templates",
+        "value": "1,204",
+        "trend": "+85 new templates"
+      }
+    }
+  },
+  "analyticsTab": {
+    "title": "Enterprise Analytics Dashboard",
+    "subtitle": "Real-time performance metrics",
+    "chartTitle": "AI Prompt Usage By Department",
+    "period": "Last 30 days",
+    "departments": ["Marketing", "Sales", "Engineering", "HR", "Finance"],
+    "metrics": {
+      "timeSaved": {
+        "title": "Time Saved",
+        "value": "356 hrs"
+      },
+      "roi": {
+        "title": "ROI",
+        "value": "287%"
+      },
+      "engagement": {
+        "title": "Engagement",
+        "value": "92%"
+      }
+    }
+  },
+  "promptsTab": {
+    "title": "Enterprise Prompt Library",
+    "subtitle": "Customized for your business needs",
+    "templates": [
+      {
+        "title": "Financial Report Generator",
+        "category": "Finance",
+        "description": "Automatically creates detailed financial reports with analysis from raw data inputs..."
+      },
+      {
+        "title": "Customer Support Template",
+        "category": "Support",
+        "description": "Generate personalized, compassionate responses to customer inquiries with..."
+      },
+      {
+        "title": "Market Research Assistant",
+        "category": "Marketing",
+        "description": "Analyze competitors, identify market trends, and generate actionable insights..."
+      }
+    ],
+    "creator": {
+      "title": "Custom Template Creator",
+      "subtitle": "Design your own business-specific prompts",
+      "button": "Create New"
+    }
+  },
+  "videoModal": {
+    "title": "Transform Your Organization with Jaydai",
+    "description": "See how enterprise companies are maximizing their AI potential with custom prompt libraries, team collaboration, and analytics."
   }
+}
 }
