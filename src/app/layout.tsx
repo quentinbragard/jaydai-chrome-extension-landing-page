@@ -5,16 +5,21 @@ import Navbar from '@/components/common/Navbar'
 import Footer from '@/components/Footer'
 import { ThemeProvider } from '@/components/ThemeProvider'
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin']
+import { Poppins, Roboto } from 'next/font/google'
+
+const poppins = Poppins({
+  variable: '--font-poppins',
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
 })
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin']
-})
-
+const roboto = Roboto({
+  variable: '--font-roboto',
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+  display: 'swap',
+})  
 export const metadata: Metadata = {
   title: 'Jaydai - Your Smart AI Assistant for ChatGPT',
   description: 'Maximize your generative AI experience with Jaydai, the Chrome extension that transforms how you use ChatGPT with expert prompts, custom templates, and detailed analytics.',
@@ -31,7 +36,7 @@ export default function RootLayout({
   const locale = params?.locale || 'en'
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}>
+      <body className={`${poppins.variable} ${roboto.variable} antialiased min-h-screen flex flex-col`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

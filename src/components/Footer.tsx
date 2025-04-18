@@ -5,9 +5,12 @@ import Link from "next/link"
 import Image from "next/image"
 import { Github, Twitter, Linkedin, Mail } from "lucide-react"
 import { useTranslations } from 'next-intl'
+import { useTheme } from "next-themes"
 
 const Footer = () => {
   const t = useTranslations('footer')
+  const { theme } = useTheme()
+  const isDark = theme === 'dark'
   return (
     <footer className="bg-secondary/30 border-t border-border">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -16,7 +19,7 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <Link href="/" className="inline-block">
               <Image 
-                src="/images/full-logo-dark.png" 
+                src={isDark ? "/images/full-logo-dark.png" : "/images/full-logo-light.png"} 
                 alt="Jaydai Logo" 
                 width={120} 
                 height={40} 
