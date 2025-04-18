@@ -205,6 +205,13 @@
       "description": "Create your own templates tailored to your specific needs and workflows"
     }
   },
+  "useCasesSection": {
+    "title": "Real-World Use Cases",
+    "subtitle": "See how Jaydai transforms AI workflows across different roles",
+    "ctaDescription": "Access hundreds of expertly-crafted prompts for your specific needs",
+    "ctaButtonText": "Get Started Free",
+    "ctaLink": "https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd"
+  },
   "analyticsDashboard": {
     "title": "Measure Your AI Impact",
     "subtitle": "Comprehensive analytics to track your productivity gains and usage patterns",
@@ -263,111 +270,6 @@
       "buttonText": "Download Extension",
       "link": "https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd"
     }
-  },
-  "enterpriseSolutions": {
-    "title": "Enterprise Solutions",
-    "subtitle": "Comprehensive AI strategy and implementation for organizations",
-    "servicesNavTitle": "Enterprise Services",
-    "learnMore": "Learn more",
-    "keyFeaturesTitle": "Key Features",
-    "workflowTitle": "How It Works",
-    "ctaTitle": "Ready to Get Started?",
-    "ctaDescription": "Our enterprise team is ready to help you implement AI solutions across your organization.",
-    "ctaButtonText": "Contact Us",
-    "successMetricsTitle": "Enterprise Success Metrics",
-    "requestDemoButtonText": "Request Enterprise Demo",
-    "services": {
-      "training": {
-        "title": "Team Training & Coaching",
-        "description": "Equip your workforce with the skills to leverage AI effectively in their daily tasks.",
-        "features": [
-          "Customized workshop programs",
-          "Role-specific training modules",
-          "Practical use case development",
-          "Ongoing coaching sessions",
-          "Progress tracking and certification"
-        ]
-      },
-      "consulting": {
-        "title": "AI Implementation Consulting",
-        "description": "Strategic guidance on integrating AI into existing workflows and business processes.",
-        "features": [
-          "Business process analysis",
-          "AI opportunity assessment",
-          "Implementation roadmap",
-          "ROI measurement framework",
-          "Change management support"
-        ]
-      },
-      "custom": {
-        "title": "Custom Prompt Engineering",
-        "description": "Develop bespoke prompt templates tailored to your company's specific needs and use cases.",
-        "features": [
-          "Industry-specific prompt libraries",
-          "Department-tailored templates",
-          "Prompt performance testing",
-          "Regular optimization updates",
-          "Comprehensive documentation"
-        ]
-      },
-      "analytics": {
-        "title": "Enterprise Analytics Dashboard",
-        "description": "Track ROI and usage patterns across your organization with comprehensive reporting.",
-        "features": [
-          "Team-wide usage metrics",
-          "Productivity gain tracking",
-          "Department comparison reports",
-          "Cost-saving analytics",
-          "Custom report generation"
-        ]
-      },
-      "governance": {
-        "title": "AI Governance Framework",
-        "description": "Implement responsible AI usage policies and ensure compliance across your organization.",
-        "features": [
-          "Usage policy development",
-          "Data security protocols",
-          "Compliance monitoring",
-          "Ethical guidelines",
-          "Risk assessment tools"
-        ]
-      }
-    },
-    "workflow": [
-      {
-        "title": "Initial Consultation",
-        "description": "We assess your specific needs and objectives"
-      },
-      {
-        "title": "Custom Solution Design",
-        "description": "We create a tailored implementation plan"
-      },
-      {
-        "title": "Implementation & Training",
-        "description": "We deploy solutions and train your teams"
-      },
-      {
-        "title": "Ongoing Support & Optimization",
-        "description": "We provide continuous improvement"
-      }
-    ],
-    "successMetrics": [
-      {
-        "value": "42%",
-        "title": "Productivity Increase",
-        "description": "Average productivity gain reported by teams using Jaydai"
-      },
-      {
-        "value": "67%",
-        "title": "Time Saved",
-        "description": "Reduction in time spent on repetitive AI interactions"
-      },
-      {
-        "value": "89%",
-        "title": "User Satisfaction",
-        "description": "Team members reporting improved AI experience with Jaydai"
-      }
-    ]
   },
   "faq": {
     "title": "Frequently Asked Questions",
@@ -552,5 +454,472 @@
     "title": "Transform Your Organization with Jaydai",
     "description": "See how enterprise companies are maximizing their AI potential with custom prompt libraries, team collaboration, and analytics."
   }
+},
+"enterpriseSolutions": {
+  "learnMore": "Learn more",
+  "valuePropsSection": {
+    "badge": "For Organizations of All Sizes",
+    "title": "Enterprise-grade AI solutions",
+    "subtitle": "Transform how your organization leverages AI with powerful tools designed for teams and businesses",
+    "enterpriseReady": "Enterprise Ready",
+    "cards": [
+      {
+        "title": "Team Collaboration",
+        "description": "Share a customized prompt bank with your entire team for specific business use cases. Standardize AI interactions across your organization.",
+        "stats": [
+          { "value": "87%", "label": "Increase in team efficiency" },
+          { "value": "100+", "label": "Concurrent users" }
+        ]
+      },
+      {
+        "title": "Custom-Tailored Prompts",
+        "description": "Expert crafted prompts designed specifically for your business needs and industry requirements.",
+        "stats": [
+          { "value": "250+", "label": "Industry-specific templates" },
+          { "value": "48hr", "label": "Custom prompt delivery" }
+        ]
+      },
+      {
+        "title": "Enterprise Analytics",
+        "description": "Measure the impact of AI across your organization with detailed analytics on usage, performance, and ROI.",
+        "stats": [
+          { "value": "356h", "label": "Average time saved monthly" },
+          { "value": "287%", "label": "Average ROI" }
+        ]
+      },
+      {
+        "title": "Training & Coaching",
+        "description": "Comprehensive training programs to help your teams master AI prompt engineering and maximize productivity.",
+        "stats": [
+          { "value": "1,200+", "label": "Trained professionals" },
+          { "value": "92%", "label": "User satisfaction" }
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "icon": "TrendingUp",
+        "value": "42%",
+        "label": "Average productivity increase"
+      },
+      {
+        "icon": "Clock",
+        "value": "68%",
+        "label": "Time saved on prompting"
+      },
+      {
+        "icon": "Sparkles",
+        "value": "3.8x",
+        "label": "AI response quality"
+      },
+      {
+        "icon": "Zap",
+        "value": "91%",
+        "label": "Team adoption rate"
+      }
+    ]
+  }
+},
+"enterpriseServices": {
+  "badge": "Comprehensive Solutions",
+  "title": "Enterprise Services",
+  "subtitle": "From implementation to optimization, we provide end-to-end support for your AI journey",
+  "sidebarTitle": "Enterprise Services",
+  "learnMore": "Learn more",
+  "keyFeatures": "Key Features",
+  "visualization": "Content visualization goes here",
+  "process": {
+    "title": "Our Implementation Process",
+    "subtitle": "We follow a proven methodology to ensure successful AI adoption across your organization",
+    "steps": [
+      {
+        "title": "Discovery & Assessment",
+        "description": "We analyze your current workflows, identify AI opportunities, and develop a tailored strategy for implementation."
+      },
+      {
+        "title": "Solution Design",
+        "description": "Our team creates custom prompt libraries, implementation plans, and training programs specific to your organization's needs."
+      },
+      {
+        "title": "Team Training",
+        "description": "We provide comprehensive training to ensure your teams can effectively leverage AI tools and prompt engineering."
+      },
+      {
+        "title": "Implementation",
+        "description": "We deploy Jaydai across your organization with custom templates, analytics, and governance frameworks."
+      },
+      {
+        "title": "Optimization & Support",
+        "description": "Ongoing analysis, template refinement, and support to ensure continuous improvement and ROI."
+      }
+    ]
+  },
+  "cta": "Start Your AI Journey",
+  "services": [
+    {
+      "id": "training",
+      "title": "Team Training & Coaching",
+      "description": "Equip your workforce with the skills to leverage AI effectively in their daily tasks.",
+      "features": [
+        "Customized workshop programs",
+        "Role-specific training modules",
+        "Practical use case development",
+        "Ongoing coaching sessions",
+        "Progress tracking and certification"
+      ],
+      "cta": "Book a training consultation"
+    },
+    {
+      "id": "prompts",
+      "title": "Custom Prompt Engineering",
+      "description": "Develop bespoke prompt templates tailored to your company's specific needs and use cases.",
+      "features": [
+        "Industry-specific prompt libraries",
+        "Department-tailored templates",
+        "Prompt performance testing",
+        "Regular optimization updates",
+        "Comprehensive documentation"
+      ],
+      "cta": "Request custom prompts"
+    },
+    {
+      "id": "analytics",
+      "title": "Enterprise Analytics Dashboard",
+      "description": "Track ROI and usage patterns across your organization with comprehensive reporting.",
+      "features": [
+        "Team-wide usage metrics",
+        "Productivity gain tracking",
+        "Department comparison reports",
+        "Cost-saving analytics",
+        "Custom report generation"
+      ],
+      "cta": "See analytics demo"
+    },
+    {
+      "id": "consulting",
+      "title": "AI Implementation Consulting",
+      "description": "Strategic guidance on integrating AI into existing workflows and business processes.",
+      "features": [
+        "Business process analysis",
+        "AI opportunity assessment",
+        "Implementation roadmap",
+        "ROI measurement framework",
+        "Change management support"
+      ],
+      "cta": "Schedule a consultation"
+    },
+    {
+      "id": "governance",
+      "title": "AI Governance Framework",
+      "description": "Implement responsible AI usage policies and ensure compliance across your organization.",
+      "features": [
+        "Usage policy development",
+        "Data security protocols",
+        "Compliance monitoring",
+        "Ethical guidelines",
+        "Risk assessment tools"
+      ],
+      "cta": "Learn about governance"
+    }
+  ]
+},
+"enterpriseTeam": {
+  "badge": "Our Expert Team",
+  "title": "Meet Our AI Implementation Experts",
+  "subtitle": "Our enterprise team brings decades of experience in AI transformation and prompt engineering",
+  "sidebarTitle": "Enterprise Leadership Team",
+  "meet": "Meet",
+  "about": "About",
+  "specialties": "Specialties",
+  "credentials": "Credentials",
+  "requestConsultation": "Request Consultation",
+  "scheduleMeeting": "Schedule Meeting",
+  "expertiseSection": {
+    "title": "Our Enterprise Expertise",
+    "credentials": {
+      "title": "Top Credentials",
+      "description": "Our team brings credentials from leading AI institutions and Fortune 500 companies"
+    },
+    "focus": {
+      "title": "Enterprise Focus",
+      "description": "Specialized in AI implementation for organizations of all sizes across industries"
+    },
+    "success": {
+      "title": "Client Success",
+      "description": "Track record of successful AI transformations for over 50+ enterprise clients"
+    }
+  },
+  "caseStudiesLink": "View our enterprise case studies",
+  "teamMembers": [
+    {
+      "id": 1,
+      "name": "Quentin",
+      "role": "CEO & AI Strategy Lead",
+      "bio": "10+ years experience in AI implementation and enterprise transformation. Previously led AI initiatives at Fortune 500 companies.",
+      "specialties": ["Enterprise Strategy", "AI Integration", "Leadership"],
+      "badges": ["Harvard MBA", "Former Google AI"]
+    },
+    {
+      "id": 2,
+      "name": "Michael Chen",
+      "role": "CTO & Prompt Engineering Lead",
+      "bio": "Expert in prompt engineering and large language models. Built AI systems powering millions of interactions daily.",
+      "specialties": ["Prompt Engineering", "LLM Fine-tuning", "Technical Leadership"],
+      "badges": ["MIT AI", "OpenAI Contributor"]
+    }
+  ]
+,
+"enterprisePricing": {
+  "badge": "Enterprise Solutions",
+  "title": "Transparent Enterprise Pricing",
+  "subtitle": "Flexible options to support your organization's AI transformation",
+  "tabs": {
+    "plans": "Subscription Plans",
+    "implementation": "Services"
+  },
+  "billingToggle": {
+    "monthly": "Monthly",
+    "annually": "Annually",
+    "discount": "(-20%)"
+  },
+  "featureLabels": {
+    "included": "What's included:",
+    "notIncluded": "Not included:",
+    "popular": "Popular",
+    "customPricing": "Custom pricing",
+    "perEmployee": "per employee / month",
+    "oneTimeFee": "one-time fee",
+    "perDay": "per day",
+    "estimatedTimeframe": "Estimated timeframe:",
+    "packageIncludes": "Package includes:"
+  },
+  "enterpriseFeatures": {
+    "title": "Enterprise-grade features",
+    "categories": [
+      {
+        "title": "Team Management",
+        "icon": "Users",
+        "color": "blue",
+        "features": [
+          "Role-based access control",
+          "Team template sharing",
+          "Team analytics"
+        ]
+      },
+      {
+        "title": "Security & Compliance",
+        "icon": "Shield",
+        "color": "purple",
+        "features": [
+          "SSO integration",
+          "Data privacy controls",
+          "Compliance reporting"
+        ]
+      },
+      {
+        "title": "Enterprise Analytics",
+        "icon": "BarChart3",
+        "color": "green",
+        "features": [
+          "ROI tracking",
+          "Department analytics",
+          "Custom reporting"
+        ]
+      },
+      {
+        "title": "Expert Support",
+        "icon": "Zap",
+        "color": "amber",
+        "features": [
+          "Dedicated success manager",
+          "24/7 priority support",
+          "Quarterly business reviews"
+        ]
+      },
+      {
+        "title": "Custom Deployment",
+        "icon": "Building",
+        "color": "pink",
+        "features": [
+          "Custom domain",
+          "API access",
+          "Integration support"
+        ]
+      },
+      {
+        "title": "Customization",
+        "icon": "MessageCircle",
+        "color": "indigo",
+        "features": [
+          "Custom prompt libraries",
+          "Custom training",
+          "Custom feature development"
+        ]
+      }
+    ]
+  },
+  "implementation": {
+    "intro": "Our professional services ensure your organization gets maximum value from Jaydai from day one.",
+    "process": {
+      "title": "Our Implementation Process",
+      "steps": [
+        {
+          "title": "Discovery",
+          "description": "We analyze your current workflows and identify AI opportunities."
+        },
+        {
+          "title": "Planning",
+          "description": "We design a tailored implementation strategy for your organization."
+        },
+        {
+          "title": "Deployment",
+          "description": "We set up Jaydai across your organization with custom templates."
+        },
+        {
+          "title": "Training",
+          "description": "We train your teams and provide ongoing support and optimization."
+        }
+      ]
+    }
+  },
+  "finalCta": {
+    "text": "Need a custom solution for your organization? We offer tailored enterprise packages to meet your specific requirements.",
+    "button": "Contact Our Enterprise Team"
+  },
+  "offerings": [
+    {
+      "id": "subscription",
+      "name": "Jaydai Enterprise",
+      "description": "Complete AI Assistant solution for your organization",
+      "price": {
+        "monthly": "€10",
+        "annually": "€8"
+      },
+      "unit": "per employee / month",
+      "cta": "Get Started",
+      "highlight": true,
+      "features": [
+        "Unlimited team members",
+        "Advanced role-based access",
+        "Unlimited custom templates",
+        "Enterprise analytics dashboard",
+        "Dedicated success manager",
+        "24/7 priority support"
+      ],
+      "notIncluded": []
+    },
+    {
+      "id": "coaching",
+      "name": "AI Coaching",
+      "description": "Personalized coaching to help your team master AI",
+      "price": {
+        "monthly": "€2,000",
+        "annually": "€2,000"
+      },
+      "unit": "one-time fee",
+      "cta": "Book Now",
+      "highlight": false,
+      "features": [
+        "Expert AI coach",
+        "Custom coaching plan",
+        "Hands-on assistance",
+        "Follow-up sessions",
+        "Performance assessment"
+      ],
+      "notIncluded": []
+    },
+    {
+      "id": "training",
+      "name": "Full-Day Training",
+      "description": "Intensive training for your team on AI best practices",
+      "price": {
+        "monthly": "€4,500",
+        "annually": "€4,500"
+      },
+      "unit": "per day",
+      "cta": "Schedule Training",
+      "highlight": true,
+      "features": [
+        "Full-day on-site training",
+        "Customized curriculum",
+        "Hands-on exercises",
+        "Take-home materials",
+        "Certificate of completion"
+      ],
+      "notIncluded": []
+    },
+    {
+      "id": "audit",
+      "name": "AI Maturity Audit",
+      "description": "Comprehensive evaluation of your organization's AI readiness",
+      "price": {
+        "monthly": "€1,000",
+        "annually": "€1,000"
+      },
+      "unit": "one-time fee",
+      "cta": "Request Audit",
+      "highlight": false,
+      "features": [
+        "AI maturity assessment",
+        "Gap analysis",
+        "Benchmarking",
+        "Recommendations report",
+        "Executive presentation"
+      ],
+      "notIncluded": []
+    }
+  ],
+  "featureTooltips": {
+    "customPrompts": "Develop bespoke prompt templates tailored to your company's specific needs and use cases.",
+    "teamSharing": "Share prompt templates and libraries across your entire organization with role-based access control.",
+    "dataPrivacy": "Advanced data privacy controls ensuring your prompt data and analytics remain secure.",
+    "dedicatedSuccess": "A dedicated customer success manager will help you implement and optimize Jaydai across your organization.",
+    "analytics": "Track usage, ROI, and efficiency gains across teams and departments.",
+    "apiAccess": "Access Jaydai's functionality programmatically through our secure enterprise API.",
+    "prioritySupport": "24/7 priority support with guaranteed response times.",
+    "customTraining": "Tailored training sessions for teams to master prompt engineering and AI workflows.",
+    "customDomain": "Deploy Jaydai on your own custom domain for enterprise-wide access.",
+    "ssoIntegration": "Single sign-on integration with your existing identity provider.",
+    "promptLibrary": "Access to our full library of expert-crafted prompt templates across industries.",
+    "complianceReporting": "Detailed compliance reporting for AI usage across your organization."
+  }
+}},
+"faq": {
+  "title": "Frequently Asked Questions",
+  "subtitle": "Everything you need to know about Jaydai",
+  "ctaPrompt": "Still have questions? We're here to help.",
+  "ctaButton": "Contact Us",
+  "faqs": [
+    {
+      "id": 1,
+      "question": "What is Jaydai and how does it work?",
+      "answer": "Jaydai is a Chrome extension that enhances your ChatGPT experience by providing a library of expert prompts organized by topic. It allows you to save custom prompts for instant access and provides detailed analytics on your usage. With just one click, you can access our ecosystem designed to optimize your interactions with ChatGPT for both professional and personal projects."
+    },
+    {
+      "id": 2,
+      "question": "Is Jaydai free to use?",
+      "answer": "Yes, Jaydai offers a free version that includes access to our basic prompt library and template saving features. We also offer premium plans for individuals and teams that include additional features such as advanced analytics, unlimited template storage, and priority support."
+    },
+    {
+      "id": 3,
+      "question": "How do I install the Jaydai Chrome extension?",
+      "answer": "Installing Jaydai is simple. Just visit the Chrome Web Store, search for 'Jaydai', and click 'Add to Chrome'. Once installed, you'll see the Jaydai icon in your browser toolbar. Click on it to start using our prompt library and templates with ChatGPT."
+    },
+    {
+      "id": 4,
+      "question": "Can I create and save my own prompt templates?",
+      "answer": "Absolutely! Jaydai allows you to create, save, and organize your own custom prompt templates. This feature helps you save time when working on different projects that require similar AI interactions. You can categorize your templates, edit them anytime, and access them with just one click."
+    },
+    {
+      "id": 5,
+      "question": "What kind of analytics does Jaydai provide?",
+      "answer": "Jaydai provides detailed analytics on your AI usage, including the number of prompts used, time saved, energy footprint, and effectiveness of different prompt types. These insights help you understand your interaction patterns and optimize your AI workflow for better results."
+    },
+    {
+      "id": 6,
+      "question": "Is there an enterprise version available for teams?",
+      "answer": "Yes, we offer an enterprise version that allows your entire team to share a customized prompt bank for your specific business use cases. The enterprise plan includes team management features, shared templates, usage analytics across the team, and dedicated support."
+    }
+  ]
 }
 }

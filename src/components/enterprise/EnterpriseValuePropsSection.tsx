@@ -1,6 +1,7 @@
 "use client"
 
 import React from "react"
+import { useTranslations } from "next-intl"
 import { motion } from "framer-motion"
 import { 
   Users, 
@@ -32,6 +33,7 @@ interface ValueCardProps {
 }
 
 const ValueCard = ({ icon, iconColor, title, description, stats, index }: ValueCardProps) => {
+  const t = useTranslations('enterpriseSolutions')
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -63,9 +65,9 @@ const ValueCard = ({ icon, iconColor, title, description, stats, index }: ValueC
           href="#contact" 
           className="text-sm text-primary hover:underline flex items-center"
         >
-          Learn more <ChevronRight size={14} className="ml-1" />
+          {t('learnMore')} <ChevronRight size={14} className="ml-1" />
         </Link>
-        <div className="text-xs text-foreground/60 bg-secondary/20 px-2 py-0.5 rounded-full">Enterprise Ready</div>
+        <div className="text-xs text-foreground/60 bg-secondary/20 px-2 py-0.5 rounded-full">{t('valuePropsSection.enterpriseReady')}</div>
       </div>
     </motion.div>
   )
@@ -115,6 +117,7 @@ const valueProps = [
 ]
 
 const EnterpriseValuePropsSection = () => {
+  const t = useTranslations('enterpriseSolutions')
   return (
     <section id="value-props" className="py-20 bg-secondary/5 relative overflow-hidden">
       {/* Background decorative elements */}
@@ -132,7 +135,7 @@ const EnterpriseValuePropsSection = () => {
           >
             <span className="flex items-center gap-1.5">
               <Building size={14} />
-              <span>For Organizations of All Sizes</span>
+              <span>{t('valuePropsSection.badge')}</span>
             </span>
           </motion.div>
           
@@ -142,8 +145,8 @@ const EnterpriseValuePropsSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-3xl md:text-4xl font-bold text-foreground"
-          >
-            Enterprise-grade AI solutions
+            >
+            {t('valuePropsSection.title')}
           </motion.h2>
           
           <motion.p
@@ -153,7 +156,7 @@ const EnterpriseValuePropsSection = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-4 text-xl text-foreground/70"
           >
-            Transform how your organization leverages AI with powerful tools designed for teams and businesses
+            {t('valuePropsSection.subtitle')}
           </motion.p>
         </div>
 

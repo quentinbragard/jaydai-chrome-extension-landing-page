@@ -2,15 +2,15 @@
 
 import React from "react"
 import HeroEnterpriseSection from "@/sections/enterprise/HeroSection"
-import EnterpriseValuePropsSection from "@/components/enterprise/EnterpriseValuePropsSection"
-import EnterpriseServicesSection from "@/components/enterprise/EnterpriseServicesSection"
+import EnterpriseValuePropsSection from "@/sections/enterprise/ValuePropsSection"
+import EnterpriseServicesSection from "@/sections/enterprise/ServicesSection"
 import EnterpriseAnalyticsSection from "@/components/enterprise/EnterpriseAnalyticsSection"
 import EnterpriseTestimonialsSection from "@/components/enterprise/EnterpriseTestimonialsSection"
 import EnterpriseCaseStudiesSection from "@/components/enterprise/EnterpriseCaseStudiesSection"
-import EnterprisePricingSection from "@/components/enterprise/EnterprisePricingSection"
-import EnterpriseFAQSection from "@/components/enterprise/EnterpriseFAQSection"
-import EnterpriseContactSection from "@/components//enterprise/EnterpriseContactSection"
-import EnterpriseTeamSection from "@/components/enterprise/EnterpriseTeamSection"
+import EnterprisePricingSection from "@/sections/enterprise/PricingSection"
+import EnterpriseFAQSection from "@/sections/enterprise/FAQSection"
+import EnterpriseContactSection from "@/sections/enterprise/ContactSection"
+import EnterpriseTeamSection from "@/sections/enterprise/TeamSection"
 import SubtleBackgroundEffect from "@/components/SubtleBackgroundEffect"
 
 export default function EnterprisePage() {
@@ -28,17 +28,16 @@ export default function EnterprisePage() {
       {/* Services Section */}
       <EnterpriseServicesSection />
       
-      {/* Analytics Dashboard Section */}
-      <EnterpriseAnalyticsSection />
-      
       {/* Team Section */}
       <EnterpriseTeamSection />
       
-      {/* Case Studies Section */}
-      <EnterpriseCaseStudiesSection />
+      {/* Case Studies Section
+      <EnterpriseCaseStudiesSection /> */}
       
-      {/* Testimonials Section */}
-      <EnterpriseTestimonialsSection />
+      
+      {/* Testimonials Section
+            <EnterpriseTestimonialsSection />
+ */}
       
       {/* Pricing Section */}
       <EnterprisePricingSection />

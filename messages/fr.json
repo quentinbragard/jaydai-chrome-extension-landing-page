@@ -204,6 +204,13 @@
       "description": "Créez vos propres modèles adaptés à vos besoins et workflows spécifiques"
     }
   },
+  "useCasesSection": {
+    "title": "Cas d'utilisation réels",
+    "subtitle": "Découvrez comment Jaydai transforme les workflows IA selon différents rôles",
+    "ctaDescription": "Accédez à des centaines de prompts conçus par des experts pour vos besoins spécifiques",
+    "ctaButtonText": "Commencez gratuitement",
+    "ctaLink": "https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd"
+  },
   "analyticsDashboard": {
     "title": "Mesurez Votre Impact IA",
     "subtitle": "Analytiques complètes pour suivre vos gains de productivité et vos habitudes d'utilisation",
@@ -263,111 +270,71 @@
       "link": "https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd"
     }
   },
-  "enterpriseSolutions": {
-    "title": "Solutions Entreprise",
-    "subtitle": "Stratégie IA complète et mise en œuvre pour les organisations",
-    "servicesNavTitle": "Services Entreprise",
-    "learnMore": "En savoir plus",
-    "keyFeaturesTitle": "Caractéristiques Clés",
-    "workflowTitle": "Comment Ça Fonctionne",
-    "ctaTitle": "Prêt à Commencer ?",
-    "ctaDescription": "Notre équipe entreprise est prête à vous aider à implémenter des solutions IA dans votre organisation.",
-    "ctaButtonText": "Contactez-nous",
-    "successMetricsTitle": "Métriques de Succès Entreprise",
-    "requestDemoButtonText": "Demander une Démo Entreprise",
-    "services": {
-      "training": {
-        "title": "Formation et Coaching d'Équipe",
-        "description": "Équipez votre personnel des compétences pour exploiter efficacement l'IA dans leurs tâches quotidiennes.",
-        "features": [
-          "Programmes d'ateliers personnalisés",
-          "Modules de formation spécifiques aux rôles",
-          "Développement de cas d'utilisation pratiques",
-          "Sessions de coaching continues",
-          "Suivi des progrès et certification"
-        ]
-      },
-      "consulting": {
-        "title": "Conseil en Implémentation IA",
-        "description": "Orientation stratégique pour intégrer l'IA dans les workflows et processus métiers existants.",
-        "features": [
-          "Analyse des processus métiers",
-          "Évaluation des opportunités IA",
-          "Feuille de route de mise en œuvre",
-          "Cadre de mesure du ROI",
-          "Support de gestion du changement"
-        ]
-      },
-      "custom": {
-        "title": "Ingénierie de Prompts Personnalisés",
-        "description": "Développez des modèles de prompts sur mesure adaptés aux besoins spécifiques de votre entreprise.",
-        "features": [
-          "Bibliothèques de prompts spécifiques à l'industrie",
-          "Modèles adaptés aux départements",
-          "Test de performance des prompts",
-          "Mises à jour d'optimisation régulières",
-          "Documentation complète"
-        ]
-      },
-      "analytics": {
-        "title": "Tableau de Bord Analytique Entreprise",
-        "description": "Suivez le ROI et les habitudes d'utilisation dans toute votre organisation avec des rapports complets.",
-        "features": [
-          "Métriques d'utilisation à l'échelle de l'équipe",
-          "Suivi des gains de productivité",
-          "Rapports de comparaison des départements",
-          "Analytiques d'économies de coûts",
-          "Génération de rapports personnalisés"
-        ]
-      },
-      "governance": {
-        "title": "Cadre de Gouvernance IA",
-        "description": "Mettez en place des politiques d'utilisation responsable de l'IA et assurez la conformité dans votre organisation.",
-        "features": [
-          "Développement de politiques d'utilisation",
-          "Protocoles de sécurité des données",
-          "Surveillance de la conformité",
-          "Directives éthiques",
-          "Outils d'évaluation des risques"
-        ]
-      }
-    },
-    "workflow": [
+"enterpriseSolutions": {
+  "learnMore": "En savoir plus",
+  "valuePropsSection": {
+    "badge": "Pour les Organisations de Toutes Tailles",
+    "title": "Solutions IA de niveau Entreprise",
+    "subtitle": "Transformez la façon dont votre organisation exploite l'IA avec des outils puissants conçus pour les équipes et les entreprises",
+    "enterpriseReady": "Prêt pour l'Entreprise",
+    "cards": [
       {
-        "title": "Consultation Initiale",
-        "description": "Nous évaluons vos besoins et objectifs spécifiques"
+        "title": "Collaboration d'Équipe",
+        "description": "Partagez une banque de prompts personnalisée avec toute votre équipe pour des cas d'utilisation métier spécifiques. Standardisez les interactions IA dans votre organisation.",
+        "stats": [
+          { "value": "87%", "label": "Augmentation de l'efficacité d'équipe" },
+          { "value": "100+", "label": "Utilisateurs simultanés" }
+        ]
       },
       {
-        "title": "Conception de Solution Personnalisée",
-        "description": "Nous créons un plan de mise en œuvre adapté"
+        "title": "Prompts Sur Mesure",
+        "description": "Prompts expertement conçus spécifiquement pour vos besoins métiers et les exigences de votre secteur.",
+        "stats": [
+          { "value": "250+", "label": "Modèles spécifiques par secteur" },
+          { "value": "48h", "label": "Livraison de prompts personnalisés" }
+        ]
       },
       {
-        "title": "Implémentation et Formation",
-        "description": "Nous déployons des solutions et formons vos équipes"
+        "title": "Analytiques Entreprise",
+        "description": "Mesurez l'impact de l'IA dans toute votre organisation avec des analyses détaillées sur l'utilisation, la performance et le ROI.",
+        "stats": [
+          { "value": "356h", "label": "Temps moyen économisé par mois" },
+          { "value": "287%", "label": "ROI moyen" }
+        ]
       },
       {
-        "title": "Support et Optimisation Continus",
-        "description": "Nous assurons une amélioration continue"
+        "title": "Formation & Coaching",
+        "description": "Programmes de formation complets pour aider vos équipes à maîtriser l'ingénierie des prompts IA et maximiser la productivité.",
+        "stats": [
+          { "value": "1 200+", "label": "Professionnels formés" },
+          { "value": "92%", "label": "Satisfaction utilisateur" }
+        ]
       }
     ],
-    "successMetrics": [
+    "metrics": [
       {
+        "icon": "TrendingUp",
         "value": "42%",
-        "title": "Augmentation de Productivité",
-        "description": "Gain de productivité moyen rapporté par les équipes utilisant Jaydai"
+        "label": "Augmentation moyenne de productivité"
       },
       {
-        "value": "67%",
-        "title": "Temps Économisé",
-        "description": "Réduction du temps passé sur des interactions IA répétitives"
+        "icon": "Clock",
+        "value": "68%",
+        "label": "Temps économisé sur la rédaction de prompts"
       },
       {
-        "value": "89%",
-        "title": "Satisfaction Utilisateur",
-        "description": "Membres de l'équipe rapportant une expérience IA améliorée avec Jaydai"
+        "icon": "Sparkles",
+        "value": "3,8x",
+        "label": "Qualité des réponses IA"
+      },
+      {
+        "icon": "Zap",
+        "value": "91%",
+        "label": "Taux d'adoption par les équipes"
       }
     ]
-  },
+  }
+},
   "faq": {
     "title": "Questions Fréquemment Posées",
     "subtitle": "Tout ce que vous devez savoir sur Jaydai",
@@ -551,5 +518,407 @@
     "title": "Transformez Votre Organisation avec Jaydai",
     "description": "Découvrez comment les entreprises maximisent leur potentiel IA avec des bibliothèques de prompts personnalisées, la collaboration d'équipe et des analyses."
   }
+},
+"enterpriseServices": {
+  "badge": "Solutions Complètes",
+  "title": "Services Entreprise",
+  "subtitle": "De l'implémentation à l'optimisation, nous fournissons un support de bout en bout pour votre parcours IA",
+  "sidebarTitle": "Services Entreprise",
+  "learnMore": "En savoir plus",
+  "keyFeatures": "Fonctionnalités Clés",
+  "visualization": "La visualisation du contenu s'affiche ici",
+  "process": {
+    "title": "Notre Processus d'Implémentation",
+    "subtitle": "Nous suivons une méthodologie éprouvée pour assurer une adoption réussie de l'IA dans votre organisation",
+    "steps": [
+      {
+        "title": "Découverte & Évaluation",
+        "description": "Nous analysons vos flux de travail actuels, identifions les opportunités d'IA et développons une stratégie sur mesure pour l'implémentation."
+      },
+      {
+        "title": "Conception de Solution",
+        "description": "Notre équipe crée des bibliothèques de prompts personnalisées, des plans d'implémentation et des programmes de formation spécifiques aux besoins de votre organisation."
+      },
+      {
+        "title": "Formation d'Équipe",
+        "description": "Nous fournissons une formation complète pour assurer que vos équipes peuvent efficacement exploiter les outils d'IA et l'ingénierie de prompts."
+      },
+      {
+        "title": "Implémentation",
+        "description": "Nous déployons Jaydai dans toute votre organisation avec des modèles personnalisés, des analyses et des cadres de gouvernance."
+      },
+      {
+        "title": "Optimisation & Support",
+        "description": "Analyse continue, amélioration des modèles et support pour assurer une amélioration continue et un ROI optimal."
+      }
+    ]
+  },
+  "cta": "Commencez Votre Parcours IA",
+  "services": [
+    {
+      "id": "training",
+      "title": "Formation & Coaching d'Équipe",
+      "description": "Équipez votre personnel des compétences nécessaires pour exploiter efficacement l'IA dans leurs tâches quotidiennes.",
+      "features": [
+        "Programmes d'ateliers personnalisés",
+        "Modules de formation spécifiques aux rôles",
+        "Développement de cas d'utilisation pratiques",
+        "Sessions de coaching continues",
+        "Suivi des progrès et certification"
+      ],
+      "cta": "Réserver une consultation de formation"
+    },
+    {
+      "id": "prompts",
+      "title": "Ingénierie de Prompts Personnalisés",
+      "description": "Développez des modèles de prompts sur mesure adaptés aux besoins spécifiques de votre entreprise et à vos cas d'utilisation.",
+      "features": [
+        "Bibliothèques de prompts spécifiques à l'industrie",
+        "Modèles adaptés aux départements",
+        "Tests de performance des prompts",
+        "Mises à jour d'optimisation régulières",
+        "Documentation complète"
+      ],
+      "cta": "Demander des prompts personnalisés"
+    },
+    {
+      "id": "analytics",
+      "title": "Tableau de Bord Analytique Entreprise",
+      "description": "Suivez le ROI et les modèles d'utilisation dans toute votre organisation avec des rapports complets.",
+      "features": [
+        "Métriques d'utilisation à l'échelle de l'équipe",
+        "Suivi des gains de productivité",
+        "Rapports de comparaison des départements",
+        "Analyses d'économies de coûts",
+        "Génération de rapports personnalisés"
+      ],
+      "cta": "Voir la démo analytique"
+    },
+    {
+      "id": "consulting",
+      "title": "Conseil en Implémentation IA",
+      "description": "Orientation stratégique pour intégrer l'IA dans les flux de travail et les processus métier existants.",
+      "features": [
+        "Analyse des processus métier",
+        "Évaluation des opportunités IA",
+        "Feuille de route d'implémentation",
+        "Cadre de mesure du ROI",
+        "Support à la gestion du changement"
+      ],
+      "cta": "Planifier une consultation"
+    },
+    {
+      "id": "governance",
+      "title": "Cadre de Gouvernance IA",
+      "description": "Mettez en œuvre des politiques d'utilisation responsable de l'IA et assurez la conformité dans toute votre organisation.",
+      "features": [
+        "Développement de politiques d'utilisation",
+        "Protocoles de sécurité des données",
+        "Surveillance de la conformité",
+        "Directives éthiques",
+        "Outils d'évaluation des risques"
+      ],
+      "cta": "En savoir plus sur la gouvernance"
+    }
+  ]
+},
+"enterpriseTeam": {
+  "badge": "Notre Équipe d'Experts",
+  "title": "Rencontrez Nos Experts en Implémentation d'IA",
+  "subtitle": "Notre équipe entreprise apporte des décennies d'expérience en transformation IA et en ingénierie de prompts",
+  "sidebarTitle": "Équipe de Direction Entreprise",
+  "meet": "Rencontrez",
+  "about": "À propos",
+  "specialties": "Spécialités",
+  "credentials": "Certifications",
+  "requestConsultation": "Demander une Consultation",
+  "scheduleMeeting": "Planifier une Réunion",
+  "expertiseSection": {
+    "title": "Notre Expertise Entreprise",
+    "credentials": {
+      "title": "Certifications de Haut Niveau",
+      "description": "Notre équipe apporte des certifications des institutions IA de premier plan et des entreprises du Fortune 500"
+    },
+    "focus": {
+      "title": "Focus Entreprise",
+      "description": "Spécialisée dans l'implémentation IA pour les organisations de toutes tailles dans tous les secteurs"
+    },
+    "success": {
+      "title": "Succès Client",
+      "description": "Historique de transformations IA réussies pour plus de 50+ clients entreprise"
+    }
+  },
+  "caseStudiesLink": "Voir nos études de cas entreprise",
+  "teamMembers": [
+    {
+      "id": 1,
+      "name": "Quentin",
+      "role": "PDG & Responsable de la Stratégie IA",
+      "bio": "Plus de 10 ans d'expérience dans l'implémentation IA et la transformation d'entreprise. A dirigé précédemment des initiatives IA dans des entreprises du Fortune 500.",
+      "specialties": ["Stratégie d'Entreprise", "Intégration IA", "Leadership"],
+      "badges": ["MBA de Harvard", "Ancien de Google AI"]
+    },
+    {
+      "id": 2,
+      "name": "Michael Chen",
+      "role": "CTO & Responsable de l'Ingénierie des Prompts",
+      "bio": "Expert en ingénierie de prompts et modèles de langage large. A construit des systèmes IA alimentant des millions d'interactions quotidiennes.",
+      "specialties": ["Ingénierie de Prompts", "Fine-tuning de LLM", "Leadership Technique"],
+      "badges": ["IA du MIT", "Contributeur OpenAI"]
+    }
+  ]
+},
+"enterprisePricing": {
+  "badge": "Solutions Entreprise",
+  "title": "Tarification Entreprise Transparente",
+  "subtitle": "Options flexibles pour soutenir la transformation IA de votre organisation",
+  "tabs": {
+    "plans": "Plans d'Abonnement",
+    "implementation": "Services"
+  },
+  "billingToggle": {
+    "monthly": "Mensuel",
+    "annually": "Annuel",
+    "discount": "(-20%)"
+  },
+  "featureLabels": {
+    "included": "Ce qui est inclus :",
+    "notIncluded": "Non inclus :",
+    "popular": "Populaire",
+    "customPricing": "Tarification personnalisée",
+    "perEmployee": "par employé / mois",
+    "oneTimeFee": "frais unique",
+    "perDay": "par jour",
+    "estimatedTimeframe": "Délai estimé :",
+    "packageIncludes": "Le forfait comprend :"
+  },
+  "enterpriseFeatures": {
+    "title": "Fonctionnalités de niveau entreprise",
+    "categories": [
+      {
+        "title": "Gestion d'Équipe",
+        "icon": "Users",
+        "color": "blue",
+        "features": [
+          "Contrôle d'accès basé sur les rôles",
+          "Partage de modèles d'équipe",
+          "Analytiques d'équipe"
+        ]
+      },
+      {
+        "title": "Sécurité & Conformité",
+        "icon": "Shield",
+        "color": "purple",
+        "features": [
+          "Intégration SSO",
+          "Contrôles de confidentialité des données",
+          "Rapports de conformité"
+        ]
+      },
+      {
+        "title": "Analytiques Entreprise",
+        "icon": "BarChart3",
+        "color": "green",
+        "features": [
+          "Suivi du ROI",
+          "Analytiques par département",
+          "Rapports personnalisés"
+        ]
+      },
+      {
+        "title": "Support Expert",
+        "icon": "Zap",
+        "color": "amber",
+        "features": [
+          "Responsable de succès dédié",
+          "Support prioritaire 24/7",
+          "Révisions commerciales trimestrielles"
+        ]
+      },
+      {
+        "title": "Déploiement Personnalisé",
+        "icon": "Building",
+        "color": "pink",
+        "features": [
+          "Domaine personnalisé",
+          "Accès API",
+          "Support d'intégration"
+        ]
+      },
+      {
+        "title": "Personnalisation",
+        "icon": "MessageCircle",
+        "color": "indigo",
+        "features": [
+          "Bibliothèques de prompts personnalisées",
+          "Formation personnalisée",
+          "Développement de fonctionnalités personnalisées"
+        ]
+      }
+    ]
+  },
+  "implementation": {
+    "intro": "Nos services professionnels garantissent que votre organisation tire le maximum de valeur de Jaydai dès le premier jour.",
+    "process": {
+      "title": "Notre Processus d'Implémentation",
+      "steps": [
+        {
+          "title": "Découverte",
+          "description": "Nous analysons vos flux de travail actuels et identifions les opportunités IA."
+        },
+        {
+          "title": "Planification",
+          "description": "Nous concevons une stratégie d'implémentation sur mesure pour votre organisation."
+        },
+        {
+          "title": "Déploiement",
+          "description": "Nous configurons Jaydai dans toute votre organisation avec des modèles personnalisés."
+        },
+        {
+          "title": "Formation",
+          "description": "Nous formons vos équipes et fournissons un support et une optimisation continus."
+        }
+      ]
+    }
+  },
+  "finalCta": {
+    "text": "Besoin d'une solution personnalisée pour votre organisation ? Nous proposons des forfaits entreprise sur mesure pour répondre à vos besoins spécifiques.",
+    "button": "Contactez Notre Équipe Entreprise"
+  },
+  "offerings": [
+    {
+      "id": "subscription",
+      "name": "Jaydai Enterprise",
+      "description": "Solution complète d'Assistant IA pour votre organisation",
+      "price": {
+        "monthly": "10 €",
+        "annually": "8 €"
+      },
+      "unit": "par employé / mois",
+      "cta": "Commencer",
+      "highlight": true,
+      "features": [
+        "Membres d'équipe illimités",
+        "Accès avancé basé sur les rôles",
+        "Modèles personnalisés illimités",
+        "Tableau de bord analytique entreprise",
+        "Responsable de succès dédié",
+        "Support prioritaire 24/7"
+      ],
+      "notIncluded": []
+    },
+    {
+      "id": "coaching",
+      "name": "Coaching IA",
+      "description": "Coaching personnalisé pour aider votre équipe à maîtriser l'IA",
+      "price": {
+        "monthly": "2 000 €",
+        "annually": "2 000 €"
+      },
+      "unit": "frais unique",
+      "cta": "Réserver Maintenant",
+      "highlight": false,
+      "features": [
+        "Coach IA expert",
+        "Plan de coaching personnalisé",
+        "Assistance pratique",
+        "Sessions de suivi",
+        "Évaluation des performances"
+      ],
+      "notIncluded": []
+    },
+    {
+      "id": "training",
+      "name": "Formation d'une Journée",
+      "description": "Formation intensive pour votre équipe sur les meilleures pratiques IA",
+      "price": {
+        "monthly": "4 500 €",
+        "annually": "4 500 €"
+      },
+      "unit": "par jour",
+      "cta": "Planifier la Formation",
+      "highlight": true,
+      "features": [
+        "Formation complète sur site",
+        "Programme personnalisé",
+        "Exercices pratiques",
+        "Matériels à emporter",
+        "Certificat de réussite"
+      ],
+      "notIncluded": []
+    },
+    {
+      "id": "audit",
+      "name": "Audit de Maturité IA",
+      "description": "Évaluation complète de la préparation à l'IA de votre organisation",
+      "price": {
+        "monthly": "1 000 €",
+        "annually": "1 000 €"
+      },
+      "unit": "frais unique",
+      "cta": "Demander un Audit",
+      "highlight": false,
+      "features": [
+        "Évaluation de maturité IA",
+        "Analyse des écarts",
+        "Benchmarking",
+        "Rapport de recommandations",
+        "Présentation exécutive"
+      ],
+      "notIncluded": []
+    }
+  ],
+  "featureTooltips": {
+    "customPrompts": "Développez des modèles de prompts sur mesure adaptés aux besoins spécifiques et aux cas d'utilisation de votre entreprise.",
+    "teamSharing": "Partagez des modèles de prompts et des bibliothèques dans toute votre organisation avec un contrôle d'accès basé sur les rôles.",
+    "dataPrivacy": "Contrôles avancés de confidentialité des données garantissant que vos données de prompts et d'analyses restent sécurisées.",
+    "dedicatedSuccess": "Un responsable de succès client dédié vous aidera à implémenter et optimiser Jaydai dans toute votre organisation.",
+    "analytics": "Suivez l'utilisation, le ROI et les gains d'efficacité à travers les équipes et les départements.",
+    "apiAccess": "Accédez aux fonctionnalités de Jaydai par programmation via notre API d'entreprise sécurisée.",
+    "prioritySupport": "Support prioritaire 24/7 avec des temps de réponse garantis.",
+    "customTraining": "Sessions de formation sur mesure pour que les équipes maîtrisent l'ingénierie des prompts et les workflows IA.",
+    "customDomain": "Déployez Jaydai sur votre propre domaine personnalisé pour un accès à l'échelle de l'entreprise.",
+    "ssoIntegration": "Intégration de l'authentification unique avec votre fournisseur d'identité existant.",
+    "promptLibrary": "Accès à notre bibliothèque complète de modèles de prompts expertement conçus pour tous les secteurs.",
+    "complianceReporting": "Rapports détaillés de conformité pour l'utilisation de l'IA dans toute votre organisation."
+  }
+},
+"faq": {
+  "title": "Questions Fréquemment Posées",
+  "subtitle": "Tout ce que vous devez savoir sur Jaydai",
+  "ctaPrompt": "Vous avez encore des questions ? Nous sommes là pour vous aider.",
+  "ctaButton": "Contactez-nous",
+  "faqs": [
+    {
+      "id": 1,
+      "question": "Qu'est-ce que Jaydai et comment fonctionne-t-il ?",
+      "answer": "Jaydai est une extension Chrome qui améliore votre expérience ChatGPT en fournissant une bibliothèque de prompts experts organisés par thème. Elle vous permet de sauvegarder des prompts personnalisés pour un accès instantané et fournit des analyses détaillées sur votre utilisation. En un seul clic, vous pouvez accéder à notre écosystème conçu pour optimiser vos interactions avec ChatGPT, tant pour des projets professionnels que personnels."
+    },
+    {
+      "id": 2,
+      "question": "Jaydai est-il gratuit ?",
+      "answer": "Oui, Jaydai propose une version gratuite qui inclut l'accès à notre bibliothèque de prompts de base et aux fonctionnalités de sauvegarde de modèles. Nous proposons également des plans premium pour les particuliers et les équipes qui incluent des fonctionnalités supplémentaires telles que des analyses avancées, un stockage illimité de modèles et un support prioritaire."
+    },
+    {
+      "id": 3,
+      "question": "Comment installer l'extension Chrome Jaydai ?",
+      "answer": "L'installation de Jaydai est simple. Visitez simplement le Chrome Web Store, recherchez 'Jaydai', et cliquez sur 'Ajouter à Chrome'. Une fois installé, vous verrez l'icône Jaydai dans la barre d'outils de votre navigateur. Cliquez dessus pour commencer à utiliser notre bibliothèque de prompts et nos modèles avec ChatGPT."
+    },
+    {
+      "id": 4,
+      "question": "Puis-je créer et sauvegarder mes propres modèles de prompts ?",
+      "answer": "Absolument ! Jaydai vous permet de créer, sauvegarder et organiser vos propres modèles de prompts personnalisés. Cette fonctionnalité vous aide à économiser du temps lors de projets nécessitant des interactions IA similaires. Vous pouvez catégoriser vos modèles, les modifier à tout moment et y accéder en un seul clic."
+    },
+    {
+      "id": 5,
+      "question": "Quels types d'analyses Jaydai fournit-il ?",
+      "answer": "Jaydai fournit des analyses détaillées sur votre utilisation de l'IA, incluant le nombre de prompts utilisés, le temps économisé, l'empreinte énergétique et l'efficacité des différents types de prompts. Ces insights vous aident à comprendre vos modèles d'interaction et à optimiser votre workflow IA pour de meilleurs résultats."
+    },
+    {
+      "id": 6,
+      "question": "Existe-t-il une version entreprise pour les équipes ?",
+      "answer": "Oui, nous proposons une version entreprise qui permet à toute votre équipe de partager une banque de prompts personnalisée pour vos cas d'utilisation métier spécifiques. Le plan entreprise inclut des fonctionnalités de gestion d'équipe, des modèles partagés, des analyses d'utilisation à l'échelle de l'équipe et un support dédié."
+    }
+  ]
 }
 }

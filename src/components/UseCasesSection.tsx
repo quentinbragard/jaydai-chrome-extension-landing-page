@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useState } from "react"
+import { useTranslations } from "next-intl"
 import { motion } from "framer-motion"
 import { 
   Code, 
@@ -108,6 +109,7 @@ const useCases = [
 ]
 
 const UseCasesSection = () => {
+  const t = useTranslations('useCasesSection')
   const [activeCase, setActiveCase] = useState(useCases[0].id)
   
   const activeUseCase = useCases.find(uc => uc.id === activeCase) || useCases[0]
@@ -127,7 +129,7 @@ const UseCasesSection = () => {
             transition={{ duration: 0.6 }}
             className="text-3xl md:text-4xl font-bold text-foreground"
           >
-            Real-World Use Cases
+            {t('title')}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -136,7 +138,7 @@ const UseCasesSection = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="mt-4 text-xl text-foreground/70 max-w-2xl mx-auto"
           >
-            See how Jaydai transforms AI workflows across different roles
+            {t('subtitle')}
           </motion.p>
         </div>
 
@@ -263,14 +265,14 @@ const UseCasesSection = () => {
           className="mt-16 text-center"
         >
           <p className="text-foreground/70 mb-6">
-            Access hundreds of expertly-crafted prompts for your specific needs
+            {t('ctaDescription')}
           </p>
           <a
-            href="https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd"
+            href={t('ctaLink')}
             target="_blank"
             className="px-8 py-3 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium"
           >
-            Get Started Free
+            {t('ctaButtonText')}
           </a>
         </motion.div>
       </div>
