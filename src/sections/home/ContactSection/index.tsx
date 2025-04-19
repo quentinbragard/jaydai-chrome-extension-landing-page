@@ -1,12 +1,49 @@
 "use client"
 
-import React from "react"
+import React, { useState } from "react"
 import { motion } from "framer-motion"
 import { useTranslations } from "next-intl"
 import { Mail, MessageSquare, Send } from "lucide-react"
+import { submitContactForm } from "./action"
 
 const ContactSection = () => {
   const t = useTranslations('contact')
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+  const [success, setSuccess] = useState<boolean>(false)
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  })
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    setError(null)
+    setSuccess(false)
+
+    try {
+      const result = await submitContactForm(formData)
+      
+      if (result.success) {
+        setSuccess(true)
+        setFormData({ name: '', email: '', subject: '', message: '' })
+      } else {
+        setError(result.error || t('form.error'))
+      }
+    } catch (err) {
+      setError(t('form.error'))
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target
+    setFormData(prev => ({ ...prev, [name]: value }))
+  }
 
   return (
     <section id="contact" className="py-20 bg-secondary/10">
@@ -82,7 +119,17 @@ const ContactSection = () => {
           
           <div className="bg-card border border-border rounded-xl p-8">
             <h3 className="text-xl font-semibold text-foreground mb-6 text-center">{t('form.title')}</h3>
-            <form className="space-y-6">
+            {success && (
+              <div className="mb-6 p-4 bg-green-500/10 text-green-500 rounded-md text-center">
+                {t('form.success')}
+              </div>
+            )}
+            {error && (
+              <div className="mb-6 p-4 bg-red-500/10 text-red-500 rounded-md text-center">
+                {error}
+              </div>
+            )}
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-foreground/70 mb-2">
@@ -91,6 +138,10 @@ const ContactSection = () => {
                   <input
                     type="text"
                     id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
                     className="w-full px-4 py-2 rounded-md border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
                     placeholder={t('form.namePlaceholder')}
                   />
@@ -102,6 +153,10 @@ const ContactSection = () => {
                   <input
                     type="email"
                     id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
                     className="w-full px-4 py-2 rounded-md border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
                     placeholder={t('form.emailPlaceholder')}
                   />
@@ -114,6 +169,10 @@ const ContactSection = () => {
                 <input
                   type="text"
                   id="subject"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  required
                   className="w-full px-4 py-2 rounded-md border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
                   placeholder={t('form.subjectPlaceholder')}
                 />
@@ -124,6 +183,10 @@ const ContactSection = () => {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
                   rows={5}
                   className="w-full px-4 py-2 rounded-md border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
                   placeholder={t('form.messagePlaceholder')}
@@ -132,9 +195,10 @@ const ContactSection = () => {
               <div className="text-center">
                 <button
                   type="submit"
-                  className="px-8 py-3 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium"
+                  disabled={isSubmitting}
+                  className="px-8 py-3 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {t('form.submitButton')}
+                  {isSubmitting ? t('form.submitting') : t('form.submitButton')}
                 </button>
               </div>
             </form>
