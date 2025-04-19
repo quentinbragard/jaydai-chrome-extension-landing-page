@@ -98,7 +98,6 @@ const EnterpriseContactSection = () => {
   
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    console.log('Form submitted:', formData)
     // Here you would normally send the data to your backend
     
     // For demo purposes, just show the success message
@@ -430,8 +429,8 @@ const EnterpriseContactSection = () => {
                           <div>
                             <h4 className="font-medium">Email Us</h4>
                             <p className="text-foreground/70 text-sm mb-1">For enterprise inquiries:</p>
-                            <a href="mailto:enterprise@jaydai.com" className="text-primary hover:underline">
-                              enterprise@jaydai.com
+                            <a href="mailto:enterprise@jayd.ai" className="text-primary hover:underline">
+                              enterprise@jayd.ai
                             </a>
                           </div>
                         </div>
