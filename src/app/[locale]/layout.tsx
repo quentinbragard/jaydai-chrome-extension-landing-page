@@ -4,7 +4,7 @@ import { getTranslations } from 'next-intl/server'
 import NextIntlClientProvider from '@/providers/NextIntlClientProvider'
 import { locales } from '@/lib/navigation'
 import Navbar from '@/components/common/Navbar'
-import Footer from '@/components/common/Footer'
+import Footer from '@/components/Footer'
 
 type LocaleLayoutProps = {
   children: ReactNode

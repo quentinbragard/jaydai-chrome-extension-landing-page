@@ -1,6 +1,10 @@
 import type { Metadata } from 'next'
+import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
-import { ThemeProvider } from '@/providers/ThemeProvider'
+import Navbar from '@/components/common/Navbar'
+import Footer from '@/components/Footer'
+import { ThemeProvider } from '@/components/ThemeProvider'
+
 import { Poppins, Roboto } from 'next/font/google'
 
 const poppins = Poppins({

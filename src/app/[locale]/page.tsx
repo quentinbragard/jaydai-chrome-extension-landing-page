@@ -7,16 +7,15 @@ import FAQSection from "@/sections/home/FAQSection"
 import TemplatesSection from "@/sections/home/TemplatesSection"
 import ContactSection from "@/sections/home/ContactSection"
 import HowItWorksSection from "@/sections/home/HowItWorksSection"
+import UseCasesSection from "@/components/UseCasesSection"
 import AnalyticsDashboardSection from "@/sections/home/AnalyticsDashboardSection"
-import EnterpriseSolutionsSection from "@/sections/enterprise/ServicesSection"
+import EnterpriseServicesSection from "@/sections/enterprise/ServicesSection"
 import PricingSection from "@/sections/home/PricingSection"
 import HeroSection from "@/sections/home/HeroSection"
-import SubtleBackgroundEffect from "@/components/effects/SubtleBackgroundEffect"
+import SubtleBackgroundEffect from "@/components/SubtleBackgroundEffect"
 import FeaturesSection from "@/sections/home/FeaturesSection"
-import { useTranslations } from "next-intl"
 
 export default function Home() {
-  const t = useTranslations('hero')
   // State for video dialog
   const [isVideoDialogOpen, setIsVideoDialogOpen] = useState(false)
   
@@ -60,8 +59,10 @@ export default function Home() {
               X
             </button>
             <div className="p-6">
-              <h3 className="text-2xl font-bold text-foreground">{t('badge')}</h3>
-              <p className="mt-2 text-foreground/70">{t('subtitle')}</p>
+              <h3 className="text-2xl font-bold text-foreground">Maximize your AI potential with Jaydai</h3>
+              <p className="mt-2 text-foreground/70">
+                See how Jaydai transforms your ChatGPT experience with expert prompts, custom templates, and detailed analytics.
+              </p>
             </div>
           </div>
         </div>
@@ -89,7 +90,7 @@ export default function Home() {
       <TestimonialsSection />
       
       {/* Enterprise Solutions Section */}
-      <EnterpriseSolutionsSection />
+      <EnterpriseServicesSection />
       
       {/* FAQ Section */}
       <FAQSection />
