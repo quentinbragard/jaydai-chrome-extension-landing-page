@@ -30,11 +30,11 @@ const Footer = () => {
               {t('description')}
             </p>
             <div className="flex space-x-4 mt-6">
-              <Link href="https://linkedin.com" target="_blank" className="text-foreground/70 hover:text-primary transition-colors">
+              <Link href="https://www.linkedin.com/company/104914264" target="_blank" className="text-foreground/70 hover:text-primary transition-colors">
                 <Linkedin size={20} />
                 <span className="sr-only">{t('linkedin')}</span>
               </Link>
-              <Link href="mailto:contact@jaydai.com" className="text-foreground/70 hover:text-primary transition-colors">
+              <Link href="mailto:contact@jayd.ai" className="text-foreground/70 hover:text-primary transition-colors">
                 <Mail size={20} />
                 <span className="sr-only">{t('email')}</span>
               </Link>

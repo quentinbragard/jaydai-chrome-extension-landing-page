@@ -29,7 +29,7 @@ const teamMembers = [
     social: {
       linkedin: "https://linkedin.com",
       twitter: "https://twitter.com",
-      email: "mailto:sarah@jaydai.com"
+      email: "mailto:sarah@jayd.ai"
     }
   },
   {
@@ -43,7 +43,7 @@ const teamMembers = [
     social: {
       linkedin: "https://linkedin.com",
       twitter: "https://twitter.com",
-      email: "mailto:michael@jaydai.com"
+      email: "mailto:michael@jayd.ai"
     }
   },
   {
@@ -57,7 +57,7 @@ const teamMembers = [
     social: {
       linkedin: "https://linkedin.com",
       twitter: "https://twitter.com",
-      email: "mailto:elena@jaydai.com"
+      email: "mailto:elena@jayd.ai"
     }
   },
   {
@@ -71,7 +71,7 @@ const teamMembers = [
     social: {
       linkedin: "https://linkedin.com",
       twitter: "https://twitter.com",
-      email: "mailto:david@jaydai.com"
+      email: "mailto:david@jayd.ai"
     }
   }
 ]

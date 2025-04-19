@@ -75,13 +75,6 @@ const HeroEnterpriseSection = () => {
                 <span>{t('ctaDemo')}</span>
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </a>
-              <button
-                onClick={() => setVideoDialogOpen(true)}
-                className="px-8 py-3 rounded-md border border-border bg-background/50 backdrop-blur-sm text-foreground hover:bg-card transition-colors font-medium flex items-center justify-center gap-2"
-              >
-                <Play size={18} className="text-primary" />
-                <span>{t('ctaVideo')}</span>
-              </button>
             </motion.div>
             
             <motion.div
@@ -106,45 +99,6 @@ const HeroEnterpriseSection = () => {
           <HeroTabs />
         </div>
       </div>
-      
-      {/* Video dialog */}
-      {videoDialogOpen && (
-        <div 
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-background/80 backdrop-blur-sm"
-          onClick={() => setVideoDialogOpen(false)}
-        >
-          <motion.div 
-            initial={{ scale: 0.9, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            className="relative w-full max-w-4xl bg-card rounded-xl shadow-2xl overflow-hidden"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="aspect-video w-full bg-black">
-              <iframe 
-                width="100%" 
-                height="100%" 
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                title="Enterprise Success Stories" 
-                frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowFullScreen
-              ></iframe>
-            </div>
-            <button
-              onClick={() => setVideoDialogOpen(false)}
-              className="absolute top-4 right-4 p-2 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors"
-            >
-              <X size={20} />
-            </button>
-            <div className="p-6">
-              <h3 className="text-2xl font-bold text-foreground">{t('videoModal.title')}</h3>
-              <p className="mt-2 text-foreground/70">
-                {t('videoModal.description')}
-              </p>
-            </div>
-          </motion.div>
-        </div>
-      )}
     </section>
   )
 }

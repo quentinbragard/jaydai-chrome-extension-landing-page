@@ -64,7 +64,7 @@ const TeamMemberDetail: React.FC<TeamMemberDetailProps> = ({
               <Linkedin size={16} />
             </a>
             <a 
-              href={member.id === 1 ? "mailto:quentin@jaydai.com" : "mailto:jean-baptiste@jaydai.com"}
+              href={member.id === 1 ? "mailto:quentin@jayd.ai" : "mailto:jean-baptiste@jayd.ai"}
               className="w-8 h-8 flex items-center justify-center rounded-full bg-background/80 text-foreground/70 hover:text-primary transition-colors"
             >
               <Mail size={16} />

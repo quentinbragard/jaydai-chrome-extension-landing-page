@@ -52,8 +52,6 @@ const LanguageSwitcher = ({ className = "" }: LanguageSwitcherProps) => {
   const handleLocaleChange = (newLocale: string) => {
     // Only change if it's a different locale
     if (newLocale !== locale) {
-      console.log(`Changing locale from ${locale} to ${newLocale}`);
-      console.log(`Current pathname: ${pathname}`);
       
       try {
         // Use the router.replace with the new locale

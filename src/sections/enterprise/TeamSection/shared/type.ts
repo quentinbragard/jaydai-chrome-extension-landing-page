@@ -12,5 +12,5 @@ export interface TeamMember {
   export const socialLinks = {
     linkedin: "https://linkedin.com",
     twitter: "https://twitter.com",
-    email: "mailto:contact@jaydai.com"
+    email: "mailto:contact@jayd.ai"
   }

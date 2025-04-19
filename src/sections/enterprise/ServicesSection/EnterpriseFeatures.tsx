@@ -72,7 +72,6 @@ const EnterpriseFeatures: React.FC<EnterpriseFeaturesProps> = ({
 }) => {
   const t = useTranslations(translationNamespace)
   const services = t.raw('services')
-  console.log("services======================", services)
   const [activeService, setActiveService] = useState(services[0].id)
   
   // Get the active service data

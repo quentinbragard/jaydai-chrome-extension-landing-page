@@ -19,7 +19,6 @@ interface Testimonial {
 
 const TestimonialsSection = () => {
   const t = useTranslations('testimonials')
-  console.log(t.raw("users"))
 
   const testimonials = t.raw("users")
 

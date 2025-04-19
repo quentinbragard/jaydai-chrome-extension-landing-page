@@ -13,7 +13,6 @@ export type ContactFormData = {
 export async function submitContactForm(data: ContactFormData) {
   try {
     const supabase = await createClient()
-    console.log("data", data)
     
     const { error } = await supabase
       .from('landing_page_contact_form')
