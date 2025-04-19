@@ -12,7 +12,6 @@ import {
   LineChart 
 } from "lucide-react"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import  PulseBeams  from "@/components/effects/PulseBeams" // We'll move this later
 import { useTranslations } from "next-intl"
 
 export const HeroTabs = () => {
@@ -26,9 +25,6 @@ export const HeroTabs = () => {
       className="w-full lg:w-1/2 mt-12 lg:mt-0"
     >
       <div className="relative p-1 bg-gradient-to-br from-primary/20 via-primary/5 to-background rounded-2xl border border-border/50 shadow-2xl">
-        <div className="absolute inset-0 pointer-events-none">
-          <PulseBeams />
-        </div>
         
         <Tabs defaultValue="teams" className="w-full">
           <div className="flex items-center justify-between px-4 py-3 border-b border-border/40">
