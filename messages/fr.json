@@ -851,12 +851,50 @@
     "complianceReporting": "Rapports détaillés de conformité pour l'utilisation de l'IA dans votre organisation."
   }
 },
-"faq": {
+"homeFAQ": {
   "title": "Questions Fréquemment Posées",
   "subtitle": "Tout ce que vous devez savoir sur Jaydai",
   "ctaPrompt": "Vous avez encore des questions ? Nous sommes là pour vous aider.",
   "ctaButton": "Contactez-nous",
-  "faqs": [
+  "questions": [
+    {
+      "id": 1,
+      "question": "Qu'est-ce que Jaydai et comment fonctionne-t-il ?",
+      "answer": "Jaydai est une extension Chrome qui améliore votre expérience ChatGPT en fournissant une bibliothèque de prompts experts organisés par thème. Elle vous permet de sauvegarder des prompts personnalisés pour un accès instantané et fournit des analyses détaillées sur votre utilisation. En un seul clic, vous pouvez accéder à notre écosystème conçu pour optimiser vos interactions avec ChatGPT, tant pour des projets professionnels que personnels."
+    },
+    {
+      "id": 2,
+      "question": "Jaydai est-il gratuit ?",
+      "answer": "Oui, Jaydai propose une version gratuite qui inclut l'accès à notre bibliothèque de prompts de base et aux fonctionnalités de sauvegarde de modèles. Nous proposons également des plans premium pour les particuliers et les équipes qui incluent des fonctionnalités supplémentaires telles que des analyses avancées, un stockage illimité de modèles et un support prioritaire."
+    },
+    {
+      "id": 3,
+      "question": "Comment installer l'extension Chrome Jaydai ?",
+      "answer": "L'installation de Jaydai est simple. Visitez simplement le Chrome Web Store, recherchez 'Jaydai', et cliquez sur 'Ajouter à Chrome'. Une fois installé, vous verrez l'icône Jaydai dans la barre d'outils de votre navigateur. Cliquez dessus pour commencer à utiliser notre bibliothèque de prompts et nos modèles avec ChatGPT."
+    },
+    {
+      "id": 4,
+      "question": "Puis-je créer et sauvegarder mes propres modèles de prompts ?",
+      "answer": "Absolument ! Jaydai vous permet de créer, sauvegarder et organiser vos propres modèles de prompts personnalisés. Cette fonctionnalité vous aide à économiser du temps lors de projets nécessitant des interactions IA similaires. Vous pouvez catégoriser vos modèles, les modifier à tout moment et y accéder en un seul clic."
+    },
+    {
+      "id": 5,
+      "question": "Quels types d'analyses Jaydai fournit-il ?",
+      "answer": "Jaydai fournit des analyses détaillées sur votre utilisation de l'IA, incluant le nombre de prompts utilisés, le temps économisé, l'empreinte énergétique et l'efficacité des différents types de prompts. Ces insights vous aident à comprendre vos modèles d'interaction et à optimiser votre workflow IA pour de meilleurs résultats."
+    },
+    {
+      "id": 6,
+      "question": "Existe-t-il une version entreprise pour les équipes ?",
+      "answer": "Oui, nous proposons une version entreprise qui permet à toute votre équipe de partager une banque de prompts personnalisée pour vos cas d'utilisation métier spécifiques. Le plan entreprise inclut des fonctionnalités de gestion d'équipe, des modèles partagés, des analyses d'utilisation à l'échelle de l'équipe et un support dédié."
+    }
+  ]
+},
+"enterpriseFAQ": {
+  "title": "Questions Fréquemment Posées",
+  "subtitle": "Tout ce que vous devez savoir sur Jaydai",
+  "ctaPrompt": "Vous avez encore des questions ? Nous sommes là pour vous aider.",
+  "ctaButton": "Contactez-nous",
+  "questions": [
     {
       "id": 1,
       "question": "Qu'est-ce que Jaydai et comment fonctionne-t-il ?",

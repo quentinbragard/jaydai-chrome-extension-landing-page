@@ -6,10 +6,10 @@ import { useTranslations } from "next-intl"
 import { Plus, Minus } from "lucide-react"
 
 const FAQSection = () => {
-  const t = useTranslations('faq')
+  const t = useTranslations('enterpriseFAQ')
   const [openIndex, setOpenIndex] = React.useState<number | null>(0)
   
-  const faqs = t.raw('faqs')
+  const faqs = t.raw('questions')
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index)

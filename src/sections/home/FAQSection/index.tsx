@@ -12,41 +12,10 @@ interface FAQ {
 }
 
 const FAQSection = () => {
-  const t = useTranslations('faq')
+  const t = useTranslations('homeFAQ')
   const [openIndex, setOpenIndex] = React.useState<number | null>(0)
 
-  const faqs: FAQ[] = [
-    {
-      id: 1,
-      question: t('questions.1.question'),
-      answer: t('questions.1.answer')
-    },
-    {
-      id: 2,
-      question: t('questions.2.question'),
-      answer: t('questions.2.answer')
-    },
-    {
-      id: 3,
-      question: t('questions.3.question'),
-      answer: t('questions.3.answer')
-    },
-    {
-      id: 4,
-      question: t('questions.4.question'),
-      answer: t('questions.4.answer')
-    },
-    {
-      id: 5,
-      question: t('questions.5.question'),
-      answer: t('questions.5.answer')
-    },
-    {
-      id: 6,
-      question: t('questions.6.question'),
-      answer: t('questions.6.answer')
-    }
-  ]
+  const questions = t.raw('questions')
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index)
@@ -84,7 +53,7 @@ const FAQSection = () => {
           className="max-w-3xl mx-auto"
         >
           <div className="space-y-4">
-            {faqs.map((faq, index) => (
+            {questions.map((faq: FAQ, index: number) => (
               <div 
                 key={faq.id}
                 className="border border-border rounded-lg overflow-hidden bg-card"
@@ -121,14 +90,14 @@ const FAQSection = () => {
 
           <div className="mt-12 text-center">
             <p className="text-foreground/70 mb-6">
-              {t('ctaDescription')}
+              {t('ctaPrompt')}
             </p>
             
             <a
               href="#contact"
               className="px-6 py-2 rounded-md bg-secondary/50 text-foreground hover:bg-secondary/70 transition-colors"
             >
-              {t('ctaButtonText')}
+              {t('ctaButton')}
             </a>
           </div>
         </motion.div>
