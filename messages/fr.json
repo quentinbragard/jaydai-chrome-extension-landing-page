@@ -2,7 +2,7 @@
   "nav": {
   "features": "Fonctionnalités",
   "testimonials": "Témoignages",
-  "templates": "Modèles",
+  "templates": "Prompts",
   "pricing": "Tarifs",
   "faq": "FAQ",
   "contact": "Contact",
@@ -237,33 +237,31 @@
   },
   "testimonials": {
     "title": "Ce Que Disent Nos Utilisateurs",
-    "subtitle": "Rejoignez des milliers de professionnels qui maximisent leur potentiel IA avec Jaydai",
-    "users": {
-      "1": {
-        "name": "Sarah Johnson",
-        "role": "Directrice Marketing",
-        "company": "TechGrowth Inc.",
-        "content": "Jaydai a complètement transformé la façon dont notre équipe marketing utilise l'IA. Les modèles de prompts nous font gagner des heures chaque semaine, et les analytiques nous aident à comprendre quelles approches fonctionnent le mieux."
+    "subtitle": "Comme eux, maximisez votre potentiel IA avec Jaydai",
+    "viewOnGoogle": "Voir sur Google",
+    "users": [
+      {
+        "name": "Guillaume Charrel",
+        "link": "https://chromewebstore.google.com/reviews/daf3636e-a439-41ee-97a6-3dc598c07990",
+        "content": "Très pratique ! Les prompts proposés me permettent de gagner beaucoup de temps et de générer des informations de meilleure qualité sur ChatGPT."
       },
-      "2": {
-        "name": "Michael Chen",
-        "role": "Créateur de Contenu",
-        "company": "Digital Nomad",
-        "content": "En tant qu'utilisateur quotidien de ChatGPT, Jaydai est un véritable game-changer. La possibilité de sauvegarder et d'organiser mes prompts personnalisés signifie que je n'ai plus jamais à réécrire les mêmes instructions."
+      {
+        "name": "Thomas Mendy",
+        "link": "https://chromewebstore.google.com/reviews/7480123c-1b20-42a0-b101-e6aaec699093",
+        "content": "Super outil ! L’ajout de templates personnalisés est vraiment intéressant pour simplifier l’utilisation de ChatGPT. Y’a plus qu’à bosser ses meilleurs prompts !"
       },
-      "3": {
-        "name": "Emily Rodriguez",
-        "role": "Directrice de Produit",
-        "company": "InnovateCorp",
-        "content": "La fonctionnalité d'analytique est ce qui distingue Jaydai. Pouvoir suivre l'utilisation de l'IA à travers l'équipe nous a aidés à optimiser nos workflows et à identifier les opportunités de formation."
+      {
+        "name": "François Galy",
+        "role": "https://chromewebstore.google.com/reviews/1e1408b2-b4ff-4649-8834-344d631b8659",
+        "content": "Très pratique. Je m'en sers régulièrement pour avoir des prompts complets à porter de main, notamment pour l'analyse de document pour ma startup."
       },
-      "4": {
-        "name": "David Park",
-        "role": "Ingénieur Logiciel",
+      {
+        "name": "Mariam Gassama",
+        "link": "https://chromewebstore.google.com/reviews/afee7b77-4f3f-4987-ace0-26306988e472",
         "company": "DevStack",
-        "content": "J'adore comment Jaydai me tient informé des avancées en IA. La bibliothèque de prompts sélectionnés me permet d'utiliser toujours les techniques les plus efficaces sans avoir à faire des recherches moi-même."
+        "content": "Enfin ! Un outil incroyablement utile pour toutes celles et ceux qui veulent obtenir une excellente réponse en un seul prompt, sans itérations interminables. Impossible pour moi de revenir à ChatGPT sans ça."
       }
-    },
+    ],
     "cta": {
       "description": "Rejoignez des milliers d'utilisateurs qui ont transformé leur expérience IA avec Jaydai. Téléchargez notre extension Chrome aujourd'hui et voyez la différence par vous-même.",
       "buttonText": "Télécharger l'Extension",
@@ -534,7 +532,9 @@
         "Sessions de coaching continues",
         "Suivi des progrès et certification"
       ],
-      "cta": "Réserver une consultation de formation"
+      "cta": "Réserver une consultation de formation",
+      "imageUrl": "/images/coaching-illustration.png",
+      "imageAlt": "Team Training & Coaching"
     },
     {
       "id": "prompts",
@@ -547,7 +547,9 @@
         "Mises à jour d'optimisation régulières",
         "Documentation complète"
       ],
-      "cta": "Demander des prompts personnalisés"
+      "cta": "Demander des prompts personnalisés",
+      "imageUrl": "/images/custom-prompts-illustration.png",
+      "imageAlt": "Custom Prompt Engineering"
     },
     {
       "id": "analytics",
@@ -560,7 +562,9 @@
         "Analyses d'économies de coûts",
         "Génération de rapports personnalisés"
       ],
-      "cta": "Voir la démo analytique"
+      "cta": "Voir la démo analytique",
+      "imageUrl": "/images/analytics-illustration.png",
+      "imageAlt": "Enterprise Analytics Dashboard"
     },
     {
       "id": "consulting",
@@ -573,7 +577,9 @@
         "Cadre de mesure du ROI",
         "Support à la gestion du changement"
       ],
-      "cta": "Planifier une consultation"
+      "cta": "Planifier une consultation",
+      "imageUrl": "/images/consulting-illustration.png",
+      "imageAlt": "AI Implementation Consulting"
     },
     {
       "id": "governance",
@@ -586,7 +592,9 @@
         "Directives éthiques",
         "Outils d'évaluation des risques"
       ],
-      "cta": "En savoir plus sur la gouvernance"
+      "cta": "En savoir plus sur la gouvernance",
+      "imageUrl": "/images/governance-illustration.png",
+      "imageAlt": "AI Governance Framework"
     }
   ]
 },
@@ -926,5 +934,15 @@
       "answer": "Oui, nous proposons une version entreprise qui permet à toute votre équipe de partager une banque de prompts personnalisée pour vos cas d'utilisation métier spécifiques. Le plan entreprise inclut des fonctionnalités de gestion d'équipe, des modèles partagés, des analyses d'utilisation à l'échelle de l'équipe et un support dédié."
     }
   ]
+},
+"privacy": {
+  "title": "Privacy Policy",
+  "lastUpdated": "Last updated: April 19, 2025",
+  "content": "<h1>Jaydai Privacy Policy</h1><h2>1. Introduction</h2><p>Welcome to Jaydai (\"we,\" \"our,\" or \"us\"). We respect your privacy and are committed to protecting your personal data. This privacy policy explains how we collect, use, and safeguard your information when you use our Chrome extension.</p><h2>2. Data We Collect</h2><p>Jaydai collects and processes the following categories of personal data:</p><h3>2.1 Account Information</h3><ul><li><span class=\"emoji\">📧</span>Email address</li><li><span class=\"emoji\">👤</span>Name</li><li><span class=\"emoji\">🔑</span>Authentication tokens</li></ul><h3>2.2 User Activity Data</h3><ul><li><span class=\"emoji\">💬</span>AI conversation patterns</li><li><span class=\"emoji\">📊</span>Template usage statistics</li><li><span class=\"emoji\">⚡</span>Energy consumption metrics</li><li><span class=\"emoji\">📈</span>Efficiency scores</li></ul><h3>2.3 User-Generated Content</h3><ul><li><span class=\"emoji\">📝</span>Custom templates created by users</li><li><span class=\"emoji\">📁</span>Folder structures and organization preferences</li></ul><h3>2.4 Website Content</h3><ul><li><span class=\"emoji\">🤖</span>Content from supported AI platforms necessary for providing template suggestions</li><li><span class=\"emoji\">📑</span>AI conversation content needed for analytics</li></ul><h2>3. How We Use Your Data</h2><p>We use your personal data for the following purposes:</p><ul><li><strong><span class=\"emoji\">⚙️</span>To provide and maintain our service</strong><br>Including user authentication, saving your preferences, and delivering core functionality</li><li><strong><span class=\"emoji\">🔧</span>To improve our service</strong><br>Analyzing usage patterns to enhance features and performance</li><li><strong><span class=\"emoji\">🎯</span>To personalize your experience</strong><br>Adapting to your communication style and offering suggestions based on your usage patterns</li><li><strong><span class=\"emoji\">✉️</span>To communicate with you</strong><br>Sending notifications about updates or changes to our service</li></ul><h2>4. Data Storage and Security</h2><ul><li><span class=\"emoji\">🔒</span>User data is stored securely using industry-standard encryption</li><li><span class=\"emoji\">💻</span>We process information locally whenever possible to minimize data transmission</li><li><span class=\"emoji\">🛡️</span>Authentication tokens are stored securely within Chrome's protected storage</li><li><span class=\"emoji\">🔐</span>We implement appropriate technical and organizational measures to protect your personal data</li></ul><h2>5. Data Sharing</h2><p>We do not sell, trade, or rent your personal data to third parties. We may share your data in the following limited circumstances:</p><ul><li><span class=\"emoji\">🤝</span>With service providers who help us deliver our services (such as cloud hosting providers)</li><li><span class=\"emoji\">⚖️</span>If required by law or to respond to legal process</li><li><span class=\"emoji\">🛑</span>To protect our rights, privacy, safety, or property</li></ul><h2>6. Your Rights</h2><p>Depending on your location, you may have the following rights regarding your personal data:</p><ul><li><span class=\"emoji\">👁️</span>Access your personal data</li><li><span class=\"emoji\">✏️</span>Correct inaccurate or incomplete data</li><li><span class=\"emoji\">🗑️</span>Delete your personal data</li><li><span class=\"emoji\">🛑</span>Restrict or object to processing of your data</li><li><span class=\"emoji\">📤</span>Data portability</li><li><span class=\"emoji\">↩️</span>Withdraw consent</li></ul><p>To exercise these rights, please contact us at privacy@jaydai.com.</p><h2>7. Retention</h2><p>We retain your personal data only for as long as necessary to fulfill the purposes outlined in this policy, unless a longer retention period is required or permitted by law.</p><h2>8. Children's Privacy</h2><p>Our service is not directed to children under 16. We do not knowingly collect personal data from children under 16. If we learn we have collected personal data from a child under 16, we will delete that information.</p><h2>9. Changes to This Policy</h2><p>We may update this privacy policy from time to time. We will notify you of any changes by posting the new privacy policy on this page and updating the \"Last Updated\" date.</p><h2>10. Contact Us</h2><p>If you have any questions about this privacy policy, please contact us at:</p><div class=\"contact-info\"><p><span class=\"emoji\">📧</span>Email: privacy@jaydai.com</p><p><span class=\"emoji\">🏢</span>Address: 123 Tech Boulevard, Innovation District, 94105, San Francisco, CA, USA</p></div>"
+},
+"termsOfService": {
+  "title": "Terms of Service",
+  "lastUpdated": "Last updated: April 19, 2025",
+  "content": "<h1>Jaydai Terms of Service</h1><h2>1. Introduction</h2><p>Welcome to Jaydai (\"we,\" \"our,\" or \"us\"). By using our Chrome extension, you agree to comply with and be bound by the following terms and conditions of use, which together with our privacy policy, govern our relationship with you in relation to this software. If you disagree with any part of these terms, please do not use our extension.</p><h2>2. Acceptance of Terms</h2><p>By installing and using Jaydai, you agree to the following terms:</p><ul><li><strong><span class=\"emoji\">🔑</span>Account Creation</strong><br>You must be at least 16 years old to create an account</li><li><strong><span class=\"emoji\">🔑</span>Account Creation</strong><br>You must be at least 16 years old to create an account</li><li><strong><span class=\"emoji\">🔑</span>Account Creation</strong><br>You must be at least 16 years old to create an account</li></ul>"
 }
 }

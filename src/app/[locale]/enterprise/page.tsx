@@ -6,7 +6,7 @@ import EnterpriseValuePropsSection from "@/sections/enterprise/ValuePropsSection
 import EnterpriseServicesSection from "@/sections/enterprise/ServicesSection"
 import EnterprisePricingSection from "@/sections/enterprise/PricingSection"
 import EnterpriseFAQSection from "@/sections/enterprise/FAQSection"
-import EnterpriseContactSection from "@/sections/enterprise/ContactSection"
+import ContactSection from "@/sections/home/ContactSection"
 import EnterpriseTeamSection from "@/sections/enterprise/TeamSection"
 import SubtleBackgroundEffect from "@/components/effects/SubtleBackgroundEffect"
 
@@ -43,7 +43,7 @@ export default function EnterprisePage() {
       <EnterpriseFAQSection />
       
       {/* Contact Section */}
-      <EnterpriseContactSection />
+      <ContactSection />
     </div>
   )
 }

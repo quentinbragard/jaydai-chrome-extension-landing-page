@@ -99,11 +99,13 @@ export default function PricingSection() {
                   </div>
 
                   <ShimmerButton
-                    className="w-full py-6 text-lg hover:shadow-[0_4px_30px_rgba(0,0,0,0.1)] transition-shadow"
+                    onClick={() => window.open("https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd", "_blank")}
+                    className="px-8 py-3 rounded-md text-primary-foreground font-black"
+                    shimmerColor="#FFCD00"
+                    shimmerSize="0.05em"
+                    shimmerDuration="3s"
+                    borderRadius="0.375rem"
                     background="hsl(var(--primary))"
-                    shimmerColor="#ffffff"
-                    shimmerDuration="1.5s"
-                    shimmerSize="0.1em"
                   >
                     {t("freePlan.ctaText")}
                   </ShimmerButton>

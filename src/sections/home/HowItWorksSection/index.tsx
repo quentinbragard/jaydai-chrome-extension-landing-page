@@ -95,14 +95,6 @@ const HowItWorksSection = () => {
       icon: Brain,
       color: "bg-green-500/10 text-green-500",
       image: "/images/step6-results.png"
-    },
-    {
-      id: 7,
-      title: t('steps.7.title'),
-      description: t('steps.7.description'),
-      icon: FileText,
-      color: "bg-amber-500/10 text-amber-500",
-      image: "/images/step7-save.png"
     }
   ];
   
@@ -302,7 +294,7 @@ const HowItWorksSection = () => {
             target="_blank"
             className="px-8 py-3 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium inline-flex items-center gap-2"
           >
-            <span>Try It Now</span>
+            <span>{t('ctaText')}</span>
             <ArrowRight size={16} />
           </a>
         </motion.div>

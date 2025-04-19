@@ -4,59 +4,24 @@ import React from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
 import { useTranslations } from "next-intl"
-import { Star, Quote } from "lucide-react"
+import { Star, Quote, ArrowUpRight } from "lucide-react"
 
 interface Testimonial {
   id: number
   name: string
-  role: string
-  company: string
-  image: string
+  role?: string
+  company?: string
+  image?: string
   content: string
   rating: number
+  link?: string
 }
 
 const TestimonialsSection = () => {
   const t = useTranslations('testimonials')
+  console.log(t.raw("users"))
 
-  const testimonials: Testimonial[] = [
-    {
-      id: 1,
-      name: t('users.1.name'),
-      role: t('users.1.role'),
-      company: t('users.1.company'),
-      image: "/images/testimonial-1.png",
-      content: t('users.1.content'),
-      rating: 5,
-    },
-    {
-      id: 2,
-      name: t('users.2.name'),
-      role: t('users.2.role'),
-      company: t('users.2.company'),
-      image: "/images/testimonial-2.png",
-      content: t('users.2.content'),
-      rating: 5,
-    },
-    {
-      id: 3,
-      name: t('users.3.name'),
-      role: t('users.3.role'),
-      company: t('users.3.company'),
-      image: "/images/testimonial-3.png",
-      content: t('users.3.content'),
-      rating: 4,
-    },
-    {
-      id: 4,
-      name: t('users.4.name'),
-      role: t('users.4.role'),
-      company: t('users.4.company'),
-      image: "/images/testimonial-4.png",
-      content: t('users.4.content'),
-      rating: 5,
-    },
-  ]
+  const testimonials = t.raw("users")
 
   return (
     <section id="testimonials" className="py-20 bg-secondary/10">
@@ -83,7 +48,7 @@ const TestimonialsSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {testimonials.map((testimonial, index) => (
+          {testimonials.map((testimonial: Testimonial, index: number) => (
             <motion.div
               key={testimonial.id}
               initial={{ opacity: 0, y: 20 }}
@@ -99,7 +64,12 @@ const TestimonialsSection = () => {
                 </div>
                 <div className="ml-4">
                   <h3 className="font-semibold text-foreground">{testimonial.name}</h3>
-                  <p className="text-sm text-foreground/70">{testimonial.role}, {testimonial.company}</p>
+                  {testimonial.link && (
+                    <a href={testimonial.link} target="_blank" rel="noopener noreferrer" className="text-sm text-primary/70 hover:text-primary flex items-center gap-1">
+                      {t("viewOnGoogle")}
+                      <ArrowUpRight size={16} className="inline-block" />
+                    </a>
+                  )}
                 </div>
                 <div className="ml-auto flex">
                   {Array.from({ length: testimonial.rating }).map((_, i) => (

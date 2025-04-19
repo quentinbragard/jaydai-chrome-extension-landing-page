@@ -83,7 +83,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-foreground/70 hover:text-primary transition-colors">
+                <Link href="https://thetunnel.substack.com/" target="_blank" className="text-foreground/70 hover:text-primary transition-colors">
                   {t('blog')}
                 </Link>
               </li>
@@ -93,12 +93,12 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-foreground/70 hover:text-primary transition-colors">
+                <Link href="/privacy" className="text-foreground/70 hover:text-primary transition-colors">
                   {t('privacyPolicy')}
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-foreground/70 hover:text-primary transition-colors">
+                <Link href="/terms-of-service" className="text-foreground/70 hover:text-primary transition-colors">
                   {t('termsOfService')}
                 </Link>
               </li>

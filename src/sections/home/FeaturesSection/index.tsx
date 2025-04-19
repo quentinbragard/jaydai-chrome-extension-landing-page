@@ -11,6 +11,7 @@ import {
   GraduationCap
 } from "lucide-react"
 import { useTranslations } from "next-intl"
+import Link from "next/link"
 
 import { FeatureCard, FeatureCardProps } from "./FeatureCard"
 
@@ -112,13 +113,22 @@ const FeaturesSection = () => {
             {t('cta.description')}
           </p>
           
-          <a
-            href={t('cta.link')}
-            target="_blank"
-            className="px-8 py-3 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium"
-          >
-            {t('cta.buttonText')}
-          </a>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href={t('cta.link')}
+              target="_blank"
+              className="px-8 py-3 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium"
+            >
+              {t('cta.buttonText')}
+            </a>
+            
+            <Link
+              href="/privacy"
+              className="text-foreground/70 hover:text-primary transition-colors"
+            >
+              Privacy Policy
+            </Link>
+          </div>
         </motion.div>
       </div>
     </section>

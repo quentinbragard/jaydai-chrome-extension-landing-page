@@ -9,7 +9,7 @@ import ContactSection from "@/sections/home/ContactSection"
 import HowItWorksSection from "@/sections/home/HowItWorksSection"
 import UseCasesSection from "@/components/UseCasesSection"
 import AnalyticsDashboardSection from "@/sections/home/AnalyticsDashboardSection"
-import EnterpriseServicesSection from "@/sections/enterprise/ServicesSection"
+import EnterpriseSolutionsSection from "@/sections/home/EnterpriseSolutionsSection"
 import PricingSection from "@/sections/home/PricingSection"
 import HeroSection from "@/sections/home/HeroSection"
 import SubtleBackgroundEffect from "@/components/SubtleBackgroundEffect"
@@ -71,8 +71,6 @@ export default function Home() {
       {/* Redesigned Features Section */}
       <FeaturesSection />
 
-      {/* Pricing Section */}
-      <PricingSection />
       
       {/* How It Works Section */}
       <HowItWorksSection />
@@ -88,9 +86,12 @@ export default function Home() {
       
       {/* Testimonials Section */}
       <TestimonialsSection />
+
+       {/* Pricing Section */}
+       <PricingSection />
       
       {/* Enterprise Solutions Section */}
-      <EnterpriseServicesSection />
+      <EnterpriseSolutionsSection />
       
       {/* FAQ Section */}
       <FAQSection />
