@@ -632,7 +632,7 @@
     "role": "Co-fondateur & CTO",
     "bio": "Diplômé de l’ESSEC Business School et de l’école 42. Il a précédemment travaillé chez Snapchat et PhotoRoom, et est l’auteur de la newsletter The Tunnel. Quentin a passé plus de 5 ans à développer des produits et pilote l’initiative IA chez Jaydai.",
     "specialties": ["Développement logiciel", "IA", "Produit", "Données"],
-    "badgesUrl": ["images/badges/essec.png", "images/badges/42.png", "images/badges/snapchat.png", "images/badges/photoroom.png"]
+    "badgesUrl": ["/images/team/badges/essec.png", "/images/team/badges/42.png", "/images/team/badges/snapchat.png", "/images/team/badges/photoroom.png"]
   },
   {
     "id": 2,
@@ -640,7 +640,7 @@
     "role": "Co-fondateur & CEO",
     "bio": "Diplômé de l’ESSEC Business School et ancien consultant spécialisé dans la conduite du changement dans différents cabinets de conseil. Jean-Baptiste est un passionné de technologie, ancien responsable des opérations dans un start-up studio, avec une passion pour les produits qui ont un impact concret.",
     "specialties": ["Stratégie d'entreprise", "Prompt Engineering", "Optimisation des processus"],
-    "badgesUrl": ["images/badges/essec.png", "images/badges/wavestone.png", "images/badges/kadran.png"]
+    "badgesUrl": ["/images/team/badges/essec.png", "/images/team/badges/wavestone.png", "/images/team/badges/kadran.png"]
   }
 ]
 },
