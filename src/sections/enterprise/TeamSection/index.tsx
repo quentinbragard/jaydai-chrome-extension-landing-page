@@ -54,7 +54,7 @@ const EnterpriseTeamSection = () => {
           />
         </div>
         
-        {/* Expertise section */}
+        {/* Expertise section 
         <TeamExpertise 
           title={t('expertiseSection.title')}
           credentials={{
@@ -71,6 +71,7 @@ const EnterpriseTeamSection = () => {
           }}
           caseStudiesLink={t('caseStudiesLink')}
         />
+        */}
       </div>
     </section>
   )

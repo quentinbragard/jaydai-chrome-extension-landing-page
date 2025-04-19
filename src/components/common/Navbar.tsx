@@ -80,9 +80,6 @@ const Navbar = () => {
                   <Link href="/enterprise#services" className="text-foreground/80 hover:text-primary transition-colors">
                     {t('services')}
                   </Link>
-                  <Link href="/enterprise#case-studies" className="text-foreground/80 hover:text-primary transition-colors">
-                    {t('caseStudies')}
-                  </Link>
                   <Link href="/enterprise#team" className="text-foreground/80 hover:text-primary transition-colors">
                     {t('team')}
                   </Link>

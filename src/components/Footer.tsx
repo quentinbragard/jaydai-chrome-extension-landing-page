@@ -46,27 +46,27 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">{t('product')}</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="#features" className="text-foreground/70 hover:text-primary transition-colors">
+                <Link href="/#features" className="text-foreground/70 hover:text-primary transition-colors">
                   {t('features')}
                 </Link>
               </li>
               <li>
-                <Link href="#templates" className="text-foreground/70 hover:text-primary transition-colors">
+                <Link href="/#templates" className="text-foreground/70 hover:text-primary transition-colors">
                   {t('templates')}
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-foreground/70 hover:text-primary transition-colors">
+                <Link href="/#pricing" className="text-foreground/70 hover:text-primary transition-colors">
                   {t('pricing')}
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-foreground/70 hover:text-primary transition-colors">
+                <Link href="/enterprise" className="text-foreground/70 hover:text-primary transition-colors">
                   {t('enterprise')}
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-foreground/70 hover:text-primary transition-colors">
+                <Link href="https://app.jayd.ai" className="text-foreground/70 hover:text-primary transition-colors">
                   {t('learningSchool')}
                 </Link>
               </li>
@@ -78,7 +78,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">{t('company')}</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="#" className="text-foreground/70 hover:text-primary transition-colors">
+                <Link href="/enterprise" className="text-foreground/70 hover:text-primary transition-colors">
                   {t('aboutUs')}
                 </Link>
               </li>

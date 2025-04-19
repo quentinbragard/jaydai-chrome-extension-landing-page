@@ -297,7 +297,10 @@
       "subjectPlaceholder": "Message subject",
       "messageLabel": "Message",
       "messagePlaceholder": "Your message",
-      "submitButton": "Send Message"
+      "submitButton": "Send Message",
+      "success": "Message sent successfully",
+      "error": "An error occurred while sending the message",
+      "submitting": "Sending..."
     }
   },
   "footer": {
@@ -307,7 +310,7 @@
     "templates": "Templates",
     "pricing": "Pricing",
     "enterprise": "Enterprise",
-    "learningSchool": "Learning School",
+    "learningSchool": "Professional Assessment by Jaydai",
     "company": "Company",
     "aboutUs": "About Us",
     "blog": "Blog",

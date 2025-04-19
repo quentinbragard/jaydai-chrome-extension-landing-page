@@ -361,7 +361,10 @@
       "subjectPlaceholder": "Sujet du message",
       "messageLabel": "Message",
       "messagePlaceholder": "Votre message",
-      "submitButton": "Envoyer le Message"
+      "submitButton": "Envoyer le Message",
+      "success": "Message envoyé avec succès",
+      "error": "Une erreur est survenue lors de l'envoi du message",
+      "submitting": "Envoi..."
     }
   },
   "footer": {
@@ -371,7 +374,7 @@
     "templates": "Modèles",
     "pricing": "Tarifs",
     "enterprise": "Entreprise",
-    "learningSchool": "École de Formation",
+    "learningSchool": "Le bilan professionnel by Jaydai",
     "company": "Entreprise",
     "aboutUs": "À Propos de Nous",
     "blog": "Blog",
@@ -602,7 +605,7 @@
   "badge": "Notre Équipe d'Experts",
   "title": "Rencontrez Nos Experts en Implémentation d'IA",
   "subtitle": "Notre équipe entreprise apporte des décennies d'expérience en transformation IA et en ingénierie de prompts",
-  "sidebarTitle": "Équipe de Direction Entreprise",
+  "sidebarTitle": "Équipe de Direction",
   "meet": "Rencontrez",
   "about": "À propos",
   "specialties": "Spécialités",
