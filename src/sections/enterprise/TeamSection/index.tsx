@@ -12,10 +12,23 @@ import {
   BadgeCheck,
   MessageSquare,
   CalendarClock,
-  ExternalLink
+  ExternalLink,
+  Info
 } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+
+// Define types for team members
+interface TeamMember {
+  id: number;
+  name: string;
+  role: string;
+  bio: string;
+  image?: string;
+  specialties: string[];
+  badgesUrl?: string[];
+  badges?: string[];
+}
 
 // Social media links for team members (kept outside translations)
 const socialLinks = {
@@ -26,14 +39,15 @@ const socialLinks = {
 
 const EnterpriseTeamSection = () => {
   const t = useTranslations('enterpriseTeam')
-  const teamMembers = t.raw('teamMembers')
+  const teamMembers = t.raw('teamMembers') as TeamMember[]
   const [activeTeamMember, setActiveTeamMember] = useState(teamMembers[0].id)
+  const [activeBadge, setActiveBadge] = useState<string | null>(null)
   
   return (
     <section id="team" className="py-20 bg-background relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 bg-grid-white/[0.02] bg-[length:20px_20px] pointer-events-none"></div>
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 blur-[100px] rounded-full opacity-30 transform translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 blur-[60px] rounded-full opacity-30 transform translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16 max-w-3xl mx-auto">
@@ -89,7 +103,7 @@ const EnterpriseTeamSection = () => {
               </div>
               
               <div className="divide-y divide-border">
-                {teamMembers.map((member: any) => (
+                {teamMembers.map((member: TeamMember) => (
                   <button
                     key={member.id}
                     onClick={() => setActiveTeamMember(member.id)}
@@ -134,7 +148,7 @@ const EnterpriseTeamSection = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="col-span-1 lg:col-span-2"
           >
-            {teamMembers.map((member: any) => {
+            {teamMembers.map((member: TeamMember) => {
               if (member.id !== activeTeamMember) return null;
               
               return (
@@ -214,20 +228,48 @@ const EnterpriseTeamSection = () => {
                         </div>
                       </div>
                       
-                      {/* Badges */}
+                      {/* Credentials/Badges */}
                       <div>
                         <h4 className="text-sm font-medium text-foreground/50 mb-3">{t('credentials')}</h4>
-                        <div className="space-y-2">
-                          {member.badges.map((badge: string, i: number) => (
-                            <div 
-                              key={i}
-                              className="flex items-center text-sm"
-                            >
-                              <BadgeCheck size={16} className="text-primary mr-2" />
-                              <span>{badge}</span>
-                            </div>
-                          ))}
-                        </div>
+                        {member.badgesUrl && Array.isArray(member.badgesUrl) && member.badgesUrl.length > 0 ? (
+                          <div className="flex flex-wrap gap-3">
+                            {member.badgesUrl.map((badgeUrl: string, i: number) => {
+                              // Skip invalid URLs
+                              if (!badgeUrl) return null;
+                              
+                              const badgeName = getBadgeName(badgeUrl);
+                              
+                              return (
+                                <div
+                                  key={i}
+                                  className="relative group"
+                                  onMouseEnter={() => setActiveBadge(badgeUrl)}
+                                  onMouseLeave={() => setActiveBadge(null)}
+                                >
+                                  <div className="h-12 w-12 rounded-md border border-border/40 bg-card shadow-sm overflow-hidden transition-all hover:scale-105 cursor-pointer">
+                                    <Image
+                                      src={badgeUrl}
+                                      alt={badgeName}
+                                      width={48}
+                                      height={48}
+                                      className="object-contain p-1"
+                                    />
+                                  </div>
+                                  {/* Tooltip */}
+                                  {activeBadge === badgeUrl && (
+                                    <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 -translate-y-full">
+                                      <div className="bg-background border border-border rounded-md px-2 py-1 text-xs text-foreground/70 whitespace-nowrap shadow-lg">
+                                        {badgeName}
+                                      </div>
+                                    </div>
+                                  )}
+                                </div>
+                              );
+                            })}
+                          </div>
+                        ) : (
+                          <p className="text-foreground/50 text-sm">No credentials available</p>
+                        )}
                       </div>
                     </div>
                     
@@ -313,5 +355,11 @@ const EnterpriseTeamSection = () => {
     </section>
   )
 }
+
+// Helper function to extract badge name from URL
+const getBadgeName = (badgeUrl: string): string => {
+  const filename = badgeUrl.split('/').pop()?.split('.')[0] || '';
+  return filename.charAt(0).toUpperCase() + filename.slice(1).replace(/-/g, ' ');
+};
 
 export default EnterpriseTeamSection

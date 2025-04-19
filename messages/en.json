@@ -629,19 +629,19 @@
   "teamMembers": [
     {
       "id": 1,
-      "name": "Quentin",
-      "role": "CEO & AI Strategy Lead",
-      "bio": "10+ years experience in AI implementation and enterprise transformation. Previously led AI initiatives at Fortune 500 companies.",
-      "specialties": ["Enterprise Strategy", "AI Integration", "Leadership"],
-      "badges": ["Harvard MBA", "Former Google AI"]
+      "name": "Quentin Bragard",
+      "role": "Co-founder & CTO",
+      "bio": "Graduated from ESSEC Business School and 42 School. Previously worked at Snapchat and PhotoRoom and author of the newsletter The Tunnel. Quentin spent 5+ years at building products and leads the AI initiative at Jaydai.", 
+      "specialties": ["Software Development", "AI", "Product", "Data"],
+      "badgesUrl": ["images/badges/essec.png", "images/badges/42.png", "images/badges/snapchat.png", "images/badges/photoroom.png"]
     },
     {
       "id": 2,
-      "name": "Michael Chen",
-      "role": "CTO & Prompt Engineering Lead",
-      "bio": "Expert in prompt engineering and large language models. Built AI systems powering millions of interactions daily.",
-      "specialties": ["Prompt Engineering", "LLM Fine-tuning", "Technical Leadership"],
-      "badges": ["MIT AI", "OpenAI Contributor"]
+      "name": "Jean-Baptiste Huiban",
+      "role": "Co-founder & CEO",
+      "bio": "Graduated from ESSEC business school and former consultant with a specialization in 'Conduct of change' at different consulting firms. Jean-Baptiste is a tech enthusiast who pas previously leading operations at a start-up stuido and has a passion for building products that help people.",
+      "specialties": ["Enterprise Strategy", "Prompt Engineering", "Process Optimization"],
+      "badgesUrl": ["images/badges/essec.png", "images/badges/wavestone.png", "images/badges/kadran.png"]
     }
   ]
 },

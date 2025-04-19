@@ -626,23 +626,23 @@
   },
   "caseStudiesLink": "Voir nos études de cas entreprise",
   "teamMembers": [
-    {
-      "id": 1,
-      "name": "Quentin",
-      "role": "PDG & Responsable de la Stratégie IA",
-      "bio": "Plus de 10 ans d'expérience dans l'implémentation IA et la transformation d'entreprise. A dirigé précédemment des initiatives IA dans des entreprises du Fortune 500.",
-      "specialties": ["Stratégie d'Entreprise", "Intégration IA", "Leadership"],
-      "badges": ["MBA de Harvard", "Ancien de Google AI"]
-    },
-    {
-      "id": 2,
-      "name": "Michael Chen",
-      "role": "CTO & Responsable de l'Ingénierie des Prompts",
-      "bio": "Expert en ingénierie de prompts et modèles de langage large. A construit des systèmes IA alimentant des millions d'interactions quotidiennes.",
-      "specialties": ["Ingénierie de Prompts", "Fine-tuning de LLM", "Leadership Technique"],
-      "badges": ["IA du MIT", "Contributeur OpenAI"]
-    }
-  ]
+  {
+    "id": 1,
+    "name": "Quentin Bragard",
+    "role": "Co-fondateur & CTO",
+    "bio": "Diplômé de l’ESSEC Business School et de l’école 42. Il a précédemment travaillé chez Snapchat et PhotoRoom, et est l’auteur de la newsletter The Tunnel. Quentin a passé plus de 5 ans à développer des produits et pilote l’initiative IA chez Jaydai.",
+    "specialties": ["Développement logiciel", "IA", "Produit", "Données"],
+    "badgesUrl": ["images/badges/essec.png", "images/badges/42.png", "images/badges/snapchat.png", "images/badges/photoroom.png"]
+  },
+  {
+    "id": 2,
+    "name": "Jean-Baptiste Huiban",
+    "role": "Co-fondateur & CEO",
+    "bio": "Diplômé de l’ESSEC Business School et ancien consultant spécialisé dans la conduite du changement dans différents cabinets de conseil. Jean-Baptiste est un passionné de technologie, ancien responsable des opérations dans un start-up studio, avec une passion pour les produits qui ont un impact concret.",
+    "specialties": ["Stratégie d'entreprise", "Prompt Engineering", "Optimisation des processus"],
+    "badgesUrl": ["images/badges/essec.png", "images/badges/wavestone.png", "images/badges/kadran.png"]
+  }
+]
 },
 "enterprisePricing": {
   "badge": "Solutions Entreprise",

@@ -2,7 +2,6 @@
 
 import React from "react"
 import HeroEnterpriseSection from "@/sections/enterprise/HeroSection"
-import EnterpriseValuePropsSection from "@/sections/enterprise/ValuePropsSection"
 import EnterpriseServicesSection from "@/sections/enterprise/ServicesSection"
 import EnterprisePricingSection from "@/sections/enterprise/PricingSection"
 import EnterpriseFAQSection from "@/sections/enterprise/FAQSection"
@@ -16,22 +15,11 @@ export default function EnterprisePage() {
       {/* Hero Section */}
       <HeroEnterpriseSection />
       
-      {/* Value Propositions Section */}
-      <EnterpriseValuePropsSection />
-      
       {/* Services Section */}
       <EnterpriseServicesSection />
       
       {/* Team Section */}
       <EnterpriseTeamSection />
-      
-      {/* Case Studies Section
-      <EnterpriseCaseStudiesSection /> */}
-      
-      
-      {/* Testimonials Section
-            <EnterpriseTestimonialsSection />
- */}
       
       {/* Pricing Section */}
       <EnterprisePricingSection />
