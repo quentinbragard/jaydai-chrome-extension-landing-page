@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Check, ArrowRight, Building2 } from "lucide-react";
-import { ShimmerButton } from "@/components/ShimmerButton";
+import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { useTranslations } from "next-intl";
 
 export default function PricingSection() {

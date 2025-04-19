@@ -11,7 +11,7 @@ import AnalyticsDashboardSection from "@/sections/home/AnalyticsDashboardSection
 import EnterpriseSolutionsSection from "@/sections/enterprise/ServicesSection"
 import PricingSection from "@/sections/home/PricingSection"
 import HeroSection from "@/sections/home/HeroSection"
-import SubtleBackgroundEffect from "@/components/SubtleBackgroundEffect"
+import SubtleBackgroundEffect from "@/components/effects/SubtleBackgroundEffect"
 import FeaturesSection from "@/sections/home/FeaturesSection"
 import { useTranslations } from "next-intl"
 

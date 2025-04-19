@@ -4,14 +4,11 @@ import React from "react"
 import HeroEnterpriseSection from "@/sections/enterprise/HeroSection"
 import EnterpriseValuePropsSection from "@/sections/enterprise/ValuePropsSection"
 import EnterpriseServicesSection from "@/sections/enterprise/ServicesSection"
-import EnterpriseAnalyticsSection from "@/components/enterprise/EnterpriseAnalyticsSection"
-import EnterpriseTestimonialsSection from "@/components/enterprise/EnterpriseTestimonialsSection"
-import EnterpriseCaseStudiesSection from "@/components/enterprise/EnterpriseCaseStudiesSection"
 import EnterprisePricingSection from "@/sections/enterprise/PricingSection"
 import EnterpriseFAQSection from "@/sections/enterprise/FAQSection"
 import EnterpriseContactSection from "@/sections/enterprise/ContactSection"
 import EnterpriseTeamSection from "@/sections/enterprise/TeamSection"
-import SubtleBackgroundEffect from "@/components/SubtleBackgroundEffect"
+import SubtleBackgroundEffect from "@/components/effects/SubtleBackgroundEffect"
 
 export default function EnterprisePage() {
   return (

@@ -12,7 +12,7 @@ import {
   LineChart 
 } from "lucide-react"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { PulseBeams } from "@/components/enterprise/PulseBeams" // We'll move this later
+import  PulseBeams  from "@/components/effects/PulseBeams" // We'll move this later
 import { useTranslations } from "next-intl"
 
 export const HeroTabs = () => {
