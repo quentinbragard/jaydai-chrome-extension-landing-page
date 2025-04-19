@@ -7,12 +7,11 @@ import FAQSection from "@/sections/home/FAQSection"
 import TemplatesSection from "@/sections/home/TemplatesSection"
 import ContactSection from "@/sections/home/ContactSection"
 import HowItWorksSection from "@/sections/home/HowItWorksSection"
-import UseCasesSection from "@/components/UseCasesSection"
 import AnalyticsDashboardSection from "@/sections/home/AnalyticsDashboardSection"
 import EnterpriseSolutionsSection from "@/sections/home/EnterpriseSolutionsSection"
 import PricingSection from "@/sections/home/PricingSection"
 import HeroSection from "@/sections/home/HeroSection"
-import SubtleBackgroundEffect from "@/components/SubtleBackgroundEffect"
+import SubtleBackgroundEffect from "@/components/effects/SubtleBackgroundEffect"
 import FeaturesSection from "@/sections/home/FeaturesSection"
 
 export default function Home() {
