@@ -3,6 +3,7 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { useTranslations } from "next-intl"
+import { trackEvent } from '@/lib/analytics'
 import { Plus, Minus } from "lucide-react"
 
 const FAQSection = () => {
@@ -13,6 +14,12 @@ const FAQSection = () => {
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index)
+    trackEvent('FAQ Clicked', {
+      question: faqs[index].question,
+      answer: faqs[index].answer,
+      source: 'enterpriseFaqSection',
+      timestamp: new Date().toISOString()
+    })
   }
 
   return (
@@ -86,8 +93,14 @@ const FAQSection = () => {
             <p className="text-foreground/70 mb-6">
               {t('ctaPrompt')}
             </p>
-            <a
+          <a
               href="#contact"
+              onClick={() => trackEvent('Button Clicked', {
+                button_name: 'enterpriseFaqSectionCta',
+                page_location: window.location.pathname,
+                source: 'enterpriseFaqSection',
+                timestamp: new Date().toISOString()
+              })}
               className="px-6 py-2 rounded-md bg-secondary/50 text-foreground hover:bg-secondary/70 transition-colors"
             >
               {t('ctaButton')}

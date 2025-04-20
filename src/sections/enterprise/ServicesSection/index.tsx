@@ -3,6 +3,7 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { useTranslations } from "next-intl"
+import { trackEvent } from '@/lib/analytics'
 import { 
   ClipboardCheck,
   ArrowRight,
@@ -71,6 +72,12 @@ const EnterpriseServicesSection = () => {
         >
           <a
             href="#contact"
+            onClick={() => trackEvent('Button Clicked', {
+              button_name: 'enterpriseServicesCta',
+              page_location: window.location.pathname,
+              source: 'enterpriseServicesSection',
+              timestamp: new Date().toISOString()
+            })}
             className="px-8 py-3 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium inline-flex items-center gap-2"
           >
             <span>{t('cta')}</span>

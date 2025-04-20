@@ -1,6 +1,7 @@
 "use client"
 
 import React from "react"
+import { trackEvent } from '@/lib/analytics'
 import { motion } from "framer-motion"
 import { Building } from "lucide-react"
 import Image from "next/image"
@@ -39,7 +40,15 @@ const TeamMemberSelector: React.FC<TeamMemberSelectorProps> = ({
           {teamMembers.map((member: TeamMember) => (
             <button
               key={member.id}
-              onClick={() => setActiveTeamMember(member.id)}
+              onClick={() => {
+                trackEvent('Team Member Selected', {
+                  member_name: member.name,
+                  member_id: member.id,
+                  source: 'enterpriseTeamSection',
+                  timestamp: new Date().toISOString()
+                })
+                setActiveTeamMember(member.id)
+              }}
               className={`w-full text-left p-4 flex items-center gap-3 transition-colors ${
                 activeTeamMember === member.id ? "bg-primary/5" : "hover:bg-secondary/5"
               }`}

@@ -9,6 +9,7 @@ import {
   X
 } from "lucide-react"
 import { useTranslations } from "next-intl"
+import { trackEvent } from '@/lib/analytics'
 import HeroTabs from "./HeroTabs"
 
 const HeroEnterpriseSection = () => {
@@ -67,6 +68,12 @@ const HeroEnterpriseSection = () => {
             >
               <a
                 href="#contact"
+                onClick={() => trackEvent('Button Clicked', {
+                  button_name: 'enterpriseHeroCta',
+                  page_location: window.location.pathname,
+                  source: 'enterpriseHeroSection',
+                  timestamp: new Date().toISOString()
+                })}
                 className="px-8 py-3 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium flex items-center justify-center gap-2 group"
               >
                 <span>{t('ctaDemo')}</span>
