@@ -60,7 +60,11 @@ export default function PricingSection() {
             </div>
 
             <div className="p-8 md:p-10 relative z-10">
-              <div className="absolute top-6 right-6 bg-primary text-primary-foreground text-sm font-bold px-4 py-2 rounded-full shadow-md animate-pulse">
+              {/* Updated badge with higher z-index and explicit positioning */}
+              <div 
+                className="absolute top-0 right-0 mt-6 mr-6 bg-primary text-primary-foreground text-sm font-bold px-4 py-2 rounded-full shadow-md animate-pulse"
+                style={{ zIndex: 20 }}
+              >
                 {t("freePlan.badge")}
               </div>
 
