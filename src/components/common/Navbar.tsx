@@ -9,6 +9,7 @@ import { useTranslations } from 'next-intl'
 import { Link } from '@/lib/navigation'
 import { useLocale } from 'next-intl'
 import LanguageSwitcher from "@/components/common/LanguageSwitcher"
+import { trackEvent } from "@/lib/analytics"
 
 const Navbar = () => {
   const t = useTranslations('nav')
@@ -21,7 +22,21 @@ const Navbar = () => {
   const lightLogo = "/images/full-logo-light.png"
   
   const toggleMenu = () => {
+    trackEvent('Navbar Menu Toggled', {
+      button_name: isMenuOpen ? 'closeMenu' : 'openMenu',
+      page_location: window.location.pathname,
+      timestamp: new Date().toISOString()
+    })
     setIsMenuOpen(!isMenuOpen)
+  }
+
+  const handleThemeToggle = () => {
+    setTheme(theme === "dark" ? "light" : "dark")
+    trackEvent('Theme Toggle Clicked', {
+      button_name: theme,
+      page_location: window.location.pathname,
+      timestamp: new Date().toISOString()
+    })
   }
 
   return (
@@ -50,6 +65,13 @@ const Navbar = () => {
                   ? "bg-primary text-primary-foreground" 
                   : "text-foreground/80 hover:text-primary"
               }`}
+              onClick={() => {
+                trackEvent('Navbar Switcher Clicked', {
+                  button_name: 'personal',
+                  page_location: window.location.pathname,
+                  timestamp: new Date().toISOString()
+                })
+              }}
             >
               <span className="flex items-center gap-1.5">
                 <Sparkles size={14} />
@@ -63,6 +85,13 @@ const Navbar = () => {
                   ? "bg-primary text-primary-foreground" 
                   : "text-foreground/80 hover:text-primary"
               }`}
+              onClick={() => {
+                trackEvent('Navbar Switcher Clicked', {
+                  button_name: 'enterprise',
+                  page_location: window.location.pathname,
+                  timestamp: new Date().toISOString()
+                })
+              }}
             >
               <span className="flex items-center gap-1.5">
                 <Building size={14} />
@@ -77,35 +106,102 @@ const Navbar = () => {
               {/* Navigation items differ based on whether we're on the enterprise page */}
               {isEnterprisePage ? (
                 <>
-                  <Link href="/enterprise#services" className="text-foreground/80 hover:text-primary transition-colors">
+                  <Link
+                    href="/enterprise#services"
+                    className="text-foreground/80 hover:text-primary transition-colors"
+                    onClick={() => {
+                      trackEvent('Navbar Button Clicked', {
+                        button_name: 'services',
+                        page_location: window.location.pathname,
+                        timestamp: new Date().toISOString()
+                      })
+                    }}
+                  >
                     {t('services')}
                   </Link>
-                  <Link href="/enterprise#team" className="text-foreground/80 hover:text-primary transition-colors">
+                  <Link
+                    href="/enterprise#team"
+                    className="text-foreground/80 hover:text-primary transition-colors"
+                    onClick={() => {
+                      trackEvent('Navbar Button Clicked', {
+                        button_name: 'team',
+                        page_location: window.location.pathname,
+                        timestamp: new Date().toISOString()
+                      })
+                    }}
+                  >
                     {t('team')}
                   </Link>
                 </>
               ) : (
                 <>
-                  <Link href="#features" className="text-foreground/80 hover:text-primary transition-colors">
+                    <Link
+                    href="#features"
+                    className="text-foreground/80 hover:text-primary transition-colors"
+                    onClick={() => {
+                      trackEvent('Navbar Button Clicked', {
+                        button_name: 'features',
+                        page_location: window.location.pathname,
+                        timestamp: new Date().toISOString()
+                      })
+                    }}
+                  >
                     {t('features')}
                   </Link>
-                  <Link href="#testimonials" className="text-foreground/80 hover:text-primary transition-colors">
+                  <Link
+                    href="#testimonials"
+                    className="text-foreground/80 hover:text-primary transition-colors"
+                    onClick={() => {
+                      trackEvent('Navbar Button Clicked', {
+                        button_name: 'testimonials',
+                        page_location: window.location.pathname,
+                        timestamp: new Date().toISOString()
+                        })
+                    }}
+                  >
                     {t('testimonials')}
                   </Link>
-                  <Link href="#templates" className="text-foreground/80 hover:text-primary transition-colors">
+                  <Link
+                    href="#templates"
+                    className="text-foreground/80 hover:text-primary transition-colors"
+                    onClick={() => {
+                      trackEvent('Navbar Button Clicked', {
+                        button_name: 'templates',
+                        page_location: window.location.pathname,
+                        timestamp: new Date().toISOString()
+                      })
+                    }}
+                  >
                     {t('templates')}
                   </Link>
                 </>
               )}
               
               {/* Common links for both pages */}
-              <Link href={`${isEnterprisePage ? "/enterprise" : ""}#pricing`} className="text-foreground/80 hover:text-primary transition-colors">
+              <Link
+                href={`${isEnterprisePage ? "/enterprise" : ""}#pricing`}
+                className="text-foreground/80 hover:text-primary transition-colors"
+                onClick={() => {
+                  trackEvent('Navbar Button Clicked', {
+                    button_name: 'pricing',
+                    page_location: window.location.pathname,
+                    timestamp: new Date().toISOString()
+                  })
+                }}
+              >
                 {t('pricing')}
               </Link>
-              <Link href={`${isEnterprisePage ? "/enterprise" : ""}#faq`} className="text-foreground/80 hover:text-primary transition-colors">
-                {t('faq')}
-              </Link>
-              <Link href={`${isEnterprisePage ? "/enterprise" : ""}#contact`} className="text-foreground/80 hover:text-primary transition-colors">
+              <Link
+                href={`${isEnterprisePage ? "/enterprise" : ""}#faq`}
+                className="text-foreground/80 hover:text-primary transition-colors"
+                onClick={() => {
+                  trackEvent('Navbar Button Clicked', {
+                    button_name: 'faq',
+                    page_location: window.location.pathname,
+                    timestamp: new Date().toISOString()
+                  })
+                }}
+              >
                 {t('contact')}
               </Link>
             </div>
@@ -118,7 +214,7 @@ const Navbar = () => {
             
             {/* Theme Toggle */}
             <button
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              onClick={handleThemeToggle}
               className="p-2 rounded-full bg-secondary/50 text-foreground hover:bg-secondary transition-colors"
               aria-label="Toggle theme"
             >
@@ -129,7 +225,14 @@ const Navbar = () => {
               href={isEnterprisePage ? "/enterprise#contact" : "https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd"} 
               target="_blank"
               className="flex items-center gap-2 font-bold text-sm lg:text-base px-4 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
-            >
+              onClick={() => {
+                trackEvent('Navbar Button Clicked', {
+                  button_name: isEnterprisePage ? 'requestDemo' : 'downloadExtension',
+                  page_location: window.location.pathname,
+                  timestamp: new Date().toISOString()
+                })
+              }}
+            > 
               <Image
                 src="/images/google_chrome_icon.png"
                 alt="Google Chrome"
@@ -148,7 +251,7 @@ const Navbar = () => {
             
             {/* Mobile Theme Toggle */}
             <button
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              onClick={handleThemeToggle}
               className="p-2 mr-2 rounded-full bg-secondary/50 text-foreground hover:bg-secondary transition-colors"
               aria-label="Toggle theme"
             >
@@ -160,7 +263,7 @@ const Navbar = () => {
               className="inline-flex items-center justify-center p-2 rounded-md text-foreground hover:bg-secondary/50 transition-colors"
               aria-expanded="false"
             >
-              <span className="sr-only">Open main menu</span>
+              <span className="sr-only">{t('openMenu')}</span>
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
@@ -281,6 +384,13 @@ const Navbar = () => {
               href="https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd" 
               target="_blank"
               className="flex items-center gap-2 font-black px-4 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+              onClick={() => {
+                trackEvent('Navbar Button Clicked', {
+                  button_name: 'downloadExtension',
+                  page_location: window.location.pathname,
+                  timestamp: new Date().toISOString()
+                })
+              }}
             >
               <Image
                 src="/images/google_chrome_icon.png"

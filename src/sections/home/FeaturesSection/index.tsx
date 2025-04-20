@@ -115,32 +115,34 @@ const FeaturesSection = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
+            <Link
               href={t('cta.link')}
               target="_blank"
               className="px-8 py-3 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium"
               onClick={() => {
-                trackEvent('button_clicked', {
-                  button_name: 'contact_us',
-                  location: 'header'
-                });
+                trackEvent('Button Clicked', {
+                  button_name: 'download_extension',
+                  page_location: window.location.pathname,
+                  timestamp: new Date().toISOString()
+                })
               }}
             >
               {t('cta.buttonText')}
-            </a>
+            </Link>
             
-            <a
+            <Link
               href="/privacy"
               className="text-foreground/70 hover:text-primary transition-colors"
               onClick={() => {
-                trackEvent('button_clicked', {
-                  button_name: 'contact_us',
-                  location: 'header'
-                });
+                trackEvent('Button Clicked', {
+                  button_name: 'privacy_policy',
+                  page_location: window.location.pathname,
+                  timestamp: new Date().toISOString()
+                })
               }}
             >
               {t('cta.privacyPolicy')}
-            </a>
+            </Link>
           </div>
         </motion.div>
       </div>

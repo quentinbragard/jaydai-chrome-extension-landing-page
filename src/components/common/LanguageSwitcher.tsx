@@ -5,7 +5,7 @@ import { usePathname, useRouter } from '@/lib/navigation'
 import { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
 import { ChevronDown, Check } from 'lucide-react'
-
+import { trackEvent } from '@/lib/analytics'
 interface LanguageSwitcherProps {
   className?: string
 }
@@ -52,6 +52,11 @@ const LanguageSwitcher = ({ className = "" }: LanguageSwitcherProps) => {
   const handleLocaleChange = (newLocale: string) => {
     // Only change if it's a different locale
     if (newLocale !== locale) {
+      trackEvent('Language Switcher Clicked', {
+        button_name: locale,
+        page_location: window.location.pathname,
+        timestamp: new Date().toISOString()
+      })
       
       try {
         // Use the router.replace with the new locale
