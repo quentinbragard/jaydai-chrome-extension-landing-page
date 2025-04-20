@@ -31,7 +31,7 @@ export default function Home() {
 
       
     {/* Hero Section */}
-    <AuroraBackground containerClassName="">
+    <AuroraBackground>
       <HeroSection openVideoDialog={openVideoDialog} />
     </AuroraBackground>
       
