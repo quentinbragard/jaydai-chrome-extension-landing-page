@@ -126,7 +126,6 @@ const TestimonialsSection = () => {
                     color: "rgba(99, 102, 241, 0.2)" 
                   }}
                 >
-                  <Quote size={24} />
                 </div>
                 
                 {/* Testimonial text with increased padding */}

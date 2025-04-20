@@ -128,7 +128,7 @@ const Navbar = () => {
             <Link 
               href={isEnterprisePage ? "/enterprise#contact" : "https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd"} 
               target="_blank"
-              className="flex items-center gap-2 font-black px-4 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+              className="flex items-center gap-2 font-bold text-sm lg:text-base px-4 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
             >
               <Image
                 src="/images/google_chrome_icon.png"

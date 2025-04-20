@@ -107,8 +107,8 @@ export default function PricingSection() {
 
                 {/* Price section with explicit styling to match local version */}
                 <div className="mt-8 md:mt-0 md:w-64 flex flex-col">
-                  <div className="text-center mb-6">
-                    <div className="text-5xl font-extrabold text-foreground tracking-tight">
+                  <div className="text-center mb-6 mt-8">
+                    <div className="text-4xl font-black text-foreground tracking-tight">
                       {t("freePlan.price")}
                     </div>
                     <div className="text-sm text-foreground/80 mt-1 uppercase tracking-wide font-bold">
