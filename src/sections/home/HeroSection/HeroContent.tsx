@@ -1,6 +1,7 @@
 'use client';
 
 import React from "react"
+import { trackEvent } from '@/lib/analytics'
 import { motion } from "framer-motion"
 import { Play } from "lucide-react"
 import { ShimmerButton } from "@/components/ui/shimmer-button"
@@ -59,7 +60,15 @@ const HeroContent: React.FC<HeroContentProps> = ({
         className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
       >
         <ShimmerButton
-          onClick={() => window.open("https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd", "_blank")}
+          onClick={() => {
+            trackEvent('Button Clicked', {
+              button_name: 'homeHeroDownloadExtension',
+              page_location: window.location.pathname,
+              source: 'homeHeroSection',
+              timestamp: new Date().toISOString()
+            })
+            window.open("https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd", "_blank")
+          }}
           className="px-8 py-3 rounded-md text-primary-foreground font-black"
           shimmerColor="#FFCD00"
           shimmerSize="0.05em"

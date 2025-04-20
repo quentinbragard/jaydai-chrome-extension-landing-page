@@ -119,10 +119,11 @@ const FeaturesSection = () => {
               href={t('cta.link')}
               target="_blank"
               className="px-8 py-3 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium"
-              onClick={() => {
+            onClick={() => {
                 trackEvent('Button Clicked', {
-                  button_name: 'download_extension',
+                  button_name: 'homeFeaturesDownloadExtension',
                   page_location: window.location.pathname,
+                  source: 'homeFeaturesSection',
                   timestamp: new Date().toISOString()
                 })
               }}
@@ -133,10 +134,11 @@ const FeaturesSection = () => {
             <Link
               href="/privacy"
               className="text-foreground/70 hover:text-primary transition-colors"
-              onClick={() => {
+            onClick={() => {
                 trackEvent('Button Clicked', {
-                  button_name: 'privacy_policy',
+                  button_name: 'homeFeaturesPrivacyPolicy',
                   page_location: window.location.pathname,
+                  source: 'homeFeaturesSection',
                   timestamp: new Date().toISOString()
                 })
               }}

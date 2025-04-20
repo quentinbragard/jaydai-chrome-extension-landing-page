@@ -159,12 +159,13 @@ const TemplatesSection = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-2">{category.title}</h3>
                 <p className="text-foreground/70 mb-4">{category.description}</p>
-                <a 
-                  href="#" 
+                <a
+                  href="#"
                   onClick={() => {
                     trackEvent('Button Clicked', {
-                      button_name: `exploreTemplates_${category.title}`,
+                      button_name: `homeTemplatesExplore_${category.id}`,
                       page_location: window.location.pathname,
+                      source: 'homeTemplatesSection',
                       timestamp: new Date().toISOString()
                     })
                   }}
@@ -197,9 +198,9 @@ const TemplatesSection = () => {
             target="_blank"
             onClick={() => {
               trackEvent('Button Clicked', {
-                button_name: 'ctaButton',
+                button_name: 'homeTemplatesCta',
                 page_location: window.location.pathname,
-                source: 'templatesSection',
+                source: 'homeTemplatesSection',
                 timestamp: new Date().toISOString()
               })
             }}

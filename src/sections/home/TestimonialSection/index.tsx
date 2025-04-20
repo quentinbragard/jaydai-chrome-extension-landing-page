@@ -74,14 +74,14 @@ const TestimonialsSection = () => {
                 
                 <div className="ml-4">
                   <h3 className="font-semibold text-foreground">{testimonial.name}</h3>
-                  {testimonial.link && (
+                    {testimonial.link && (
                     <a 
                       href={testimonial.link} 
                       onClick={() => {
                         trackEvent('Testimonial Clicked', {
-                          button_name: testimonial.name,
+                          button_name: `homeTestimonialClick_${testimonial.id}`,
                           page_location: window.location.pathname,
-                          source: 'testimonialsSection',
+                          source: 'homeTestimonialsSection',
                           timestamp: new Date().toISOString()
                         })
                       }}
@@ -161,9 +161,9 @@ const TestimonialsSection = () => {
             href={t('cta.link')}
             onClick={() => {
               trackEvent('Button Clicked', {
-                button_name: 'testimonialsSectionCta',
+                button_name: 'homeTestimonialsSectionCta',
                 page_location: window.location.pathname,
-                source: 'testimonialsSection',
+                source: 'homeTestimonialsSection',
                 timestamp: new Date().toISOString()
               })
             }}

@@ -24,8 +24,9 @@ export default function Home() {
   
   const openVideoDialog = () => {
     trackEvent('Button Clicked', {
-      button_name: 'open_video_dialog',
+      button_name: 'homeHeroOpenVideoDialog',
       page_location: window.location.pathname,
+      source: 'homeHeroSection',
       timestamp: new Date().toISOString()
     })
     setIsVideoDialogOpen(true)
@@ -33,8 +34,9 @@ export default function Home() {
   
   const closeVideoDialog = () => {
     trackEvent('Button Clicked', {
-      button_name: 'close_video_dialog',
+      button_name: 'homeHeroCloseVideoDialog',
       page_location: window.location.pathname,
+      source: 'homeHeroSection',
       timestamp: new Date().toISOString()
     })
     setIsVideoDialogOpen(false)

@@ -12,9 +12,9 @@ export default function PricingSection() {
 
   const handleCtaClick = () => {
     trackEvent('Button Clicked', {
-      button_name: 'pricingSectionCta',
+      button_name: 'homePricingSectionCta',
       page_location: window.location.pathname,
-      source: 'pricingSection',
+      source: 'homePricingSection',
       timestamp: new Date().toISOString()
     })
     window.open("https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd", "_blank")
@@ -171,11 +171,11 @@ export default function PricingSection() {
 
                     <a
                       href="/enterprise"
-                      onClick={() => {
+                    onClick={() => {
                         trackEvent('Button Clicked', {
-                          button_name: 'pricingSectionCta_enterprisePlan',
+                          button_name: 'homePricingSectionEnterprisePlanCta',
                           page_location: window.location.pathname,
-                          source: 'pricingSection',
+                          source: 'homePricingSection',
                           timestamp: new Date().toISOString()
                         })
                       }}

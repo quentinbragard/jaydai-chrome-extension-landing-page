@@ -50,8 +50,9 @@ const HowItWorksSection = () => {
   const handleSeeHowClick = (stepId: number) => {
     openImageModal(steps[stepId-1].image, steps[stepId-1].title)
     trackEvent('Button Clicked', {
-      button_name: `howItWorks_seeHow_${stepId}`,
+      button_name: `homeHowItWorksSeeHow_${stepId}`,
       page_location: window.location.pathname,
+      source: 'homeHowItWorksSection',
       timestamp: new Date().toISOString()
     })
   }
@@ -242,8 +243,9 @@ const HowItWorksSection = () => {
                         onClick={() => {
                           openImageModal(steps[activeStep-1].image, steps[activeStep-1].title)
                           trackEvent('Image Modal Direct Open', {
-                            button_name: `howItWorks_imageModal_${steps[activeStep-1].title}`,
+                            button_name: `homeHowItWorksImageModalOpen_${steps[activeStep-1].id}`,
                             page_location: window.location.pathname,
+                            source: 'homeHowItWorksSection',
                             timestamp: new Date().toISOString()
                           })
                         }}
@@ -310,6 +312,12 @@ const HowItWorksSection = () => {
           <a
             href="https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd"
             target="_blank"
+            onClick={() => trackEvent('Button Clicked', {
+              button_name: 'homeHowItWorksCta',
+              page_location: window.location.pathname,
+              source: 'homeHowItWorksSection',
+              timestamp: new Date().toISOString()
+            })}
             className="px-8 py-3 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium inline-flex items-center gap-2"
           >
             <span>{t('ctaText')}</span>
@@ -365,8 +373,9 @@ const HowItWorksSection = () => {
                 onClick={() => {
                   setIsImageModalOpen(false)
                   trackEvent('Image Modal Closed', {
-                    button_name: `howItWorks_imageModal_${imageTitle}`,
+                    button_name: `homeHowItWorksImageModalClose`,
                     page_location: window.location.pathname,
+                    source: 'homeHowItWorksSection',
                     timestamp: new Date().toISOString()
                   })
                 }}

@@ -59,10 +59,10 @@ const AnalyticsDashboardSection = () => {
                 target="_blank"
                 className="inline-flex items-center gap-2 font-black px-3 py-1.5 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
                 onClick={() => {
-                  trackEvent('Download Extension Clicked', {
-                    button_name: 'analyticsDashboard',
+                  trackEvent('Button Clicked', {
+                    button_name: 'homeAnalyticsDashboardDownloadExtension',
                     page_location: window.location.pathname,
-                    source: 'analyticsDashboardSection',
+                    source: 'homeAnalyticsDashboardSection',
                     timestamp: new Date().toISOString()
                   })
                 }}

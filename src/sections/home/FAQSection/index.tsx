@@ -23,6 +23,7 @@ const FAQSection = () => {
     trackEvent('FAQ Clicked', {
       question: questions[index].question,
       answer: questions[index].answer,
+      source: 'homeFaqSection',
       timestamp: new Date().toISOString()
     })
   }
@@ -101,11 +102,11 @@ const FAQSection = () => {
             
             <a
               href="#contact"
-              onClick={() => {
+            onClick={() => {
                 trackEvent('Button Clicked', {
-                  button_name: 'faqSectionCta',
+                  button_name: 'homeFaqSectionCta',
                   page_location: window.location.pathname,
-                  source: 'faqSection',
+                  source: 'homeFaqSection',
                   timestamp: new Date().toISOString()
                 })
               }}

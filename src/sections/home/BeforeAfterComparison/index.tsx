@@ -17,9 +17,10 @@ const BeforeAfterComparison = () => {
   const [imageLoaded, setImageLoaded] = useState(false)
 
   const handleCtaClick = () => {
-    trackEvent('button_clicked', {
-      button_name: 'try_extension',
-      location: 'comparison_section',
+    trackEvent('Button Clicked', {
+      button_name: 'homeComparisonTryExtension',
+      page_location: window.location.pathname,
+      source: 'homeComparisonSection',
       timestamp: new Date().toISOString()
     })
     window.open('https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd', '_blank')
@@ -158,10 +159,10 @@ const BeforeAfterComparison = () => {
                 target="_blank"
                 className="inline-flex items-center gap-2 font-black px-3 py-1.5 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
                 onClick={() => {
-                  trackEvent('Download Extension Clicked', {
-                    button_name: 'beforeAfterComparison',
+                  trackEvent('Button Clicked', {
+                    button_name: 'homeComparisonDownloadExtension',
                     page_location: window.location.pathname,
-                    source: 'beforeAfterComparisonSection',
+                    source: 'homeComparisonSection',
                     timestamp: new Date().toISOString()
                   })
                 }}
