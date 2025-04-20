@@ -44,7 +44,7 @@ export default function RootLayout({
   
   return (
     <html lang={locale} suppressHydrationWarning>
-      <head>
+            <head>
         {/* Preload critical resources */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -52,6 +52,21 @@ export default function RootLayout({
         {/* Favicon and App Icons */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-DWG2Y6PC5G"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', '${process.env.NEXT_PUBLIC_GA_TRACKING_ID}');
+          `}
+        </Script>
       </head>
       <body className={`${poppins.variable} ${roboto.variable} antialiased min-h-screen flex flex-col`}>
         <ThemeProvider

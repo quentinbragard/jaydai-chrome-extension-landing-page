@@ -14,6 +14,7 @@ import HeroSection from "@/sections/home/HeroSection"
 import FeaturesSection from "@/sections/home/FeaturesSection"
 import { AuroraBackground } from "@/components/ui/aurora-backgound"
 import { useTranslations } from "next-intl"
+import { trackEvent } from "@/lib/analytics"
 
 export default function Home() {
   const t = useTranslations('homePage')
@@ -22,10 +23,12 @@ export default function Home() {
   const [isVideoDialogOpen, setIsVideoDialogOpen] = useState(false)
   
   const openVideoDialog = () => {
+    trackEvent('open_video_dialog')
     setIsVideoDialogOpen(true)
   }
   
   const closeVideoDialog = () => {
+    trackEvent('close_video_dialog')
     setIsVideoDialogOpen(false)
   }
 
