@@ -23,12 +23,20 @@ export default function Home() {
   const [isVideoDialogOpen, setIsVideoDialogOpen] = useState(false)
   
   const openVideoDialog = () => {
-    trackEvent('open_video_dialog')
+    trackEvent('Button Clicked', {
+      button_name: 'open_video_dialog',
+      page_location: window.location.pathname,
+      timestamp: new Date().toISOString()
+    })
     setIsVideoDialogOpen(true)
   }
   
   const closeVideoDialog = () => {
-    trackEvent('close_video_dialog')
+    trackEvent('Button Clicked', {
+      button_name: 'close_video_dialog',
+      page_location: window.location.pathname,
+      timestamp: new Date().toISOString()
+    })
     setIsVideoDialogOpen(false)
   }
 
