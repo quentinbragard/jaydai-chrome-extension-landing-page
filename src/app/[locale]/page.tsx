@@ -13,8 +13,11 @@ import PricingSection from "@/sections/home/PricingSection"
 import HeroSection from "@/sections/home/HeroSection"
 import FeaturesSection from "@/sections/home/FeaturesSection"
 import { AuroraBackground } from "@/components/ui/aurora-backgound"
+import { useTranslations } from "next-intl"
 
 export default function Home() {
+  const t = useTranslations('homePage')
+
   // State for video dialog
   const [isVideoDialogOpen, setIsVideoDialogOpen] = useState(false)
   
@@ -46,7 +49,7 @@ export default function Home() {
                 width="100%" 
                 height="100%" 
                 src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                title="Jaydai Demo Video" 
+                title={t('videoDialog.title')} 
                 frameBorder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowFullScreen
@@ -59,9 +62,11 @@ export default function Home() {
               X
             </button>
             <div className="p-6">
-              <h3 className="text-2xl font-bold text-foreground">Maximize your AI potential with Jaydai</h3>
+              <h3 className="text-2xl font-bold text-foreground">
+                {t('videoDialog.title')}
+              </h3>
               <p className="mt-2 text-foreground/70">
-                See how Jaydai transforms your ChatGPT experience with expert prompts, custom templates, and detailed analytics.
+                {t('videoDialog.description')}
               </p>
             </div>
           </div>

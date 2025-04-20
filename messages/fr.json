@@ -947,5 +947,13 @@
   "title": "Terms of Service",
   "lastUpdated": "Last updated: April 19, 2025",
   "content": "<h1>Jaydai Terms of Service</h1><h2>1. Introduction</h2><p>Welcome to Jaydai (\"we,\" \"our,\" or \"us\"). By using our Chrome extension, you agree to comply with and be bound by the following terms and conditions of use, which together with our privacy policy, govern our relationship with you in relation to this software. If you disagree with any part of these terms, please do not use our extension.</p><h2>2. Acceptance of Terms</h2><p>By installing and using Jaydai, you agree to the following terms:</p><ul><li><strong><span class=\"emoji\">🔑</span>Account Creation</strong><br>You must be at least 16 years old to create an account</li><li><strong><span class=\"emoji\">🔑</span>Account Creation</strong><br>You must be at least 16 years old to create an account</li><li><strong><span class=\"emoji\">🔑</span>Account Creation</strong><br>You must be at least 16 years old to create an account</li></ul>"
+},
+"homePage": {
+  "videoDialog": {
+    "title": "Vidéo de démonstration de Jaydai",
+    "description": "Découvrez comment Jaydai transforme votre expérience ChatGPT avec des prompts experts, des modèles personnalisés et des analyses détaillées.",
+    "ctaButton": "Regarder maintenant",
+    "ctaButton2": "En savoir plus"
+  }
 }
 }
