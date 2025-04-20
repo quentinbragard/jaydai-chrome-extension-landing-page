@@ -23,7 +23,7 @@ export default function PricingSection() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ type: "spring", stiffness: 80, damping: 15 }}
+            transition={{ duration: 0.5 }}
             className="text-3xl md:text-4xl font-bold text-foreground tracking-tight"
           >
             {t("title")}
@@ -32,7 +32,7 @@ export default function PricingSection() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ type: "spring", stiffness: 80, damping: 15, delay: 0.1 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
             className="mt-4 text-xl text-foreground/70 max-w-2xl mx-auto"
           >
             {t("subtitle")}
@@ -40,18 +40,19 @@ export default function PricingSection() {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          {/* Main Free Tier Card */}
+          {/* Main Free Tier Card - Explicit styling to ensure consistency */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ type: "spring", stiffness: 80, damping: 15, delay: 0.2 }}
-            className="relative rounded-2xl overflow-hidden border border-primary/30 
-            bg-gradient-to-br from-primary/10 to-background shadow-[0_0_0_1px_rgba(255,255,255,0.05)] 
-            backdrop-blur-xl transition-all duration-300 hover:scale-[1.01] before:absolute 
-            before:inset-0 before:rounded-2xl before:p-[1px] before:bg-gradient-to-br 
-            before:from-primary/40 before:to-primary/10 before:content-[''] before:z-[-1]"
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="relative rounded-2xl overflow-hidden border border-primary/30"
+            style={{
+              background: "rgba(157, 147, 247, 0.25)",
+              boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)"
+            }}
           >
+            {/* Decorative blurred circles */}
             <div className="absolute -top-10 -right-10">
               <div className="w-40 h-40 bg-primary/10 rounded-full blur-xl" />
             </div>
@@ -60,10 +61,22 @@ export default function PricingSection() {
             </div>
 
             <div className="p-8 md:p-10 relative z-10">
-              {/* Updated badge with higher z-index and explicit positioning */}
+              {/* Badge with explicit styling and positioning */}
               <div 
-                className="absolute top-0 right-0 mt-6 mr-6 bg-primary text-primary-foreground text-sm font-bold px-4 py-2 rounded-full shadow-md animate-pulse"
-                style={{ zIndex: 20 }}
+                className="absolute"
+                style={{ 
+                  top: "24px", 
+                  right: "24px", 
+                  backgroundColor: "rgb(99, 102, 241)",
+                  color: "white",
+                  fontWeight: "bold",
+                  fontSize: "0.875rem",
+                  padding: "0.5rem 1rem",
+                  borderRadius: "9999px",
+                  boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+                  zIndex: 20,
+                  animation: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite"
+                }}
               >
                 {t("freePlan.badge")}
               </div>
@@ -92,19 +105,20 @@ export default function PricingSection() {
                   </div>
                 </div>
 
+                {/* Price section with explicit styling to match local version */}
                 <div className="mt-8 md:mt-0 md:w-64 flex flex-col">
                   <div className="text-center mb-6">
                     <div className="text-5xl font-extrabold text-foreground tracking-tight">
                       {t("freePlan.price")}
                     </div>
-                    <div className="text-sm text-foreground/60 mt-1 uppercase tracking-wide">
+                    <div className="text-sm text-foreground/80 mt-1 uppercase tracking-wide font-bold">
                       {t("freePlan.priceSubtext")}
                     </div>
                   </div>
 
                   <ShimmerButton
                     onClick={() => window.open("https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd", "_blank")}
-                    className="px-8 py-3 rounded-md text-primary-foreground font-black"
+                    className="px-8 py-3 rounded-md text-primary-foreground font-black text-center w-full"
                     shimmerColor="#FFCD00"
                     shimmerSize="0.05em"
                     shimmerDuration="3s"
@@ -123,8 +137,8 @@ export default function PricingSection() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ type: "spring", stiffness: 80, damping: 15, delay: 0.3 }}
-            className="relative rounded-xl overflow-hidden border border-muted bg-card shadow-xl hover:shadow-2xl transition-shadow"
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="relative rounded-xl overflow-hidden border border-muted bg-card shadow-xl hover:shadow-2xl transition-shadow mt-6"
           >
             <div className="p-6 md:p-8">
               <div className="flex items-start gap-4">
@@ -145,9 +159,7 @@ export default function PricingSection() {
 
                     <a
                       href="/enterprise"
-                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg 
-                      bg-primary text-primary-foreground hover:bg-primary/90 
-                      transition-colors duration-200 shadow-md"
+                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-200 shadow-md"
                     >
                       <span>{t("enterprise.ctaText")}</span>
                       <ArrowRight size={16} />
@@ -175,7 +187,7 @@ export default function PricingSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ type: "spring", stiffness: 80, damping: 15, delay: 0.5 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
           className="mt-16 text-center"
         >
           <p className="text-foreground/70 mb-2">
@@ -186,6 +198,18 @@ export default function PricingSection() {
           </a>
         </motion.div>
       </div>
+      
+      {/* Add keyframes for the pulse animation */}
+      <style jsx global>{`
+        @keyframes pulse {
+          0%, 100% {
+            opacity: 1;
+          }
+          50% {
+            opacity: 0.7;
+          }
+        }
+      `}</style>
     </section>
   );
 }
