@@ -964,5 +964,39 @@
     "ctaButton": "Regarder maintenant",
     "ctaButton2": "En savoir plus"
   }
-}
+},
+"blog": {
+  "title": "Blog",
+  "subtitle": "Découvrez les dernières perspectives, conseils et stratégies pour maîtriser l'ingénierie des prompts IA",
+  "blogBadge": "Blog Jaydai",
+  "featuredPost": "À la une",
+  "readMore": "Lire la suite",
+    "readTime": "min de lecture",
+    "author": "Auteur",
+    "allPosts": "Tous les articles",
+    "filter": "Filtrer par catégorie",
+    "clearFilter": "Effacer le filtre",
+    "noPosts": {
+      "title": "Aucun article trouvé",
+      "message": "Il n'y a pas d'articles correspondant à votre filtre actuel. Essayez de sélectionner une autre catégorie ou revenez plus tard."
+    },
+    "pagination": {
+      "firstPage": "Aller à la première page",
+      "previousPage": "Aller à la page précédente",
+      "nextPage": "Aller à la page suivante",
+      "lastPage": "Aller à la dernière page",
+      "goToPage": "Aller à la page {page}"
+    },
+    "post": {
+      "notFound": "Article Non Trouvé",
+      "backToBlog": "Retour au Blog",
+      "readTime": "min de lecture",
+      "relatedPosts": "Articles Similaires",
+      "exploreBlog": "Explorer plus d'articles"
+    },
+    "seo": {
+      "title": "Blog Jaydai | Conseils et Stratégies pour l'Ingénierie des Prompts IA",
+      "description": "Explorez les dernières perspectives, tutoriels et stratégies pour maîtriser l'ingénierie des prompts IA avec le blog officiel de Jaydai."
+    }
+  }
 }

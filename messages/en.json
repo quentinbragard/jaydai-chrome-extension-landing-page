@@ -965,5 +965,39 @@
     "ctaButton": "Watch Now",
     "ctaButton2": "Learn More"
   }
-}
+},
+"blog": {
+    "title": "Blog",
+    "subtitle": "Discover the latest insights, tips, and strategies for mastering AI prompt engineering",
+    "blogBadge": "Jaydai Blog",
+    "featuredPost": "Featured",
+    "readMore": "Read more",
+    "readTime": "min read",
+    "author": "Author",
+    "allPosts": "All Posts",
+    "filter": "Filter by category",
+    "clearFilter": "Clear filter",
+    "noPosts": {
+      "title": "No posts found",
+      "message": "There are no posts matching your current filter. Try selecting a different category or check back later."
+    },
+    "pagination": {
+      "firstPage": "Go to first page",
+      "previousPage": "Go to previous page",
+      "nextPage": "Go to next page",
+      "lastPage": "Go to last page",
+      "goToPage": "Go to page {page}"
+    },
+    "post": {
+      "notFound": "Blog Post Not Found",
+      "backToBlog": "Back to Blog",
+      "readTime": "min read",
+      "relatedPosts": "Related Posts",
+      "exploreBlog": "Explore more articles"
+    },
+    "seo": {
+      "title": "Jaydai Blog | AI Prompt Engineering Tips & Strategies",
+      "description": "Explore the latest insights, tutorials, and strategies for mastering AI prompt engineering with Jaydai's official blog."
+    }
+  }
 }
