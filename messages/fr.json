@@ -114,6 +114,10 @@
     "subtitle": "Sept étapes simples pour maximiser votre potentiel IA",
     "ctaText": "Essayez Maintenant",
     "ctaLink": "https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd",
+    "seeHow": "Voir comment",
+    "closeModal": "Cliquez n'importe où en dehors de l'image pour fermer",
+    "optimizedWithJaydai": "Optimisé avec Jaydai",
+    "loading": "Chargement...",
     "steps": {
       "1": {
         "title": "Installer l'Extension",

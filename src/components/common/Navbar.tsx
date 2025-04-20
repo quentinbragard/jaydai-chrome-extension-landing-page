@@ -385,8 +385,8 @@ const Navbar = () => {
               target="_blank"
               className="flex items-center gap-2 font-black px-4 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
               onClick={() => {
-                trackEvent('Navbar Button Clicked', {
-                  button_name: 'downloadExtension',
+                trackEvent('Download Extension Clicked', {
+                  button_name: 'navbar',
                   page_location: window.location.pathname,
                   timestamp: new Date().toISOString()
                 })

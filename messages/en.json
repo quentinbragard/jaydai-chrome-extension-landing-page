@@ -115,6 +115,10 @@
     "subtitle": "Seven simple steps to maximize your AI potential",
     "ctaText": "Try It Now",
     "ctaLink": "https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd",
+    "seeHow": "See how",
+    "closeModal": "Click anywhere outside the image to close",
+    "optimizedWithJaydai": "Optimized with Jaydai",
+    "loading": "Loading...",
     "steps": {
       "1": {
         "title": "Install the Extension",

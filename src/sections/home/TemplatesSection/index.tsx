@@ -4,6 +4,7 @@ import React, { useRef } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { useTranslations } from "next-intl"
 import { ArrowRight } from "lucide-react"
+import { trackEvent } from '@/lib/analytics'
 
 interface TemplateCategory {
   id: number
@@ -160,6 +161,13 @@ const TemplatesSection = () => {
                 <p className="text-foreground/70 mb-4">{category.description}</p>
                 <a 
                   href="#" 
+                  onClick={() => {
+                    trackEvent('Button Clicked', {
+                      button_name: `exploreTemplates_${category.title}`,
+                      page_location: window.location.pathname,
+                      timestamp: new Date().toISOString()
+                    })
+                  }}
                   className={`inline-flex items-center ${category.textColor} hover:underline`}
                 >
                   {t('exploreTemplates')} <ArrowRight size={16} className="ml-1" />
@@ -187,9 +195,16 @@ const TemplatesSection = () => {
           <a
             href={t('ctaLink')}
             target="_blank"
+            onClick={() => {
+              trackEvent('Button Clicked', {
+                button_name: 'ctaButton',
+                page_location: window.location.pathname,
+                timestamp: new Date().toISOString()
+              })
+            }}
             className="px-8 py-3 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium"
           >
-            {t('ctaButtonText')}
+            {t('ctaButtonText')} 
           </a>
         </motion.div>
       </div>

@@ -16,7 +16,8 @@ import {
   ZoomIn,
   X
 } from "lucide-react"
-
+import Link from "next/link"
+import { trackEvent } from '@/lib/analytics'
 const HowItWorksSection = () => {
   const t = useTranslations('howItWorks')
   const { resolvedTheme } = useTheme()
@@ -102,6 +103,11 @@ const HowItWorksSection = () => {
     setModalImage(getThemeAwareImagePath(baseImageSrc));
     setImageTitle(title);
     setIsImageModalOpen(true);
+    trackEvent('Image Modal Opened', {
+      button_name: `howItWorks_imageModal_${title}`,
+      page_location: window.location.pathname,
+      timestamp: new Date().toISOString()
+    })
   };
   
   // Get the current step's image path based on theme
@@ -184,8 +190,16 @@ const HowItWorksSection = () => {
                       animate={{ opacity: 1 }}
                       className="flex items-center mt-3 text-primary font-medium"
                     >
-                      <span>See how</span>
-                      <ArrowRight size={14} className="ml-1" />
+                      <Link href={`#${step.id}`} onClick={() => {
+                        trackEvent('Button Clicked', {
+                          button_name: `howItWorks_seeHow_${step.id}`,
+                          page_location: window.location.pathname,
+                          timestamp: new Date().toISOString()
+                        })
+                      }}>
+                        <span>{t('seeHow')}</span>
+                        <ArrowRight size={14} className="ml-1" />
+                      </Link>
                     </motion.div>
                   )}
                 </div>
@@ -251,7 +265,7 @@ const HowItWorksSection = () => {
               {!mounted && (
                 <div className="absolute inset-0 flex items-center justify-center pt-10">
                   <div className="w-full h-full bg-secondary/10 animate-pulse flex items-center justify-center">
-                    <div className="text-secondary/30">Loading...</div>
+                    <div className="text-secondary/30">{t('loading')}</div>
                   </div>
                 </div>
               )}
@@ -260,7 +274,7 @@ const HowItWorksSection = () => {
               <div className="absolute bottom-4 right-4 z-10">
                 {activeStep === 6 && (
                   <div className="bg-primary/80 text-primary-foreground text-xs px-2 py-1 rounded-md">
-                    Optimized with Jaydai
+                    {t('optimizedWithJaydai')}
                   </div>
                 )}
               </div>
@@ -344,7 +358,14 @@ const HowItWorksSection = () => {
               
               {/* Close button */}
               <button
-                onClick={() => setIsImageModalOpen(false)}
+                onClick={() => {
+                  setIsImageModalOpen(false)
+                  trackEvent('Image Modal Closed', {
+                    button_name: `howItWorks_imageModal_${imageTitle}`,
+                    page_location: window.location.pathname,
+                    timestamp: new Date().toISOString()
+                  })
+                }}
                 className="absolute top-3 right-4 z-40 bg-primary text-primary-foreground rounded-full p-2 hover:bg-primary/90 transition-colors"
                 aria-label="Close image viewer"
               >
@@ -353,7 +374,7 @@ const HowItWorksSection = () => {
               
               {/* Instruction hint */}
               <div className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-secondary/80 backdrop-blur-sm text-foreground/90 rounded-full px-4 py-1.5 text-sm flex items-center shadow-lg">
-                <span>Click anywhere outside the image to close</span>
+                <span>{t('closeModal')}</span>
               </div>
             </motion.div>
           </motion.div>
