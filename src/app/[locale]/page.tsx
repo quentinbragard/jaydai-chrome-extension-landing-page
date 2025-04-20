@@ -11,8 +11,8 @@ import AnalyticsDashboardSection from "@/sections/home/AnalyticsDashboardSection
 import EnterpriseSolutionsSection from "@/sections/home/EnterpriseSolutionsSection"
 import PricingSection from "@/sections/home/PricingSection"
 import HeroSection from "@/sections/home/HeroSection"
-import SubtleBackgroundEffect from "@/components/effects/SubtleBackgroundEffect"
 import FeaturesSection from "@/sections/home/FeaturesSection"
+import { AuroraBackground } from "@/components/ui/aurora-backgound"
 
 export default function Home() {
   // State for video dialog
@@ -28,11 +28,12 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Subtle background effect that follows cursor */}
-      <SubtleBackgroundEffect />
+
       
-      {/* Hero Section */}
+    {/* Hero Section */}
+    <AuroraBackground containerClassName="">
       <HeroSection openVideoDialog={openVideoDialog} />
+    </AuroraBackground>
       
       {/* Video Dialog */}
       {isVideoDialogOpen && (
