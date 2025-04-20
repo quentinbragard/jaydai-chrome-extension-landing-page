@@ -68,7 +68,8 @@
     "cta": {
       "description": "Experience all these features and more with our free Chrome extension.",
       "buttonText": "Download Now",
-      "link": "https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd"
+      "link": "https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd",
+      "privacyPolicy": "Privacy Policy"
     }
   },
   "pricing": {

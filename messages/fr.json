@@ -67,7 +67,8 @@
     "cta": {
       "description": "Découvrez toutes ces fonctionnalités et plus encore avec notre extension Chrome gratuite.",
       "buttonText": "Télécharger Maintenant",
-      "link": "https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd"
+      "link": "https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd",
+      "privacyPolicy": "Politique de Confidentialité"
     }
   },
   "pricing": {

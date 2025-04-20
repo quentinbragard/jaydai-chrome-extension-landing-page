@@ -12,6 +12,7 @@ import {
 } from "lucide-react"
 import { useTranslations } from "next-intl"
 import Link from "next/link"
+import { trackEvent } from '@/lib/analytics'
 
 import { FeatureCard, FeatureCardProps } from "./FeatureCard"
 
@@ -118,16 +119,28 @@ const FeaturesSection = () => {
               href={t('cta.link')}
               target="_blank"
               className="px-8 py-3 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium"
+              onClick={() => {
+                trackEvent('button_clicked', {
+                  button_name: 'contact_us',
+                  location: 'header'
+                });
+              }}
             >
               {t('cta.buttonText')}
             </a>
             
-            <Link
+            <a
               href="/privacy"
               className="text-foreground/70 hover:text-primary transition-colors"
+              onClick={() => {
+                trackEvent('button_clicked', {
+                  button_name: 'contact_us',
+                  location: 'header'
+                });
+              }}
             >
-              Privacy Policy
-            </Link>
+              {t('cta.privacyPolicy')}
+            </a>
           </div>
         </motion.div>
       </div>
