@@ -1,6 +1,14 @@
-import React from "react"
+"use client";
+
+import React, { useState, useEffect } from "react";
 
 const HeroBackground = () => {
+  const [isMounted, setIsMounted] = useState(false);
+  
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   return (
     <>
       {/* Background gradient effects */}
@@ -12,7 +20,7 @@ const HeroBackground = () => {
       {/* Animated dots grid */}
       <div className="absolute inset-0 bg-grid-white/[0.02] bg-[length:20px_20px] [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
     </>
-  )
-}
+  );
+};
 
-export default HeroBackground
+export default HeroBackground;
