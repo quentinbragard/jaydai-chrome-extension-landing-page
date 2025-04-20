@@ -4,6 +4,7 @@ import React from "react"
 import { motion } from "framer-motion"
 import { useTranslations } from "next-intl"
 import { Plus, Minus } from "lucide-react"
+import { trackEvent } from '@/lib/analytics'
 
 interface FAQ {
   id: number
@@ -19,6 +20,11 @@ const FAQSection = () => {
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index)
+    trackEvent('FAQ Clicked', {
+      question: questions[index].question,
+      answer: questions[index].answer,
+      timestamp: new Date().toISOString()
+    })
   }
 
   return (
@@ -95,6 +101,14 @@ const FAQSection = () => {
             
             <a
               href="#contact"
+              onClick={() => {
+                trackEvent('Button Clicked', {
+                  button_name: 'faqSectionCta',
+                  page_location: window.location.pathname,
+                  source: 'faqSection',
+                  timestamp: new Date().toISOString()
+                })
+              }}
               className="px-6 py-2 rounded-md bg-secondary/50 text-foreground hover:bg-secondary/70 transition-colors"
             >
               {t('ctaButton')}

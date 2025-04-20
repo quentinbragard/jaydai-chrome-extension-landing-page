@@ -118,6 +118,7 @@
     "closeModal": "Cliquez n'importe où en dehors de l'image pour fermer",
     "optimizedWithJaydai": "Optimisé avec Jaydai",
     "loading": "Chargement...",
+    "step": "Étape",
     "steps": {
       "1": {
         "title": "Installer l'Extension",
@@ -160,7 +161,8 @@
     "basicPrompt": "\"Écrivez sur les avantages de l'IA\"",
     "jaydaiPromptLabel": "Prompt Jaydai",
     "jaydaiPrompt": "\"Analysez les 5 principaux avantages commerciaux de l'implémentation de l'IA...\"",
-    "instructions": "Faites glisser le curseur pour comparer la différence entre les prompts basiques et les modèles optimisés de Jaydai."
+    "instructions": "Faites glisser le curseur pour comparer la différence entre les prompts basiques et les modèles optimisés de Jaydai.",
+    "ctaText": "Télécharger l'Extension"
   },
   "templateCategories": {
     "title": "Catégories de Modèles de Prompts",
@@ -222,6 +224,7 @@
     "subtitle": "Analytiques complètes pour suivre vos gains de productivité et vos habitudes d'utilisation",
     "dashboardAlt": "Tableau de Bord Analytique",
     "description": "Obtenez des insights précieux sur votre utilisation de l'IA et mesurez les améliorations de productivité de votre équipe avec nos analytiques détaillées.",
+    "ctaText": "Télécharger l'Extension",
     "stats": {
       "totalPrompts": {
         "label": "Total des Prompts",

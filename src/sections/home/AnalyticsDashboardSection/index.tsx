@@ -6,6 +6,9 @@ import { useTranslations } from "next-intl"
 import StatsCards from "./StatsCards"
 import DashboardViewer from "./DashboardViewer"
 import SectionHeader from "./SectionHeader"
+import Link from "next/link"
+import Image from "next/image"
+import { trackEvent } from '@/lib/analytics'
 
 const AnalyticsDashboardSection = () => {
   const t = useTranslations('analyticsDashboard')
@@ -43,6 +46,38 @@ const AnalyticsDashboardSection = () => {
             {t('description')}
           </p>
         </motion.div>
+         {/* CTA Button */}
+         <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="mt-8 w-full flex justify-center"
+            >
+             <Link 
+                href="https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd" 
+                target="_blank"
+                className="inline-flex items-center gap-2 font-black px-3 py-1.5 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+                onClick={() => {
+                  trackEvent('Download Extension Clicked', {
+                    button_name: 'analyticsDashboard',
+                    page_location: window.location.pathname,
+                    source: 'analyticsDashboardSection',
+                    timestamp: new Date().toISOString()
+                  })
+                }}
+              >
+              <Image
+                src="/images/google_chrome_icon.png"
+                alt="Google Chrome"
+                width={20}
+                height={20}
+                className="w-5 h-5"
+              />
+              {t('ctaText')}
+            </Link>
+            </motion.div>
+
       </div>
     </section>
   )

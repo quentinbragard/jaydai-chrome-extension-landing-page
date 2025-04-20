@@ -6,6 +6,7 @@ import Image from "next/image"
 import { Github, Twitter, Linkedin, Mail } from "lucide-react"
 import { useTranslations } from 'next-intl'
 import { useTheme } from "next-themes"
+import { trackEvent } from '@/lib/analytics'
 
 const Footer = () => {
   const t = useTranslations('footer')
@@ -17,7 +18,15 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and description */}
           <div className="col-span-1 md:col-span-2">
-            <Link href="/" className="inline-block">
+            <Link href="/" className="inline-block"
+              onClick={() => {
+                trackEvent('Footer Logo Clicked', {
+                  page_location: window.location.pathname,
+                  source: 'footer',
+                  timestamp: new Date().toISOString()
+                })
+              }}
+            > 
               <Image 
                 src={isDark ? "/images/full-logo-dark.png" : "/images/full-logo-light.png"} 
                 alt="Jaydai Logo" 
@@ -30,11 +39,28 @@ const Footer = () => {
               {t('description')}
             </p>
             <div className="flex space-x-4 mt-6">
-              <Link href="https://www.linkedin.com/company/104914264" target="_blank" className="text-foreground/70 hover:text-primary transition-colors">
+              <Link href="https://www.linkedin.com/company/104914264" target="_blank"
+                onClick={() => {
+                  trackEvent('Footer LinkedIn Clicked', {
+                    page_location: window.location.pathname,
+                    source: 'footer',
+                    timestamp: new Date().toISOString()
+                  })
+                }}
+              >
                 <Linkedin size={20} />
                 <span className="sr-only">{t('linkedin')}</span>
               </Link>
-              <Link href="mailto:contact@jayd.ai" className="text-foreground/70 hover:text-primary transition-colors">
+              <Link href="mailto:contact@jayd.ai"
+                onClick={() => {
+                  trackEvent('Footer Button Clicked', {
+                    button_name: 'email',
+                    page_location: window.location.pathname,
+                    source: 'footer',
+                    timestamp: new Date().toISOString()
+                  })
+                }}
+              >
                 <Mail size={20} />
                 <span className="sr-only">{t('email')}</span>
               </Link>
@@ -46,27 +72,72 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">{t('product')}</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/#features" className="text-foreground/70 hover:text-primary transition-colors">
+                <Link href="/#features"
+                  onClick={() => {
+                    trackEvent('Footer Button Clicked', {
+                      button_name: 'features',
+                      page_location: window.location.pathname,
+                      source: 'footer',
+                      timestamp: new Date().toISOString()
+                    })
+                  }}
+                >
                   {t('features')}
                 </Link>
               </li>
               <li>
-                <Link href="/#templates" className="text-foreground/70 hover:text-primary transition-colors">
+                <Link href="/#templates"
+                  onClick={() => {
+                    trackEvent('Footer Button Clicked', {
+                      button_name: 'templates',
+                      page_location: window.location.pathname,
+                      source: 'footer',
+                      timestamp: new Date().toISOString()
+                    })
+                  }}
+                >
                   {t('templates')}
                 </Link>
               </li>
               <li>
-                <Link href="/#pricing" className="text-foreground/70 hover:text-primary transition-colors">
+                <Link href="/#pricing"
+                  onClick={() => {
+                    trackEvent('Footer Button Clicked', {
+                      button_name: 'pricing',
+                      page_location: window.location.pathname,
+                      source: 'footer',
+                      timestamp: new Date().toISOString()
+                    })
+                  }}
+                >
                   {t('pricing')}
                 </Link>
               </li>
               <li>
-                <Link href="/enterprise" className="text-foreground/70 hover:text-primary transition-colors">
+                <Link href="/enterprise"
+                  onClick={() => {
+                    trackEvent('Footer Button Clicked', {
+                      button_name: 'enterprise',
+                      page_location: window.location.pathname,
+                      source: 'footer',
+                      timestamp: new Date().toISOString()
+                    })
+                  }}
+                >
                   {t('enterprise')}
                 </Link>
               </li>
               <li>
-                <Link href="https://app.jayd.ai" className="text-foreground/70 hover:text-primary transition-colors">
+                <Link href="https://app.jayd.ai"
+                  onClick={() => {
+                    trackEvent('Footer Button Clicked', {
+                      button_name: 'learningSchool',
+                      page_location: window.location.pathname,
+                      source: 'footer',
+                      timestamp: new Date().toISOString()
+                    })
+                  }}
+                >
                   {t('learningSchool')}
                 </Link>
               </li>
@@ -78,27 +149,72 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">{t('company')}</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/enterprise" className="text-foreground/70 hover:text-primary transition-colors">
+                <Link href="/enterprise"
+                  onClick={() => {
+                    trackEvent('Footer Button Clicked', {
+                      button_name: 'aboutUs',
+                      page_location: window.location.pathname,
+                      source: 'footer',
+                      timestamp: new Date().toISOString()
+                    })
+                  }}
+                >
                   {t('aboutUs')}
                 </Link>
               </li>
               <li>
-                <Link href="https://thetunnel.substack.com/" target="_blank" className="text-foreground/70 hover:text-primary transition-colors">
+                <Link href="https://thetunnel.substack.com/" target="_blank"
+                  onClick={() => {
+                    trackEvent('Footer Button Clicked', {
+                      button_name: 'blog',
+                      page_location: window.location.pathname,
+                      source: 'footer',
+                      timestamp: new Date().toISOString()
+                    })
+                  }}
+                >
                   {t('blog')}
                 </Link>
               </li>
-              <li>
-                <Link href="#contact" className="text-foreground/70 hover:text-primary transition-colors">
+                <li>
+                <Link href="#contact"
+                  onClick={() => {
+                    trackEvent('Footer Button Clicked', {
+                      button_name: 'contact',
+                      page_location: window.location.pathname,
+                      source: 'footer',
+                      timestamp: new Date().toISOString()
+                    })
+                  }}
+                >
                   {t('contact')}
                 </Link>
               </li>
-              <li>
-                <Link href="/privacy" className="text-foreground/70 hover:text-primary transition-colors">
+                <li>
+                <Link href="/privacy"
+                  onClick={() => {
+                    trackEvent('Footer Button Clicked', {
+                      button_name: 'privacyPolicy',
+                      page_location: window.location.pathname,
+                      source: 'footer',
+                      timestamp: new Date().toISOString()
+                    })
+                  }}
+                >
                   {t('privacyPolicy')}
                 </Link>
               </li>
               <li>
-                <Link href="/terms-of-service" className="text-foreground/70 hover:text-primary transition-colors">
+                <Link href="/terms-of-service"
+                  onClick={() => {
+                    trackEvent('Footer Button Clicked', {
+                      button_name: 'termsOfService',
+                      page_location: window.location.pathname,
+                      source: 'footer',
+                      timestamp: new Date().toISOString()
+                    })
+                  }}
+                >
                   {t('termsOfService')}
                 </Link>
               </li>
@@ -114,7 +230,14 @@ const Footer = () => {
             <Link 
               href="https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd" 
               target="_blank"
-              className="px-4 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+              onClick={() => {
+                trackEvent('Download Extension Clicked', {
+                  button_name: 'downloadExtension',
+                  page_location: window.location.pathname,
+                  source: 'footer',
+                  timestamp: new Date().toISOString()
+                })
+              }}
             >
               {t('downloadExtension')}
             </Link>

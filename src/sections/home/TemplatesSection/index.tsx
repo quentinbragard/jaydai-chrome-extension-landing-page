@@ -199,6 +199,7 @@ const TemplatesSection = () => {
               trackEvent('Button Clicked', {
                 button_name: 'ctaButton',
                 page_location: window.location.pathname,
+                source: 'templatesSection',
                 timestamp: new Date().toISOString()
               })
             }}

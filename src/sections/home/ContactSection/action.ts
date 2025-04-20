@@ -1,7 +1,7 @@
 'use server'
 
 import { createClient } from '@/utils/supabase/server'
-import { revalidatePath } from 'next/cache'
+import { trackEvent } from '@/lib/analytics'
 
 export type ContactFormData = {
   name: string
@@ -28,13 +28,24 @@ export async function submitContactForm(data: ContactFormData) {
 
     if (error) {
       console.error('Error submitting contact form:', error)
+      trackEvent('Contact Form Submission Failed', {
+        error: error.message,
+        timestamp: new Date().toISOString()
+      })
       return { success: false, error: error.message }
     }
 
     //revalidatePath('/')
+    trackEvent('Contact Form Submission Success', {
+      timestamp: new Date().toISOString()
+    })
     return { success: true }
   } catch (error) {
     console.error('Error submitting contact form:', error)
+    trackEvent('Contact Form Submission Error', {
+      error: error instanceof Error ? error.message : 'Unknown error',
+      timestamp: new Date().toISOString()
+    })
     return { success: false, error: 'An unexpected error occurred' }
   }
 }

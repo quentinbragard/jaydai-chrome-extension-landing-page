@@ -6,7 +6,8 @@ import Image from "next/image"
 import { ArrowLeftRight } from "lucide-react"
 import { useTranslations } from "next-intl"
 import { useTheme } from "next-themes"
-
+import { trackEvent } from '@/lib/analytics'
+import Link from "next/link"
 
 const BeforeAfterComparison = () => {
   const t = useTranslations('beforeAfterComparison')
@@ -14,6 +15,15 @@ const BeforeAfterComparison = () => {
   const { resolvedTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
   const [imageLoaded, setImageLoaded] = useState(false)
+
+  const handleCtaClick = () => {
+    trackEvent('button_clicked', {
+      button_name: 'try_extension',
+      location: 'comparison_section',
+      timestamp: new Date().toISOString()
+    })
+    window.open('https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd', '_blank')
+  }
     
   // Only access the theme after mounting to avoid hydration mismatch
     useEffect(() => {
@@ -134,6 +144,38 @@ const BeforeAfterComparison = () => {
             <p className="text-foreground/70 mt-6">
               {t('instructions')}
             </p>
+            
+            {/* CTA Button */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="mt-8"
+            >
+             <Link 
+                href="https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd" 
+                target="_blank"
+                className="inline-flex items-center gap-2 font-black px-3 py-1.5 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+                onClick={() => {
+                  trackEvent('Download Extension Clicked', {
+                    button_name: 'beforeAfterComparison',
+                    page_location: window.location.pathname,
+                    source: 'beforeAfterComparisonSection',
+                    timestamp: new Date().toISOString()
+                  })
+                }}
+              >
+              <Image
+                src="/images/google_chrome_icon.png"
+                alt="Google Chrome"
+                width={20}
+                height={20}
+                className="w-5 h-5"
+              />
+              {t('ctaText')}
+            </Link>
+            </motion.div>
           </div>
         </motion.div>
       </div>

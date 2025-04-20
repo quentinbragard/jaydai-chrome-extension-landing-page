@@ -119,6 +119,7 @@
     "closeModal": "Click anywhere outside the image to close",
     "optimizedWithJaydai": "Optimized with Jaydai",
     "loading": "Loading...",
+    "step": "Step",
     "steps": {
       "1": {
         "title": "Install the Extension",
@@ -161,7 +162,8 @@
     "basicPrompt": "\"Write about AI benefits\"",
     "jaydaiPromptLabel": "Jaydai prompt",
     "jaydaiPrompt": "\"Analyze the top 5 business benefits of implementing AI...\"",
-    "instructions": "Drag the slider to compare the difference between basic prompts and Jaydai's optimized templates."
+    "instructions": "Drag the slider to compare the difference between basic prompts and Jaydai's optimized templates.",
+    "ctaText": "Download Extension"
   },
   "templateCategories": {
     "title": "Prompt Template Categories",
@@ -223,6 +225,7 @@
     "subtitle": "Comprehensive analytics to track your productivity gains and usage patterns",
     "dashboardAlt": "Analytics Dashboard",
     "description": "Gain valuable insights into your AI usage and measure the productivity improvements across your team with our detailed analytics.",
+    "ctaText": "Download Extension",
     "stats": {
       "totalPrompts": {
         "label": "Total Prompts",

@@ -5,9 +5,21 @@ import { motion } from "framer-motion";
 import { Check, ArrowRight, Building2 } from "lucide-react";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { useTranslations } from "next-intl";
+import { trackEvent } from '@/lib/analytics'
 
 export default function PricingSection() {
   const t = useTranslations("pricing");
+
+  const handleCtaClick = () => {
+    trackEvent('Button Clicked', {
+      button_name: 'pricingSectionCta',
+      page_location: window.location.pathname,
+      source: 'pricingSection',
+      timestamp: new Date().toISOString()
+    })
+    window.open("https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd", "_blank")
+  }
+
   return (
     <section
       id="pricing"
@@ -117,7 +129,7 @@ export default function PricingSection() {
                   </div>
 
                   <ShimmerButton
-                    onClick={() => window.open("https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd", "_blank")}
+                    onClick={handleCtaClick}
                     className="px-8 py-3 rounded-md text-primary-foreground font-black text-center w-full"
                     shimmerColor="#FFCD00"
                     shimmerSize="0.05em"
@@ -159,6 +171,14 @@ export default function PricingSection() {
 
                     <a
                       href="/enterprise"
+                      onClick={() => {
+                        trackEvent('Button Clicked', {
+                          button_name: 'pricingSectionCta_enterprisePlan',
+                          page_location: window.location.pathname,
+                          source: 'pricingSection',
+                          timestamp: new Date().toISOString()
+                        })
+                      }}
                       className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-200 shadow-md"
                     >
                       <span>{t("enterprise.ctaText")}</span>

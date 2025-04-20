@@ -46,7 +46,15 @@ const HowItWorksSection = () => {
     
     return `${prefix}${themeSuffix}${extension}`;
   };
-  
+
+  const handleSeeHowClick = (stepId: number) => {
+    openImageModal(steps[stepId-1].image, steps[stepId-1].title)
+    trackEvent('Button Clicked', {
+      button_name: `howItWorks_seeHow_${stepId}`,
+      page_location: window.location.pathname,
+      timestamp: new Date().toISOString()
+    })
+  }
   // Define steps with base image paths
   const steps = [
     {
@@ -103,11 +111,6 @@ const HowItWorksSection = () => {
     setModalImage(getThemeAwareImagePath(baseImageSrc));
     setImageTitle(title);
     setIsImageModalOpen(true);
-    trackEvent('Image Modal Opened', {
-      button_name: `howItWorks_imageModal_${title}`,
-      page_location: window.location.pathname,
-      timestamp: new Date().toISOString()
-    })
   };
   
   // Get the current step's image path based on theme
@@ -188,18 +191,12 @@ const HowItWorksSection = () => {
                     <motion.div 
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
-                      className="flex items-center mt-3 text-primary font-medium"
+                      className="flex flex-row items-center mt-3 text-primary font-medium"
                     >
-                      <Link href={`#${step.id}`} onClick={() => {
-                        trackEvent('Button Clicked', {
-                          button_name: `howItWorks_seeHow_${step.id}`,
-                          page_location: window.location.pathname,
-                          timestamp: new Date().toISOString()
-                        })
-                      }}>
+                      <button onClick={() => handleSeeHowClick(step.id)} className="flex flex-row items-center mt-3 text-primary font-medium">
                         <span>{t('seeHow')}</span>
                         <ArrowRight size={14} className="ml-1" />
-                      </Link>
+                      </button>
                     </motion.div>
                   )}
                 </div>
@@ -242,7 +239,14 @@ const HowItWorksSection = () => {
                     <div className="absolute inset-0 flex items-center justify-center pt-10">
                       <div 
                         className="relative w-full h-full cursor-pointer group"
-                        onClick={() => openImageModal(steps[activeStep-1].image, steps[activeStep-1].title)}
+                        onClick={() => {
+                          openImageModal(steps[activeStep-1].image, steps[activeStep-1].title)
+                          trackEvent('Image Modal Direct Open', {
+                            button_name: `howItWorks_imageModal_${steps[activeStep-1].title}`,
+                            page_location: window.location.pathname,
+                            timestamp: new Date().toISOString()
+                          })
+                        }}
                       >
                         <Image 
                           src={currentStepImage}
@@ -337,7 +341,7 @@ const HowItWorksSection = () => {
                 <h3 className="font-semibold text-lg">{imageTitle}</h3>
                 <div className="flex items-center gap-2">
                   <span className="px-3 py-1 rounded-full text-xs bg-primary/90 text-primary-foreground">
-                    Step {activeStep}
+                    {t('step')} {activeStep}
                   </span>
                 </div>
               </div>

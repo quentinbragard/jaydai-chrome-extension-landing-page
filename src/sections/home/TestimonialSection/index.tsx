@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import { useTranslations } from "next-intl"
 import { Star, Quote, ArrowUpRight } from "lucide-react"
+import { trackEvent } from '@/lib/analytics'
 
 interface Testimonial {
   id: number
@@ -76,6 +77,14 @@ const TestimonialsSection = () => {
                   {testimonial.link && (
                     <a 
                       href={testimonial.link} 
+                      onClick={() => {
+                        trackEvent('Testimonial Clicked', {
+                          button_name: testimonial.name,
+                          page_location: window.location.pathname,
+                          source: 'testimonialsSection',
+                          timestamp: new Date().toISOString()
+                        })
+                      }}
                       target="_blank" 
                       rel="noopener noreferrer" 
                       className="text-sm flex items-center gap-1"
@@ -150,6 +159,14 @@ const TestimonialsSection = () => {
           
           <a
             href={t('cta.link')}
+            onClick={() => {
+              trackEvent('Button Clicked', {
+                button_name: 'testimonialsSectionCta',
+                page_location: window.location.pathname,
+                source: 'testimonialsSection',
+                timestamp: new Date().toISOString()
+              })
+            }}
             target="_blank"
             className="px-8 py-3 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium"
             style={{ 

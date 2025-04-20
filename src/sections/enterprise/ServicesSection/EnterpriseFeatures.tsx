@@ -22,6 +22,7 @@ import {
   Sparkles
 } from "lucide-react"
 import Image from "next/image"
+import { trackEvent } from '@/lib/analytics'
 
 // Service icon mapping
 const getServiceIcon = (id: string) => {
@@ -124,16 +125,7 @@ const EnterpriseFeatures: React.FC<EnterpriseFeaturesProps> = ({
                       {service.description}
                     </p>
                     
-                    {activeService === service.id && (
-                      <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        className="mt-1 text-primary text-xs font-medium flex items-center"
-                      >
-                        {t('learnMore')}
-                        <ChevronRight size={12} className="ml-1" />
-                      </motion.div>
-                    )}
+                    
                   </div>
                 </button>
               );
@@ -189,6 +181,14 @@ const EnterpriseFeatures: React.FC<EnterpriseFeaturesProps> = ({
                   <a
                     href="#contact"
                     className={`px-4 py-2 rounded-md ${activeServiceColor.split(" ")[0]} ${activeServiceColor.split(" ")[1]} hover:opacity-90 transition-opacity flex items-center gap-1`}
+                    onClick={() => {
+                      trackEvent('Button Clicked', {
+                        button_name: 'enterpriseFeaturesCta',
+                        page_location: window.location.pathname,
+                        source: 'enterpriseServicesSection',
+                        timestamp: new Date().toISOString()
+                      })
+                    }}
                   >
                     <span>{activeServiceData.cta}</span>
                     <ArrowRight size={16} />
