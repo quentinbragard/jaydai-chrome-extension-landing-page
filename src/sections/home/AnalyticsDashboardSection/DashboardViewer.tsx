@@ -22,6 +22,9 @@ const DashboardViewer: React.FC<DashboardViewerProps> = ({ className = "" }) => 
     setMounted(true)
   }, [])
 
+  // Always use a consistent initial dashboard image for SSR
+  const defaultDashboardImage = "/images/analytics-dashboard-dark.png"
+  
   // Determine which dashboard image to display based on theme
   const dashboardImage = mounted && resolvedTheme === "dark" 
     ? "/images/analytics-dashboard-dark.png" 
@@ -42,21 +45,19 @@ const DashboardViewer: React.FC<DashboardViewerProps> = ({ className = "" }) => 
         
         {/* Dashboard image */}
         <div className="relative">
-          {/* Loading placeholder */}
-          {!imageLoaded && <LoadingPlaceholder />}
+          {/* Loading placeholder - shown until image loads or when not mounted */}
+          {(!imageLoaded || !mounted) && <LoadingPlaceholder />}
           
-          {/* Actual dashboard image */}
-          {mounted && (
-            <Image 
-              src={dashboardImage}
-              alt={t('dashboardAlt')}
-              width={1920}
-              height={1080}
-              className={`w-full transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
-              priority
-              onLoad={() => setImageLoaded(true)}
-            />
-          )}
+          {/* Use default image before mounting, then switch based on theme */}
+          <Image 
+            src={mounted ? dashboardImage : defaultDashboardImage}
+            alt={t('dashboardAlt')}
+            width={1920}
+            height={1080}
+            className={`w-full transition-opacity duration-300 ${imageLoaded && mounted ? 'opacity-100' : 'opacity-0'}`}
+            priority
+            onLoad={() => setImageLoaded(true)}
+          />
         </div>
       </div>
       

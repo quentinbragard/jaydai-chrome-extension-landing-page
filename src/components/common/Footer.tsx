@@ -11,7 +11,17 @@ import { trackEvent } from '@/lib/analytics'
 const Footer = () => {
   const t = useTranslations('footer')
   const { theme } = useTheme()
-  const isDark = theme === 'dark'
+  // Add mounted state to fix hydration issues
+  const [mounted, setMounted] = React.useState(false)
+  
+  // Only access theme after mounting
+  React.useEffect(() => {
+    setMounted(true)
+  }, [])
+  
+  // Determine isDark based on mounted state
+  const isDark = mounted && theme === 'dark'
+  
   return (
     <footer className="bg-secondary/30 border-t border-border">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -28,7 +38,7 @@ const Footer = () => {
               }}
             > 
               <Image 
-                src={isDark ? "/images/full-logo-dark.png" : "/images/full-logo-light.png"} 
+                src={mounted ? (isDark ? "/images/full-logo-dark.png" : "/images/full-logo-light.png") : "/images/full-logo-dark.png"} 
                 alt="Jaydai Logo" 
                 width={120} 
                 height={40} 

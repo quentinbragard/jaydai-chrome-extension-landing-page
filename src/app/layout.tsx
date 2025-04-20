@@ -3,6 +3,7 @@ import Script from 'next/script'
 import './globals.css'
 import { ThemeProvider } from '@/providers/ThemeProvider'
 import { Analytics } from '@/components/Analytics'
+import SchemaOrg from '@/components/SchemaOrg'
 
 import { Poppins, Roboto } from 'next/font/google'
 
@@ -24,12 +25,18 @@ export const metadata: Metadata = {
   title: 'Jaydai - Your Smart AI Assistant for ChatGPT',
   description: 'Maximize your generative AI experience with Jaydai, the Chrome extension that transforms how you use ChatGPT with expert prompts, custom templates, and detailed analytics.',
   keywords: 'AI, ChatGPT, prompts, templates, Chrome extension, productivity',
-  metadataBase: new URL('https://jaydai.com'),
+  metadataBase: new URL('https://jayd.ai'),
   openGraph: {
     title: 'Jaydai - Your Smart AI Assistant for ChatGPT',
     description: 'Maximize your generative AI experience with Jaydai, the Chrome extension that transforms how you use ChatGPT with expert prompts, custom templates, and detailed analytics.',
     type: 'website',
-    url: 'https://jaydai.com',
+    url: 'https://jayd.ai',
+  },
+  alternates: {
+    languages: {
+      'en': 'https://jayd.ai/en',
+      'fr': 'https://jayd.ai/fr',
+    },
   },
 }
 
@@ -79,6 +86,9 @@ export default function RootLayout({
           
           {/* Analytics Component */}
           <Analytics />
+          
+          {/* Schema.org structured data */}
+          <SchemaOrg locale={locale} />
         </ThemeProvider>
       </body>
     </html>

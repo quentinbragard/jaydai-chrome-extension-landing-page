@@ -21,6 +21,14 @@ const Navbar = () => {
   const darkLogo = "/images/full-logo-dark.png"
   const lightLogo = "/images/full-logo-light.png"
   
+  // Add mounted state to prevent hydration mismatch
+  const [mounted, setMounted] = React.useState(false)
+  
+  // Only access theme after component has mounted
+  React.useEffect(() => {
+    setMounted(true)
+  }, [])
+  
   const toggleMenu = () => {
     trackEvent('Navbar Menu Toggled', {
       button_name: isMenuOpen ? 'closeMenu' : 'openMenu',
@@ -39,6 +47,9 @@ const Navbar = () => {
     })
   }
 
+  // Determine current logo
+  const currentLogo = !mounted ? darkLogo : (theme === "dark" ? darkLogo : lightLogo)
+
   return (
     <nav className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -47,7 +58,7 @@ const Navbar = () => {
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
               <Image 
-                src={theme === "dark" ? darkLogo : lightLogo} 
+                src={currentLogo} 
                 alt="Jaydai Logo" 
                 width={120} 
                 height={40} 
@@ -212,13 +223,13 @@ const Navbar = () => {
             {/* Language Switcher */}
             <LanguageSwitcher />
             
-            {/* Theme Toggle */}
+            {/* Theme Toggle - Only show after mounted */}
             <button
               onClick={handleThemeToggle}
               className="p-2 rounded-full bg-secondary/50 text-foreground hover:bg-secondary transition-colors"
               aria-label="Toggle theme"
             >
-              {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+              {!mounted ? null : theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
             </button>
             
             <Link 
@@ -249,13 +260,13 @@ const Navbar = () => {
             {/* Mobile Language Switcher */}
             <LanguageSwitcher className="mr-2" />
             
-            {/* Mobile Theme Toggle */}
+            {/* Mobile Theme Toggle - Only show after mounted */}
             <button
               onClick={handleThemeToggle}
               className="p-2 mr-2 rounded-full bg-secondary/50 text-foreground hover:bg-secondary transition-colors"
               aria-label="Toggle theme"
             >
-              {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+              {!mounted ? null : theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
             </button>
             
             <button
