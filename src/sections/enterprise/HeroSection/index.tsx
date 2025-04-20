@@ -16,11 +16,8 @@ const HeroEnterpriseSection = () => {
   const [videoDialogOpen, setVideoDialogOpen] = useState(false)
   
   return (
-    <section id="hero" className="relative pt-24 pb-20 md:pt-32 md:pb-32 overflow-hidden bg-background">
+    <section id="hero" className="relative pt-24 pb-20 md:pt-32 md:pb-32 overflow-hidden">
       {/* Background decorative elements */}
-      <div className="absolute inset-0 bg-grid-white/[0.02] bg-[length:30px_30px] [mask-image:radial-gradient(ellipse_at_center,transparent_0%,black_70%)]"></div>
-      <div className="absolute -top-[40%] -left-[10%] w-[80%] h-[80%] rounded-full bg-primary/10 blur-[120px] opacity-60 animate-pulse" />
-      <div className="absolute -bottom-[40%] -right-[10%] w-[80%] h-[80%] rounded-full bg-primary/10 blur-[120px] opacity-60 animate-pulse" />
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12">

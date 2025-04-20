@@ -1,14 +1,19 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 export default function SubtleBackgroundEffect({ className = "" }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const mouseRef = useRef({ x: 0, y: 0 });
   const gradientRef = useRef<HTMLDivElement>(null);
+  
+  // Add this to prevent hydration mismatch
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    setIsMounted(true); // Mark component as mounted
+    
     const handleMouseMove = (e: MouseEvent) => {
       if (!containerRef.current || !gradientRef.current) return;
       
@@ -41,6 +46,11 @@ export default function SubtleBackgroundEffect({ className = "" }) {
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
+
+  // Don't render random elements until client-side
+  if (!isMounted) {
+    return <div className={`fixed inset-0 pointer-events-none ${className}`}></div>;
+  }
 
   return (
     <div 

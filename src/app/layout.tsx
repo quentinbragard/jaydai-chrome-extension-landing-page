@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import './globals.css'
 import { ThemeProvider } from '@/providers/ThemeProvider'
+import { Analytics } from '@/components/Analytics'
 
 import { Poppins, Roboto } from 'next/font/google'
 
@@ -17,10 +19,18 @@ const roboto = Roboto({
   weight: ['400', '500', '700'],
   display: 'swap',
 })  
+
 export const metadata: Metadata = {
   title: 'Jaydai - Your Smart AI Assistant for ChatGPT',
   description: 'Maximize your generative AI experience with Jaydai, the Chrome extension that transforms how you use ChatGPT with expert prompts, custom templates, and detailed analytics.',
   keywords: 'AI, ChatGPT, prompts, templates, Chrome extension, productivity',
+  metadataBase: new URL('https://jaydai.com'),
+  openGraph: {
+    title: 'Jaydai - Your Smart AI Assistant for ChatGPT',
+    description: 'Maximize your generative AI experience with Jaydai, the Chrome extension that transforms how you use ChatGPT with expert prompts, custom templates, and detailed analytics.',
+    type: 'website',
+    url: 'https://jaydai.com',
+  },
 }
 
 export default function RootLayout({
@@ -31,8 +41,18 @@ export default function RootLayout({
   params?: { locale?: string }
 }>) {
   const locale = params?.locale || 'en'
+  
   return (
     <html lang={locale} suppressHydrationWarning>
+      <head>
+        {/* Preload critical resources */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
+        {/* Favicon and App Icons */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+      </head>
       <body className={`${poppins.variable} ${roboto.variable} antialiased min-h-screen flex flex-col`}>
         <ThemeProvider
           attribute="class"
@@ -41,6 +61,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          
+          {/* Analytics Component */}
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
