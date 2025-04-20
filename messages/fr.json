@@ -371,7 +371,7 @@
     "description": "Maximisez votre expérience IA avec Jaydai, l'extension Chrome gratuite qui transforme la façon dont vous utilisez ChatGPT avec des prompts experts, des modèles personnalisés et des analytiques détaillées.",
     "product": "Produit",
     "features": "Fonctionnalités",
-    "templates": "Modèles",
+    "templates": "Prompts",
     "pricing": "Tarifs",
     "enterprise": "Entreprise",
     "learningSchool": "Le bilan professionnel by Jaydai",
@@ -609,7 +609,7 @@
   "meet": "Rencontrez",
   "about": "À propos",
   "specialties": "Spécialités",
-  "credentials": "Certifications",
+  "credentials": "Parcours",
   "requestConsultation": "Demander une Consultation",
   "scheduleMeeting": "Planifier une Réunion",
   "expertiseSection": {
@@ -652,8 +652,8 @@
   "title": "Tarification Entreprise Transparente",
   "subtitle": "Options flexibles pour soutenir la transformation IA de votre organisation",
   "tabs": {
-    "plans": "Plans d'Abonnement",
-    "implementation": "Services"
+    "plans": "Nos Offres",
+    "implementation": "Nos Services"
   },
   "billingToggle": {
     "monthly": "Mensuel",
