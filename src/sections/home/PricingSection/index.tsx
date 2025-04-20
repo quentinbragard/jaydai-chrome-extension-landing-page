@@ -159,7 +159,7 @@ export default function PricingSection() {
 
                     <a
                       href="/enterprise"
-                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-200 shadow-md"
+                      className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-200 shadow-md"
                     >
                       <span>{t("enterprise.ctaText")}</span>
                       <ArrowRight size={16} />
