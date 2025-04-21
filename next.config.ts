@@ -9,6 +9,13 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  images: {
+    remotePatterns: [
+      {
+        hostname: 'vetoswvwgsebhxetqppa.supabase.co',
+      },
+    ],
+  },
 }
 
 export default withNextIntl('./src/lib/i18n.ts')(nextConfig);

@@ -43,7 +43,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
     >
       {/* Image Container */}
       <div className="relative overflow-hidden w-full aspect-video">
-        <Link href={`/blog/${post.slug}`}>
+        <Link href={`/${locale}/blog/${post.slug}`}>
           <div className="relative w-full h-full">
             <Image
               src={post.featured_image || '/images/blog-placeholder.jpg'}
@@ -62,7 +62,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
       
       {/* Content */}
       <div className="p-6 flex flex-col flex-grow">
-        <Link href={`/blog/${post.slug}`} className="block group-hover:text-primary transition-colors">
+        <Link href={`/${locale}/blog/${post.slug}`} className="block group-hover:text-primary transition-colors">
           <h3 className="text-xl font-bold mb-2 line-clamp-2">{post.title}</h3>
         </Link>
         
@@ -84,7 +84,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
           </div>
           
           <Link 
-            href={`/blog/${post.slug}`}
+            href={`/${locale}/blog/${post.slug}`}
             className="inline-flex items-center text-primary hover:underline text-sm"
           >
             <span>Read more</span>
