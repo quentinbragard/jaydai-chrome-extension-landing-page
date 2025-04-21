@@ -7,8 +7,9 @@ import Link from 'next/link'
 import { Calendar, Clock, ArrowRight } from 'lucide-react'
 import { formatDistanceToNow } from 'date-fns'
 import { enUS, fr } from 'date-fns/locale'
-import { useLocale } from 'next-intl'
 import { BlogPost } from '@/lib/blog'
+import { useLocale } from 'next-intl'
+import { useTranslations } from 'next-intl'
 
 interface BlogCardProps {
   post: BlogPost
@@ -22,6 +23,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
   featured = false 
 }) => {
   const locale = useLocale()
+  const t = useTranslations('blog')
   const dateLocale = locale === 'fr' ? fr : enUS
   
   // Format date for display
@@ -30,6 +32,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
     addSuffix: true,
     locale: dateLocale
   })
+
   
   return (
     <motion.div
@@ -87,7 +90,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
             href={`/${locale}/blog/${post.slug}`}
             className="inline-flex items-center text-primary hover:underline text-sm"
           >
-            <span>Read more</span>
+            <span>{t('blogPost.readMore')}</span>
             <ArrowRight size={14} className="ml-1 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>

@@ -11,11 +11,11 @@ import { getTranslations } from 'next-intl/server'
 const POSTS_PER_PAGE = 9
 
 // Generate metadata for the blog page
-export async function generateMetadata({
-  params: { locale }
-}: {
-  params: { locale: string }
-}): Promise<Metadata> {
+export async function generateMetadata(
+  { params }: { params: { locale: string } }
+): Promise<Metadata> {
+  // now we can safely read locale
+  const { locale } = params;
   const t = await getTranslations({ locale, namespace: 'blog' })
   
   return {

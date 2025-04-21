@@ -80,23 +80,6 @@ const HeroEnterpriseSection = () => {
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </a>
             </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="mt-12 pt-8 border-t border-border/40"
-            >
-              <div className="text-sm text-foreground/50 mb-4">{t('trustedBy')}</div>
-              <div className="flex flex-wrap gap-6 items-center">
-                {/* Company logos */}
-                {t.raw('companies').map((company, index) => (
-                  <div key={index} className="w-24 h-8 bg-foreground/5 rounded-md flex items-center justify-center">
-                    <div className="text-foreground/70 font-semibold">{company}</div>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
           </div>
           
           {/* Right column: Feature tabs */}

@@ -998,6 +998,9 @@
     "seo": {
       "title": "Jaydai Blog | AI Prompt Engineering Tips & Strategies",
       "description": "Explore the latest insights, tutorials, and strategies for mastering AI prompt engineering with Jaydai's official blog."
-    }
+    },
+    "blogPost": {
+    "readMore": "Read more"
+  }
   }
 }

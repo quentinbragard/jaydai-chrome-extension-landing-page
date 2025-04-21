@@ -18,7 +18,7 @@
   },
   "hero": {
     "badge": "Maximisez votre potentiel IA avec Jaydai",
-    "title": "Votre Assistant IA Intelligent pour",
+    "title": "Tous les meilleurs prompts directement dans",
     "titleHighlight": "ChatGPT",
     "subtitle": "Transformez votre utilisation de ChatGPT grâce à notre bibliothèque de prompts experts, modèles personnalisés et analyses détaillées.",
     "ctaExtension": "Obtenir l'extension Chrome",
@@ -995,8 +995,11 @@
       "exploreBlog": "Explorer plus d'articles"
     },
     "seo": {
-      "title": "Blog Jaydai | Conseils et Stratégies pour l'Ingénierie des Prompts IA",
+      "title": "Blog Jaydai | Conseils et Stratégies pour utiliser les meilleurs Prompts IA",
       "description": "Explorez les dernières perspectives, tutoriels et stratégies pour maîtriser l'ingénierie des prompts IA avec le blog officiel de Jaydai."
+    },
+    "blogPost": {
+      "readMore": "Lire la suite"
     }
   }
 }
