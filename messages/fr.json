@@ -1000,6 +1000,12 @@
     },
     "blogPost": {
       "readMore": "Lire la suite"
-    }
+    },
+    "blogCta": {
+    "defaultTitle": "Améliorez Votre Expérience ChatGPT avec Jaydai",
+    "defaultContent": "Maximisez votre expérience IA avec Jaydai, l'extension Chrome qui transforme votre utilisation de ChatGPT avec des prompts experts, des modèles personnalisés et des analytiques détaillées. Rejoignez des milliers d'utilisateurs qui ont optimisé leur flux de travail IA.",
+    "buttonText": "Installer l'Extension",
+    "extensionLabel": "Extension Chrome"
+  }
   }
 }

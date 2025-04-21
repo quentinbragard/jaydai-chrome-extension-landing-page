@@ -224,3 +224,44 @@ body, p, span, div, a, button {
   font-family: var(--font-roboto);
 }
 
+/* === Custom Text Styles === */
+.highlight-primary {
+  color: hsl(var(--primary));
+  font-weight: 600;
+}
+
+.highlight-muted {
+  color: hsl(var(--muted-foreground));
+  font-style: italic;
+}
+
+.text-glow {
+  @apply text-[hsl(var(--primary))] drop-shadow-md;
+}
+
+.underline-dotted {
+  text-decoration: underline dotted hsl(var(--primary));
+  text-underline-offset: 4px;
+}
+
+/* === Callouts & Alert Boxes === */
+.callout {
+  @apply border-l-4 p-4 rounded-md mb-4;
+}
+
+.callout-info {
+  border-color: hsl(var(--primary));
+  background-color: hsl(var(--muted));
+  color: hsl(var(--foreground));
+}
+
+.callout-warning {
+  border-color: hsl(var(--destructive));
+  background-color: hsl(var(--muted));
+  color: hsl(var(--foreground));
+}
+
+/* === Custom Badge/Label === */
+.badge {
+  @apply inline-block text-xs font-medium px-2 py-0.5 rounded bg-[hsl(var(--primary)/0.1)] text-[hsl(var(--primary))];
+}

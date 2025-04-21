@@ -6,10 +6,14 @@ import Image from "next/image"
 import { Github, Twitter, Linkedin, Mail } from "lucide-react"
 import { useTranslations } from 'next-intl'
 import { useTheme } from "next-themes"
+import { useIsMobile } from "@/hooks/use-mobile"
+import { useExtensionModal } from '@/components/common/ExtensionModalContext'
 import { trackEvent } from '@/lib/analytics'
 
 const Footer = () => {
   const t = useTranslations('footer')
+  const isMobile = useIsMobile()
+  const { open } = useExtensionModal()
   const { theme } = useTheme()
   // Add mounted state to fix hydration issues
   const [mounted, setMounted] = React.useState(false)
@@ -237,20 +241,23 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} Jaydai. {t('allRightsReserved')}
           </p>
           <div className="mt-4 md:mt-0">
-            <Link 
-              href="https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd" 
-              target="_blank"
+            <a 
               onClick={() => {
-                trackEvent('Download Extension Clicked', {
-                  button_name: 'downloadExtension',
+                trackEvent('Button Clicked', {
+                  button_name: 'footerDownloadExtension',
                   page_location: window.location.pathname,
                   source: 'footer',
                   timestamp: new Date().toISOString()
                 })
+                if (isMobile) {
+                  open()
+                } else {
+                  window.open("https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd", "_blank")
+                }
               }}
             >
               {t('downloadExtension')}
-            </Link>
+            </a>
           </div>
         </div>
       </div>

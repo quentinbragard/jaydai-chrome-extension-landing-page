@@ -8,6 +8,8 @@ import { enUS, fr } from 'date-fns/locale'
 import { getBlogPostBySlug, getRelatedBlogPosts } from '@/lib/blog'
 import { getTranslations } from 'next-intl/server'
 import BlogCard from '@/sections/blog/BlogCard'
+import BlogPostContent from '@/sections/blog/BlogPostContent'
+import BlogPostCallToAction from '@/sections/blog/BlogPostCallToAction'
 
 // Generate metadata for the blog post
 export async function generateMetadata({
@@ -55,6 +57,8 @@ export default async function BlogPostPage({
   
   // Fetch blog post
   const post = await getBlogPostBySlug(slug, locale)
+  const CallTOActionMetadata = post?.call_to_action_metadata || {}
+
   
   // If post not found, redirect to the blog index page with the correct locale
   if (!post) {
@@ -67,6 +71,10 @@ export default async function BlogPostPage({
   
   // Get related posts
   const relatedPosts = await getRelatedBlogPosts(post.id, post.category, locale, 3)
+  
+  // Divide content into sections for better formatting
+  // This is a simplified example - you might need a more sophisticated approach
+  // based on your content structure
   
   return (
     <div className="py-20 bg-background">
@@ -139,9 +147,28 @@ export default async function BlogPostPage({
             />
           </div>
           
-          {/* Article Content */}
+          {/* Article Content with CTA */}
           <article className="prose prose-lg md:prose-xl dark:prose-invert max-w-none mb-16">
-            <div dangerouslySetInnerHTML={{ __html: post.content }} />
+            {/* First section of content */}
+            <BlogPostContent 
+              sections={post.content.slice(0, 2)}
+              className="mb-10"
+            />
+            
+            {/* Call to Action Banner */}
+            <BlogPostCallToAction 
+              // You can customize the CTA with post-specific metadata if needed
+              variant="primary"
+              title={CallTOActionMetadata?.title}
+              body={CallTOActionMetadata?.body}
+              href={CallTOActionMetadata?.href}
+            />
+            
+            {/* Rest of the content */}
+            <BlogPostContent 
+              sections={post.content.slice(2, post.content.length)}
+              className="mt-10"
+            />
           </article>
           
           {/* Tags */}
@@ -191,4 +218,49 @@ export default async function BlogPostPage({
       </div>
     </div>
   )
+}
+
+/**
+ * Helper function to split HTML content into sections
+ * This is a simplified implementation - you might need to adapt it based on your content structure
+ */
+function splitContentIntoSections(content: string): string[] {
+  // Simple approach: Split at heading tags (h2, h3)
+  // You could use a more sophisticated approach with a DOM parser for production
+  const headingRegex = /<h[2-3][^>]*>/i
+  
+  // If no headings found, return the entire content as a single section
+  if (!headingRegex.test(content)) {
+    return [content]
+  }
+  
+  // Split at heading tags
+  const sections: string[] = []
+  let remainingContent = content
+  
+  // Find all heading positions
+  const headingMatches = [...content.matchAll(/<h[2-3][^>]*>/gi)]
+  
+  if (headingMatches.length === 0) {
+    return [content]
+  }
+  
+  // Add content before first heading as intro section
+  if (headingMatches[0].index && headingMatches[0].index > 0) {
+    sections.push(content.substring(0, headingMatches[0].index))
+  }
+  
+  // Process each heading and its content
+  headingMatches.forEach((match, index) => {
+    if (!match.index) return
+    
+    const startIdx = match.index
+    const endIdx = index < headingMatches.length - 1 && headingMatches[index + 1].index 
+      ? headingMatches[index + 1].index 
+      : content.length
+    
+    sections.push(content.substring(startIdx, endIdx))
+  })
+  
+  return sections
 }

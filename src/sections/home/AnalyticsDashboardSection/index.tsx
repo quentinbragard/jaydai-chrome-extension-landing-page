@@ -9,9 +9,13 @@ import SectionHeader from "./SectionHeader"
 import Link from "next/link"
 import Image from "next/image"
 import { trackEvent } from '@/lib/analytics'
+import { useIsMobile } from '@/hooks/use-mobile'
+import { useExtensionModal } from '@/components/common/ExtensionModalContext'
 
 const AnalyticsDashboardSection = () => {
   const t = useTranslations('analyticsDashboard')
+  const isMobile = useIsMobile()
+  const { open } = useExtensionModal()
 
   return (
     <section id="analytics" className="py-20 bg-background/50 relative overflow-hidden">
@@ -54,19 +58,24 @@ const AnalyticsDashboardSection = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="mt-8 w-full flex justify-center"
             >
-             <Link 
-                href="https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd" 
-                target="_blank"
-                className="inline-flex items-center gap-2 font-black px-3 py-1.5 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
-                onClick={() => {
-                  trackEvent('Button Clicked', {
-                    button_name: 'homeAnalyticsDashboardDownloadExtension',
-                    page_location: window.location.pathname,
-                    source: 'homeAnalyticsDashboardSection',
-                    timestamp: new Date().toISOString()
-                  })
-                }}
-              >
+        <Link
+          href="https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd"
+          data-extension
+          target="_blank"
+          className="inline-flex items-center gap-2 font-black px-3 py-1.5 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+          onClick={(e) => {
+            trackEvent('Button Clicked', {
+              button_name: 'homeAnalyticsDashboardDownloadExtension',
+              page_location: window.location.pathname,
+              source: 'homeAnalyticsDashboardSection',
+              timestamp: new Date().toISOString()
+            })
+            if (isMobile) {
+              e.preventDefault()
+              open()
+            }
+          }}
+        >
               <Image
                 src="/images/google_chrome_icon.png"
                 alt="Google Chrome"

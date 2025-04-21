@@ -93,8 +93,9 @@ export default function Home() {
       {/* How It Works Section */}
       <HowItWorksSection />
       
-      {/* Before/After Comparison */}
-      <BeforeAfterComparison />
+      {/* Before/After Comparison
+      <BeforeAfterComparison /> */}
+      
       
       {/* Templates Section */}
       <TemplatesSection />

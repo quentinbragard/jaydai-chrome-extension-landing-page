@@ -13,11 +13,15 @@ import {
 import { useTranslations } from "next-intl"
 import Link from "next/link"
 import { trackEvent } from '@/lib/analytics'
+import { useIsMobile } from '@/hooks/use-mobile'
+import { useExtensionModal } from "@/components/common/ExtensionModalContext"
 
 import { FeatureCard, FeatureCardProps } from "./FeatureCard"
 
 const FeaturesSection = () => {
   const t = useTranslations('features')
+  const isMobile = useIsMobile()
+  const { open } = useExtensionModal()
 
   const features: FeatureCardProps[] = [
     {
@@ -115,21 +119,25 @@ const FeaturesSection = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href={t('cta.link')}
+            <a
               target="_blank"
               className="px-8 py-3 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium"
-            onClick={() => {
+              onClick={() => {
                 trackEvent('Button Clicked', {
                   button_name: 'homeFeaturesDownloadExtension',
                   page_location: window.location.pathname,
                   source: 'homeFeaturesSection',
                   timestamp: new Date().toISOString()
                 })
+                if (isMobile) {
+                  open()
+                } else {
+                  window.open("https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd", "_blank")
+                }
               }}
             >
               {t('cta.buttonText')}
-            </Link>
+            </a>
             
             <Link
               href="/privacy"

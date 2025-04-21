@@ -18,8 +18,12 @@ import {
 } from "lucide-react"
 import Link from "next/link"
 import { trackEvent } from '@/lib/analytics'
+import { useIsMobile } from '@/hooks/use-mobile'
+import { useExtensionModal } from '@/components/common/ExtensionModalContext'
 const HowItWorksSection = () => {
   const t = useTranslations('howItWorks')
+  const isMobile = useIsMobile()
+  const { open } = useExtensionModal()
   const { resolvedTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
   const [activeStep, setActiveStep] = useState(1)
@@ -311,13 +315,20 @@ const HowItWorksSection = () => {
         >
           <a
             href="https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd"
+            data-extension
             target="_blank"
-            onClick={() => trackEvent('Button Clicked', {
-              button_name: 'homeHowItWorksCta',
-              page_location: window.location.pathname,
-              source: 'homeHowItWorksSection',
-              timestamp: new Date().toISOString()
-            })}
+            onClick={(e) => {
+              trackEvent('Button Clicked', {
+                button_name: 'homeHowItWorksCta',
+                page_location: window.location.pathname,
+                source: 'homeHowItWorksSection',
+                timestamp: new Date().toISOString()
+              })
+              if (isMobile) {
+                e.preventDefault()
+                open()
+              }
+            }}
             className="px-8 py-3 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium inline-flex items-center gap-2"
           >
             <span>{t('ctaText')}</span>

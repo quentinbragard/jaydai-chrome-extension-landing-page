@@ -6,7 +6,7 @@ export interface BlogPost {
   title: string
   slug: string
   summary: string
-  content: string
+  content: string[]
   featured_image: string
   author: string
   published_at: string
@@ -14,7 +14,13 @@ export interface BlogPost {
   tags: string[]
   status: 'draft' | 'published'
   reading_time: number
-  locale: string
+  locale: string,
+  call_to_action_metadata: {
+    title: string,
+    description: string,
+    body: string,
+    href: string
+  }
 }
 
 export interface BlogListResponse {

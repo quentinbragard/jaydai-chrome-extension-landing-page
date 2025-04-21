@@ -5,6 +5,8 @@ import { motion, useScroll, useTransform } from "framer-motion"
 import { useTranslations } from "next-intl"
 import { ArrowRight } from "lucide-react"
 import { trackEvent } from '@/lib/analytics'
+import { useIsMobile } from '@/hooks/use-mobile'
+import { useExtensionModal } from "@/components/common/ExtensionModalContext"
 
 interface TemplateCategory {
   id: number
@@ -19,6 +21,8 @@ interface TemplateCategory {
 const TemplatesSection = () => {
   const t = useTranslations('templateCategories')
   const containerRef = useRef<HTMLDivElement>(null)
+  const isMobile = useIsMobile()
+  const { open } = useExtensionModal()
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start end", "end start"]
@@ -168,6 +172,11 @@ const TemplatesSection = () => {
                       source: 'homeTemplatesSection',
                       timestamp: new Date().toISOString()
                     })
+                    if (isMobile) {
+                      open()
+                    } else {
+                      window.open("https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd", "_blank")
+                    }
                   }}
                   className={`inline-flex items-center ${category.textColor} hover:underline`}
                 >
@@ -194,7 +203,6 @@ const TemplatesSection = () => {
           </p>
           
           <a
-            href={t('ctaLink')}
             target="_blank"
             onClick={() => {
               trackEvent('Button Clicked', {
@@ -203,6 +211,11 @@ const TemplatesSection = () => {
                 source: 'homeTemplatesSection',
                 timestamp: new Date().toISOString()
               })
+              if (isMobile) {
+                open()
+              } else {
+                window.open("https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd", "_blank")
+              }
             }}
             className="px-8 py-3 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium"
           >

@@ -6,9 +6,13 @@ import { Check, ArrowRight, Building2 } from "lucide-react";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { useTranslations } from "next-intl";
 import { trackEvent } from '@/lib/analytics'
+import { useIsMobile } from '@/hooks/use-mobile'
+import { useExtensionModal } from '@/components/common/ExtensionModalContext'
 
 export default function PricingSection() {
   const t = useTranslations("pricing");
+  const isMobile = useIsMobile()
+  const { open } = useExtensionModal()
 
   const handleCtaClick = () => {
     trackEvent('Button Clicked', {
@@ -17,7 +21,14 @@ export default function PricingSection() {
       source: 'homePricingSection',
       timestamp: new Date().toISOString()
     })
-    window.open("https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd", "_blank")
+    if (isMobile) {
+      open()
+    } else {
+      window.open(
+        "https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd",
+        "_blank"
+      )
+    }
   }
 
   return (
@@ -129,6 +140,7 @@ export default function PricingSection() {
                   </div>
 
                   <ShimmerButton
+                    data-extension
                     onClick={handleCtaClick}
                     className="px-8 py-3 rounded-md text-primary-foreground font-black text-center w-full"
                     shimmerColor="#FFCD00"

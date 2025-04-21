@@ -1,6 +1,8 @@
 'use client';
 
 import React from "react"
+import { useIsMobile } from '@/hooks/use-mobile'
+import { useExtensionModal } from '@/components/common/ExtensionModalContext'
 import { trackEvent } from '@/lib/analytics'
 import { motion } from "framer-motion"
 import { Play } from "lucide-react"
@@ -15,6 +17,8 @@ const HeroContent: React.FC<HeroContentProps> = ({
   openVideoDialog, 
   translations 
 }) => {
+  const isMobile = useIsMobile()
+  const { open } = useExtensionModal()
   return (
     <>
       {/* Animated badge */}
@@ -59,16 +63,21 @@ const HeroContent: React.FC<HeroContentProps> = ({
         transition={{ duration: 0.6, delay: 0.3 }}
         className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
       >
-        <ShimmerButton
-          onClick={() => {
-            trackEvent('Button Clicked', {
-              button_name: 'homeHeroDownloadExtension',
-              page_location: window.location.pathname,
-              source: 'homeHeroSection',
-              timestamp: new Date().toISOString()
-            })
+      <ShimmerButton
+        data-extension
+        onClick={() => {
+          trackEvent('Button Clicked', {
+            button_name: 'homeHeroDownloadExtension',
+            page_location: window.location.pathname,
+            source: 'homeHeroSection',
+            timestamp: new Date().toISOString()
+          })
+          if (isMobile) {
+            open()
+          } else {
             window.open("https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd", "_blank")
-          }}
+          }
+        }}
           className="px-8 py-3 rounded-md text-primary-foreground font-black"
           shimmerColor="#FFCD00"
           shimmerSize="0.05em"
