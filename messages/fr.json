@@ -18,7 +18,7 @@
   },
   "hero": {
     "badge": "Maximisez votre potentiel IA avec Jaydai",
-    "title": "Votre Assistant IA Intelligent pour",
+    "title": "Tous les meilleurs prompts directement dans",
     "titleHighlight": "ChatGPT",
     "subtitle": "Transformez votre utilisation de ChatGPT grâce à notre bibliothèque de prompts experts, modèles personnalisés et analyses détaillées.",
     "ctaExtension": "Obtenir l'extension Chrome",
@@ -964,5 +964,48 @@
     "ctaButton": "Regarder maintenant",
     "ctaButton2": "En savoir plus"
   }
-}
+},
+"blog": {
+  "title": "Blog",
+  "subtitle": "Découvrez les dernières perspectives, conseils et stratégies pour maîtriser l'ingénierie des prompts IA",
+  "blogBadge": "Blog Jaydai",
+  "featuredPost": "À la une",
+  "readMore": "Lire la suite",
+    "readTime": "min de lecture",
+    "author": "Auteur",
+    "allPosts": "Tous les articles",
+    "filter": "Filtrer par catégorie",
+    "clearFilter": "Effacer le filtre",
+    "noPosts": {
+      "title": "Aucun article trouvé",
+      "message": "Il n'y a pas d'articles correspondant à votre filtre actuel. Essayez de sélectionner une autre catégorie ou revenez plus tard."
+    },
+    "pagination": {
+      "firstPage": "Aller à la première page",
+      "previousPage": "Aller à la page précédente",
+      "nextPage": "Aller à la page suivante",
+      "lastPage": "Aller à la dernière page",
+      "goToPage": "Aller à la page {page}"
+    },
+    "post": {
+      "notFound": "Article Non Trouvé",
+      "backToBlog": "Retour au Blog",
+      "readTime": "min de lecture",
+      "relatedPosts": "Articles Similaires",
+      "exploreBlog": "Explorer plus d'articles"
+    },
+    "seo": {
+      "title": "Blog Jaydai | Conseils et Stratégies pour utiliser les meilleurs Prompts IA",
+      "description": "Explorez les dernières perspectives, tutoriels et stratégies pour maîtriser l'ingénierie des prompts IA avec le blog officiel de Jaydai."
+    },
+    "blogPost": {
+      "readMore": "Lire la suite"
+    },
+    "blogCta": {
+    "defaultTitle": "Améliorez Votre Expérience ChatGPT avec Jaydai",
+    "defaultContent": "Maximisez votre expérience IA avec Jaydai, l'extension Chrome qui transforme votre utilisation de ChatGPT avec des prompts experts, des modèles personnalisés et des analytiques détaillées. Rejoignez des milliers d'utilisateurs qui ont optimisé leur flux de travail IA.",
+    "buttonText": "Installer l'Extension",
+    "extensionLabel": "Extension Chrome"
+  }
+  }
 }

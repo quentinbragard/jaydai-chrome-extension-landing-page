@@ -3,23 +3,28 @@
 import * as React from "react"
 import Image from "next/image"
 import { useTheme } from "next-themes"
-import { usePathname } from "next/navigation"
+import { usePathname, redirect } from "next/navigation"
 import { Menu, X, Moon, Sun, Building, Sparkles } from "lucide-react"
 import { useTranslations } from 'next-intl'
-import { Link } from '@/lib/navigation'
+import { Link, useRouter } from '@/lib/navigation'
 import { useLocale } from 'next-intl'
 import LanguageSwitcher from "@/components/common/LanguageSwitcher"
 import { trackEvent } from "@/lib/analytics"
+import { useIsMobile } from "@/hooks/use-mobile"
+import { useExtensionModal } from "@/components/common/ExtensionModalContext"
 
 const Navbar = () => {
   const t = useTranslations('nav')
   const locale = useLocale()
+  const isMobile = useIsMobile()
+  const { open } = useExtensionModal()
   const { theme, setTheme } = useTheme()
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
   const pathname = usePathname()
   const isEnterprisePage = pathname.includes("/enterprise")
   const darkLogo = "/images/full-logo-dark.png"
   const lightLogo = "/images/full-logo-light.png"
+  const router = useRouter()
   
   // Add mounted state to prevent hydration mismatch
   const [mounted, setMounted] = React.useState(false)
@@ -203,7 +208,7 @@ const Navbar = () => {
                 {t('pricing')}
               </Link>
               <Link
-                href={`${isEnterprisePage ? "/enterprise" : ""}#faq`}
+                href={`${isEnterprisePage ? "/enterprise" : ""}#contact`}
                 className="text-foreground/80 hover:text-primary transition-colors"
                 onClick={() => {
                   trackEvent('Navbar Button Clicked', {
@@ -232,27 +237,48 @@ const Navbar = () => {
               {!mounted ? null : theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
             </button>
             
-            <Link 
-              href={isEnterprisePage ? "/enterprise#contact" : "https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd"} 
-              target="_blank"
-              className="flex items-center gap-2 font-bold text-sm lg:text-base px-4 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
-              onClick={() => {
-                trackEvent('Navbar Button Clicked', {
-                  button_name: isEnterprisePage ? 'requestDemo' : 'downloadExtension',
-                  page_location: window.location.pathname,
-                  timestamp: new Date().toISOString()
-                })
-              }}
-            > 
-              <Image
-                src="/images/google_chrome_icon.png"
-                alt="Google Chrome"
-                width={20}
-                height={20}
-                className="w-5 h-5"
-              />
-              {isEnterprisePage ? t('requestDemo') : t('downloadExtension')}
-            </Link>
+            {isEnterprisePage ? (
+              <a 
+                className="flex items-center gap-2 font-bold text-sm lg:text-base px-4 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+                onClick={() => {
+                  trackEvent('Button Clicked', {
+                    button_name: 'navbarDownloadExtension',
+                    page_location: window.location.pathname,
+                    source: 'navbar',
+                    timestamp: new Date().toISOString()
+                  })
+                  router.push("/enterprise#contact")
+                }}
+              > 
+                {t('requestDemo')}
+              </a>
+            ) : (
+              <a 
+                className="flex items-center gap-2 font-bold text-sm lg:text-base px-4 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+                onClick={() => {
+                  trackEvent('Button Clicked', {
+                    button_name: 'navbarDownloadExtension',
+                    page_location: window.location.pathname,
+                    source: 'navbar',
+                    timestamp: new Date().toISOString()
+                  })
+                  if (isMobile) {
+                    open()
+                  } else {
+                    window.open("https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd", "_blank")
+                  }
+                }}
+              >
+                <Image
+                  src="/images/google_chrome_icon.png"
+                  alt="Google Chrome"
+                  width={20}
+                  height={20}
+                  className="w-5 h-5"
+                />
+                {t('downloadExtension')}
+              </a>
+            )}
           </div>
           
           {/* Mobile menu button */}
@@ -391,27 +417,48 @@ const Navbar = () => {
               {t('contact')}
             </Link>
             
-            <Link 
-              href="https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd" 
-              target="_blank"
-              className="flex items-center gap-2 font-black px-4 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
-              onClick={() => {
-                trackEvent('Download Extension Clicked', {
-                  button_name: 'navbar',
-                  page_location: window.location.pathname,
-                  timestamp: new Date().toISOString()
-                })
-              }}
-            >
-              <Image
-                src="/images/google_chrome_icon.png"
-                alt="Google Chrome"
-                width={20}
-                height={20}
-                className="w-5 h-5"
-              />
-              {isEnterprisePage ? t('requestDemo') : t('downloadExtension')}
-            </Link>
+            {isEnterprisePage ? (
+              <a 
+                className="flex items-center gap-2 font-bold text-sm lg:text-base px-4 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+                onClick={() => {
+                  trackEvent('Button Clicked', {
+                    button_name: 'navbarDownloadExtension',
+                    page_location: window.location.pathname,
+                    source: 'navbar',
+                    timestamp: new Date().toISOString()
+                  })
+                  router.push("/enterprise#contact")
+                }}
+              > 
+                {t('requestDemo')}
+              </a>
+            ) : (
+              <a 
+                className="flex items-center gap-2 font-bold text-sm lg:text-base px-4 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+                onClick={() => {
+                  trackEvent('Button Clicked', {
+                    button_name: 'navbarDownloadExtension',
+                    page_location: window.location.pathname,
+                    source: 'navbar',
+                    timestamp: new Date().toISOString()
+                  })
+                  if (isMobile) {
+                    open()
+                  } else {
+                    window.open("https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd", "_blank")
+                  }
+                }}
+              >
+                <Image
+                  src="/images/google_chrome_icon.png"
+                  alt="Google Chrome"
+                  width={20}
+                  height={20}
+                  className="w-5 h-5"
+                />
+                {t('downloadExtension')}
+              </a>
+            )}
           </div>
         </div>
       )}

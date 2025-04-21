@@ -6,6 +6,8 @@ import Image from "next/image"
 import { useTranslations } from "next-intl"
 import { Star, Quote, ArrowUpRight } from "lucide-react"
 import { trackEvent } from '@/lib/analytics'
+import { useIsMobile } from '@/hooks/use-mobile'
+import { useExtensionModal } from "@/components/common/ExtensionModalContext"
 
 interface Testimonial {
   id: number
@@ -20,7 +22,8 @@ interface Testimonial {
 
 const TestimonialsSection = () => {
   const t = useTranslations('testimonials')
-
+  const isMobile = useIsMobile()
+  const { open } = useExtensionModal()
   const testimonials = t.raw("users")
 
   return (
@@ -158,7 +161,6 @@ const TestimonialsSection = () => {
           </p>
           
           <a
-            href={t('cta.link')}
             onClick={() => {
               trackEvent('Button Clicked', {
                 button_name: 'homeTestimonialsSectionCta',
@@ -166,6 +168,11 @@ const TestimonialsSection = () => {
                 source: 'homeTestimonialsSection',
                 timestamp: new Date().toISOString()
               })
+              if (isMobile) {
+                open()
+              } else {
+                window.open("https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd", "_blank")
+              }
             }}
             target="_blank"
             className="px-8 py-3 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium"

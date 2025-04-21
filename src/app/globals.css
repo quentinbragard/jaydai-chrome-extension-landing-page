@@ -147,3 +147,121 @@ body, p, span, div, a, button {
 .animate-pulse-glow {
   animation: pulse-glow 2s ease-in-out infinite;
 }
+
+
+.article-wrapper {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  line-height: 1.7;
+  font-family: 'Inter', sans-serif;
+}
+
+.article-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.article-subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.article-paragraph {
+  margin-bottom: 1.25rem;
+}
+
+.article-list {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.article-list-ordered {
+  list-style-type: decimal;
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.article-separator {
+  border: none;
+  border-top: 1px solid #e5e5e5;
+  margin: 2.5rem 0;
+}
+
+.article-quote {
+  font-style: italic;
+  margin: 1.5rem 0;
+  padding-left: 1rem;
+  border-left: 4px solid #ccc;
+}
+
+.article-wrapper {
+  max-width: 768px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem 1rem;
+}
+
+.article-title {
+  font-family: var(--font-poppins);
+}
+
+.article-subtitle {
+  font-family: var(--font-poppins);
+}
+
+.article-paragraph,
+.article-list,
+.article-quote {
+  font-family: var(--font-roboto);
+}
+
+.jaydai-banner {
+  font-family: var(--font-roboto);
+}
+
+/* === Custom Text Styles === */
+.highlight-primary {
+  color: hsl(var(--primary));
+  font-weight: 600;
+}
+
+.highlight-muted {
+  color: hsl(var(--muted-foreground));
+  font-style: italic;
+}
+
+.text-glow {
+  @apply text-[hsl(var(--primary))] drop-shadow-md;
+}
+
+.underline-dotted {
+  text-decoration: underline dotted hsl(var(--primary));
+  text-underline-offset: 4px;
+}
+
+/* === Callouts & Alert Boxes === */
+.callout {
+  @apply border-l-4 p-4 rounded-md mb-4;
+}
+
+.callout-info {
+  border-color: hsl(var(--primary));
+  background-color: hsl(var(--muted));
+  color: hsl(var(--foreground));
+}
+
+.callout-warning {
+  border-color: hsl(var(--destructive));
+  background-color: hsl(var(--muted));
+  color: hsl(var(--foreground));
+}
+
+/* === Custom Badge/Label === */
+.badge {
+  @apply inline-block text-xs font-medium px-2 py-0.5 rounded bg-[hsl(var(--primary)/0.1)] text-[hsl(var(--primary))];
+}

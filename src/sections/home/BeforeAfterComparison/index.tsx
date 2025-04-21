@@ -7,10 +7,14 @@ import { ArrowLeftRight } from "lucide-react"
 import { useTranslations } from "next-intl"
 import { useTheme } from "next-themes"
 import { trackEvent } from '@/lib/analytics'
+import { useIsMobile } from '@/hooks/use-mobile'
+import { useExtensionModal } from '@/components/common/ExtensionModalContext'
 import Link from "next/link"
 
 const BeforeAfterComparison = () => {
   const t = useTranslations('beforeAfterComparison')
+  const isMobile = useIsMobile()
+  const { open } = useExtensionModal()
   const [position, setPosition] = useState(50)
   const { resolvedTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
@@ -23,7 +27,11 @@ const BeforeAfterComparison = () => {
       source: 'homeComparisonSection',
       timestamp: new Date().toISOString()
     })
-    window.open('https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd', '_blank')
+    if (isMobile) {
+      open()
+    } else {
+      window.open('https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd', '_blank')
+    }
   }
     
   // Only access the theme after mounting to avoid hydration mismatch
@@ -154,19 +162,24 @@ const BeforeAfterComparison = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="mt-8"
             >
-             <Link 
-                href="https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd" 
-                target="_blank"
-                className="inline-flex items-center gap-2 font-black px-3 py-1.5 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
-                onClick={() => {
-                  trackEvent('Button Clicked', {
-                    button_name: 'homeComparisonDownloadExtension',
-                    page_location: window.location.pathname,
-                    source: 'homeComparisonSection',
-                    timestamp: new Date().toISOString()
-                  })
-                }}
-              >
+            <Link
+              href="https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd"
+              data-extension
+              target="_blank"
+              className="inline-flex items-center gap-2 font-black px-3 py-1.5 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+              onClick={(e) => {
+                trackEvent('Button Clicked', {
+                  button_name: 'homeComparisonDownloadExtension',
+                  page_location: window.location.pathname,
+                  source: 'homeComparisonSection',
+                  timestamp: new Date().toISOString()
+                })
+                if (isMobile) {
+                  e.preventDefault()
+                  open()
+                }
+              }}
+            >
               <Image
                 src="/images/google_chrome_icon.png"
                 alt="Google Chrome"

@@ -65,7 +65,7 @@ export const HeroTabs = () => {
                     {t.raw("teamsTab.activities").map((activity, index) => (
                       <div key={index} className="flex items-center gap-2">
                         <div className="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center text-xs text-blue-500">{activity.user}</div>
-                        <div className="flex-1 p-2 rounded bg-secondary/20 text-sm">{activity.action}</div>
+                        <div className="flex-1 p-2 rounded bg-secondary/20 text-sm text-foreground/70">{activity.action}</div>
                         <div className="text-xs text-foreground/50">{activity.time}</div>
                       </div>
                     ))}
@@ -75,7 +75,7 @@ export const HeroTabs = () => {
                 <div className="grid grid-cols-2 gap-3 mt-3">
                   <div className="p-4 rounded-lg border border-border bg-card">
                     <div className="text-foreground/70 text-sm">{t("teamsTab.stats.users.title")}</div>
-                    <div className="mt-1 text-2xl font-bold">{t("teamsTab.stats.users.value")}</div>
+                    <div className="mt-1 text-2xl font-bold text-foreground">{t("teamsTab.stats.users.value")}</div>
                     <div className="mt-1 text-xs text-green-500 flex items-center">
                       <ArrowRight size={12} className="rotate-45" />
                       <span>{t("teamsTab.stats.users.trend")}</span>
@@ -83,7 +83,7 @@ export const HeroTabs = () => {
                   </div>
                   <div className="p-4 rounded-lg border border-border bg-card">
                     <div className="text-foreground/70 text-sm">{t("teamsTab.stats.templates.title")}</div>
-                    <div className="mt-1 text-2xl font-bold">{t("teamsTab.stats.templates.value")}</div>
+                    <div className="mt-1 text-2xl font-bold text-foreground">{t("teamsTab.stats.templates.value")}</div>
                     <div className="mt-1 text-xs text-green-500 flex items-center">
                       <ArrowRight size={12} className="rotate-45" />
                       <span>{t("teamsTab.stats.templates.trend")}</span>
@@ -106,7 +106,7 @@ export const HeroTabs = () => {
                   
                   <div className="p-4">
                     <div className="mb-4 flex justify-between items-center">
-                      <div className="text-sm font-medium">{t("analyticsTab.chartTitle")}</div>
+                      <div className="text-sm font-medium text-foreground/70">{t("analyticsTab.chartTitle")}</div>
                       <div className="text-xs text-foreground/60">{t("analyticsTab.period")}</div>
                     </div>
                     
@@ -144,21 +144,21 @@ export const HeroTabs = () => {
                       <div className="text-foreground/70 text-xs">{t("analyticsTab.metrics.timeSaved.title")}</div>
                       <Zap size={14} className="text-amber-500" />
                     </div>
-                    <div className="mt-1 text-xl font-bold">{t("analyticsTab.metrics.timeSaved.value")}</div>
+                    <div className="mt-1 text-xl font-bold text-foreground">{t("analyticsTab.metrics.timeSaved.value")}</div>
                   </div>
                   <div className="p-3 rounded-lg border border-border bg-card">
                     <div className="flex items-center justify-between">
                       <div className="text-foreground/70 text-xs">{t("analyticsTab.metrics.roi.title")}</div>
                       <LineChart size={14} className="text-green-500" />
                     </div>
-                    <div className="mt-1 text-xl font-bold">{t("analyticsTab.metrics.roi.value")}</div>
+                    <div className="mt-1 text-xl font-bold text-foreground">{t("analyticsTab.metrics.roi.value")}</div>
                   </div>
                   <div className="p-3 rounded-lg border border-border bg-card">
                     <div className="flex items-center justify-between">
                       <div className="text-foreground/70 text-xs">{t("analyticsTab.metrics.engagement.title")}</div>
                       <Users size={14} className="text-blue-500" />
                     </div>
-                    <div className="mt-1 text-xl font-bold">{t("analyticsTab.metrics.engagement.value")}</div>
+                    <div className="mt-1 text-xl font-bold text-foreground ">{t("analyticsTab.metrics.engagement.value")}</div>
                   </div>
                 </div>
               </div>
@@ -194,7 +194,7 @@ export const HeroTabs = () => {
                 
                 <div className="p-3 rounded-lg border border-border bg-card flex items-center justify-between">
                   <div>
-                    <div className="font-medium">{t("promptsTab.creator.title")}</div>
+                    <div className="font-medium text-foreground">{t("promptsTab.creator.title")}</div>
                     <div className="text-sm text-foreground/60">{t("promptsTab.creator.subtitle")}</div>
                   </div>
                   <button className="px-3 py-1.5 rounded-md bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-colors">
