@@ -801,8 +801,8 @@
       "name": "AI Coaching",
       "description": "Personalized coaching to help your team master AI",
       "price": {
-        "monthly": "€2,000",
-        "annually": "€2,000"
+        "monthly": "€2,500",
+        "annually": "€2,500"
       },
       "unit": "one-time fee",
       "cta": "Book Now",
@@ -821,8 +821,8 @@
       "name": "Full-Day Training",
       "description": "Intensive training for your team on AI best practices",
       "price": {
-        "monthly": "€4,500",
-        "annually": "€4,500"
+        "monthly": "€2,000",
+        "annually": "€2,000"
       },
       "unit": "per day",
       "cta": "Schedule Training",
@@ -841,8 +841,8 @@
       "name": "AI Maturity Audit",
       "description": "Comprehensive evaluation of your organization's AI readiness",
       "price": {
-        "monthly": "€1,000",
-        "annually": "€1,000"
+        "monthly": "On request",
+        "annually": "On request"
       },
       "unit": "one-time fee",
       "cta": "Request Audit",
@@ -1006,7 +1006,15 @@
     "defaultTitle": "Enhance Your ChatGPT Experience with Jaydai",
     "defaultContent": "Maximize your AI experience with Jaydai, the Chrome extension that transforms how you use ChatGPT with expert prompts, custom templates, and detailed analytics. Join thousands of users who have optimized their AI workflow.",
     "buttonText": "Install Extension",
-    "extensionLabel": "Chrome Extension"
+    "extensionLabel": "Chrome Extension",
+    "rating": "5/5 Rating",
+    "readMore": "Read more"
   }
+},
+  "mobileDialog": {
+    "title": "Get Extension Instructions",
+    "description": "The Chrome extension is only available on desktop. Enter your email to receive installation instructions.",
+    "ctaButton": "Submit",
+    "cancelButton": "Cancel"
   }
 }

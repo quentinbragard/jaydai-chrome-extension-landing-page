@@ -1,6 +1,7 @@
 import { ReactNode } from 'react'
 import { notFound } from 'next/navigation'
 import { getTranslations } from 'next-intl/server'
+import { ExtensionModalProvider } from '@/components/common/ExtensionModalContext'
 import NextIntlClientProvider from '@/providers/NextIntlClientProvider'
 import { locales } from '@/lib/navigation'
 import Navbar from '@/components/common/Navbar'
@@ -37,11 +38,13 @@ export default async function LocaleLayout({
       now={new Date()}
       messages={messages}
     >
-      <Navbar />
-      <main className="flex-grow">
-        {children}
-      </main>
-      <Footer />
+      <ExtensionModalProvider>
+        <Navbar />
+          <main className="flex-grow">
+            {children}
+          </main>
+        <Footer />
+      </ExtensionModalProvider>
     </NextIntlClientProvider>
   )
 }

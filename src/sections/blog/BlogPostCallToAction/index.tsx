@@ -119,7 +119,7 @@ const BlogPostCallToAction: React.FC<BlogPostCallToActionProps> = ({
                     variant === 'outline' ? 'text-primary' : 'text-white/90'
                   } hover:underline`}
                 >
-                  <span>Learn More</span>
+                  <span>{t('blogPost.readMore')}</span>
                   <ChevronRight size={14} />
                 </Link>
               </div>
@@ -143,7 +143,7 @@ const BlogPostCallToAction: React.FC<BlogPostCallToActionProps> = ({
               </div>
               
               <div className={`text-sm mb-4 ${variant === 'outline' ? 'text-foreground/60' : 'text-white/70'}`}>
-                4.8/5 Rating
+                {t('blogCta.rating')}
               </div>
               
               <div className="flex">

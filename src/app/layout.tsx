@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import Script from 'next/script'
 import './globals.css'
 import { ThemeProvider } from '@/providers/ThemeProvider'
-import { ExtensionModalProvider } from '@/components/common/ExtensionModalContext'
 import { Analytics } from '@/components/Analytics'
 import SchemaOrg from '@/components/SchemaOrg'
 
@@ -83,7 +82,6 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <ExtensionModalProvider>
             {children}
             
             {/* Analytics Component */}
@@ -91,7 +89,6 @@ export default function RootLayout({
             
             {/* Schema.org structured data */}
             <SchemaOrg locale={locale} />
-          </ExtensionModalProvider>
         </ThemeProvider>
       </body>
     </html>
