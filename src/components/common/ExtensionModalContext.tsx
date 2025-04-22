@@ -15,6 +15,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { trackEvent } from "@/lib/analytics"
+import { useTranslations } from "next-intl"
 
 const EXTENSION_URL = "https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd"
 
@@ -27,7 +28,7 @@ const ExtensionModalContext = React.createContext<ExtensionModalContextValue | n
 export function ExtensionModalProvider({ children }: { children: React.ReactNode }) {
   const [isOpen, setIsOpen] = React.useState(false)
   const isMobile = useIsMobile()
-
+  const t = useTranslations('mobileDialog')
   React.useEffect(() => {
     const handleClick = (event: MouseEvent) => {
       const target = (event.target as HTMLElement).closest("a[data-extension], button[data-extension]")
@@ -72,18 +73,18 @@ export function ExtensionModalProvider({ children }: { children: React.ReactNode
         <DialogOverlay />
         <DialogContent>
           <DialogHeader>
-            <DialogTitle>Get Extension Instructions</DialogTitle>
+            <DialogTitle>{t('title')}</DialogTitle>
             <DialogDescription>
-              The Chrome extension is only available on desktop. Enter your email to receive installation instructions.
+              {t('description')}
             </DialogDescription>
           </DialogHeader>
           <form onSubmit={handleSubmit}>
             <Input type="email" name="email" placeholder="you@example.com" required className="mb-4" />
             <DialogFooter>
               <DialogClose asChild>
-                <Button variant="outline">Cancel</Button>
+                <Button variant="outline">{t('cancelButton')}</Button>
               </DialogClose>
-              <Button type="submit">Submit</Button>
+              <Button type="submit">{t('ctaButton')}</Button>
             </DialogFooter>
           </form>
         </DialogContent>

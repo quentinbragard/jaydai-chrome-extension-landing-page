@@ -282,7 +282,7 @@ const Navbar = () => {
           </div>
           
           {/* Mobile menu button */}
-          <div className="flex md:hidden">
+          <div className="flex md:hidden items-center">
             {/* Mobile Language Switcher */}
             <LanguageSwitcher className="mr-2" />
             
