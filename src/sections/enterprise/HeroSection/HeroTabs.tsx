@@ -28,7 +28,7 @@ export const HeroTabs = () => {
         
         <Tabs defaultValue="prompts" className="w-full">
           <div className="flex items-center justify-between px-4 py-3 border-b border-border/40">
-            <div className="text-foreground/70 text-sm font-medium">{t("tabs.title")}</div>
+            <div className="hidden md:block text-foreground/70 text-sm font-medium">{t("tabs.title")}</div>
             <TabsList className="bg-background/50 backdrop-blur-sm border border-border/60">
             <TabsTrigger value="prompts" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
                 <PenTool size={14} className="mr-1" /> {t("tabs.prompts")}

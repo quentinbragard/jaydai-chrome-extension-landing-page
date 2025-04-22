@@ -239,10 +239,10 @@ const Navbar = () => {
             
             {isEnterprisePage ? (
               <a 
-                className="flex items-center gap-2 font-bold text-sm lg:text-base px-4 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+                className="flex items-center gap-2 font-bold whitespace-nowrap text-sm px-3 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
                 onClick={() => {
                   trackEvent('Button Clicked', {
-                    button_name: 'navbarDownloadExtension',
+                    button_name: 'navbarRequestDemo',
                     page_location: window.location.pathname,
                     source: 'navbar',
                     timestamp: new Date().toISOString()
@@ -254,7 +254,7 @@ const Navbar = () => {
               </a>
             ) : (
               <a 
-                className="flex items-center gap-2 font-bold text-sm lg:text-base px-4 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+                className="flex items-center gap-2 font-bold whitespace-nowrap text-xs lg:text-sm px-3 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
                 onClick={() => {
                   trackEvent('Button Clicked', {
                     button_name: 'navbarDownloadExtension',
@@ -272,9 +272,9 @@ const Navbar = () => {
                 <Image
                   src="/images/google_chrome_icon.png"
                   alt="Google Chrome"
-                  width={20}
-                  height={20}
-                  className="w-5 h-5"
+                  width={10}
+                  height={10}
+                  className="w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5"
                 />
                 {t('downloadExtension')}
               </a>
@@ -419,7 +419,7 @@ const Navbar = () => {
             
             {isEnterprisePage ? (
               <a 
-                className="flex items-center gap-2 font-bold text-sm lg:text-base px-4 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+                className="flex items-center gap-2 font-bold whitespace-nowrap text-sm px-3 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
                 onClick={() => {
                   trackEvent('Button Clicked', {
                     button_name: 'navbarDownloadExtension',
@@ -434,7 +434,7 @@ const Navbar = () => {
               </a>
             ) : (
               <a 
-                className="flex items-center gap-2 font-bold text-sm lg:text-base px-4 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+                className="flex items-center gap-2 font-bold whitespace-nowrap text-sm px-3 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
                 onClick={() => {
                   trackEvent('Button Clicked', {
                     button_name: 'navbarDownloadExtension',
