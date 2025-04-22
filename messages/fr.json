@@ -1009,10 +1009,20 @@
     "readMore": "Lire la suite"
   }
   },
+  "enterprisePage": {
+    "seo": {
+      "title": "Jaydai Entreprise | Solutions IA pour les entreprises",
+      "description": "Offrez à votre organisation la puissance de Jaydai Entreprise. Rationalisez vos workflows IA avec collaboration d'équipe, contrôles administratifs, bibliothèques de prompts personnalisés et analytiques détaillées."
+    }
+  },
   "mobileDialog": {
     "title": "Télécharger l'Extension",
     "description": "Téléchargez l'extension Jaydai pour Chrome pour accéder à tous les prompts et modèles de Jaydai.",
     "ctaButton": "Valider",
     "cancelButton": "Annuler"
+  },
+  "seoMetadata": {
+    "title": "Jaydai | Tous les meilleurs prompts directement dans ChatGPT",
+    "description": "Maximisez votre expérience IA avec Jaydai, l'extension Chrome qui transforme votre utilisation de ChatGPT avec des prompts experts, des modèles personnalisés et des analytiques détaillées."
   }
 }

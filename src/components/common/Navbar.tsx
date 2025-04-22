@@ -57,7 +57,7 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur-md border-b border-border">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto ">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
@@ -73,7 +73,7 @@ const Navbar = () => {
           </div>
           
           {/* Product Type Switcher (B2C/B2B) - Desktop */}
-          <div className="hidden md:flex items-center mx-4 bg-secondary/20 rounded-full p-0.5">
+          <div className="hidden xl:flex items-center mx-4 bg-secondary/20 rounded-full p-0.5">
             <Link
               href="/"
               className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${
@@ -117,7 +117,7 @@ const Navbar = () => {
           </div>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:block flex-1">
+          <div className="hidden xl:block flex-1">
             <div className="ml-10 flex items-center justify-center space-x-8">
               {/* Navigation items differ based on whether we're on the enterprise page */}
               {isEnterprisePage ? (
@@ -224,7 +224,7 @@ const Navbar = () => {
           </div>
           
           {/* Right side buttons */}
-          <div className="hidden md:flex items-center space-x-4 pl-8">
+          <div className="hidden xl:flex items-center space-x-4 pl-8">
             {/* Language Switcher */}
             <LanguageSwitcher />
             
@@ -282,7 +282,7 @@ const Navbar = () => {
           </div>
           
           {/* Mobile menu button */}
-          <div className="flex md:hidden items-center">
+          <div className="flex xl:hidden items-center">
             {/* Mobile Language Switcher */}
             <LanguageSwitcher className="mr-2" />
             
@@ -309,7 +309,7 @@ const Navbar = () => {
 
       {/* Mobile menu, show/hide based on menu state */}
       {isMenuOpen && (
-        <div className="md:hidden">
+        <div className="xl:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-background border-b border-border">
             {/* Product Type Switcher (B2C/B2B) - Mobile */}
             <div className="flex items-center justify-center bg-secondary/20 rounded-lg p-1 mb-4 mx-2">

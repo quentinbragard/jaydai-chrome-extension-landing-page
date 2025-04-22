@@ -1,6 +1,29 @@
 import { ReactNode } from 'react'
 import { notFound } from 'next/navigation'
 import { getTranslations } from 'next-intl/server'
+import type { Metadata } from 'next'
+// Generate localized SEO metadata for all pages under [locale]
+export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+  const { locale } = params
+  const t = await getTranslations({ locale, namespace: 'seoMetadata' })
+  return {
+    title: t('title'),
+    description: t('description'),
+    openGraph: {
+      title: t('title'),
+      description: t('description'),
+      type: 'website',
+      locale,
+      url: `https://jayd.ai/${locale}`
+    },
+    alternates: {
+      languages: {
+        en: 'https://jayd.ai/en',
+        fr: 'https://jayd.ai/fr'
+      }
+    }
+  }
+}
 import { ExtensionModalProvider } from '@/components/common/ExtensionModalContext'
 import NextIntlClientProvider from '@/providers/NextIntlClientProvider'
 import { locales } from '@/lib/navigation'
