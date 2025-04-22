@@ -19,7 +19,7 @@
   },
   "hero": {
     "badge": "Maximize your AI potential with Jaydai",
-    "title": "Your Smart AI Assistant for",
+    "title": "The best prompts directly in",
     "titleHighlight": "ChatGPT",
     "subtitle": "Transform how you use ChatGPT with our library of expert prompts, custom templates, and detailed analytics.",
     "ctaExtension": "Get Chrome Extension",
@@ -1010,11 +1010,21 @@
     "rating": "5/5 Rating",
     "readMore": "Read more"
   }
-},
+  },
+  "enterprisePage": {
+    "seo": {
+      "title": "Jaydai Enterprise | AI Solutions for Businesses",
+      "description": "Empower your organization with Jaydai Enterprise. Streamline AI workflows with team collaboration, admin controls, custom prompt libraries, and detailed analytics."
+    }
+  },
   "mobileDialog": {
     "title": "Get Extension Instructions",
     "description": "The Chrome extension is only available on desktop. Enter your email to receive installation instructions.",
     "ctaButton": "Submit",
     "cancelButton": "Cancel"
+  },
+  "seoMetadata": {
+    "title": "Jaydai | The best prompts directly in ChatGPT",
+    "description": "Maximize your generative AI experience with Jaydai, the Chrome extension that transforms how you use ChatGPT with expert prompts, custom templates, and detailed analytics."
   }
 }

@@ -4,6 +4,7 @@ import './globals.css'
 import { ThemeProvider } from '@/providers/ThemeProvider'
 import { Analytics } from '@/components/Analytics'
 import SchemaOrg from '@/components/SchemaOrg'
+import { getTranslations } from 'next-intl/server'
 
 import { Poppins, Roboto } from 'next/font/google'
 
@@ -21,23 +22,30 @@ const roboto = Roboto({
   display: 'swap',
 })  
 
-export const metadata: Metadata = {
-  title: 'Jaydai - Your Smart AI Assistant for ChatGPT',
-  description: 'Maximize your generative AI experience with Jaydai, the Chrome extension that transforms how you use ChatGPT with expert prompts, custom templates, and detailed analytics.',
-  keywords: 'AI, ChatGPT, prompts, templates, Chrome extension, productivity',
-  metadataBase: new URL('https://jayd.ai'),
-  openGraph: {
-    title: 'Jaydai - Your Smart AI Assistant for ChatGPT',
-    description: 'Maximize your generative AI experience with Jaydai, the Chrome extension that transforms how you use ChatGPT with expert prompts, custom templates, and detailed analytics.',
-    type: 'website',
-    url: 'https://jayd.ai',
-  },
-  alternates: {
-    languages: {
-      'en': 'https://jayd.ai/en',
-      'fr': 'https://jayd.ai/fr',
+export async function generateMetadata(
+  { params }: { params: { locale: string } }
+): Promise<Metadata> {
+  // now we can safely read locale
+  const { locale } = params;
+  const t = await getTranslations({ locale, namespace: 'seoMetadata' })
+  
+  return {
+    title: t('title'),
+    description: t('description'),
+    openGraph: {
+      title: t('title'),
+      description: t('description'),
+      type: 'website',
+      locale: locale,
+      url: `https://jayd.ai/`,
     },
-  },
+    alternates: {
+      languages: {
+        'en': 'https://jayd.ai/en',
+        'fr': 'https://jayd.ai/fr',
+      },
+    },
+  }
 }
 
 export default function RootLayout({
@@ -83,7 +91,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
             {children}
-            
+
             {/* Analytics Component */}
             <Analytics />
             
