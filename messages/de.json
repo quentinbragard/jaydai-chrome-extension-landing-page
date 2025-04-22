@@ -1,0 +1,1029 @@
+{
+    "nav":
+    {
+     "features": "Funktionen",
+     "testimonials": "Kundenstimmen",
+     "templates": "Prompts",
+     "pricing": "Preise",
+     "faq": "FAQ",
+     "contact": "Kontakt",
+     "personal": "Persönlich",
+     "enterprise": "Unternehmen",
+     "downloadExtension": "Erweiterung herunterladen",
+     "learn": "Lernen",
+     "services": "Dienstleistungen",
+     "caseStudies": "Fallstudien",
+     "team": "Team",
+     "requestDemo": "Demo anfragen",
+     "openMenu": "Hauptmenü öffnen"
+     },
+     "hero": {
+       "badge": "Maximieren Sie Ihr KI-Potenzial mit Jaydai",
+       "title": "Die besten Prompts direkt in",
+       "titleHighlight": "ChatGPT",
+       "subtitle": "Verändern Sie Ihre ChatGPT-Nutzung mit unserer Bibliothek von Experten-Prompts, benutzerdefinierten Vorlagen und detaillierten Analysen.",
+       "ctaExtension": "Chrome-Erweiterung holen",
+       "ctaDemo": "Demo ansehen",
+       "stats": [
+         {
+           "value": "+50%",
+           "label": "Effektivere Antworten"
+         },
+         {
+           "value": "70%",
+           "label": "Zeitersparnis beim Schreiben von Prompts"
+         },
+         {
+           "value": "100%",
+           "label": "Kontrolle über Nutzungsstatistiken"
+         }
+       ]
+     },
+     "features": {
+       "title": "Leistungsstarke Funktionen",
+       "subtitle": "Alles, was Sie brauchen, um Ihr KI-Potenzial zu maximieren",
+       "libraries": {
+         "title": "Offizielle Prompt-Bibliotheken",
+         "description": "Greifen Sie auf kuratierte Sammlungen von Experten-Prompts zu, organisiert nach Anwendungsfall und Branche. Unsere Bibliotheken werden ständig mit den neuesten Techniken und bewährten Methoden aktualisiert."
+       },
+       "companyTemplates": {
+         "title": "Unternehmensvorlagen",
+         "description": "Teilen Sie eine angepasste Prompt-Bank mit Ihrem gesamten Team für spezifische Geschäftsanwendungen. Standardisieren Sie KI-Interaktionen in Ihrer Organisation und stellen Sie konsistente Ergebnisse sicher."
+       },
+       "customTemplates": {
+         "title": "Erstellen Sie benutzerdefinierte Vorlagen",
+         "description": "Erstellen und speichern Sie Ihre eigenen Prompt-Vorlagen, um Zeit bei wiederkehrenden Projekten zu sparen. Organisieren Sie sie nach Kategorien und greifen Sie mit einem einzigen Klick darauf zu."
+       },
+       "analytics": {
+         "title": "Detaillierte Analysen",
+         "description": "Verfolgen Sie Ihre KI-Nutzung mit umfassenden Analysen. Überwachen Sie eingesparte Zeit, Energieverbrauch und Effektivität verschiedener Prompt-Typen, um Ihren Arbeitsablauf zu optimieren."
+       },
+       "aiUpdates": {
+         "title": "KI-Fortschritts-Updates",
+         "description": "Bleiben Sie über die neuesten KI-Entwicklungen informiert und erfahren Sie, wie Sie diese nutzen können. Wir aktualisieren kontinuierlich unsere Prompt-Bibliotheken, um neue Fähigkeiten und Techniken zu integrieren."
+       },
+       "learningSchool": {
+         "title": "Lernplattform",
+         "description": "Greifen Sie auf unsere Online-Lernplattform mit praxisnahen Simulationen zu, um KI-Prompt-Engineering zu meistern. Lernen Sie, wie Sie effektive Prompts für jede Situation erstellen."
+       },
+       "cta": {
+         "description": "Erleben Sie all diese Funktionen und mehr mit unserer kostenlosen Chrome-Erweiterung.",
+         "buttonText": "Jetzt herunterladen",
+         "link": "https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd",
+         "privacyPolicy": "Datenschutzrichtlinie"
+       }
+     },
+     "pricing": {
+       "title": "Völlig kostenlos für alle",
+       "subtitle": "Starten Sie noch heute kostenlos mit allen wesentlichen Funktionen",
+       "freePlan": {
+         "badge": "100% KOSTENLOS",
+         "name": "Jaydai Free",
+         "description": "Alles, was Sie brauchen, um Ihre KI-Interaktionen mit fachmännisch erstellten Prompts zu verbessern.",
+         "featuresTitle": "Im kostenlosen Paket enthalten:",
+         "features": [
+           "30+ Experten-Prompt-Vorlagen",
+           "Speichern Sie bis zu 10 benutzerdefinierte Prompts",
+           "Grundlegende Nutzungsanalyse",
+           "Zugriff auf Chrome-Erweiterung",
+           "Regelmäßige Funktions-Updates",
+           "Community-Support",
+           "Funktioniert mit ChatGPT & Claude",
+           "Vollständige Prompt-Anpassung"
+         ],
+         "price": "0€",
+         "priceSubtext": "Für immer kostenlos",
+         "ctaText": "Jetzt starten"
+       },
+       "enterprise": {
+         "title": "Unternehmenslösung",
+         "description": "Für Teams und Organisationen, die erweiterte Funktionen und Support benötigen",
+         "ctaText": "Mehr erfahren",
+         "features": [
+           "Team-Zusammenarbeit",
+           "Admin-Kontrollen", 
+           "Benutzerdefinierte Prompt-Bibliotheken",
+           "Dedizierter Support",
+           "Schulung & Einarbeitung"
+         ]
+       },
+       "faqPrompt": "Haben Sie Fragen zu unserem Angebot?",
+       "faqLink": "Schauen Sie in unseren FAQ-Bereich"
+     },
+     "howItWorks": {
+       "title": "Wie Jaydai funktioniert",
+       "subtitle": "Sieben einfache Schritte, um Ihr KI-Potenzial zu maximieren",
+       "ctaText": "Jetzt ausprobieren",
+       "ctaLink": "https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd",
+       "seeHow": "So geht's",
+       "closeModal": "Klicken Sie außerhalb des Bildes, um zu schließen",
+       "optimizedWithJaydai": "Optimiert mit Jaydai",
+       "loading": "Wird geladen...",
+       "step": "Schritt",
+       "steps": {
+         "1": {
+           "title": "Installieren Sie die Erweiterung",
+           "description": "Fügen Sie Jaydai mit nur einem Klick aus dem Chrome Web Store hinzu"
+         },
+         "2": {
+           "title": "Erstellen Sie Ihr Konto",
+           "description": "Klicken Sie auf \"Jetzt starten\" und erstellen Sie Ihr Konto. Sie können sich mit Google oder E-Mail anmelden."
+         },
+         "3": {
+           "title": "Gehen Sie zu ChatGPT",
+           "description": "Sie sehen einen neuen Button, um in der unteren rechten Ecke der ChatGPT-Oberfläche auf Jaydai zuzugreifen."
+         },
+         "4": {
+           "title": "Wählen Sie Ihren Prompt",
+           "description": "Wählen Sie aus unserer Bibliothek von Experten-Prompts oder verwenden Sie Ihre gespeicherten Vorlagen"
+         },
+         "5": {
+           "title": "Personalisieren Sie Ihren Prompt",
+           "description": "Ersetzen Sie die Variablen durch Ihre eigenen Informationen, um einen personalisierten Prompt zu erstellen"
+         },
+         "6": {
+           "title": "Lassen Sie die KI die Arbeit erledigen",
+           "description": "Erhalten Sie bessere Ergebnisse dank fachmännisch erstellter Prompts"
+         },
+         "7": {
+           "title": "Speichern Sie Ihre besten Prompts",
+           "description": "Wenn Sie einen funktionierenden Prompt gefunden haben, speichern Sie ihn für die spätere Verwendung"
+         }
+       }
+     },
+     "beforeAfterComparison": {
+       "title": "Sehen Sie den Unterschied",
+       "subtitle": "Vergleichen Sie KI-Antworten mit und ohne Jaydais optimierte Prompts",
+       "beforeLabel": "Ohne Jaydai",
+       "afterLabel": "Mit Jaydai",
+       "beforeAlt": "KI-Antwort ohne Jaydai",
+       "afterAlt": "KI-Antwort mit Jaydai",
+       "basicPromptLabel": "Einfacher Prompt",
+       "basicPrompt": "\"Schreibe über KI-Vorteile\"",
+       "jaydaiPromptLabel": "Jaydai-Prompt",
+       "jaydaiPrompt": "\"Analysiere die 5 wichtigsten geschäftlichen Vorteile der Implementierung von KI...\"",
+       "instructions": "Ziehen Sie den Schieberegler, um den Unterschied zwischen einfachen Prompts und Jaydais optimierten Vorlagen zu vergleichen.",
+       "ctaText": "Erweiterung herunterladen"
+     },
+     "templateCategories": {
+       "title": "Prompt-Vorlagenkategorien",
+       "subtitle": "Greifen Sie auf Hunderte von fachmännisch erstellten Prompt-Vorlagen zu, die nach Kategorien organisiert sind",
+       "templateCount": {
+         "multiple": "{{count}}+ Vorlagen",
+         "infinite": "∞ Vorlagen"
+       },
+       "exploreTemplates": "Vorlagen erkunden",
+       "ctaDescription": "Können Sie nicht finden, was Sie brauchen? Erstellen Sie Ihre eigenen benutzerdefinierten Vorlagen oder fordern Sie neue von unserem Team an.",
+       "ctaButtonText": "Kostenlos starten",
+       "ctaLink": "https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd",
+       "businessMarketing": {
+         "title": "Business & Marketing",
+         "description": "Optimieren Sie Ihre Marketing-Texte, erstellen Sie Geschäftspläne und analysieren Sie Markttrends"
+       },
+       "contentCreation": {
+         "title": "Content-Erstellung",
+         "description": "Generieren Sie Blogbeiträge, Social-Media-Inhalte und kreative Texte mit perfektem Tonfall"
+       },
+       "dataAnalysis": {
+         "title": "Datenanalyse",
+         "description": "Interpretieren Sie Daten, erstellen Sie Berichte und gewinnen Sie Erkenntnisse aus komplexen Informationen"
+       },
+       "programming": {
+         "title": "Programmierung",
+         "description": "Debuggen Sie Code, generieren Sie Funktionen und erklären Sie komplexe Programmierkonzepte"
+       },
+       "education": {
+         "title": "Bildung",
+         "description": "Erstellen Sie Unterrichtspläne, Lernhilfen und Bildungsinhalte für jedes Fach"
+       },
+       "research": {
+         "title": "Forschung",
+         "description": "Formulieren Sie Forschungsfragen, analysieren Sie Literatur und fassen Sie Ergebnisse zusammen"
+       },
+       "personalDevelopment": {
+         "title": "Persönliche Entwicklung",
+         "description": "Erstellen Sie Gewohnheits-Tracker, Rahmenwerke zur Zielsetzung und Pläne zur Selbstverbesserung"
+       },
+       "creativeProjects": {
+         "title": "Kreative Projekte",
+         "description": "Generieren Sie Ideen für Kunst, Musik, Fiktion und andere kreative Unternehmungen"
+       },
+       "customTemplates": {
+         "title": "Benutzerdefinierte Vorlagen",
+         "description": "Erstellen Sie Ihre eigenen Vorlagen, die auf Ihre spezifischen Bedürfnisse und Arbeitsabläufe zugeschnitten sind"
+       }
+     },
+     "useCasesSection": {
+       "title": "Praxisnahe Anwendungsfälle",
+       "subtitle": "Sehen Sie, wie Jaydai KI-Arbeitsabläufe für verschiedene Rollen transformiert",
+       "ctaDescription": "Greifen Sie auf Hunderte von fachmännisch erstellten Prompts für Ihre spezifischen Bedürfnisse zu",
+       "ctaButtonText": "Kostenlos starten",
+       "ctaLink": "https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd"
+     },
+     "analyticsDashboard": {
+       "title": "Messen Sie Ihre KI-Wirkung",
+       "subtitle": "Umfassende Analysen zur Verfolgung Ihrer Produktivitätsgewinne und Nutzungsmuster",
+       "dashboardAlt": "Analyse-Dashboard",
+       "description": "Gewinnen Sie wertvolle Einblicke in Ihre KI-Nutzung und messen Sie die Produktivitätsverbesserungen in Ihrem Team mit unseren detaillierten Analysen.",
+       "ctaText": "Erweiterung herunterladen",
+       "stats": {
+         "totalPrompts": {
+           "label": "Gesamte Prompts",
+           "trend": "vs. vorheriger Zeitraum"
+         },
+         "timeSaved": {
+           "label": "Eingesparte Zeit",
+           "trend": "diese Woche"
+         },
+         "efficiencyGain": {
+           "label": "Effizienzgewinn",
+           "trend": "Verbesserung"
+         },
+         "templatesSaved": {
+           "label": "Gespeicherte Vorlagen",
+           "trend": "neu diese Woche"
+         }
+       }
+     },
+     "testimonials": {
+       "title": "Was unsere Nutzer sagen",
+       "subtitle": "Schließen Sie sich ihnen an und maximieren Sie Ihr KI-Potenzial mit Jaydai",
+       "viewOnGoogle": "Bei Google ansehen",
+       "users": [
+         {
+           "name": "Guillaume Charrel",
+           "link": "https://chromewebstore.google.com/reviews/daf3636e-a439-41ee-97a6-3dc598c07990",
+           "content": "Sehr praktisch! Die vorgeschlagenen Prompts helfen mir, viel Zeit zu sparen und qualitativ hochwertigere Informationen auf ChatGPT zu generieren."
+         },
+         {
+           "name": "Thomas Mendy",
+           "link": "https://chromewebstore.google.com/reviews/7480123c-1b20-42a0-b101-e6aaec699093",
+           "content": "Tolles Tool! Die Ergänzung durch benutzerdefinierte Vorlagen ist wirklich interessant, um die Nutzung von ChatGPT zu vereinfachen. Jetzt geht es nur noch darum, an Ihren besten Prompts zu arbeiten!"
+         },
+         {
+           "name": "François Galy",
+           "role": "https://chromewebstore.google.com/reviews/1e1408b2-b4ff-4649-8834-344d631b8659",
+           "content": "Sehr praktisch. Ich nutze es regelmäßig, um vollständige Prompts zur Hand zu haben, besonders für die Dokumentenanalyse für mein Startup."
+         },
+         {
+           "name": "Mariam Gassama",
+           "link": "https://chromewebstore.google.com/reviews/afee7b77-4f3f-4987-ace0-26306988e472",
+           "company": "DevStack",
+           "content": "Endlich! Wahnsinnig nützliches Tool für jeden, der eine großartige Antwort in einem einzigen Prompt ohne endlose Iterationen erhalten möchte. Ich kann unmöglich zu ChatGPT ohne dieses Tool zurückkehren."
+         }
+       ],
+       "cta": {
+         "description": "Schließen Sie sich Tausenden von Nutzern an, die ihre KI-Erfahrung mit Jaydai verändert haben. Laden Sie unsere Chrome-Erweiterung noch heute herunter und sehen Sie selbst den Unterschied.",
+         "buttonText": "Kostenlos starten",
+         "link": "https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd"
+       }
+     },
+     "contact": {
+       "title": "Kontaktieren Sie uns",
+       "subtitle": "Haben Sie Fragen oder benötigen Sie Hilfe? Wir sind für Sie da.",
+       "emailContact": {
+         "title": "E-Mail",
+         "description": "Senden Sie uns eine E-Mail und wir melden uns innerhalb von 24 Stunden bei Ihnen.",
+         "email": "contact@jayd.ai"
+       },
+       "liveChat": {
+         "title": "Live-Chat",
+         "description": "Chatten Sie mit unserem Support-Team für sofortige Unterstützung.",
+         "buttonText": "Chat starten"
+       },
+       "enterprise": {
+         "title": "Unternehmen",
+         "description": "Kontaktieren Sie unser Vertriebsteam für Unternehmenslösungen.",
+         "email": "enterprise@jayd.ai"
+       },
+       "form": {
+         "title": "Senden Sie uns eine Nachricht",
+         "nameLabel": "Name",
+         "namePlaceholder": "Ihr Name",
+         "emailLabel": "E-Mail",
+         "emailPlaceholder": "Ihre E-Mail",
+         "subjectLabel": "Betreff",
+         "subjectPlaceholder": "Nachrichtenbetreff",
+         "messageLabel": "Nachricht",
+         "messagePlaceholder": "Ihre Nachricht",
+         "submitButton": "Nachricht senden",
+         "success": "Nachricht erfolgreich gesendet",
+         "error": "Beim Senden der Nachricht ist ein Fehler aufgetreten",
+         "submitting": "Wird gesendet..."
+       }
+     },
+     "footer": {
+       "description": "Maximieren Sie Ihre generative KI-Erfahrung mit Jaydai, der kostenlosen Chrome-Erweiterung, die verändert, wie Sie ChatGPT mit Experten-Prompts, benutzerdefinierten Vorlagen und detaillierten Analysen nutzen.",
+       "product": "Produkt",
+       "features": "Funktionen",
+       "templates": "Vorlagen",
+       "pricing": "Preise",
+       "enterprise": "Unternehmen",
+       "learningSchool": "Professionelle Bewertung durch Jaydai",
+       "company": "Unternehmen",
+       "aboutUs": "Über uns",
+       "blog": "Blog",
+       "contact": "Kontakt",
+       "privacyPolicy": "Datenschutzrichtlinie",
+       "termsOfService": "Nutzungsbedingungen",
+       "allRightsReserved": "Alle Rechte vorbehalten.",
+       "downloadExtension": "Erweiterung herunterladen",
+       "linkedin": "LinkedIn",
+       "email": "E-Mail"
+     },
+     "enterpriseHero": {
+     "badge": "KI-Lösungen für Unternehmen",
+     "title": "Transformieren Sie Ihre",
+     "titleHighlight": "Organisation",
+     "titleSuffix": "mit Unternehmens-KI",
+     "subtitle": "Stärken Sie Ihre Teams mit fachmännisch erstellten KI-Prompts, benutzerdefinierten Vorlagen und Analysen, die für den Einsatz im Unternehmensmaßstab konzipiert sind.",
+     "ctaDemo": "Unternehmens-Demo anfragen",
+     "ctaVideo": "Erfolgsgeschichten ansehen",
+     "trustedBy": "Vertraut von Branchenführern:",
+     "companies": ["Acme Inc", "Globex", "TechCorp", "Initech"],
+     "tabs": {
+       "title": "Unternehmenslösungen",
+       "teams": "Teams",
+       "analytics": "Analysen",
+       "prompts": "Prompts"
+     },
+     "teamsTab": {
+       "title": "Unternehmens-Teamzusammenarbeit",
+       "subtitle": "Zentralisiertes Prompt-Management",
+       "status": "Aktiv",
+       "activities": [
+         {
+           "user": "MB",
+           "action": "Neuen Prompt hinzugefügt: Finanzanalyse-Vorlage",
+           "time": "vor 2m"
+         },
+         {
+           "user": "KL",
+           "action": "Marketing-Kampagnenvorlage aktualisiert",
+           "time": "vor 1h"
+         },
+         {
+           "user": "TJ",
+           "action": "Kundendienst-Vorlagen mit dem Vertriebsteam geteilt",
+           "time": "vor 3h"
+         }
+       ],
+       "stats": {
+         "users": {
+           "title": "Gesamtnutzer",
+           "value": "248",
+           "trend": "+12% diesen Monat"
+         },
+         "templates": {
+           "title": "Geteilte Vorlagen",
+           "value": "1.204",
+           "trend": "+85 neue Vorlagen"
+         }
+       }
+     },
+     "analyticsTab": {
+       "title": "Unternehmens-Analysedashboard",
+       "subtitle": "Echtzeit-Leistungsmetriken",
+       "chartTitle": "KI-Prompt-Nutzung nach Abteilung",
+       "period": "Letzte 30 Tage",
+       "departments": ["Marketing", "Vertrieb", "Technik", "HR", "Finanzen"],
+       "metrics": {
+         "timeSaved": {
+           "title": "Eingesparte Zeit",
+           "value": "356 Std."
+         },
+         "roi": {
+           "title": "ROI",
+           "value": "287%"
+         },
+         "engagement": {
+           "title": "Engagement",
+           "value": "92%"
+         }
+       }
+     },
+     "promptsTab": {
+       "title": "Unternehmens-Prompt-Bibliothek",
+       "subtitle": "Angepasst an Ihre geschäftlichen Bedürfnisse",
+       "templates": [
+         {
+           "title": "Finanzberichtsgenerator",
+           "category": "Finanzen",
+           "description": "Erstellt automatisch detaillierte Finanzberichte mit Analysen aus Rohdateneingaben..."
+         },
+         {
+           "title": "Kundensupport-Vorlage",
+           "category": "Support",
+           "description": "Generieren Sie personalisierte, einfühlsame Antworten auf Kundenanfragen mit..."
+         },
+         {
+           "title": "Marktforschungsassistent",
+           "category": "Marketing",
+           "description": "Analysieren Sie Wettbewerber, identifizieren Sie Markttrends und generieren Sie umsetzbare Erkenntnisse..."
+         }
+       ],
+       "creator": {
+         "title": "Benutzerdefinierter Vorlagenersteller",
+         "subtitle": "Entwerfen Sie Ihre eigenen geschäftsspezifischen Prompts",
+         "button": "Neu erstellen"
+       }
+     },
+     "videoModal": {
+       "title": "Transformieren Sie Ihre Organisation mit Jaydai",
+       "description": "Sehen Sie, wie Unternehmen ihr KI-Potenzial mit benutzerdefinierten Prompt-Bibliotheken, Teamzusammenarbeit und Analysen maximieren."
+     }
+   },
+   "enterpriseSolutions": {
+     "learnMore": "Mehr erfahren",
+     "valuePropsSection": {
+       "badge": "Für Organisationen aller Größen",
+       "title": "KI-Lösungen für Unternehmen",
+       "subtitle": "Verändern Sie, wie Ihre Organisation KI nutzt, mit leistungsstarken Tools für Teams und Unternehmen",
+       "enterpriseReady": "Unternehmensbereit",
+       "cards": [
+         {
+           "title": "Team-Zusammenarbeit",
+           "description": "Teilen Sie eine angepasste Prompt-Bank mit Ihrem gesamten Team für spezifische Geschäftsanwendungsfälle. Standardisieren Sie KI-Interaktionen in Ihrer Organisation.",
+           "stats": [
+             { "value": "87%", "label": "Steigerung der Teameffizienz" },
+             { "value": "100+", "label": "Gleichzeitige Benutzer" }
+           ]
+         },
+         {
+           "title": "Maßgeschneiderte Prompts",
+           "description": "Von Experten erstellte Prompts, die speziell auf Ihre Geschäftsbedürfnisse und Branchenanforderungen zugeschnitten sind.",
+           "stats": [
+             { "value": "250+", "label": "Branchenspezifische Vorlagen" },
+             { "value": "48h", "label": "Lieferung benutzerdefinierter Prompts" }
+           ]
+         },
+         {
+           "title": "Unternehmensanalysen",
+           "description": "Messen Sie die Wirkung von KI in Ihrer Organisation mit detaillierten Analysen zu Nutzung, Leistung und ROI.",
+           "stats": [
+             { "value": "356h", "label": "Durchschnittliche monatliche Zeitersparnis" },
+             { "value": "287%", "label": "Durchschnittlicher ROI" }
+           ]
+         },
+         {
+           "title": "Schulung & Coaching",
+           "description": "Umfassende Schulungsprogramme, um Ihren Teams zu helfen, KI-Prompt-Engineering zu meistern und die Produktivität zu maximieren.",
+           "stats": [
+             { "value": "1.200+", "label": "Geschulte Fachleute" },
+             { "value": "92%", "label": "Benutzerzufriedenheit" }
+           ]
+         }
+       ],
+       "metrics": [
+         {
+           "icon": "TrendingUp",
+           "value": "42%",
+           "label": "Durchschnittliche Produktivitätssteigerung"
+         },
+         {
+           "icon": "Clock",
+           "value": "68%",
+           "label": "Zeitersparnis beim Prompting"
+         },
+         {
+           "icon": "Sparkles",
+           "value": "3,8x",
+           "label": "KI-Antwortqualität"
+         },
+         {
+           "icon": "Zap",
+           "value": "91%",
+           "label": "Team-Adoptionsrate"
+         }
+       ]
+     }
+   },
+   "enterpriseServices": {
+     "badge": "Umfassende Lösungen",
+     "title": "Unternehmensdienstleistungen",
+     "subtitle": "Von der Implementierung bis zur Optimierung bieten wir End-to-End-Unterstützung für Ihre KI-Reise",
+     "sidebarTitle": "Unternehmensdienstleistungen",
+     "learnMore": "Mehr erfahren",
+     "keyFeatures": "Hauptmerkmale",
+     "visualization": "Inhaltsvisualisierung hier",
+     "process": {
+       "title": "Unser Implementierungsprozess",
+       "subtitle": "Wir folgen einer bewährten Methodik, um eine erfolgreiche KI-Einführung in Ihrer Organisation sicherzustellen",
+       "steps": [
+         {
+           "title": "Entdeckung & Bewertung",
+           "description": "Wir analysieren Ihre aktuellen Arbeitsabläufe, identifizieren KI-Möglichkeiten und entwickeln eine maßgeschneiderte Strategie für die Implementierung."
+         },
+         {
+           "title": "Lösungsdesign",
+           "description": "Unser Team erstellt benutzerdefinierte Prompt-Bibliotheken, Implementierungspläne und Schulungsprogramme, die auf die Bedürfnisse Ihrer Organisation zugeschnitten sind."
+         },
+         {
+           "title": "Team-Schulung",
+           "description": "Wir bieten umfassendes Training, um sicherzustellen, dass Ihre Teams KI-Tools und Prompt-Engineering effektiv nutzen können."
+         },
+         {
+           "title": "Implementierung",
+           "description": "Wir implementieren Jaydai in Ihrer gesamten Organisation mit benutzerdefinierten Vorlagen, Analysen und Governance-Rahmenwerken."
+         },
+         {
+           "title": "Optimierung & Support",
+           "description": "Laufende Analyse, Vorlagenverfeinerung und Unterstützung, um kontinuierliche Verbesserung und ROI sicherzustellen."
+         }
+       ]
+     },
+     "cta": "Starten Sie Ihre KI-Reise",
+     "services": [
+       {
+         "id": "training",
+         "title": "Team-Schulung & Coaching",
+         "description": "Statten Sie Ihre Belegschaft mit den Fähigkeiten aus, KI effektiv in ihren täglichen Aufgaben zu nutzen.",
+         "features": [
+           "Maßgeschneiderte Workshop-Programme",
+           "Rollenspezifische Schulungsmodule",
+           "Entwicklung praktischer Anwendungsfälle",
+           "Fortlaufende Coaching-Sitzungen",
+           "Fortschrittsverfolgung und Zertifizierung"
+         ],
+         "cta": "Schulungsberatung buchen",
+         "imageUrl": "/images/coaching-illustration.png",
+         "imageAlt": "Team-Schulung & Coaching"
+       },
+       {
+         "id": "prompts",
+         "title": "Benutzerdefiniertes Prompt-Engineering",
+         "description": "Entwickeln Sie maßgeschneiderte Prompt-Vorlagen, die auf die spezifischen Bedürfnisse und Anwendungsfälle Ihres Unternehmens zugeschnitten sind.",
+         "features": [
+           "Branchenspezifische Prompt-Bibliotheken",
+           "Abteilungsspezifische Vorlagen",
+           "Prompt-Performance-Tests",
+           "Regelmäßige Optimierungsupdates",
+           "Umfassende Dokumentation"
+         ],
+         "cta": "Benutzerdefinierte Prompts anfragen",
+         "imageUrl": "/images/custom-prompts-illustration.png",
+         "imageAlt": "Benutzerdefiniertes Prompt-Engineering"
+       },
+       {
+         "id": "analytics",
+         "title": "Unternehmens-Analyse-Dashboard",
+         "description": "Verfolgen Sie ROI und Nutzungsmuster in Ihrer Organisation mit umfassender Berichterstattung.",
+         "features": [
+           "Teamweite Nutzungsmetriken",
+           "Verfolgung von Produktivitätsgewinnen",
+           "Abteilungsvergleichsberichte",
+           "Kostenersparnis-Analysen",
+           "Benutzerdefinierte Berichtserstellung"
+         ],
+         "cta": "Analyse-Demo ansehen",
+         "imageUrl": "/images/analytics-illustration.png",
+         "imageAlt": "Unternehmens-Analyse-Dashboard"
+       },
+       {
+         "id": "consulting",
+         "title": "KI-Implementierungsberatung",
+         "description": "Strategische Anleitung zur Integration von KI in bestehende Arbeitsabläufe und Geschäftsprozesse.",
+         "features": [
+           "Geschäftsprozessanalyse",
+           "KI-Potentialbewertung",
+           "Implementierungs-Roadmap",
+           "ROI-Messungsrahmen",
+           "Change-Management-Unterstützung"
+         ],
+         "cta": "Beratungstermin vereinbaren",
+         "imageUrl": "/images/consulting-illustration.png",
+         "imageAlt": "KI-Implementierungsberatung"
+       },
+       {
+         "id": "governance",
+         "title": "KI-Governance-Rahmenwerk",
+         "description": "Implementieren Sie verantwortungsvolle KI-Nutzungsrichtlinien und stellen Sie die Einhaltung in Ihrer gesamten Organisation sicher.",
+         "features": [
+           "Entwicklung von Nutzungsrichtlinien",
+           "Datensicherheitsprotokolle",
+           "Compliance-Überwachung",
+           "Ethische Richtlinien",
+           "Risikobewertungstools"
+         ],
+         "cta": "Über Governance informieren",
+         "imageUrl": "/images/governance-illustration.png",
+         "imageAlt": "KI-Governance-Rahmenwerk"
+       }
+     ]
+   },
+   "enterpriseTeam": {
+     "badge": "Unser Expertenteam",
+     "title": "Lernen Sie unsere KI-Implementierungsexperten kennen",
+     "subtitle": "Unser Unternehmensteam bringt jahrzehntelange Erfahrung in KI-Transformation und Prompt-Engineering mit",
+     "sidebarTitle": "Unternehmensführungsteam",
+     "meet": "Kennenlernen",
+     "about": "Über",
+     "specialties": "Spezialgebiete",
+     "credentials": "Referenzen",
+     "requestConsultation": "Beratung anfragen",
+     "scheduleMeeting": "Meeting planen",
+     "expertiseSection": {
+       "title": "Unsere Unternehmensexpertise",
+       "credentials": {
+         "title": "Top-Referenzen",
+         "description": "Unser Team bringt Referenzen von führenden KI-Institutionen und Fortune-500-Unternehmen mit"
+       },
+       "focus": {
+         "title": "Unternehmensfokus",
+         "description": "Spezialisiert auf KI-Implementierung für Organisationen aller Größen und Branchen"
+       },
+       "success": {
+         "title": "Kundenerfolg",
+         "description": "Erfolgsbilanz von erfolgreichen KI-Transformationen für über 50+ Unternehmenskunden"
+       }
+     },
+     "caseStudiesLink": "Sehen Sie unsere Unternehmens-Fallstudien",
+     "teamMembers": [
+       {
+         "id": 1,
+         "name": "Quentin Bragard",
+         "role": "Mitgründer & CTO",
+         "bio": "Absolvent der ESSEC Business School und der 42 School. Arbeitete zuvor bei Snapchat und PhotoRoom und ist Autor des Newsletters The Tunnel. Quentin hat über 5 Jahre Erfahrung im Aufbau von Produkten und leitet die KI-Initiative bei Jaydai.", 
+         "specialties": ["Softwareentwicklung", "KI", "Produkt", "Daten"],
+         "badgesUrl": ["/images/team/badges/essec.png", "/images/team/badges/42.png", "/images/team/badges/snapchat.png", "/images/team/badges/photoroom.png"]
+       },
+       {
+         "id": 2,
+         "name": "Jean-Baptiste Huiban",
+         "role": "Mitgründer & CEO",
+         "bio": "Absolvent der ESSEC Business School und ehemaliger Berater mit Spezialisierung auf 'Change Management' bei verschiedenen Beratungsfirmen. Jean-Baptiste ist ein Technik-Enthusiast, der zuvor die Betriebsleitung eines Start-up-Studios innehatte und eine Leidenschaft für die Entwicklung von Produkten hat, die Menschen helfen.",
+         "specialties": ["Unternehmensstrategie", "Prompt-Engineering", "Prozessoptimierung"],
+         "badgesUrl": ["/images/team/badges/essec.png", "/images/team/badges/wavestone.png", "/images/team/badges/kadran.png"]
+       }
+     ]
+   },
+   "enterprisePricing": {
+     "badge": "Unternehmenslösungen",
+     "title": "Transparente Unternehmenspreise",
+     "subtitle": "Flexible Optionen zur Unterstützung der KI-Transformation Ihrer Organisation",
+     "tabs": {
+       "plans": "Unsere Angebote",
+       "implementation": "Unsere Dienstleistungen"
+     },
+     "billingToggle": {
+       "monthly": "Monatlich",
+       "annually": "Jährlich",
+       "discount": "(-20%)"
+     },
+     "featureLabels": {
+       "included": "Inbegriffen:",
+       "notIncluded": "Nicht inbegriffen:",
+       "popular": "Beliebt",
+       "customPricing": "Individuelle Preisgestaltung",
+       "perEmployee": "pro Mitarbeiter / Monat",
+       "oneTimeFee": "Einmalgebühr",
+       "perDay": "pro Tag",
+       "estimatedTimeframe": "Geschätzter Zeitrahmen:",
+       "packageIncludes": "Paket beinhaltet:"
+     },
+     "enterpriseFeatures": {
+       "title": "Unternehmensklasse-Funktionen",
+       "categories": [
+         {
+           "title": "Team-Management",
+           "icon": "Users",
+           "color": "blue",
+           "features": [
+             "Rollenbasierte Zugangskontrolle",
+             "Team-Vorlagenfreigabe",
+             "Team-Analysen"
+           ]
+         },
+         {
+           "title": "Sicherheit & Compliance",
+           "icon": "Shield",
+           "color": "purple",
+           "features": [
+             "SSO-Integration",
+             "Datenschutzkontrollen",
+             "Compliance-Berichterstattung"
+           ]
+         },
+         {
+           "title": "Unternehmensanalysen",
+           "icon": "BarChart3",
+           "color": "green",
+           "features": [
+             "ROI-Verfolgung",
+             "Abteilungsanalysen",
+             "Benutzerdefinierte Berichterstattung"
+           ]
+         },
+         {
+           "title": "Experten-Support",
+           "icon": "Zap",
+           "color": "amber",
+           "features": [
+             "Dedizierter Erfolgsmanager",
+             "24/7 Prioritäts-Support",
+             "Vierteljährliche Geschäftsbesprechungen"
+           ]
+         },
+         {
+           "title": "Benutzerdefinierte Bereitstellung",
+           "icon": "Building",
+           "color": "pink",
+           "features": [
+             "Benutzerdefinierte Domain",
+             "API-Zugang",
+             "Integrationsunterstützung"
+           ]
+         },
+         {
+           "title": "Anpassung",
+           "icon": "MessageCircle",
+           "color": "indigo",
+           "features": [
+             "Benutzerdefinierte Prompt-Bibliotheken",
+             "Benutzerdefinierte Schulung",
+             "Benutzerdefinierte Funktionsentwicklung"
+           ]
+         }
+       ]
+     },
+     "implementation": {
+       "intro": "Unsere professionellen Dienstleistungen stellen sicher, dass Ihre Organisation vom ersten Tag an maximalen Nutzen aus Jaydai zieht.",
+       "process": {
+         "title": "Unser Implementierungsprozess",
+         "steps": [
+           {
+             "title": "Entdeckung",
+             "description": "Wir analysieren Ihre aktuellen Arbeitsabläufe und identifizieren KI-Möglichkeiten."
+           },
+           {
+             "title": "Planung",
+             "description": "Wir entwerfen eine maßgeschneiderte Implementierungsstrategie für Ihre Organisation."
+           },
+           {
+             "title": "Bereitstellung",
+             "description": "Wir richten Jaydai in Ihrer gesamten Organisation mit benutzerdefinierten Vorlagen ein."
+           },
+           {
+             "title": "Schulung",
+             "description": "Wir schulen Ihre Teams und bieten laufende Unterstützung und Optimierung."
+           }
+         ]
+       }
+     },
+     "finalCta": {
+       "text": "Benötigen Sie eine maßgeschneiderte Lösung für Ihre Organisation? Wir bieten maßgeschneiderte Unternehmenspakete, die Ihren spezifischen Anforderungen entsprechen.",
+       "button": "Kontaktieren Sie unser Unternehmensteam"
+     },
+     "offerings": [
+       {
+         "id": "subscription",
+         "name": "Jaydai Enterprise",
+         "description": "Komplette KI-Assistentenlösung für Ihre Organisation",
+         "price": {
+           "monthly": "10 €",
+           "annually": "8 €"
+         },
+         "unit": "pro Mitarbeiter / Monat",
+         "cta": "Jetzt starten",
+         "highlight": true,
+         "features": [
+           "Unbegrenzte Teammitglieder",
+           "Erweiterte rollenbasierte Zugangskontrolle",
+           "Unbegrenzte benutzerdefinierte Vorlagen",
+           "Unternehmens-Analyse-Dashboard",
+           "Dedizierter Erfolgsmanager",
+           "24/7 Prioritäts-Support"
+         ],
+         "notIncluded": []
+       },
+       {
+         "id": "coaching",
+         "name": "KI-Coaching",
+         "description": "Personalisiertes Coaching, um Ihrem Team zu helfen, KI zu meistern",
+         "price": {
+           "monthly": "2.500 €",
+           "annually": "2.500 €"
+         },
+         "unit": "Einmalgebühr",
+         "cta": "Jetzt buchen",
+         "highlight": false,
+         "features": [
+           "Experten-KI-Coach",
+           "Maßgeschneiderter Coaching-Plan",
+           "Praktische Unterstützung",
+           "Nachfolge-Sitzungen",
+           "Leistungsbewertung"
+         ],
+         "notIncluded": []
+       },
+       {
+         "id": "training",
+         "name": "Ganztägige Schulung",
+         "description": "Intensive Schulung für Ihr Team zu KI-Best-Practices",
+         "price": {
+           "monthly": "2.000 €",
+           "annually": "2.000 €"
+         },
+         "unit": "pro Tag",
+         "cta": "Schulung planen",
+         "highlight": true,
+         "features": [
+           "Ganztägige Vor-Ort-Schulung",
+           "Maßgeschneiderter Lehrplan",
+           "Praktische Übungen",
+           "Mitnehm-Materialien",
+           "Abschlusszertifikat"
+         ],
+         "notIncluded": []
+       },
+       {
+         "id": "audit",
+         "name": "KI-Reifegrad-Audit",
+         "description": "Umfassende Bewertung der KI-Bereitschaft Ihrer Organisation",
+         "price": {
+           "monthly": "Auf Anfrage",
+           "annually": "Auf Anfrage"
+         },
+         "unit": "Einmalgebühr",
+         "cta": "Audit anfragen",
+         "highlight": false,
+         "features": [
+           "KI-Reifebewertung",
+           "Gap-Analyse",
+           "Benchmarking",
+           "Empfehlungsbericht",
+           "Präsentation für die Geschäftsleitung"
+         ],
+         "notIncluded": []
+       }
+     ],
+     "featureTooltips": {
+       "customPrompts": "Entwickeln Sie maßgeschneiderte Prompt-Vorlagen, die auf die spezifischen Bedürfnisse und Anwendungsfälle Ihres Unternehmens zugeschnitten sind.",
+       "teamSharing": "Teilen Sie Prompt-Vorlagen und -Bibliotheken in Ihrer gesamten Organisation mit rollenbasierter Zugangskontrolle.",
+       "dataPrivacy": "Erweiterte Datenschutzkontrollen, die sicherstellen, dass Ihre Prompt-Daten und Analysen sicher bleiben.",
+       "dedicatedSuccess": "Ein dedizierter Kundenerfolgsmanager hilft Ihnen bei der Implementierung und Optimierung von Jaydai in Ihrer gesamten Organisation.",
+       "analytics": "Verfolgen Sie Nutzung, ROI und Effizienzgewinne über Teams und Abteilungen hinweg.",
+       "apiAccess": "Greifen Sie programmatisch über unsere sichere Unternehmens-API auf die Funktionalität von Jaydai zu.",
+       "prioritySupport": "24/7 Prioritäts-Support mit garantierten Reaktionszeiten.",
+       "customTraining": "Maßgeschneiderte Schulungssitzungen für Teams, um Prompt-Engineering und KI-Arbeitsabläufe zu meistern.",
+       "customDomain": "Stellen Sie Jaydai auf Ihrer eigenen benutzerdefinierten Domain für den unternehmensweiten Zugriff bereit.",
+       "ssoIntegration": "Single-Sign-On-Integration mit Ihrem bestehenden Identitätsanbieter.",
+       "promptLibrary": "Zugriff auf unsere vollständige Bibliothek von fachmännisch erstellten Prompt-Vorlagen für verschiedene Branchen.",
+       "complianceReporting": "Detaillierte Compliance-Berichterstattung für KI-Nutzung in Ihrer gesamten Organisation."
+     }
+   },
+   "homeFAQ": {
+     "title": "Häufig gestellte Fragen",
+     "subtitle": "Alles, was Sie über Jaydai wissen müssen",
+     "ctaPrompt": "Haben Sie noch Fragen? Wir sind für Sie da.",
+     "ctaButton": "Kontaktieren Sie uns",
+     "questions": [
+       {
+         "id": 1,
+         "question": "Was ist Jaydai und wie funktioniert es?",
+         "answer": "Jaydai ist eine Chrome-Erweiterung, die Ihre ChatGPT-Erfahrung verbessert, indem sie eine Bibliothek von Experten-Prompts bereitstellt, die nach Themen organisiert sind. Sie ermöglicht es Ihnen, benutzerdefinierte Prompts für sofortigen Zugriff zu speichern und bietet detaillierte Analysen zu Ihrer Nutzung. Mit nur einem Klick können Sie auf unser Ökosystem zugreifen, das entwickelt wurde, um Ihre Interaktionen mit ChatGPT sowohl für berufliche als auch für persönliche Projekte zu optimieren."
+       },
+       {
+         "id": 2,
+         "question": "Ist Jaydai kostenlos nutzbar?",
+         "answer": "Ja, Jaydai bietet eine kostenlose Version, die Zugang zu unserer grundlegenden Prompt-Bibliothek und Vorlagenspeicherungsfunktionen umfasst. Wir bieten auch Premium-Pakete für Einzelpersonen und Teams an, die zusätzliche Funktionen wie erweiterte Analysen, unbegrenzten Vorlagenspeicher und prioritären Support umfassen."
+       },
+       {
+         "id": 3,
+         "question": "Wie installiere ich die Jaydai Chrome-Erweiterung?",
+         "answer": "Die Installation von Jaydai ist einfach. Besuchen Sie einfach den Chrome Web Store, suchen Sie nach 'Jaydai' und klicken Sie auf 'Zu Chrome hinzufügen'. Nach der Installation sehen Sie das Jaydai-Symbol in Ihrer Browser-Symbolleiste. Klicken Sie darauf, um unsere Prompt-Bibliothek und Vorlagen mit ChatGPT zu nutzen."
+       },
+       {
+         "id": 4,
+         "question": "Kann ich meine eigenen Prompt-Vorlagen erstellen und speichern?",
+         "answer": "Absolut! Jaydai ermöglicht es Ihnen, Ihre eigenen benutzerdefinierten Prompt-Vorlagen zu erstellen, zu speichern und zu organisieren. Diese Funktion hilft Ihnen, Zeit zu sparen, wenn Sie an verschiedenen Projekten arbeiten, die ähnliche KI-Interaktionen erfordern. Sie können Ihre Vorlagen kategorisieren, sie jederzeit bearbeiten und mit nur einem Klick darauf zugreifen."
+       },
+       {
+         "id": 5,
+         "question": "Welche Art von Analysen bietet Jaydai?",
+         "answer": "Jaydai bietet detaillierte Analysen zu Ihrer KI-Nutzung, einschließlich der Anzahl der verwendeten Prompts, eingesparter Zeit, Energieverbrauch und Wirksamkeit verschiedener Prompt-Typen. Diese Erkenntnisse helfen Ihnen, Ihre Interaktionsmuster zu verstehen und Ihren KI-Arbeitsablauf für bessere Ergebnisse zu optimieren."
+       },
+       {
+         "id": 6,
+         "question": "Gibt es eine Unternehmensversion für Teams?",
+         "answer": "Ja, wir bieten eine Unternehmensversion an, die es Ihrem gesamten Team ermöglicht, eine angepasste Prompt-Bank für Ihre spezifischen Geschäftsanwendungsfälle zu teilen. Der Unternehmensplan umfasst Team-Management-Funktionen, gemeinsame Vorlagen, Nutzungsanalysen im gesamten Team und dedizierten Support."
+       }
+     ]
+   },
+   "enterpriseFAQ": {
+     "title": "Häufig gestellte Fragen",
+     "subtitle": "Alles, was Sie über Jaydai wissen müssen",
+     "ctaPrompt": "Haben Sie noch Fragen? Wir sind für Sie da.",
+     "ctaButton": "Kontaktieren Sie uns",
+     "questions": [
+       {
+         "id": 1,
+         "question": "Was ist Jaydai und wie funktioniert es?",
+         "answer": "Jaydai ist eine Chrome-Erweiterung, die Ihre ChatGPT-Erfahrung verbessert, indem sie eine Bibliothek von Experten-Prompts bereitstellt, die nach Themen organisiert sind. Sie ermöglicht es Ihnen, benutzerdefinierte Prompts für sofortigen Zugriff zu speichern und bietet detaillierte Analysen zu Ihrer Nutzung. Mit nur einem Klick können Sie auf unser Ökosystem zugreifen, das entwickelt wurde, um Ihre Interaktionen mit ChatGPT sowohl für berufliche als auch für persönliche Projekte zu optimieren."
+       },
+       {
+         "id": 2,
+         "question": "Ist Jaydai kostenlos nutzbar?",
+         "answer": "Ja, Jaydai bietet eine kostenlose Version, die Zugang zu unserer grundlegenden Prompt-Bibliothek und Vorlagenspeicherungsfunktionen umfasst. Wir bieten auch Premium-Pakete für Einzelpersonen und Teams an, die zusätzliche Funktionen wie erweiterte Analysen, unbegrenzten Vorlagenspeicher und prioritären Support umfassen."
+       },
+       {
+         "id": 3,
+         "question": "Wie installiere ich die Jaydai Chrome-Erweiterung?",
+         "answer": "Die Installation von Jaydai ist einfach. Besuchen Sie einfach den Chrome Web Store, suchen Sie nach 'Jaydai' und klicken Sie auf 'Zu Chrome hinzufügen'. Nach der Installation sehen Sie das Jaydai-Symbol in Ihrer Browser-Symbolleiste. Klicken Sie darauf, um unsere Prompt-Bibliothek und Vorlagen mit ChatGPT zu nutzen."
+       },
+       {
+         "id": 4,
+         "question": "Kann ich meine eigenen Prompt-Vorlagen erstellen und speichern?",
+         "answer": "Absolut! Jaydai ermöglicht es Ihnen, Ihre eigenen benutzerdefinierten Prompt-Vorlagen zu erstellen, zu speichern und zu organisieren. Diese Funktion hilft Ihnen, Zeit zu sparen, wenn Sie an verschiedenen Projekten arbeiten, die ähnliche KI-Interaktionen erfordern. Sie können Ihre Vorlagen kategorisieren, sie jederzeit bearbeiten und mit nur einem Klick darauf zugreifen."
+       },
+       {
+         "id": 5,
+         "question": "Welche Art von Analysen bietet Jaydai?",
+         "answer": "Jaydai bietet detaillierte Analysen zu Ihrer KI-Nutzung, einschließlich der Anzahl der verwendeten Prompts, eingesparter Zeit, Energieverbrauch und Wirksamkeit verschiedener Prompt-Typen. Diese Erkenntnisse helfen Ihnen, Ihre Interaktionsmuster zu verstehen und Ihren KI-Arbeitsablauf für bessere Ergebnisse zu optimieren."
+       },
+       {
+         "id": 6,
+         "question": "Gibt es eine Unternehmensversion für Teams?",
+         "answer": "Ja, wir bieten eine Unternehmensversion an, die es Ihrem gesamten Team ermöglicht, eine angepasste Prompt-Bank für Ihre spezifischen Geschäftsanwendungsfälle zu teilen. Der Unternehmensplan umfasst Team-Management-Funktionen, gemeinsame Vorlagen, Nutzungsanalysen im gesamten Team und dedizierten Support."
+       }
+     ]
+   },
+   "privacy": {
+     "title": "Datenschutzrichtlinie",
+     "lastUpdated": "Zuletzt aktualisiert: 19. April 2025",
+   "content": "<h1>Jaydai Privacy Policy</h1><h2>1. Introduction</h2><p>Welcome to Jaydai (\"we,\" \"our,\" or \"us\"). We respect your privacy and are committed to protecting your personal data. This privacy policy explains how we collect, use, and safeguard your information when you use our Chrome extension.</p><h2>2. Data We Collect</h2><p>Jaydai collects and processes the following categories of personal data:</p><h3>2.1 Account Information</h3><ul><li><span class=\"emoji\">📧</span>Email address</li><li><span class=\"emoji\">👤</span>Name</li><li><span class=\"emoji\">🔑</span>Authentication tokens</li></ul><h3>2.2 User Activity Data</h3><ul><li><span class=\"emoji\">💬</span>AI conversation patterns</li><li><span class=\"emoji\">📊</span>Template usage statistics</li><li><span class=\"emoji\">⚡</span>Energy consumption metrics</li><li><span class=\"emoji\">📈</span>Efficiency scores</li></ul><h3>2.3 User-Generated Content</h3><ul><li><span class=\"emoji\">📝</span>Custom templates created by users</li><li><span class=\"emoji\">📁</span>Folder structures and organization preferences</li></ul><h3>2.4 Website Content</h3><ul><li><span class=\"emoji\">🤖</span>Content from supported AI platforms necessary for providing template suggestions</li><li><span class=\"emoji\">📑</span>AI conversation content needed for analytics</li></ul><h2>3. How We Use Your Data</h2><p>We use your personal data for the following purposes:</p><ul><li><strong><span class=\"emoji\">⚙️</span>To provide and maintain our service</strong><br>Including user authentication, saving your preferences, and delivering core functionality</li><li><strong><span class=\"emoji\">🔧</span>To improve our service</strong><br>Analyzing usage patterns to enhance features and performance</li><li><strong><span class=\"emoji\">🎯</span>To personalize your experience</strong><br>Adapting to your communication style and offering suggestions based on your usage patterns</li><li><strong><span class=\"emoji\">✉️</span>To communicate with you</strong><br>Sending notifications about updates or changes to our service</li></ul><h2>4. Data Storage and Security</h2><ul><li><span class=\"emoji\">🔒</span>User data is stored securely using industry-standard encryption</li><li><span class=\"emoji\">💻</span>We process information locally whenever possible to minimize data transmission</li><li><span class=\"emoji\">🛡️</span>Authentication tokens are stored securely within Chrome's protected storage</li><li><span class=\"emoji\">🔐</span>We implement appropriate technical and organizational measures to protect your personal data</li></ul><h2>5. Data Sharing</h2><p>We do not sell, trade, or rent your personal data to third parties. We may share your data in the following limited circumstances:</p><ul><li><span class=\"emoji\">🤝</span>With service providers who help us deliver our services (such as cloud hosting providers)</li><li><span class=\"emoji\">⚖️</span>If required by law or to respond to legal process</li><li><span class=\"emoji\">🛑</span>To protect our rights, privacy, safety, or property</li></ul><h2>6. Your Rights</h2><p>Depending on your location, you may have the following rights regarding your personal data:</p><ul><li><span class=\"emoji\">👁️</span>Access your personal data</li><li><span class=\"emoji\">✏️</span>Correct inaccurate or incomplete data</li><li><span class=\"emoji\">🗑️</span>Delete your personal data</li><li><span class=\"emoji\">🛑</span>Restrict or object to processing of your data</li><li><span class=\"emoji\">📤</span>Data portability</li><li><span class=\"emoji\">↩️</span>Withdraw consent</li></ul><p>To exercise these rights, please contact us at privacy@jayd.ai.</p><h2>7. Retention</h2><p>We retain your personal data only for as long as necessary to fulfill the purposes outlined in this policy, unless a longer retention period is required or permitted by law.</p><h2>8. Children's Privacy</h2><p>Our service is not directed to children under 16. We do not knowingly collect personal data from children under 16. If we learn we have collected personal data from a child under 16, we will delete that information.</p><h2>9. Changes to This Policy</h2><p>We may update this privacy policy from time to time. We will notify you of any changes by posting the new privacy policy on this page and updating the \"Last Updated\" date.</p><h2>10. Contact Us</h2><p>If you have any questions about this privacy policy, please contact us at:</p><div class=\"contact-info\"><p><span class=\"emoji\">📧</span>Email: privacy@jayd.ai</p><p><span class=\"emoji\">🏢</span>Address: 123 Tech Boulevard, Innovation District, 94105, San Francisco, CA, USA</p></div>"
+},
+"termsOfService": {
+  "title": "Terms of Service",
+  "lastUpdated": "Last updated: April 19, 2025",
+  "content": "<h1>Jaydai Terms of Service</h1><h2>1. Introduction</h2><p>Welcome to Jaydai (\"we,\" \"our,\" or \"us\"). By using our Chrome extension, you agree to comply with and be bound by the following terms and conditions of use, which together with our privacy policy, govern our relationship with you in relation to this software. If you disagree with any part of these terms, please do not use our extension.</p><h2>2. Acceptance of Terms</h2><p>By installing and using Jaydai, you agree to the following terms:</p><ul><li><strong><span class=\"emoji\">🔑</span>Account Creation</strong><br>You must be at least 16 years old to create an account</li><li><strong><span class=\"emoji\">🔑</span>Account Creation</strong><br>You must be at least 16 years old to create an account</li><li><strong><span class=\"emoji\">🔑</span>Account Creation</strong><br>You must be at least 16 years old to create an account</li></ul>"
+},"homePage": {
+  "videoDialog": {
+    "title": "Jaydai Demo-Video",
+    "description": "Sehen Sie, wie Jaydai Ihre ChatGPT-Erfahrung mit Experten-Prompts, benutzerdefinierten Vorlagen und detaillierten Analysen verändert.",
+    "ctaButton": "Jetzt ansehen",
+    "ctaButton2": "Mehr erfahren"
+  }
+},
+"blog": {
+    "title": "Blog",
+    "subtitle": "Entdecken Sie die neuesten Einblicke, Tipps und Strategien zur Beherrschung des KI-Prompt-Engineering",
+    "blogBadge": "Jaydai Blog",
+    "featuredPost": "Hervorgehoben",
+    "readMore": "Weiterlesen",
+    "readTime": "Min. Lesezeit",
+    "author": "Autor",
+    "allPosts": "Alle Beiträge",
+    "filter": "Nach Kategorie filtern",
+    "clearFilter": "Filter löschen",
+    "noPosts": {
+      "title": "Keine Beiträge gefunden",
+      "message": "Es gibt keine Beiträge, die Ihrem aktuellen Filter entsprechen. Versuchen Sie, eine andere Kategorie auszuwählen oder schauen Sie später wieder vorbei."
+    },
+    "pagination": {
+      "firstPage": "Zur ersten Seite",
+      "previousPage": "Zur vorherigen Seite",
+      "nextPage": "Zur nächsten Seite",
+      "lastPage": "Zur letzten Seite",
+      "goToPage": "Zu Seite {page} gehen"
+    },
+    "post": {
+      "notFound": "Blog-Beitrag nicht gefunden",
+      "backToBlog": "Zurück zum Blog",
+      "readTime": "Min. Lesezeit",
+      "relatedPosts": "Verwandte Beiträge",
+      "exploreBlog": "Weitere Artikel erkunden"
+    },
+    "seo": {
+      "title": "Jaydai Blog | KI-Prompt-Engineering Tipps & Strategien",
+      "description": "Entdecken Sie die neuesten Einblicke, Tutorials und Strategien zur Beherrschung des KI-Prompt-Engineering mit dem offiziellen Blog von Jaydai."
+    },
+    "blogPost": {
+    "readMore": "Weiterlesen"
+  },
+  "blogCta": {
+    "defaultTitle": "Verbessern Sie Ihre ChatGPT-Erfahrung mit Jaydai",
+    "defaultContent": "Maximieren Sie Ihre KI-Erfahrung mit Jaydai, der Chrome-Erweiterung, die verändert, wie Sie ChatGPT mit Experten-Prompts, benutzerdefinierten Vorlagen und detaillierten Analysen nutzen. Schließen Sie sich Tausenden von Nutzern an, die ihren KI-Arbeitsablauf optimiert haben.",
+    "buttonText": "Erweiterung installieren",
+    "extensionLabel": "Chrome-Erweiterung",
+    "rating": "5/5 Bewertung",
+    "readMore": "Weiterlesen"
+  }
+  },
+  "enterprisePage": {
+    "seo": {
+      "title": "Jaydai Enterprise | KI-Lösungen für Unternehmen",
+      "description": "Stärken Sie Ihre Organisation mit Jaydai Enterprise. Optimieren Sie KI-Arbeitsabläufe mit Team-Zusammenarbeit, Admin-Kontrollen, benutzerdefinierten Prompt-Bibliotheken und detaillierten Analysen."
+    }
+  },
+  "mobileDialog": {
+    "title": "Erweiterungs-Installationsanweisungen",
+    "description": "Die Chrome-Erweiterung ist nur auf dem Desktop verfügbar. Geben Sie Ihre E-Mail-Adresse ein, um Installationsanweisungen zu erhalten.",
+    "ctaButton": "Absenden",
+    "cancelButton": "Abbrechen"
+  },
+  "seoMetadata": {
+    "title": "Jaydai | Die besten Prompts direkt in ChatGPT",
+    "description": "Maximieren Sie Ihre generative KI-Erfahrung mit Jaydai, der Chrome-Erweiterung, die verändert, wie Sie ChatGPT mit Experten-Prompts, benutzerdefinierten Vorlagen und detaillierten Analysen nutzen."
+  }
+}

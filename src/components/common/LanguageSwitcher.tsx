@@ -21,6 +21,11 @@ const languageOptions = [
     locale: "fr",
     name: "Français",
     flag: "/images/flags/fr.svg",
+  },
+  {
+    locale: "de",
+    name: "Deutsch",
+    flag: "/images/flags/de.svg",
   }
   // Add more languages here in the future
 ]
