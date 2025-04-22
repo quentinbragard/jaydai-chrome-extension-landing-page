@@ -141,7 +141,7 @@ const TestimonialsSection = () => {
                 </div>
                 
                 {/* Testimonial text with increased padding */}
-                <p style={{ paddingLeft: "35px", position: "relative", zIndex: 10 }}>
+                <p style={{ paddingLeft: "35px", position: "relative", zIndex: 10 }} className="text-foreground/70">
                   {testimonial.content}
                 </p>
               </blockquote>

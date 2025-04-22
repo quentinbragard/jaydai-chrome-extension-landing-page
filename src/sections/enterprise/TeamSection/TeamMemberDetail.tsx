@@ -46,7 +46,7 @@ const TeamMemberDetail: React.FC<TeamMemberDetailProps> = ({
     >
       <div className="bg-card border border-border rounded-xl overflow-hidden h-full">
         {/* Header with background gradient */}
-        <div className="h-32 bg-gradient-to-r from-primary/20 to-primary/5 relative">
+        <div className="h-48 bg-gradient-to-r from-primary/20 to-primary/5 relative">
           <div className="absolute top-6 left-8">
             <div className="text-sm text-foreground/50 mb-1">{meetLabel}</div>
             <h3 className="text-2xl font-bold">{member.name}</h3>
