@@ -2,7 +2,7 @@
 "nav": {
   "features": "Fonctionnalités",
   "testimonials": "Témoignages",
-  "templates": "Prompts",
+  "blog": "Blog",
   "pricing": "Tarifs",
   "faq": "FAQ",
   "contact": "Contact",
@@ -1007,7 +1007,23 @@
     "extensionLabel": "Extension Chrome",
     "rating": "5/5 Rating",
     "readMore": "Lire la suite"
-  }
+  },
+  "shareButton": {
+      "title": "Partagez cet article",
+      "description": "Vous avez trouvé cet article intéressant ? Partagez-le avec vos amis et collègues.",
+      "copy": "Copier",
+      "copied": "Copié !",
+      "copyLink": "Copier le lien",
+      "preview": "Aperçu du partage",
+      "previewText": "Aperçu"
+    },
+    "promptLibrary": {
+      "title": "Bibliothèque de prompts",
+      "copy": "Copier",
+      "copied": "Copié !",
+      "showMore": "Voir plus",
+      "showLess": "Voir moins"
+    }
   },
   "enterprisePage": {
     "seo": {
@@ -1024,5 +1040,37 @@
   "seoMetadata": {
     "title": "Jaydai | Tous les meilleurs prompts directement dans ChatGPT",
     "description": "Maximisez votre expérience IA avec Jaydai, l'extension Chrome qui transforme votre utilisation de ChatGPT avec des prompts experts, des modèles personnalisés et des analytiques détaillées."
+  },
+  "shareButton": {
+    "title": "Partagez cet article",
+    "description": "Vous avez trouvé cet article intéressant ? Partagez-le avec vos amis et collègues.",
+    "copy": "Copier",
+    "copied": "Copié !",
+    "copyLink": "Copier le lien",
+    "preview": "Aperçu du partage",
+    "previewText": "Aperçu",
+    "twitterLabel": "Twitter",
+    "facebookLabel": "Facebook",
+    "linkedinLabel": "LinkedIn",
+    "emailLabel": "Email",
+    "shareOn": "Partager sur {{platform}}",
+    
+    "promptExample": {
+      "title": "Exemple de prompt",
+      "copy": "Copier le prompt",
+      "copied": "Prompt copié !",
+      "showMore": "Voir plus",
+      "showLess": "Voir moins"
+    },
+   "whatsappLabel": "WhatsApp",
+    "platformMessages": {
+      "whatsapp": "J'ai découvert cet article intéressant sur {{title}}. À lire absolument !",
+      "linkedin": "J'ai découvert cet article intéressant sur {{title}}. Je pense que cela pourrait vous intéresser !",
+      "twitter": "Je viens de lire cet article fascinant sur {{title}}. À découvrir ! #Jaydai #IA",
+      "email": {
+        "subject": "Article intéressant à lire : {{title}}",
+        "body": "Bonjour,\n\nJ'ai pensé que cet article pourrait t'intéresser : {{title}}.\n\nJe l'ai trouvé particulièrement instructif et je pense qu'il pourrait t'être utile."
+      }
+    }
   }
 }

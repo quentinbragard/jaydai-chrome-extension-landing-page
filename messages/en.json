@@ -3,7 +3,7 @@
  {
   "features": "Features",
   "testimonials": "Testimonials",
-  "templates": "Prompts",
+  "blog": "Blog",
   "pricing": "Pricing",
   "faq": "FAQ",
   "contact": "Contact",
@@ -1009,7 +1009,23 @@
     "extensionLabel": "Chrome Extension",
     "rating": "5/5 Rating",
     "readMore": "Read more"
-  }
+  },
+  "shareButton": {
+      "title": "Share this article",
+      "description": "Found this article interesting? Share it with your friends and colleagues.",
+      "copy": "Copy",
+      "copied": "Copied!",
+      "copyLink": "Copy link",
+      "preview": "Share preview",
+      "previewText": "Preview"
+    },
+    "promptLibrary": {
+      "title": "Prompt Library",
+      "copy": "Copy",
+      "copied": "Copied!",
+      "showMore": "Show more",
+      "showLess": "Show less"
+    }
   },
   "enterprisePage": {
     "seo": {
@@ -1026,5 +1042,34 @@
   "seoMetadata": {
     "title": "Jaydai | The best prompts directly in ChatGPT",
     "description": "Maximize your generative AI experience with Jaydai, the Chrome extension that transforms how you use ChatGPT with expert prompts, custom templates, and detailed analytics."
+  },
+  "shareButton": {
+    "title": "Share this article",
+    "description": "Found this article interesting? Share it with your friends and colleagues.",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "copyLink": "Copy link",
+    "preview": "Share preview",
+    "previewText": "Preview",
+    "twitterLabel": "Twitter",
+    "facebookLabel": "Facebook",
+    "linkedinLabel": "LinkedIn",
+    "emailLabel": "Email",
+    "shareOn": "Share on {{platform}}",
+    "promptExample": {
+      "title": "Prompt example",
+      "copy": "Copy prompt",
+      "copied": "Prompt copied!",
+      "showMore": "Show more",
+      "showLess": "Show less"
+    },
+    "platformMessages": {
+      "linkedin": "I discovered this interesting article about {{title}}. I think you might find it valuable!",
+      "twitter": "Just read this fascinating article about {{title}}. Check it out! #Jaydai #AI",
+      "email": {
+        "subject": "Interesting article to read: {{title}}",
+        "body": "Hi,\n\nI thought you might be interested in this article: {{title}}.\n\nI found it particularly insightful and thought it might be useful to you."
+      }
+    }
   }
 }
