@@ -385,7 +385,7 @@ const Navbar = () => {
                   {t('testimonials')}
                 </Link>
                 <Link 
-                  href="#templates" 
+                  href="/blog" 
                   className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-secondary/50 transition-colors"
                   onClick={toggleMenu}
                 >
