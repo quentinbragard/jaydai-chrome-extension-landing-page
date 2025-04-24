@@ -14,8 +14,9 @@ const POSTS_PER_PAGE = 9
 export async function generateMetadata(
   { params }: { params: { locale: string } }
 ): Promise<Metadata> {
-  // now we can safely read locale
-  const { locale } = params;
+  // Await the params object before accessing properties
+  const paramsObj = await params;
+  const locale = paramsObj.locale;
   const t = await getTranslations({ locale, namespace: 'blog' })
   
   return {
@@ -32,20 +33,26 @@ export async function generateMetadata(
 }
 
 export default async function BlogPage({
-  params: { locale },
+  params,
   searchParams
 }: {
   params: { locale: string }
   searchParams: { [key: string]: string | string[] | undefined }
 }) {
-  // Parse query parameters
-  const currentPage = typeof searchParams.page === 'string' 
-    ? parseInt(searchParams.page) 
-    : 1
+  // Await both params and searchParams objects
+  const paramsObj = await params;
+  const searchParamsObj = await searchParams;
   
-  const selectedCategory = typeof searchParams.category === 'string'
-    ? searchParams.category
-    : null
+  // Access properties from the awaited objects
+  const locale = paramsObj.locale;
+  
+  const currentPage = typeof searchParamsObj.page === 'string' 
+    ? parseInt(searchParamsObj.page) 
+    : 1;
+  
+  const selectedCategory = typeof searchParamsObj.category === 'string'
+    ? searchParamsObj.category
+    : null;
   
   // Fetch blog posts with pagination and category filter
   const { posts, total } = await getBlogPosts(

@@ -3,13 +3,13 @@
 import React from "react"
 import { motion } from "framer-motion"
 
-interface PlainHtmlSectionProps {
+interface PlainHtmlProps {
   content: string;
   index?: number;
   className?: string;
 }
 
-const PlainHtmlSection: React.FC<PlainHtmlSectionProps> = ({ 
+const PlainHtml: React.FC<PlainHtmlProps> = ({ 
   content, 
   index = 0,
   className = ""
@@ -26,4 +26,4 @@ const PlainHtmlSection: React.FC<PlainHtmlSectionProps> = ({
   );
 };
 
-export default PlainHtmlSection;
+export default PlainHtml;

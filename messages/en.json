@@ -1071,5 +1071,56 @@
         "body": "Hi,\n\nI thought you might be interested in this article: {{title}}.\n\nI found it particularly insightful and thought it might be useful to you."
       }
     }
+  },
+  "promptLibrary": {
+    "title": "AI Prompt Library",
+    "subtitle": "Explore our curated collection of AI prompts to supercharge your productivity",
+    "search": {
+      "placeholder": "Search prompts...",
+      "noResults": "No prompts found matching your search criteria",
+      "categories": {
+        "all": "All Categories",
+        "label": "Filter by category"
+      }
+    },
+    "categories": {
+      "writing": {
+        "name": "Writing & Content",
+        "description": "Create compelling content and improve your writing"
+      },
+      "productivity": {
+        "name": "Productivity",
+        "description": "Boost your efficiency and workflow"
+      },
+      "analysis": {
+        "name": "Analysis & Research",
+        "description": "Deep dive into data and research"
+      },
+      "coding": {
+        "name": "Programming",
+        "description": "Code assistance and development"
+      },
+      "business": {
+        "name": "Business",
+        "description": "Professional communication and strategy"
+      },
+      "creative": {
+        "name": "Creative",
+        "description": "Unleash your creativity"
+      }
+    },
+    "prompt": {
+      "copy": "Copy prompt",
+      "copied": "Copied!",
+      "try": "Try this prompt",
+      "count_one": "1 prompt",
+      "count_other": "{{count}} prompts"
+    },
+    "loadMore": "Load more prompts",
+    "filters": {
+      "popular": "Most Popular",
+      "recent": "Most Recent",
+      "trending": "Trending"
+    }
   }
 }

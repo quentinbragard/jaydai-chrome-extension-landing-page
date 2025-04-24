@@ -90,6 +90,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <div className="hidden list-disc" />
             {children}
 
             {/* Analytics Component */}

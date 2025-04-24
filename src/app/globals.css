@@ -161,6 +161,8 @@ body, p, span, div, a, button {
   font-size: 2.25rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
+  line-height: 1.2;
+
 }
 
 .article-subtitle {
@@ -171,7 +173,7 @@ body, p, span, div, a, button {
 }
 
 .article-paragraph {
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.5rem;
 }
 
 .article-list {
@@ -264,4 +266,42 @@ body, p, span, div, a, button {
 /* === Custom Badge/Label === */
 .badge {
   @apply inline-block text-xs font-medium px-2 py-0.5 rounded bg-[hsl(var(--primary)/0.1)] text-[hsl(var(--primary))];
+}
+
+.article-content a {
+  @apply text-[hsl(var(--primary))];
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.article-content a:hover {
+  @apply text-[hsl(var(--primary))];
+  text-decoration: underline;
+  font-weight: 600;
+  background-color: hsl(var(--muted));
+}
+
+.article-content code {
+  @apply bg-[hsl(var(--muted))];
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.2rem;
+  font-weight: 600;
+  color: #DA615D;
+  background-color: hsl(var(--muted));
+}
+
+.article-content h1 {
+  @apply text-2xl font-bold;
+}
+
+.article-content h2 {
+  @apply text-xl font-bold;
+}
+
+.article-content h3 {
+  @apply text-lg font-bold;
+}
+
+.article-content h4 {
+  @apply text-base font-bold;
 }

@@ -1072,5 +1072,56 @@
         "body": "Bonjour,\n\nJ'ai pensé que cet article pourrait t'intéresser : {{title}}.\n\nJe l'ai trouvé particulièrement instructif et je pense qu'il pourrait t'être utile."
       }
     }
+  },
+  "promptLibrary": {
+    "title": "Bibliothèque de Prompts IA",
+    "subtitle": "Explorez notre collection de prompts IA pour booster votre productivité",
+    "search": {
+      "placeholder": "Rechercher des prompts...",
+      "noResults": "Aucun prompt trouvé correspondant à vos critères",
+      "categories": {
+        "all": "Toutes les catégories",
+        "label": "Filtrer par catégorie"
+      }
+    },
+    "categories": {
+      "writing": {
+        "name": "Rédaction & Contenu",
+        "description": "Créez du contenu captivant et améliorez votre écriture"
+      },
+      "productivity": {
+        "name": "Productivité",
+        "description": "Optimisez votre efficacité et votre flux de travail"
+      },
+      "analysis": {
+        "name": "Analyse & Recherche",
+        "description": "Plongez dans les données et la recherche"
+      },
+      "coding": {
+        "name": "Programmation",
+        "description": "Assistance au code et développement"
+      },
+      "business": {
+        "name": "Business",
+        "description": "Communication professionnelle et stratégie"
+      },
+      "creative": {
+        "name": "Créativité",
+        "description": "Libérez votre créativité"
+      }
+    },
+    "prompt": {
+      "copy": "Copier le prompt",
+      "copied": "Copié !",
+      "try": "Essayer ce prompt",
+      "count_one": "1 prompt",
+      "count_other": "{{count}} prompts"
+    },
+    "loadMore": "Charger plus de prompts",
+    "filters": {
+      "popular": "Plus Populaires",
+      "recent": "Plus Récents",
+      "trending": "Tendances"
+    }
   }
 }

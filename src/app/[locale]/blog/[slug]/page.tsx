@@ -12,10 +12,13 @@ import BlogSectionRenderer from '@/sections/blog/BlogSectionRenderer'
 
 // Generate metadata for the blog post
 export async function generateMetadata({
-  params: { locale, slug }
+  params
 }: {
   params: { locale: string; slug: string }
 }): Promise<Metadata> {
+  const awaitedParams = await params
+  const locale = awaitedParams.locale
+  const slug = awaitedParams.slug
   const t = await getTranslations({ locale, namespace: 'blog' })
   const post = await getBlogPostBySlug(slug, locale)
   
@@ -57,10 +60,13 @@ export async function generateMetadata({
 }
 
 export default async function BlogPostPage({
-  params: { locale, slug }
+  params
 }: {
   params: { locale: string; slug: string }
 }) {
+  const awaitedParams = await params
+  const locale = awaitedParams.locale
+  const slug = awaitedParams.slug
   const t = await getTranslations({ locale, namespace: 'blog' })
   
   // Fetch blog post
@@ -153,8 +159,8 @@ export default async function BlogPostPage({
           </div>
           
           {/* Article Content with dynamic sections */}
-          <article className="prose prose-lg md:prose-xl dark:prose-invert max-w-none mb-16">
-            <BlogSectionRenderer sections={contentSections} />
+          <article className="prose prose-lg md:prose-xl dark:prose-invert max-w-none mb-16 article-content">
+            <BlogSectionRenderer sections={contentSections} className="prose-lg md:prose-xl dark:prose-invert text-lg md:text-xl max-w-none mb-16" />
           </article>
           
           {/* Tags */}

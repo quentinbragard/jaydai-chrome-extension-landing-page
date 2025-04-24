@@ -1070,5 +1070,47 @@
         "body": "Hallo,\n\nIch dachte, dieser Artikel könnte für dich interessant sein: {{title}}.\n\nIch fand ihn besonders aufschlussreich und dachte, er könnte für dich nützlich sein."
       }
     }
+  },
+  "promptLibrary": {
+    "title": "Prompt-Bibliothek",
+    "subtitle": "Entdecken Sie unsere Sammlung vorgefertigter Prompts zur Steigerung Ihrer Produktivität",
+    "categories": {
+      "writing": {
+        "title": "Schreiben & Content",
+        "description": "Prompts für Content-Erstellung, Schreibhilfe und Bearbeitung"
+      },
+      "research": {
+        "title": "Forschung & Analyse",
+        "description": "Tools für Recherche, Datenanalyse und Informationssammlung"
+      },
+      "business": {
+        "title": "Business & Marketing",
+        "description": "Vorlagen für Geschäftskommunikation und Marketing-Materialien"
+      },
+      "programming": {
+        "title": "Programmierung & Entwicklung",
+        "description": "Coding-Unterstützung und technische Dokumentation"
+      },
+      "education": {
+        "title": "Bildung & Lernen",
+        "description": "Bildungsinhalte und Lernmaterialien"
+      },
+      "creative": {
+        "title": "Kreativ & Design",
+        "description": "Kreatives Schreiben und Design-Unterstützung"
+      }
+    },
+    "promptCount": {
+      "single": "1 Prompt",
+      "multiple": "{{count}} Prompts"
+    },
+    "searchPlaceholder": "Prompts durchsuchen...",
+    "filterByCategory": "Nach Kategorie filtern",
+    "allCategories": "Alle Kategorien",
+    "tryPrompt": "Prompt ausprobieren",
+    "copyPrompt": "Prompt kopieren",
+    "promptCopied": "Prompt kopiert!",
+    "noResults": "Keine Prompts für Ihre Suche gefunden",
+    "loadMore": "Weitere Prompts laden"
   }
 }
