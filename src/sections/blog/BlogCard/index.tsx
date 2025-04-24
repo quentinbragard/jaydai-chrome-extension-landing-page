@@ -9,7 +9,7 @@ import { enUS, fr } from 'date-fns/locale'
 import { BlogPost } from '@/lib/blog'
 import { useLocale } from 'next-intl'
 import { useTranslations } from 'next-intl'
-import { Link } from '@/lib/navigation' 
+import Link from 'next/link'
 
 interface BlogCardProps {
   post: BlogPost
@@ -48,7 +48,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
     >
       {/* Image Container */}
       <div className="relative overflow-hidden w-full aspect-video">
-        <Link href={`/blog/${post.slug}`}>
+        <Link href={`/${locale}/blog/${post.slug}`}>
           <div className="relative w-full h-full">
             <Image
               src={post.featured_image || '/images/blog-placeholder.jpg'}
@@ -67,7 +67,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
       
       {/* Content */}
       <div className="p-6 flex flex-col flex-grow">
-        <Link href={`/blog/${post.slug}`} className="block group-hover:text-primary transition-colors">
+        <Link href={`/${locale}/blog/${post.slug}`} className="block group-hover:text-primary transition-colors">
           <h3 className="text-xl font-bold mb-2 line-clamp-2">{post.title}</h3>
         </Link>
         
@@ -84,12 +84,12 @@ const BlogCard: React.FC<BlogCardProps> = ({
             </div>
             <div className="flex items-center">
               <Clock size={14} className="mr-1" />
-              <span>{post.reading_time} min read</span>
+              <span>{post.reading_time} min {t('post.readTime')}</span>
             </div>
           </div>
           
           <Link 
-            href={`/blog/${post.slug}`}
+            href={`/${locale}/blog/${post.slug}`}
             className="inline-flex items-center text-primary hover:underline text-sm"
           >
             <span>{t('blogPost.readMore')}</span>
