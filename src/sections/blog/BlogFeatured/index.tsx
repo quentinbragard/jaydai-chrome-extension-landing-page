@@ -3,12 +3,12 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import Link from 'next/link'
 import { Calendar, Clock, ArrowRight } from 'lucide-react'
 import { formatDistanceToNow } from 'date-fns'
 import { enUS, fr } from 'date-fns/locale'
 import { useLocale, useTranslations } from 'next-intl'
 import { BlogPost } from '@/lib/blog'
+import Link from 'next/link'
 
 interface BlogFeaturedProps {
   post: BlogPost
@@ -42,7 +42,7 @@ const BlogFeatured: React.FC<BlogFeaturedProps> = ({ post }) => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-card border border-border rounded-xl overflow-hidden">
         {/* Image Side */}
         <div className="relative aspect-video md:aspect-auto overflow-hidden">
-          <Link href={`/blog/${post.slug}`}>
+          <Link href={`/${locale}/blog/${post.slug}`}>
             <Image
               src={post.featured_image || '/images/blog-placeholder.jpg'}
               alt={post.title}
@@ -59,7 +59,7 @@ const BlogFeatured: React.FC<BlogFeaturedProps> = ({ post }) => {
         
         {/* Content Side */}
         <div className="p-6 md:p-8 flex flex-col">
-          <Link href={`/blog/${post.slug}`} className="block hover:text-primary transition-colors">
+          <Link href={`/${locale}/blog/${post.slug}`} className="block hover:text-primary transition-colors">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">{post.title}</h2>
           </Link>
           
@@ -83,7 +83,14 @@ const BlogFeatured: React.FC<BlogFeaturedProps> = ({ post }) => {
             <div className="flex items-center">
               <div className="flex-shrink-0 mr-3">
                 <div className="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center">
+                {post.author === "Quentin Bragard" ? (
+                  <Image src="/images/team/quentin.png" alt="Quentin Bragard" width={40} height={40} />
+                ) : 
+                post.author === "Jean-Baptiste Huiban" ? (
+                  <Image src="/images/team/jb.png" alt="Jean-Baptiste Huiban" width={40} height={40} />
+                ) : (
                   <span className="font-medium text-sm">{post.author.charAt(0)}</span>
+                )}
                 </div>
               </div>
               <div>
@@ -93,7 +100,7 @@ const BlogFeatured: React.FC<BlogFeaturedProps> = ({ post }) => {
             </div>
             
             <Link 
-              href={`/blog/${post.slug}`}
+              href={`/${locale}/blog/${post.slug}`}
               className="inline-flex items-center text-primary hover:underline text-sm mt-6"
             >
               <span>{t('readMore')}</span>

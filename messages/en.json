@@ -3,7 +3,7 @@
  {
   "features": "Features",
   "testimonials": "Testimonials",
-  "templates": "Prompts",
+  "blog": "Blog",
   "pricing": "Pricing",
   "faq": "FAQ",
   "contact": "Contact",
@@ -801,8 +801,8 @@
       "name": "AI Coaching",
       "description": "Personalized coaching to help your team master AI",
       "price": {
-        "monthly": "€2,500",
-        "annually": "€2,500"
+        "monthly": "€3,000",
+        "annually": "€3,000"
       },
       "unit": "one-time fee",
       "cta": "Book Now",
@@ -821,8 +821,8 @@
       "name": "Full-Day Training",
       "description": "Intensive training for your team on AI best practices",
       "price": {
-        "monthly": "€2,000",
-        "annually": "€2,000"
+        "monthly": "€2,500",
+        "annually": "€2,500"
       },
       "unit": "per day",
       "cta": "Schedule Training",
@@ -1009,7 +1009,23 @@
     "extensionLabel": "Chrome Extension",
     "rating": "5/5 Rating",
     "readMore": "Read more"
-  }
+  },
+  "shareButton": {
+      "title": "Share this article",
+      "description": "Found this article interesting? Share it with your friends and colleagues.",
+      "copy": "Copy",
+      "copied": "Copied!",
+      "copyLink": "Copy link",
+      "preview": "Share preview",
+      "previewText": "Preview"
+    },
+    "promptLibrary": {
+      "title": "Prompt Library",
+      "copy": "Copy",
+      "copied": "Copied!",
+      "showMore": "Show more",
+      "showLess": "Show less"
+    }
   },
   "enterprisePage": {
     "seo": {
@@ -1026,5 +1042,85 @@
   "seoMetadata": {
     "title": "Jaydai | The best prompts directly in ChatGPT",
     "description": "Maximize your generative AI experience with Jaydai, the Chrome extension that transforms how you use ChatGPT with expert prompts, custom templates, and detailed analytics."
+  },
+  "shareButton": {
+    "title": "Share this article",
+    "description": "Found this article interesting? Share it with your friends and colleagues.",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "copyLink": "Copy link",
+    "preview": "Share preview",
+    "previewText": "Preview",
+    "twitterLabel": "Twitter",
+    "facebookLabel": "Facebook",
+    "linkedinLabel": "LinkedIn",
+    "emailLabel": "Email",
+    "shareOn": "Share on {{platform}}",
+    "promptExample": {
+      "title": "Prompt example",
+      "copy": "Copy prompt",
+      "copied": "Prompt copied!",
+      "showMore": "Show more",
+      "showLess": "Show less"
+    },
+    "platformMessages": {
+      "linkedin": "I discovered this interesting article about {{title}}. I think you might find it valuable!",
+      "twitter": "Just read this fascinating article about {{title}}. Check it out! #Jaydai #AI",
+      "email": {
+        "subject": "Interesting article to read: {{title}}",
+        "body": "Hi,\n\nI thought you might be interested in this article: {{title}}.\n\nI found it particularly insightful and thought it might be useful to you."
+      }
+    }
+  },
+  "promptLibrary": {
+    "title": "AI Prompt Library",
+    "subtitle": "Explore our curated collection of AI prompts to supercharge your productivity",
+    "search": {
+      "placeholder": "Search prompts...",
+      "noResults": "No prompts found matching your search criteria",
+      "categories": {
+        "all": "All Categories",
+        "label": "Filter by category"
+      }
+    },
+    "categories": {
+      "writing": {
+        "name": "Writing & Content",
+        "description": "Create compelling content and improve your writing"
+      },
+      "productivity": {
+        "name": "Productivity",
+        "description": "Boost your efficiency and workflow"
+      },
+      "analysis": {
+        "name": "Analysis & Research",
+        "description": "Deep dive into data and research"
+      },
+      "coding": {
+        "name": "Programming",
+        "description": "Code assistance and development"
+      },
+      "business": {
+        "name": "Business",
+        "description": "Professional communication and strategy"
+      },
+      "creative": {
+        "name": "Creative",
+        "description": "Unleash your creativity"
+      }
+    },
+    "prompt": {
+      "copy": "Copy prompt",
+      "copied": "Copied!",
+      "try": "Try this prompt",
+      "count_one": "1 prompt",
+      "count_other": "{{count}} prompts"
+    },
+    "loadMore": "Load more prompts",
+    "filters": {
+      "popular": "Most Popular",
+      "recent": "Most Recent",
+      "trending": "Trending"
+    }
   }
 }

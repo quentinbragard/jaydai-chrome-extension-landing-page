@@ -4,7 +4,7 @@ import { getTranslations } from 'next-intl/server'
 import type { Metadata } from 'next'
 // Generate localized SEO metadata for all pages under [locale]
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
-  const { locale } = params
+  const { locale } =  await params
   const t = await getTranslations({ locale, namespace: 'seoMetadata' })
   return {
     title: t('title'),
@@ -39,7 +39,8 @@ export default async function LocaleLayout({
   children,
   params
 }: LocaleLayoutProps) {
-  const locale = params.locale
+  const awaitedParams = await params
+  const locale = awaitedParams.locale
   // Validate that the incoming locale is valid
   if (!locales.includes(locale as any)) {
     notFound()

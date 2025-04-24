@@ -3,7 +3,7 @@
     {
      "features": "Funktionen",
      "testimonials": "Kundenstimmen",
-     "templates": "Prompts",
+     "blog": "Blog",
      "pricing": "Preise",
      "faq": "FAQ",
      "contact": "Kontakt",
@@ -801,8 +801,8 @@
          "name": "KI-Coaching",
          "description": "Personalisiertes Coaching, um Ihrem Team zu helfen, KI zu meistern",
          "price": {
-           "monthly": "2.500 €",
-           "annually": "2.500 €"
+           "monthly": "3.000 €",
+           "annually": "3.000 €"
          },
          "unit": "Einmalgebühr",
          "cta": "Jetzt buchen",
@@ -821,8 +821,8 @@
          "name": "Ganztägige Schulung",
          "description": "Intensive Schulung für Ihr Team zu KI-Best-Practices",
          "price": {
-           "monthly": "2.000 €",
-           "annually": "2.000 €"
+           "monthly": "2.500 €",
+           "annually": "2.500 €"
          },
          "unit": "pro Tag",
          "cta": "Schulung planen",
@@ -1008,7 +1008,23 @@
     "extensionLabel": "Chrome-Erweiterung",
     "rating": "5/5 Bewertung",
     "readMore": "Weiterlesen"
-  }
+  },
+  "shareButton": {
+      "title": "Diesen Artikel teilen",
+      "description": "Fanden Sie diesen Artikel interessant? Teilen Sie ihn mit Ihren Freunden und Kollegen.",
+      "copy": "Kopieren",
+      "copied": "Kopiert!",
+      "copyLink": "Link kopieren",
+      "preview": "Vorschau der Beiträge",
+      "previewText": "Vorschau"
+    },
+    "promptLibrary": {
+      "title": "Prompt-Bibliothek",
+      "copy": "Kopieren",
+      "copied": "Kopiert!",
+      "showMore": "Mehr anzeigen",
+      "showLess": "Weniger anzeigen"
+    }
   },
   "enterprisePage": {
     "seo": {
@@ -1025,5 +1041,76 @@
   "seoMetadata": {
     "title": "Jaydai | Die besten Prompts direkt in ChatGPT",
     "description": "Maximieren Sie Ihre generative KI-Erfahrung mit Jaydai, der Chrome-Erweiterung, die verändert, wie Sie ChatGPT mit Experten-Prompts, benutzerdefinierten Vorlagen und detaillierten Analysen nutzen."
+  },
+  "shareButton": {
+    "title": "Diesen Artikel teilen",
+    "description": "Fanden Sie diesen Artikel interessant? Teilen Sie ihn mit Ihren Freunden und Kollegen.",
+    "copy": "Kopieren",
+    "copied": "Kopiert!",
+    "copyLink": "Link kopieren",
+    "preview": "Vorschau der Beiträge",
+    "previewText": "Vorschau",
+    "twitterLabel": "Twitter",
+    "facebookLabel": "Facebook",
+    "linkedinLabel": "LinkedIn",
+    "emailLabel": "E-Mail",
+    "shareOn": "Auf {{platform}} teilen",
+    "promptExample": {
+      "title": "Prompt-Beispiel",
+      "copy": "Prompt kopieren",
+      "copied": "Prompt kopiert!",
+      "showMore": "Mehr anzeigen",
+      "showLess": "Weniger anzeigen"
+    },
+    "platformMessages": {
+      "linkedin": "Ich habe diesen interessanten Artikel über {{title}} entdeckt. Ich denke, Sie könnten ihn wertvoll finden!",
+      "twitter": "Habe gerade diesen faszinierenden Artikel über {{title}} gelesen. Schauen Sie mal rein! #Jaydai #KI",
+      "email": {
+        "subject": "Interessanter Artikel zum Lesen: {{title}}",
+        "body": "Hallo,\n\nIch dachte, dieser Artikel könnte für dich interessant sein: {{title}}.\n\nIch fand ihn besonders aufschlussreich und dachte, er könnte für dich nützlich sein."
+      }
+    }
+  },
+  "promptLibrary": {
+    "title": "Prompt-Bibliothek",
+    "subtitle": "Entdecken Sie unsere Sammlung vorgefertigter Prompts zur Steigerung Ihrer Produktivität",
+    "categories": {
+      "writing": {
+        "title": "Schreiben & Content",
+        "description": "Prompts für Content-Erstellung, Schreibhilfe und Bearbeitung"
+      },
+      "research": {
+        "title": "Forschung & Analyse",
+        "description": "Tools für Recherche, Datenanalyse und Informationssammlung"
+      },
+      "business": {
+        "title": "Business & Marketing",
+        "description": "Vorlagen für Geschäftskommunikation und Marketing-Materialien"
+      },
+      "programming": {
+        "title": "Programmierung & Entwicklung",
+        "description": "Coding-Unterstützung und technische Dokumentation"
+      },
+      "education": {
+        "title": "Bildung & Lernen",
+        "description": "Bildungsinhalte und Lernmaterialien"
+      },
+      "creative": {
+        "title": "Kreativ & Design",
+        "description": "Kreatives Schreiben und Design-Unterstützung"
+      }
+    },
+    "promptCount": {
+      "single": "1 Prompt",
+      "multiple": "{{count}} Prompts"
+    },
+    "searchPlaceholder": "Prompts durchsuchen...",
+    "filterByCategory": "Nach Kategorie filtern",
+    "allCategories": "Alle Kategorien",
+    "tryPrompt": "Prompt ausprobieren",
+    "copyPrompt": "Prompt kopieren",
+    "promptCopied": "Prompt kopiert!",
+    "noResults": "Keine Prompts für Ihre Suche gefunden",
+    "loadMore": "Weitere Prompts laden"
   }
 }

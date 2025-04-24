@@ -8,15 +8,18 @@ import { enUS, fr } from 'date-fns/locale'
 import { getBlogPostBySlug, getRelatedBlogPosts } from '@/lib/blog'
 import { getTranslations } from 'next-intl/server'
 import BlogCard from '@/sections/blog/BlogCard'
-import BlogPostContent from '@/sections/blog/BlogPostContent'
-import BlogPostCallToAction from '@/sections/blog/BlogPostCallToAction'
+import BlogSectionRenderer from '@/sections/blog/BlogSectionRenderer'
 
 // Generate metadata for the blog post
+export const dynamic = 'force-dynamic';
 export async function generateMetadata({
-  params: { locale, slug }
+  params
 }: {
   params: { locale: string; slug: string }
 }): Promise<Metadata> {
+  const awaitedParams = await params
+  const locale = awaitedParams.locale
+  const slug = awaitedParams.slug
   const t = await getTranslations({ locale, namespace: 'blog' })
   const post = await getBlogPostBySlug(slug, locale)
   
@@ -26,39 +29,49 @@ export async function generateMetadata({
     }
   }
 
+  // Use page_metadata for SEO if available, otherwise use post data
+  const pageMetadata = post.page_metadata || {}
   
   return {
-    title: post.title,
-    description: post.summary,
+    title: pageMetadata.seo_title || post.title,
+    description: pageMetadata.seo_description || post.summary,
     openGraph: {
-      title: post.title,
-      description: post.summary,
+      title: pageMetadata.seo_title || post.title,
+      description: pageMetadata.seo_description || post.summary,
       type: 'article',
       locale: locale,
-      url: `https://jayd.ai/${locale}/blog/${slug}`,
+      url: pageMetadata.canonical_url || `https://jayd.ai/${locale}/blog/${slug}`,
       images: [
         {
-          url: post.featured_image,
+          url: pageMetadata.og_image || post.featured_image,
           width: 1200,
           height: 630,
           alt: post.title,
         },
       ],
     },
+    keywords: pageMetadata.keywords || post.tags,
+    // Add canonical URL if available
+    ...(pageMetadata.canonical_url && {
+      alternates: {
+        canonical: pageMetadata.canonical_url
+      }
+    })
   }
 }
 
 export default async function BlogPostPage({
-  params: { locale, slug }
+  params
 }: {
   params: { locale: string; slug: string }
 }) {
+  const awaitedParams = await params
+  const locale = awaitedParams.locale
+  const slug = awaitedParams.slug
   const t = await getTranslations({ locale, namespace: 'blog' })
   
   // Fetch blog post
   const post = await getBlogPostBySlug(slug, locale)
-  const CallTOActionMetadata = post?.call_to_action_metadata || {}
-
   
   // If post not found, redirect to the blog index page with the correct locale
   if (!post) {
@@ -72,9 +85,8 @@ export default async function BlogPostPage({
   // Get related posts
   const relatedPosts = await getRelatedBlogPosts(post.id, post.category, locale, 3)
   
-  // Divide content into sections for better formatting
-  // This is a simplified example - you might need a more sophisticated approach
-  // based on your content structure
+  // Get content sections from the new structure, or fall back to the old structure
+  const contentSections = post.content_metadata || post.content || []
   
   return (
     <div className="py-20 bg-background">
@@ -82,7 +94,7 @@ export default async function BlogPostPage({
         {/* Back to Blog Link */}
         <div className="mb-8">
           <Link 
-            href="/blog"
+            href={`/${locale}/blog`}
             className="inline-flex items-center text-primary hover:underline"
           >
             <ArrowLeft size={16} className="mr-2" />
@@ -147,28 +159,9 @@ export default async function BlogPostPage({
             />
           </div>
           
-          {/* Article Content with CTA */}
-          <article className="prose prose-lg md:prose-xl dark:prose-invert max-w-none mb-16">
-            {/* First section of content */}
-            <BlogPostContent 
-              sections={post.content.slice(0, 2)}
-              className="mb-10"
-            />
-            
-            {/* Call to Action Banner */}
-            <BlogPostCallToAction 
-              // You can customize the CTA with post-specific metadata if needed
-              variant="primary"
-              title={CallTOActionMetadata?.title}
-              body={CallTOActionMetadata?.body}
-              href={CallTOActionMetadata?.href}
-            />
-            
-            {/* Rest of the content */}
-            <BlogPostContent 
-              sections={post.content.slice(2, post.content.length)}
-              className="mt-10"
-            />
+          {/* Article Content with dynamic sections */}
+          <article className="prose prose-lg md:prose-xl dark:prose-invert max-w-none mb-16 article-content">
+            <BlogSectionRenderer sections={contentSections} className="prose-lg md:prose-xl dark:prose-invert text-lg md:text-xl max-w-none mb-16" />
           </article>
           
           {/* Tags */}
@@ -206,7 +199,7 @@ export default async function BlogPostPage({
             
             <div className="mt-8 text-center">
               <Link 
-                href="/blog"
+                href={`/${locale}/blog`}
                 className="inline-flex items-center text-primary hover:underline"
               >
                 {t('post.exploreBlog')}
@@ -218,49 +211,4 @@ export default async function BlogPostPage({
       </div>
     </div>
   )
-}
-
-/**
- * Helper function to split HTML content into sections
- * This is a simplified implementation - you might need to adapt it based on your content structure
- */
-function splitContentIntoSections(content: string): string[] {
-  // Simple approach: Split at heading tags (h2, h3)
-  // You could use a more sophisticated approach with a DOM parser for production
-  const headingRegex = /<h[2-3][^>]*>/i
-  
-  // If no headings found, return the entire content as a single section
-  if (!headingRegex.test(content)) {
-    return [content]
-  }
-  
-  // Split at heading tags
-  const sections: string[] = []
-  let remainingContent = content
-  
-  // Find all heading positions
-  const headingMatches = [...content.matchAll(/<h[2-3][^>]*>/gi)]
-  
-  if (headingMatches.length === 0) {
-    return [content]
-  }
-  
-  // Add content before first heading as intro section
-  if (headingMatches[0].index && headingMatches[0].index > 0) {
-    sections.push(content.substring(0, headingMatches[0].index))
-  }
-  
-  // Process each heading and its content
-  headingMatches.forEach((match, index) => {
-    if (!match.index) return
-    
-    const startIdx = match.index
-    const endIdx = index < headingMatches.length - 1 && headingMatches[index + 1].index 
-      ? headingMatches[index + 1].index 
-      : content.length
-    
-    sections.push(content.substring(startIdx, endIdx))
-  })
-  
-  return sections
 }

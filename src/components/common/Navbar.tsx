@@ -61,7 +61,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center">
+            <Link href={process.env.NEXT_PUBLIC_BASE_SITE_URL || "/"} className="flex items-center">
               <Image 
                 src={currentLogo} 
                 alt="Jaydai Logo" 
@@ -75,7 +75,7 @@ const Navbar = () => {
           {/* Product Type Switcher (B2C/B2B) - Desktop */}
           <div className="hidden xl:flex items-center mx-4 bg-secondary/20 rounded-full p-0.5">
             <Link
-              href="/"
+              href={process.env.NEXT_PUBLIC_BASE_SITE_URL || "/"}
               className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${
                 !isEnterprisePage 
                   ? "bg-primary text-primary-foreground" 
@@ -95,7 +95,7 @@ const Navbar = () => {
               </span>
             </Link>
             <Link
-              href="/enterprise"
+              href={`${process.env.NEXT_PUBLIC_BASE_SITE_URL || "/"}enterprise`}
               className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${
                 isEnterprisePage 
                   ? "bg-primary text-primary-foreground" 
@@ -123,7 +123,7 @@ const Navbar = () => {
               {isEnterprisePage ? (
                 <>
                   <Link
-                    href="/enterprise#services"
+                    href={`${process.env.NEXT_PUBLIC_BASE_SITE_URL || "/"}enterprise#services`}
                     className="text-foreground/80 hover:text-primary transition-colors"
                     onClick={() => {
                       trackEvent('Navbar Button Clicked', {
@@ -136,7 +136,7 @@ const Navbar = () => {
                     {t('services')}
                   </Link>
                   <Link
-                    href="/enterprise#team"
+                    href={`${process.env.NEXT_PUBLIC_BASE_SITE_URL || "/"}enterprise#team`}
                     className="text-foreground/80 hover:text-primary transition-colors"
                     onClick={() => {
                       trackEvent('Navbar Button Clicked', {
@@ -152,7 +152,7 @@ const Navbar = () => {
               ) : (
                 <>
                     <Link
-                    href="#features"
+                    href={`${process.env.NEXT_PUBLIC_BASE_SITE_URL || "/"}#features`}
                     className="text-foreground/80 hover:text-primary transition-colors"
                     onClick={() => {
                       trackEvent('Navbar Button Clicked', {
@@ -165,7 +165,7 @@ const Navbar = () => {
                     {t('features')}
                   </Link>
                   <Link
-                    href="#testimonials"
+                    href={`${process.env.NEXT_PUBLIC_BASE_SITE_URL || "/"}#testimonials`}
                     className="text-foreground/80 hover:text-primary transition-colors"
                     onClick={() => {
                       trackEvent('Navbar Button Clicked', {
@@ -177,25 +177,25 @@ const Navbar = () => {
                   >
                     {t('testimonials')}
                   </Link>
-                  <Link
-                    href="#templates"
-                    className="text-foreground/80 hover:text-primary transition-colors"
-                    onClick={() => {
-                      trackEvent('Navbar Button Clicked', {
-                        button_name: 'templates',
-                        page_location: window.location.pathname,
-                        timestamp: new Date().toISOString()
-                      })
-                    }}
-                  >
-                    {t('templates')}
-                  </Link>
                 </>
               )}
               
-              {/* Common links for both pages */}
+            {/* Common links for both pages */}
+            <Link
+                  href={`${process.env.NEXT_PUBLIC_BASE_SITE_URL || "/"}blog`}
+                  className="text-foreground/80 hover:text-primary transition-colors"
+                  onClick={() => {
+                    trackEvent('Navbar Button Clicked', {
+                      button_name: 'templates',
+                      page_location: window.location.pathname,
+                      timestamp: new Date().toISOString()
+                    })
+                  }}
+                >
+                  {t('blog')}
+                </Link>
               <Link
-                href={`${isEnterprisePage ? "/enterprise" : ""}#pricing`}
+                href={`${isEnterprisePage ? `${process.env.NEXT_PUBLIC_BASE_SITE_URL || "/"}enterprise` : ""}#pricing`}
                 className="text-foreground/80 hover:text-primary transition-colors"
                 onClick={() => {
                   trackEvent('Navbar Button Clicked', {
@@ -208,7 +208,7 @@ const Navbar = () => {
                 {t('pricing')}
               </Link>
               <Link
-                href={`${isEnterprisePage ? "/enterprise" : ""}#contact`}
+                href={`${isEnterprisePage ? `${process.env.NEXT_PUBLIC_BASE_SITE_URL || "/"}enterprise` : ""}#contact`}
                 className="text-foreground/80 hover:text-primary transition-colors"
                 onClick={() => {
                   trackEvent('Navbar Button Clicked', {
@@ -396,21 +396,21 @@ const Navbar = () => {
             
             {/* Common links */}
             <Link 
-              href={`${isEnterprisePage ? "/enterprise" : ""}#pricing`} 
+                href={`${isEnterprisePage ? `${process.env.NEXT_PUBLIC_BASE_SITE_URL || "/"}enterprise` : ""}#pricing`} 
               className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-secondary/50 transition-colors"
               onClick={toggleMenu}
             >
               {t('pricing')}
             </Link>
             <Link 
-              href={`${isEnterprisePage ? "/enterprise" : ""}#faq`} 
+              href={`${isEnterprisePage ? `${process.env.NEXT_PUBLIC_BASE_SITE_URL || "/"}enterprise` : ""}#faq`} 
               className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-secondary/50 transition-colors"
               onClick={toggleMenu}
             >
               {t('faq')}
             </Link>
             <Link 
-              href={`${isEnterprisePage ? "/enterprise" : ""}#contact`} 
+              href={`${isEnterprisePage ? `${process.env.NEXT_PUBLIC_BASE_SITE_URL || "/"}enterprise` : ""}#contact`} 
               className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-secondary/50 transition-colors"
               onClick={toggleMenu}
             >
@@ -427,7 +427,7 @@ const Navbar = () => {
                     source: 'navbar',
                     timestamp: new Date().toISOString()
                   })
-                  router.push("/enterprise#contact")
+                  router.push(`${process.env.NEXT_PUBLIC_BASE_SITE_URL || "/"}enterprise#contact`)
                 }}
               > 
                 {t('requestDemo')}

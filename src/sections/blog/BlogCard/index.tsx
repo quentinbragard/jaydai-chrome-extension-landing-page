@@ -3,13 +3,13 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import Link from 'next/link'
 import { Calendar, Clock, ArrowRight } from 'lucide-react'
 import { formatDistanceToNow } from 'date-fns'
 import { enUS, fr } from 'date-fns/locale'
 import { BlogPost } from '@/lib/blog'
 import { useLocale } from 'next-intl'
 import { useTranslations } from 'next-intl'
+import Link from 'next/link'
 
 interface BlogCardProps {
   post: BlogPost
@@ -33,6 +33,8 @@ const BlogCard: React.FC<BlogCardProps> = ({
     locale: dateLocale
   })
 
+  console.log("locale", locale)
+  console.log("post", post)
   
   return (
     <motion.div
@@ -82,7 +84,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
             </div>
             <div className="flex items-center">
               <Clock size={14} className="mr-1" />
-              <span>{post.reading_time} min read</span>
+              <span>{post.reading_time} min {t('post.readTime')}</span>
             </div>
           </div>
           

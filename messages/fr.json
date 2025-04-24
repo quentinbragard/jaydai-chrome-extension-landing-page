@@ -2,7 +2,7 @@
 "nav": {
   "features": "Fonctionnalités",
   "testimonials": "Témoignages",
-  "templates": "Prompts",
+  "blog": "Blog",
   "pricing": "Tarifs",
   "faq": "FAQ",
   "contact": "Contact",
@@ -799,8 +799,8 @@
       "name": "Coaching IA",
       "description": "Un coaching IA pour dirigeants pour vous aider à maîtriser l’IA pour votre entreprise",
       "price": {
-        "monthly": "2 500€",
-        "annually": "2 500€"
+        "monthly": "3 000€",
+        "annually": "3 000€"
       },
       "unit": "frais unique",
       "cta": "Réserver",
@@ -819,8 +819,8 @@
       "name": "Formation de vos équipes",
       "description": "Formation personnalisée de vos équipes sur des cas d’usage adaptés à votre métier",
       "price": {
-        "monthly": "2 000€",
-        "annually": "2 000€"
+        "monthly": "2 500€",
+        "annually": "2 500€"
       },
       "unit": "par session de formation",
       "cta": "Planifier la Formation",
@@ -1007,7 +1007,23 @@
     "extensionLabel": "Extension Chrome",
     "rating": "5/5 Rating",
     "readMore": "Lire la suite"
-  }
+  },
+  "shareButton": {
+      "title": "Partagez cet article",
+      "description": "Vous avez trouvé cet article intéressant ? Partagez-le avec vos amis et collègues.",
+      "copy": "Copier",
+      "copied": "Copié !",
+      "copyLink": "Copier le lien",
+      "preview": "Aperçu du partage",
+      "previewText": "Aperçu"
+    },
+    "promptLibrary": {
+      "title": "Bibliothèque de prompts",
+      "copy": "Copier",
+      "copied": "Copié !",
+      "showMore": "Voir plus",
+      "showLess": "Voir moins"
+    }
   },
   "enterprisePage": {
     "seo": {
@@ -1024,5 +1040,88 @@
   "seoMetadata": {
     "title": "Jaydai | Tous les meilleurs prompts directement dans ChatGPT",
     "description": "Maximisez votre expérience IA avec Jaydai, l'extension Chrome qui transforme votre utilisation de ChatGPT avec des prompts experts, des modèles personnalisés et des analytiques détaillées."
+  },
+  "shareButton": {
+    "title": "Partagez cet article",
+    "description": "Vous avez trouvé cet article intéressant ? Partagez-le avec vos amis et collègues.",
+    "copy": "Copier",
+    "copied": "Copié !",
+    "copyLink": "Copier le lien",
+    "preview": "Aperçu du partage",
+    "previewText": "Aperçu",
+    "twitterLabel": "Twitter",
+    "facebookLabel": "Facebook",
+    "linkedinLabel": "LinkedIn",
+    "emailLabel": "Email",
+    "shareOn": "Partager sur {{platform}}",
+    
+    "promptExample": {
+      "title": "Exemple de prompt",
+      "copy": "Copier le prompt",
+      "copied": "Prompt copié !",
+      "showMore": "Voir plus",
+      "showLess": "Voir moins"
+    },
+   "whatsappLabel": "WhatsApp",
+    "platformMessages": {
+      "whatsapp": "J'ai découvert cet article intéressant sur {{title}}. À lire absolument !",
+      "linkedin": "J'ai découvert cet article intéressant sur {{title}}. Je pense que cela pourrait vous intéresser !",
+      "twitter": "Je viens de lire cet article fascinant sur {{title}}. À découvrir ! #Jaydai #IA",
+      "email": {
+        "subject": "Article intéressant à lire : {{title}}",
+        "body": "Bonjour,\n\nJ'ai pensé que cet article pourrait t'intéresser : {{title}}.\n\nJe l'ai trouvé particulièrement instructif et je pense qu'il pourrait t'être utile."
+      }
+    }
+  },
+  "promptLibrary": {
+    "title": "Bibliothèque de Prompts IA",
+    "subtitle": "Explorez notre collection de prompts IA pour booster votre productivité",
+    "search": {
+      "placeholder": "Rechercher des prompts...",
+      "noResults": "Aucun prompt trouvé correspondant à vos critères",
+      "categories": {
+        "all": "Toutes les catégories",
+        "label": "Filtrer par catégorie"
+      }
+    },
+    "categories": {
+      "writing": {
+        "name": "Rédaction & Contenu",
+        "description": "Créez du contenu captivant et améliorez votre écriture"
+      },
+      "productivity": {
+        "name": "Productivité",
+        "description": "Optimisez votre efficacité et votre flux de travail"
+      },
+      "analysis": {
+        "name": "Analyse & Recherche",
+        "description": "Plongez dans les données et la recherche"
+      },
+      "coding": {
+        "name": "Programmation",
+        "description": "Assistance au code et développement"
+      },
+      "business": {
+        "name": "Business",
+        "description": "Communication professionnelle et stratégie"
+      },
+      "creative": {
+        "name": "Créativité",
+        "description": "Libérez votre créativité"
+      }
+    },
+    "prompt": {
+      "copy": "Copier le prompt",
+      "copied": "Copié !",
+      "try": "Essayer ce prompt",
+      "count_one": "1 prompt",
+      "count_other": "{{count}} prompts"
+    },
+    "loadMore": "Charger plus de prompts",
+    "filters": {
+      "popular": "Plus Populaires",
+      "recent": "Plus Récents",
+      "trending": "Tendances"
+    }
   }
 }

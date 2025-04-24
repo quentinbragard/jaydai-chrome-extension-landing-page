@@ -1,0 +1,192 @@
+[
+  {
+    "type": "plainHtml",
+    "content": "<h1 class=\"article-title\">Comment j'ai créé la landing page de Jaydai avec l'IA</h1><p class=\"article-paragraph\"><h2>Rendons à César ce qui est à César.</h2><br/>Nous sommes très fiers de vous présenter la nouvelle landing page de Jaydai sur laquelle vous vous trouvez actuellement 🍾🍾</p>Cette landing page, on a voulu la rendre la plus belle et informative  possible, et je ne sais pas vous, mais nous on est super contents du résultat!<br/>Mais si je vous disais qu’il nous a fallu une semaine en tout et pour tout pour fabriquer de A à Z cette vitrine? <br/><br/>Vous ne me croiriez sûrement pas…<br/><br/>Une landing page, responsive, multilingue, multi-thème (nuit/jour) avec autant d’effets visuels et d’informations ? Bien-sûr moi je suis le roi d’Angleterre (j’ai toujours connu cette expression à propos de la reine d’Angleterre, (mais il faut vivre avec son temps)?</br></br>Alors je vais vous le dire tout de suite : non ce site n’a pas été fait uniquement par une IA. Et non, je ne risque pas de me faire grand remplacer par des algos.</br>En revanche, réaliser ça en une semaine, sans aucun budget, aurait été 100% impossible sans une IA.</br>Et avant de vous détailler (avec des preuves) le déroulé exact de ce projet, je voulais vous partager dès à présent quelques enseignements : </p>"
+  },
+  {
+    "icon": "clock",
+    "type": "tldrSection",
+    "items": [
+      {
+        "html": "<p>Il ne faut jamais prendre pour acquis que l’IA n’est pas capable de faire quelque chose. J’ai testé de faire générer des sites par de l’IA des dizaines de fois, ça n’a jamais marché. Mais ça c’était avant la sortie de Manus qui est l’outil que j’ai utilisé. L’IA avance vite, ses limites aussi, n’hésitez jamais à “réessayer”.</p>"
+      },
+      {
+        "html": "<p>Une IA, c’est rarement suffisant pour un projet d’envergure. Dans mon cas, j’ai utilisé Claude, chatGPT et Manus. Et évidemment ma propre intelligence et mes connaissances techniques.</p>"
+      },
+      {
+        "html": "<p>Il est temps de revoir nos ambitions à la hausse. Jamais de la vie, pour une landing page comme la nôtre, on serait partis sur une version similaire, ça aurait pris beaucoup trop de temps. Et en utilisant un outil no-code basique, on aurait peut-être mis 2 jours plutôt que 7, mais on aurait eu une version dix fois moins impressionnantes (et pas les mêmes taux de conversion que ceux qu’on a actuellement 😉)</p>"
+      }
+    ],
+    "title": "TL;DR (Trop Long; Donc Résumé)",
+    "variant": "bordered",
+    "subtitle": "Pour ceux qui veulent aller à l'essentiel:"
+  },
+  {
+    "type": "beautifulList",
+    "items": [
+      {
+        "title": "Découvrir Manus",
+        "content": "Allez faire un tour sur leur <a target=\"_blank\" href=\"https://manus.im\">site</a> pour en savoir plus, mais en quelques mots : Manus, c’est un agent IA généraliste qui a son propre Operating system. C’est-à-dire que vous lui envoyez un prompt, et lui ne vous répond pas tout de suite, il analyse la situation, vous pose des questions complémentaires et utilise son ordinateur interne pour répondre à votre demande."
+      },
+      {
+        "title": "LE prompt",
+        "content": " A savoir sur Manus : dans la version gratuite, vous pouvez envoyer des prompts de moins de 1000 caractères et vous obtenez comme cadeau de bienvenue 1000 crédit. Chaque demande consomme des crédits (la mienne valait à peu près 300 crédits). Une fois le prompt initial, Manus clarifie et se met à coder dans son coin (une bonne dizaine de minutes dans mon cas). Vous trouverez ci-dessous l’exacte conversation que j’ai eue : <a target=\"_blank\" href=\"https://manus.im/share/eh8u4YntNFgdQdvQ1oHSmy?replay=1\">👉 Le Replay</a>"
+      },
+      {
+        "title": "La vérification",
+        "content": "Honnêtement au moment de checker ce qu’il avait fait, je n’y croyais pas trop. Et c’était beaucoup trop fastidieux d’aller checker tout le code. Alors j’ai choisi <a target=\"_blank\" href=\"https://www.youtube.com/watch?v=bbeiDL22DJA\">la solution offensive</a> : déployer le code sans le toucher. Si vous voulez reproduire chez vous :</br></br> <ul class=\"list-disc space-y-2\"><li>Télécharger le fichier jaydai-landing-code.zip et ouvrez le</li><li>Ouvrez un terminal et allez dans ce dossier et lancer la commande suivante : <code>pnpm install && pnpm run dev</code></li><li>Ouvrez <code>localhost:3000</code> et vous avez la version originale.</li></ul>"
+      },
+      {
+        "title": "Prendre cette base pour faire générer des idées à Claude",
+        "content": "J’ai mis mon code sur github et comme Claude est capable de lire des repo github, il a eu accès à tout mon code et m’a généré pas mal de choses que j’ai intégré (notamment dans la version entreprise)."
+      },
+      {
+        "title": "Générer des images de grande qualité",
+        "content": "En l'occurence, j'ai utilisé chatGPT pour générer des images qui correspondent aux couleurs de Jaydai. Avec la nouvelle version du générateur d’images c’est très efficace."
+      },
+      {
+        "title": "Coder par soi-même… En s’aidant d’outils d’IA ",
+        "content": "Il y avait quand même un peu de boulot (à peu près une semaine) pour faire marcher tous les boutons, créer un petit backend pour récupérer les demandes de contact, etc. Heureusement, j'ai pu m'aider de quelques outils comme Claude (très utile pour les traductions), chatGPT (très utile pour les images), Cursor (très utile pour le code) et un peu de Manus aussi, notamment pour l’optimisation SEO."
+      },
+      {
+        "title": "Ouvrir une bonne bière avec son associé et profiter du moment 🍻",
+        "content": "Preuves à l'appui 👇"
+      }
+    ],
+    "title": "Les étapes",
+    "listType": "numbered",
+    "iconColor": "text-primary",
+    "description": "Passons maintenant à la démarche étape par étape. "
+  },
+  {
+    "type": "plainImage",
+    "border": false,
+    "shadow": true,
+    "caption": "A ne pas reproduire chez vous",
+    "rounded": true,
+    "imageAlt": "JB, Quentin & une bière",
+    "imageUrl": "https://vetoswvwgsebhxetqppa.supabase.co/storage/v1/object/public/images/landing/blog/fr/article-1-jb-et-quentin.png",
+    "maxWidth": "2xl",
+    "alignment": "center",
+    "aspectRatio": "square"
+  },
+  {
+    "type": "plainHtml",
+    "content": "<p class=\"article-paragraph\"><h2>Tous les prompts que j'ai utilisé</h2><br/>Si vous voulez reproduire un projet de ce genre chez vous, voici en détail les différents prompts que j'ai utilisé.</br>Je vous les ai laissé en VO (souvent en anglais car cest souvent mieux pour le code, et avec des fautes d'orthographe (pour vous montrer que ce n'est pas ce qui importe le plus quand on prompte) 😉.</p>"
+  },
+  {
+    "type": "promptLibrary",
+    "title": "Tous les prompts pour la création de cette landing page",
+    "ctaUrl": "https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd",
+    "ctaText": "Découvrir plus de prompts",
+    "prompts": [
+      {
+        "tags": [
+          "Agent IA",
+          "Code frontend"
+        ],
+        "title": "Générer la structure avec Manus",
+        "output": "I'll help you create a Next.js landing page with all the components you've requested. I'll use Tailwind CSS, shadcn, and 21st.dev components to build an engaging and modern landing page. Let me get started on this right away. I'll first set up the Next.js project with the necessary dependencies, then implement each of the components you've mentioned, including the animated hero section, hero video dialog, testimonials, before/after comparison, FAQ section, prompt templates category, features list, navbar, footer, and contact section. I'll keep you updated on my progress.",
+        "comment": "En donnant déjà à Manus le langage qu'il doit utiliser, des exemples publics de components que je trouve joli et la liste de ce que j'attends j'augmente les chances qu'il ait exactement ce que j'ai en tête",
+        "purpose": "Première tentative de faire générer une landing page fonctionnel avec Manus",
+        "platforms": [
+          "manus"
+        ],
+        "badExample": "Create a landing page for my product Jaydai.",
+        "goodExample": "I will send you some information about my company, and I want you to create a Next.js landing page using tailwnd css, shadcn and 21st dev omponents. \n\nMy landing page need to have : \n- an animated hero section (for example https://21st.dev/mikolajdobrucki/hero-section/default)\n- A hero video dialog (https://magicui.design/docs/components/hero-video-dialog)\n- Testimonials (for example https://21st.dev/bankkroll/simple-animated-testimonials/simple-animated-testimonials)\n- A before after compare (like https://21st.dev/aceternity/compare/default)\n- A faq (like for example : https://21st.dev/anshuman008/faq-chat-accordion/default) \n- A list of prompt templates category example (like for example in https://21st.dev/DavidHDev/tilted-scroll/default)\n- A list of features (like for example : https://21st.dev/aceternity/feature-section-with-hover-effects/default) \n- A navbar, a footer, contact us, etc  all classic landing page stuffs."
+      },
+      {
+        "tags": [
+          "LLM",
+          "Code frontend",
+          "Design"
+        ],
+        "title": "Générer des idées complémentaires (notamment pour la partie entreprise)",
+        "output": "I'd love to help you create impressive design ideas for your Jaydai landing page!\n\nLooking at your files, you already have a solid foundation with components using Next.js, Tailwind CSS, and motion animations.\n\nLet's create an \"ideas\" page with fresh design concepts that will make your landing page even more engaging and conversion-focused.\n\nFirst, I'll analyze what you currently have, then suggest new design ideas that align with modern web design principles while highlighting Jaydai's value proposition.\n\nLet me create a design ideas page with multiple section concepts:",
+        "comment": "C'est le moment pour laisser plus de champ libre. Je continue de lui donner des indications sur les outils à sa disposition (tailwind, shadcn, etc.), mais je lui donne une description de Jaydai pour qu'il me propose des idées de designvque je n'aurai pas forcément eue. ",
+        "purpose": "Générer plein d'idées pour me donner de l'inspiration et pour avoir une base plus grande encore de code dans lequel piocher au moment où je me mettrai moi-même à coder.",
+        "platforms": [
+          "chatgpt",
+          "claude"
+        ],
+        "badExample": "Look at my code. Please create some new components in the same style that I can add to my landing page.",
+        "goodExample": "You are a Software Engineer with great design skills and specialist of creating amazing landing pages with Next.js, Tailwind CSS, ShadCN, 21st.dev (or any similar component libraries).\n\nI have created a first draft for my landing page (attached). I will send you some informations about Jaydai (my product), and I would like you to find ways to add more sophisticated designs.\n\nThe goal is to have a converting landing page and to show that we can build amazing things (like the landing page itself).\n\nI want to create a new page for great design ideas (called ideas). Add any design ideas that would make the landing page even more impressive in the ideas page (We don’t care about the content, orders, etc, I just want sections ideas and then I’ll select the ones I like).\n\nUse as many 21st.dev designs as you can and ShadCN, Tailwind, etc. You should always respect the most important design principles.\n\nHere are some information:\n\nAt Jaydai, we help people and organizations to use AI efficiently and smartly by converting real-life and business use cases into prompts that are available inside any AI tool (like ChatGPT, Claude, etc.).\n\nOur main product is a Google Chrome Extension that lets users access all the best prompts for use cases that can be solved by AI in just a few clicks.\n\nWith Jaydai, people and organizations maximize the results they get from AI — even without subscribing to any paid version — because a great prompt to an average model often beats a basic prompt to the best models.\n\nWe spend hours crafting prompts so our clients can benefit directly from this work, and we also create unique, custom-tailored prompts for each client so they can master prompt engineering on their own use cases.\n\nUsers can also create their own prompt templates to save time when working on recurring tasks or projects.\n\nWe offer an online learning school where users learn to use AI efficiently through real-world simulations.\n\nFor companies, we provide:\n- Team training & AI coaching\n- Prompt libraries tailored to internal use cases\n- Strategic audits and consulting to launch their AI transformation\n\n---\n\nOverview Jaydai: Maximize AI Potential.\nJaydai is a Chrome extension offering a library of high-quality prompts.\n\nJaydai - Your Smart AI Assistant for ChatGPT\n\nMaximize your generative AI experience with Jaydai, the free Chrome extension that transforms how you use ChatGPT.\n\n🚀 Unlock the full potential of AI with our library of expert prompts organized by topic\n💼 Boost your productivity by saving your custom prompts for instant access\n📊 Measure your impact with detailed analytics on your usage and energy footprint\n\nWith just one click, access a complete ecosystem designed to optimize your interactions with ChatGPT for both professional and personal projects.\n\n+50% more effective responses\n70% time saved writing prompts\nFinally, usage statistics to stay in control\n\nDownload Jaydai for free today and join the community of users who leverage AI in an efficient, responsible, and innovative way!\n\n✨ Enterprise version available: Allow your entire team to share a customized prompt bank for your specific business use cases."
+      },
+      {
+        "tags": [
+          "Image",
+          "Design"
+        ],
+        "title": "Générer des images pour la landing",
+        "output": "L'image qui est utilisée pour illustrer le coaching dans la partie services de la page entreprise.",
+        "comment": "En lui donnant les couleurs de Jaydai (en format numérique), je m'assure de la cohérence globale de mon site. Prouesse d'autant plus impressionnante que je suis daltonien...",
+        "purpose": "Trouver un prompt qui fera une image qui me convient et ne pas le lâcher tant que je génère de nouvelles images.",
+        "platforms": [
+          "chatgpt"
+        ],
+        "badExample": "Canvas create an image to illustrate training & coaching services for my company Jaydai",
+        "goodExample": "Canvas Create an image for my landing page that illustrates this point:\n{\n  \"id\": \"training\",\n  \"title\": \"Team Training & Coaching\",\n  \"description\": \"Equip your workforce with the skills to leverage AI effectively in their daily tasks.\",\n  \"features\": [\n    \"Customized workshop programs\",\n    \"Role-specific training modules\",\n    \"Practical use case development\",\n    \"Ongoing coaching sessions\",\n    \"Progress tracking and certification\"\n  ],\n  \"cta\": \"Book a training consultation\"\n},\n\nDon't use sentence to describe the product, it must be mostly visual.\n\nUse this color palette:\n.dark {\n  --background: 230 80% 5%; /* Dark background */\n  --foreground: 220 15% 95%; /* Off-white with blue hint */\n  --primary: 240 70% 65%; /* Lighter indigo for dark mode */\n  --primary-foreground: 230 80% 5%;\n  --secondary: 225 35% 16%; /* Dark blue-gray */\n  --secondary-foreground: 220 15% 95%;\n  --accent: 225 40% 19%; /* Deep indigo accent */\n  --accent-foreground: 220 15% 95%;\n  --muted: 225 30% 15%;\n  --muted-foreground: 220 15% 70%;\n  --card: 230 85% 7%;\n  --card-foreground: 220 15% 95%;\n  --popover: 230 85% 7%;\n  --popover-foreground: 220 15% 95%;\n  --destructive: 350 80% 65%; /* Brighter red for dark mode */\n  --destructive-foreground: 230 80% 5%;\n  --border: 225 35% 16%;\n  --input: 225 35% 16%;\n  --ring: 240 70% 65%; /* Lighter indigo */\n  --chart-1: 240 70% 65%; /* Lighter indigo */\n  --chart-2: 175 70% 60%; /* Brighter teal */\n  --chart-3: 340 70% 65%; /* Lighter rose */\n  --chart-4: 45 90% 65%; /* Brighter gold */\n  --chart-5: 270 70% 65%; /* Lighter purple */\n}"
+      },
+      {
+        "tags": [
+          "Code Frontend",
+          "Database Design"
+        ],
+        "title": "Céer le blog de la landing",
+        "output": "I'll help you create a blog section for your landing page.\n\nBased on the codebase you provided, I see that it's a Next.js application with Tailwind CSS styling and internationalization support.\n\nYou want to add a blog page that will display articles stored in a Supabase table.\n\nYou didn't provide the SQL query for the Supabase table structure, so I'll make some reasonable assumptions about the blog table schema and create the necessary components and pages.\n\nLet's start by creating the blog page structure and components:",
+        "comment": "J'ai utilisé ce prompt après avoir moi-même coder sur le projet pendant une semaine. Le prompt est beaucoup moins long, car en lui partageant mon code, claude a déjà beaucoup d'infos sur ce que j'ai en tête...",
+        "purpose": "Une landing page sans blog? Please...",
+        "platforms": [
+          "claude"
+        ],
+        "badExample": "Create a blog for my landing page",
+        "goodExample": "You are a Software Engineer.\nI am developing a landing page (I will send you the codebase).\nI want to add a new page: blog.\n\nI have created a Supabase table (attached: the SQL query that I ran in Supabase) that will contain all blog articles.\n\nThe blog page will display all these blog articles.\n\nPlease create:\n- The blog section components\n- The blog page folder"
+      },
+      {
+        "tags": [
+          "Marketing",
+          "Créer une FAQ"
+        ],
+        "title": "Un dernier pour la route : générer la FAQ avec un prompt officiel de Jaydai",
+        "output": "Les FAQ (particuliers et entreprise) de notre site",
+        "comment": "Le prompt en entier est disponible dans notre extension, venez le tester par vous-même!",
+        "purpose": "Quelques variables à rentrer dans notre template, et hop : le tour est joué",
+        "platforms": [
+          "chatgpt"
+        ],
+        "badExample": "Create a FAQ for my landing page",
+        "goodExample": "A découvrir dans notre extension"
+      }
+    ],
+    "description": "N'hésitez pas à copier-coller et à tester par vous même..."
+  },
+  {
+    "type": "plainHtml",
+    "content": "<p class=\"article-paragraph\"><h2>Conclusion</h2><br/>Et voilà, vous ave pu voir ce qui se passait \"sous le capot\" comme on dit. Comme vous le voyez, une grande partie de ce code a été généré ou écrit avec de l'IA. Mais puisque j'ai commencé par rendre à César ce qui était à César, je finirai par me donner un peu de crédit quand même : Sans les heures que j'ai passé à coder et à debugger, cette landing ne serait pas aussi belle!<br/>J'espère que ce premier article de blog vous a plu et que vous avez appris des choses. Si vous voulez recevoir d'autres exemples de prompts, tips, conseils, astuces sur l'IA pour devenir des experts de ChatGPT, n'hésitez pas à vous abonner à notre newsletter <a target=\"_blank\" href=\"https://thetunnel.substack.com/\">The Tunnel</a>.<br/><br/>À très vite 👋</p>"
+  },
+  {
+    "type": "shareButtonSection",
+    "title": "Partagez cette expérience avec vos collègues",
+    "variant": "cards",
+    "messages": {
+      "email": {
+        "body": "Bonjour,\n\nJe viens de lire cet article intéressant sur la façon dont l'équipe de Jaydai a créé leur landing page en seulement une semaine en utilisant des outils d'IA comme Manus, Claude et ChatGPT.\n\nJe pense que cette approche pourrait t'intéresser, surtout la partie sur la façon de combiner différents outils d'IA pour amplifier (plutôt que remplacer) la créativité humaine.",
+        "subject": "Article intéressant: Comment créer une landing page professionnelle avec l'IA"
+      },
+      "twitter": "Comment créer une landing page professionnelle en une semaine avec l'IA? L'équipe de @JaydaiAI l'a fait! Découvrez leur méthode combinant Manus AI, Claude et ChatGPT 🤖✨ #IA #WebDev",
+      "facebook": "J'ai découvert comment l'équipe de Jaydai a créé leur landing page professionnelle en seulement une semaine avec l'IA! 🚀 Une combinaison de Manus AI, Claude et ChatGPT. À découvrir!",
+      "linkedin": "J'ai découvert comment l'équipe de Jaydai a créé leur landing page en seulement une semaine grâce à l'IA! 🚀\n\nUne combinaison de Manus AI, Claude et ChatGPT leur a permis de développer un site multilingue, responsive et visuellement attractif sans presque aucun budget.\n\nUn excellent exemple de la façon dont l'IA peut amplifier (et non remplacer) la créativité humaine!",
+      "whatsapp": "J'ai trouvé cet article super intéressant sur comment créer une landing page en une semaine avec l'IA! 🚀 Jaydai a utilisé Manus AI, Claude et ChatGPT. À lire absolument:",
+      "messenger": "J'ai découvert comment l'équipe de Jaydai a créé leur landing page professionnelle en seulement une semaine avec l'IA! 🚀 Une combinaison de Manus AI, Claude et ChatGPT. À découvrir!"
+    },
+    "className": "my-8 max-w-4xl mx-auto",
+    "description": "Vous avez trouvé cette approche intéressante ? Partagez cet article avec vos amis et collègues qui s'intéressent à l'IA et au développement web.",
+    "showPreview": true
+  },
+  {
+    "truncated": true
+  },
+  {
+    "truncated": true
+  }
+]

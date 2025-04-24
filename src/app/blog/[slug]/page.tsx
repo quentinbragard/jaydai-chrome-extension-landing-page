@@ -1,7 +1,7 @@
 import { redirect } from 'next/navigation'
 import { defaultLocale } from '@/lib/navigation'
 
-export default function BlogPage({
+export default async function BlogPage({
     params,
     searchParams
 }: {
@@ -10,7 +10,8 @@ export default function BlogPage({
 }) {
     // turn the catch‑all into a safe string path
 
-    const slug = params.slug;
+    const awaitedParams = await params
+    const slug = awaitedParams.slug;
 
     // flatten out searchParams into an array of [key,value] pairs
     const queryEntries = Object.entries(searchParams).flatMap(([key, val]) => {

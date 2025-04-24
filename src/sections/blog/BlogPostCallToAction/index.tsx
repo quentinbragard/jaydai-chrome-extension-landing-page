@@ -105,8 +105,8 @@ const BlogPostCallToAction: React.FC<BlogPostCallToActionProps> = ({
                   }}
                   className={`inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-colors ${
                     variant === 'outline'
-                      ? 'bg-primary text-primary-foreground hover:bg-primary/90'
-                      : 'bg-white text-primary hover:bg-white/90'
+                      ? 'bg-primary !text-primary-foreground hover:bg-primary/90'
+                      : 'bg-white !text-primary hover:bg-white/90'
                   }`}
                 >
                   <span>{t('blogCta.buttonText')}</span>
@@ -151,8 +151,8 @@ const BlogPostCallToAction: React.FC<BlogPostCallToActionProps> = ({
                   <Star 
                     key={i} 
                     size={16} 
-                    className={i <= 4 ? "text-amber-400" : "text-amber-400/30"} 
-                    fill={i <= 4 ? "currentColor" : "none"}
+                    className={i <= 5 ? "text-amber-400" : "text-amber-400/30"} 
+                    fill={i <= 5 ? "currentColor" : "none"}
                   />
                 ))}
               </div>
