@@ -11,6 +11,7 @@ import { getTranslations } from 'next-intl/server'
 const POSTS_PER_PAGE = 9
 
 // Generate metadata for the blog page
+export const dynamic = 'force-dynamic';
 export async function generateMetadata(
   { params }: { params: { locale: string } }
 ): Promise<Metadata> {

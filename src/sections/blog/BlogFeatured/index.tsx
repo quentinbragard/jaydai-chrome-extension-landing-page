@@ -83,7 +83,14 @@ const BlogFeatured: React.FC<BlogFeaturedProps> = ({ post }) => {
             <div className="flex items-center">
               <div className="flex-shrink-0 mr-3">
                 <div className="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center">
+                {post.author === "Quentin Bragard" ? (
+                  <Image src="/images/team/quentin.png" alt="Quentin Bragard" width={40} height={40} />
+                ) : 
+                post.author === "Jean-Baptiste Huiban" ? (
+                  <Image src="/images/team/jb.png" alt="Jean-Baptiste Huiban" width={40} height={40} />
+                ) : (
                   <span className="font-medium text-sm">{post.author.charAt(0)}</span>
+                )}
                 </div>
               </div>
               <div>

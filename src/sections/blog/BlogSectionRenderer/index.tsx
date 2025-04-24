@@ -155,7 +155,7 @@ const BlogSectionRenderer: React.FC<BlogSectionRendererProps> = ({
               />
             );
             
-          case 'plainImageSection':
+          case 'plainImage':
             return (
               <PlainImageSection
                 key={`section-${index}`}

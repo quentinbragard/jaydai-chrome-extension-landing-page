@@ -799,8 +799,8 @@
       "name": "Coaching IA",
       "description": "Un coaching IA pour dirigeants pour vous aider à maîtriser l’IA pour votre entreprise",
       "price": {
-        "monthly": "2 500€",
-        "annually": "2 500€"
+        "monthly": "3 000€",
+        "annually": "3 000€"
       },
       "unit": "frais unique",
       "cta": "Réserver",
@@ -819,8 +819,8 @@
       "name": "Formation de vos équipes",
       "description": "Formation personnalisée de vos équipes sur des cas d’usage adaptés à votre métier",
       "price": {
-        "monthly": "2 000€",
-        "annually": "2 000€"
+        "monthly": "2 500€",
+        "annually": "2 500€"
       },
       "unit": "par session de formation",
       "cta": "Planifier la Formation",

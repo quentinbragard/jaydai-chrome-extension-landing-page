@@ -132,6 +132,10 @@ export async function getBlogPostBySlug(slug: string, locale: string = 'en'): Pr
     .eq('slug', slug)
     .eq('locale', locale)
     .single();
+
+  console.log("locale", locale)
+  console.log("slug", slug)
+  console.log("data", data)
   
   if (error || !data) {
     console.error('Error fetching blog article by slug:', error);

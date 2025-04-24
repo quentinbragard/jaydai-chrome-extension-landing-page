@@ -801,8 +801,8 @@
       "name": "AI Coaching",
       "description": "Personalized coaching to help your team master AI",
       "price": {
-        "monthly": "€2,500",
-        "annually": "€2,500"
+        "monthly": "€3,000",
+        "annually": "€3,000"
       },
       "unit": "one-time fee",
       "cta": "Book Now",
@@ -821,8 +821,8 @@
       "name": "Full-Day Training",
       "description": "Intensive training for your team on AI best practices",
       "price": {
-        "monthly": "€2,000",
-        "annually": "€2,000"
+        "monthly": "€2,500",
+        "annually": "€2,500"
       },
       "unit": "per day",
       "cta": "Schedule Training",

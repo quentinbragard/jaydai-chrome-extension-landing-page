@@ -801,8 +801,8 @@
          "name": "KI-Coaching",
          "description": "Personalisiertes Coaching, um Ihrem Team zu helfen, KI zu meistern",
          "price": {
-           "monthly": "2.500 €",
-           "annually": "2.500 €"
+           "monthly": "3.000 €",
+           "annually": "3.000 €"
          },
          "unit": "Einmalgebühr",
          "cta": "Jetzt buchen",
@@ -821,8 +821,8 @@
          "name": "Ganztägige Schulung",
          "description": "Intensive Schulung für Ihr Team zu KI-Best-Practices",
          "price": {
-           "monthly": "2.000 €",
-           "annually": "2.000 €"
+           "monthly": "2.500 €",
+           "annually": "2.500 €"
          },
          "unit": "pro Tag",
          "cta": "Schulung planen",

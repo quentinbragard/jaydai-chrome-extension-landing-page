@@ -11,6 +11,7 @@ import BlogCard from '@/sections/blog/BlogCard'
 import BlogSectionRenderer from '@/sections/blog/BlogSectionRenderer'
 
 // Generate metadata for the blog post
+export const dynamic = 'force-dynamic';
 export async function generateMetadata({
   params
 }: {
