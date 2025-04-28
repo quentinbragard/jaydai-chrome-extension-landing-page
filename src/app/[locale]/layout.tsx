@@ -14,7 +14,15 @@ export async function generateMetadata({ params }: { params: { locale: string } 
       description: t('description'),
       type: 'website',
       locale,
-      url: `https://jayd.ai/${locale}`
+      url: `https://jayd.ai/${locale}`,
+      images: [
+        {
+          url: 'https://vetoswvwgsebhxetqppa.supabase.co/storage/v1/object/public/images/landing/og-image.png',
+          width: 1200,
+          height: 630,
+          alt: 'Jayd.ai',
+        },
+      ],
     },
     alternates: {
       languages: {
