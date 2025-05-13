@@ -122,7 +122,7 @@ const EnterpriseContactSection = () => {
   }
   
   return (
-    <section id="contact" className="py-20 bg-secondary/5 relative overflow-hidden">
+    <section id="Contact" className="py-20 bg-secondary/5 relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 bg-grid-white/[0.02] bg-[length:20px_20px] pointer-events-none"></div>
       <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-primary/5 blur-[100px] rounded-full opacity-30 transform translate-x-1/2 translate-y-1/2 pointer-events-none"></div>
