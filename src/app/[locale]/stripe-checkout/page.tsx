@@ -22,7 +22,7 @@ function StripeCheckoutContent() {
   useEffect(() => {
     const verifySession = async () => {
       try {
-        const sessionId = searchParams.get('sessionId')
+        const sessionId = searchParams.get('session-id')
         const redirectUrl = searchParams.get('redirect-url')
         const isDev = searchParams.get('dev') === 'true'
         
