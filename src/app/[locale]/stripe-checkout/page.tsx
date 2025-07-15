@@ -33,8 +33,8 @@ function StripeCheckoutContent() {
         }
         
         const apiUrl = isDev 
-          ? 'https://api.dev.jayd.ai/verify-session'
-          : 'https://api.prod.jayd.ai/verify-session'
+          ? 'https://api.dev.jayd.ai/stripe/verify-session'
+          : 'https://api.prod.jayd.ai/stripe/verify-session'
         
         const response = await fetch(apiUrl, {
           method: 'POST',
