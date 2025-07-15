@@ -18,7 +18,7 @@ export const AIToolGrid: React.FC<AIToolGridProps> = ({ onToolClick }) => {
   };
 
   return (
-    <div className="jd-grid jd-grid-cols-2 md:jd-grid-cols-3 jd-gap-4 jd-max-w-3xl jd-mx-auto">
+    <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
       {AI_TOOLS.map((tool) => (
         <ToolCard key={tool.name} tool={tool} onClick={() => handleOpen(tool.url, tool.disabled)} />
       ))}
