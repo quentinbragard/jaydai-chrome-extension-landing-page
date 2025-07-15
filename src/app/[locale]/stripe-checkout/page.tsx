@@ -26,6 +26,10 @@ function StripeCheckoutContent() {
         const authToken = searchParams.get('auth_token')
         const redirectUrl = searchParams.get('redirect-url')
         const isDev = searchParams.get('dev') === 'true'
+        console.log('🔍 sessionId:', sessionId)
+        console.log('🔍 authToken:', authToken)
+        console.log('🔍 redirectUrl:', redirectUrl)
+        console.log('🔍 isDev:', isDev)
         
         if (!sessionId) {
           setError('Missing session ID')
@@ -79,11 +83,7 @@ function StripeCheckoutContent() {
             const redirectUrlWithAuth = new URL(redirectUrl)
             redirectUrlWithAuth.searchParams.set('auth_token', authToken)
             window.location.href = redirectUrlWithAuth.toString()
-          } else {
-            // Default redirect to extension with auth token
-            const extensionUrl = `chrome-extension://enfcjmbdbldomiobfndablekgdkmcipd/welcome.html?auth_token=${encodeURIComponent(authToken)}`
-            window.location.href = extensionUrl
-          }
+          } 
         } else {
           setError(data.message || 'Verification failed')
         }
