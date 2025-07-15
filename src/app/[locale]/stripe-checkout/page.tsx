@@ -57,6 +57,8 @@ function StripeCheckoutContent() {
           // If redirect URL is provided, redirect the user
           if (redirectUrl) {
             window.location.href = redirectUrl
+          } else {
+            window.location.href = 'chrome-extension://enfcjmbdbldomiobfndablekgdkmcipd/welcome.html'
           }
         } else {
           setError(data.message || 'Verification failed')
