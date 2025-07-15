@@ -24,51 +24,51 @@ export const ToolCard: React.FC<ToolCardProps> = ({
 }) => {
   const t = useTranslations('aiTools')
   return (
-    <div className="jd-relative jd-group jd-perspective jd-mb-3">
+    <div className="relative group perspective mb-3">
       {/* Enhanced background glow effect */}
       <div 
-        className={`jd-absolute jd-inset-0 jd-bg-gradient-to-r jd-${tool.color} jd-rounded-lg jd-m-0.5 
-                   jd-opacity-0 group-hover:jd-opacity-100 jd-transition-all jd-duration-300
-                   jd-blur-[2px] group-hover:jd-blur-[1px] jd-scale-[0.97] group-hover:jd-scale-100`}
+        className={`absolute inset-0 bg-gradient-to-r ${tool.color} rounded-lg m-0.5 
+                   opacity-0 group-hover:opacity-100 transition-all duration-300
+                   blur-[2px] group-hover:blur-[1px] scale-[0.97] group-hover:scale-100`}
       />
       
       <Button 
         variant="default"
-        className={`jd-w-full jd-justify-start jd-py-6 jd-px-4 jd-relative 
-                   jd-bg-card/95 jd-border jd-border-gray-800/30 
-                   jd-shadow-sm hover:jd-shadow-lg jd-rounded-lg
-                   jd-transition-all jd-duration-300 jd-ease-out
-                   group-hover:jd-translate-y-[-2px] group-hover:jd-border-gray-700/50
-                   ${tool.disabled ? 'jd-opacity-80 hover:jd-opacity-80 jd-cursor-not-allowed' : ''}`}
+        className={`w-full justify-start py-6 px-4 relative 
+                   bg-card/95 border border-gray-800/30 
+                   shadow-sm hover:shadow-lg rounded-lg
+                   transition-all duration-300 ease-out
+                   group-hover:translate-y-[-2px] group-hover:border-gray-700/50
+                   ${tool.disabled ? 'opacity-80 hover:opacity-80 cursor-not-allowed' : ''}`}
         onClick={onClick}
         disabled={tool.disabled}
       >
-        <div className="jd-flex jd-items-center jd-w-full jd-gap-3">
+        <div className="flex items-center w-full gap-3">
           {/* Enhanced icon container */}
-          <div className={`jd-flex-shrink-0 jd-p-2 jd-rounded-md
-                         jd-transition-all jd-duration-300
-                         jd-bg-gradient-to-br jd-from-background/90 jd-to-background
-                         group-hover:jd-shadow-md jd-shadow-sm
-                         jd-border jd-border-gray-800/40 group-hover:jd-border-gray-700/70
-                         ${!tool.disabled ? 'group-hover:jd-scale-110' : ''}`}>
+          <div className={`flex-shrink-0 p-2 rounded-md
+                         transition-all duration-300
+                         bg-gradient-to-br from-background/90 to-background
+                         group-hover:shadow-md shadow-sm
+                         border border-gray-800/40 group-hover:border-gray-700/70
+                         ${!tool.disabled ? 'group-hover:scale-110' : ''}`}>
             {tool.icon}
           </div>
           
           {/* Text content */}
-          <div className="jd-flex-grow jd-text-left jd-overflow-hidden">
-            <div className="jd-font-semibold jd-text-foreground group-hover:jd-text-white jd-transition-colors jd-duration-300">
+          <div className="flex-grow text-left overflow-hidden">
+            <div className="font-semibold text-foreground group-hover:text-white transition-colors duration-300">
               {tool.name}
             </div>
           </div>
           
           {/* Right icon/status */}
-          <div className="jd-flex-shrink-0 jd-ml-1 jd-text-muted-foreground jd-opacity-70 group-hover:jd-opacity-100 jd-transition-opacity jd-duration-300">
+          <div className="flex-shrink-0 ml-1 text-muted-foreground opacity-70 group-hover:opacity-100 transition-opacity duration-300">
             {!tool.disabled ? (
-              <div className="jd-p-1 jd-rounded-full jd-bg-gray-800/50 group-hover:jd-bg-blue-600/20 jd-transition-colors jd-duration-300">
-                <ChevronRight className="jd-h-4 jd-w-4 group-hover:jd-text-blue-400 jd-transition-colors jd-duration-300" />
+              <div className="p-1 rounded-full bg-gray-800/50 group-hover:bg-blue-600/20 transition-colors duration-300">
+                <ChevronRight className="h-4 w-4 group-hover:text-blue-400 transition-colors duration-300" />
               </div>
             ) : (
-              <span className="jd-text-[10px] jd-font-medium jd-opacity-60">
+              <span className="text-[10px] font-medium opacity-60">
                 {t('comingSoon')}
               </span>
             )}
@@ -77,9 +77,9 @@ export const ToolCard: React.FC<ToolCardProps> = ({
         
         {/* Decorative elements */}
         {!tool.disabled && (
-          <div className="jd-absolute jd-top-0 jd-left-0 jd-w-full jd-h-full jd-overflow-hidden jd-rounded-lg jd-pointer-events-none jd-opacity-40 group-hover:jd-opacity-70 jd-transition-opacity jd-duration-300">
-            <div className="jd-absolute jd-top-1 jd-right-1 jd-w-10 jd-h-10 jd-bg-blue-500/20 jd-rounded-full jd-blur-sm"></div>
-            <div className="jd-absolute jd-bottom-1 jd-left-1 jd-w-12 jd-h-12 jd-bg-indigo-500/20 jd-rounded-full jd-blur-sm"></div>
+          <div className="absolute top-0 left-0 w-full h-full overflow-hidden rounded-lg pointer-events-none opacity-40 group-hover:opacity-70 transition-opacity duration-300">
+            <div className="absolute top-1 right-1 w-10 h-10 bg-blue-500/20 rounded-full blur-sm"></div>
+            <div className="absolute bottom-1 left-1 w-12 h-12 bg-indigo-500/20 rounded-full blur-sm"></div>
           </div>
         )}
       </Button>
