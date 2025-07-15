@@ -1123,5 +1123,27 @@
       "recent": "Plus Récents",
       "trending": "Tendances"
     }
+  },
+  "payment": {
+    "metaTitle": "Vérification de paiement - Jayd.ai",
+    "metaDescription": "Vérifiez votre paiement et commencez à utiliser Jayd.ai",
+    "verifying": "Vérification de votre paiement...",
+    "verificationFailed": "Échec de la vérification",
+    "tryAgain": "Réessayer",
+    "paymentSuccessful": "Paiement réussi !",
+    "thankYou": "Merci pour votre achat. Votre compte a été mis à niveau.",
+    "getStarted": "Commencer maintenant",
+    "chooseToolBelow": "Choisissez l'un des outils AI ci-dessous pour commencer"
+  },
+  "aiTools": {
+    "description": {
+      "ChatGPT": "IA conversationnelle d'OpenAI",
+      "Copilot": "Recherche et chat IA de Microsoft Copilot",
+      "Mistral": "IA conversationnelle de Mistral AI",
+      "Claude": "IA assistant d'Anthropic",
+      "Gemini": "IA générative de Google",
+      "Perplexity": "Recherche et chat IA"
+    },
+    "comingSoon": "Bientôt disponible"
   }
-}
+} 

@@ -1113,5 +1113,27 @@
     "promptCopied": "Prompt kopiert!",
     "noResults": "Keine Prompts für Ihre Suche gefunden",
     "loadMore": "Weitere Prompts laden"
+  },
+  "payment": {
+    "metaTitle": "Zahlungsverifizierung - Jayd.ai",
+    "metaDescription": "Verifizieren Sie Ihre Zahlung und beginnen Sie mit Jayd.ai",
+    "verifying": "Zahlungsverifizierung...",
+    "verificationFailed": "Verifizierung fehlgeschlagen",
+    "tryAgain": "Erneut versuchen",
+    "paymentSuccessful": "Zahlung erfolgreich!",
+    "thankYou": "Danke für Ihre Zahlung. Ihr Konto wurde aktualisiert.",
+    "getStarted": "Jetzt starten",
+    "chooseToolBelow": "Wählen Sie eines der folgenden AI-Tools, um zu beginnen"
+  },
+  "aiTools": {
+    "description": {
+      "ChatGPT": "OpenAIs konversationelle KI",
+      "Copilot": "Microsoft Copilot KI-gestützte Suche und Chat",
+      "Mistral": "Mistral AIs konversationelles Modell",
+      "Claude": "Anthropics KI-Assistent",
+      "Gemini": "Googles generative KI",
+      "Perplexity": "KI-gestützte Suche und Chat"
+    },
+    "comingSoon": "Bald verfügbar"
   }
 }
