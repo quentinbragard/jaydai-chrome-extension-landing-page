@@ -22,7 +22,7 @@ function StripeCheckoutContent() {
   useEffect(() => {
     const verifySession = async () => {
       try {
-        const sessionId = searchParams.get('sessionId')
+        const sessionId = searchParams.get('session-id')
         const redirectUrl = searchParams.get('redirect-url')
         const isDev = searchParams.get('dev') === 'true'
         
@@ -57,6 +57,8 @@ function StripeCheckoutContent() {
           // If redirect URL is provided, redirect the user
           if (redirectUrl) {
             window.location.href = redirectUrl
+          } else {
+            window.location.href = 'chrome-extension://enfcjmbdbldomiobfndablekgdkmcipd/welcome.html'
           }
         } else {
           setError(data.message || 'Verification failed')
