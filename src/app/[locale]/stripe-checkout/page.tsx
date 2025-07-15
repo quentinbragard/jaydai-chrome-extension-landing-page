@@ -23,11 +23,18 @@ function StripeCheckoutContent() {
     const verifySession = async () => {
       try {
         const sessionId = searchParams.get('session-id')
+        const authToken = searchParams.get('auth_token')
         const redirectUrl = searchParams.get('redirect-url')
         const isDev = searchParams.get('dev') === 'true'
         
         if (!sessionId) {
           setError('Missing session ID')
+          setLoading(false)
+          return
+        }
+
+        if (!authToken) {
+          setError('Missing authentication token')
           setLoading(false)
           return
         }
@@ -40,11 +47,18 @@ function StripeCheckoutContent() {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
+            'Authorization': `Bearer ${authToken}`,
           },
           body: JSON.stringify({ sessionId }),
         })
         
         const data = await response.json()
+        
+        if (response.status === 401 || response.status === 403) {
+          setError('Authentication failed. Please try again.')
+          setLoading(false)
+          return
+        }
         
         if (data.success) {
           setSuccess(true)
@@ -54,18 +68,28 @@ function StripeCheckoutContent() {
             timestamp: new Date().toISOString()
           })
           
+          // Store auth token in localStorage for future use
+          if (authToken) {
+            localStorage.setItem('authToken', authToken)
+          }
+          
           // If redirect URL is provided, redirect the user
           if (redirectUrl) {
-            window.location.href = redirectUrl
+            // Add auth token to redirect URL
+            const redirectUrlWithAuth = new URL(redirectUrl)
+            redirectUrlWithAuth.searchParams.set('auth_token', authToken)
+            window.location.href = redirectUrlWithAuth.toString()
           } else {
-            window.location.href = 'chrome-extension://enfcjmbdbldomiobfndablekgdkmcipd/welcome.html'
+            // Default redirect to extension with auth token
+            const extensionUrl = `chrome-extension://enfcjmbdbldomiobfndablekgdkmcipd/welcome.html?auth_token=${encodeURIComponent(authToken)}`
+            window.location.href = extensionUrl
           }
         } else {
           setError(data.message || 'Verification failed')
         }
       } catch (err) {
+        console.error('Verification error:', err)
         setError('An error occurred during verification')
-        console.error(err)
       } finally {
         setLoading(false)
       }
@@ -104,9 +128,16 @@ function StripeCheckoutContent() {
           </p>
           <Button 
             onClick={() => window.location.reload()}
-            className="bg-primary text-primary-foreground"
+            className="bg-primary text-primary-foreground mr-4"
           >
             {t('tryAgain')}
+          </Button>
+          <Button 
+            onClick={() => window.location.href = 'https://jayd.ai/'}
+            variant="outline"
+            className="bg-secondary text-secondary-foreground"
+          >
+            Back to Home
           </Button>
         </div>
       </div>
