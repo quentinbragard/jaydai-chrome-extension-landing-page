@@ -1,7 +1,7 @@
 // src/app/[locale]/stripe-checkout/page.tsx
 "use client"
 
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, Suspense } from "react"
 import { useSearchParams } from "next/navigation"
 import { AIToolGrid } from "@/components/common/AITools/AIToolGrid"
 import { Button } from "@/components/ui/button"
@@ -11,7 +11,7 @@ import { AuroraBackground } from "@/components/ui/aurora-backgound"
 import { useTranslations } from "next-intl"
 import { trackEvent } from "@/lib/analytics"
 
-export default function StripeCheckoutPage() {
+function StripeCheckoutContent() {
   const searchParams = useSearchParams()
   const t = useTranslations('payment')
   
@@ -177,4 +177,12 @@ export default function StripeCheckoutPage() {
   }
   
   return null
+}
+
+export default function StripeCheckoutPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <StripeCheckoutContent />
+    </Suspense>
+  )
 }
