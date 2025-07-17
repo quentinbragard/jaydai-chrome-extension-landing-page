@@ -79,11 +79,8 @@ function StripeCheckoutContent() {
           
           // If redirect URL is provided, redirect the user
           if (redirectUrl) {
-            // Add auth token to redirect URL
-            const redirectUrlWithAuth = new URL(redirectUrl)
-            redirectUrlWithAuth.searchParams.set('auth_token', authToken)
-            window.location.href = redirectUrlWithAuth.toString()
-          } 
+            window.location.href = redirectUrl
+          }
         } else {
           setError(data.message || 'Verification failed')
         }
