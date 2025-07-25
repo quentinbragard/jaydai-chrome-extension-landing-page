@@ -123,7 +123,7 @@ const FeaturesSection = () => {
               target="_blank"
               className="px-8 py-3 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium"
               onClick={() => {
-                trackEvent('Button Clicked', {
+                trackEvent(`${isMobile ? 'Mobile Download Extension' : 'Download Extension'}`, {
                   button_name: 'homeFeaturesDownloadExtension',
                   page_location: window.location.pathname,
                   source: 'homeFeaturesSection',

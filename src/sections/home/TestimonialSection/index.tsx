@@ -162,7 +162,7 @@ const TestimonialsSection = () => {
           
           <a
             onClick={() => {
-              trackEvent('Button Clicked', {
+              trackEvent(`${isMobile ? 'Mobile Download Extension' : 'Download Extension'}`, {
                 button_name: 'homeTestimonialsSectionCta',
                 page_location: window.location.pathname,
                 source: 'homeTestimonialsSection',

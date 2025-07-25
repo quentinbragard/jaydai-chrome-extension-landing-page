@@ -318,7 +318,7 @@ const HowItWorksSection = () => {
             data-extension
             target="_blank"
             onClick={(e) => {
-              trackEvent('Button Clicked', {
+              trackEvent(`${isMobile ? 'Mobile Download Extension' : 'Download Extension'}`, {
                 button_name: 'homeHowItWorksCta',
                 page_location: window.location.pathname,
                 source: 'homeHowItWorksSection',

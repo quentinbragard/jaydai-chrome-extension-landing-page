@@ -36,7 +36,7 @@ const BlogPostCallToAction: React.FC<BlogPostCallToActionProps> = ({
   const ctaContent = content || t('blogCta.defaultContent')
   
   const handleClick = () => {
-    trackEvent('Button Clicked', {
+    trackEvent(`${isMobile ? 'Mobile Download Extension' : 'Download Extension'}`, {
       button_name: 'blogPostCallToAction',
       page_location: window.location.pathname,
       source: 'blogPost',

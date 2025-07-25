@@ -256,7 +256,7 @@ const Navbar = () => {
               <a 
                 className="flex items-center gap-2 font-bold whitespace-nowrap text-xs lg:text-sm px-3 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
                 onClick={() => {
-                  trackEvent('Button Clicked', {
+                  trackEvent(`${isMobile ? 'Mobile Download Extension' : 'Download Extension'}`, {
                     button_name: 'navbarDownloadExtension',
                     page_location: window.location.pathname,
                     source: 'navbar',
@@ -436,7 +436,7 @@ const Navbar = () => {
               <a 
                 className="flex items-center gap-2 font-bold whitespace-nowrap text-sm px-3 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
                 onClick={() => {
-                  trackEvent('Button Clicked', {
+                  trackEvent(`${isMobile ? 'Mobile Download Extension' : 'Download Extension'}`, {
                     button_name: 'navbarDownloadExtension',
                     page_location: window.location.pathname,
                     source: 'navbar',

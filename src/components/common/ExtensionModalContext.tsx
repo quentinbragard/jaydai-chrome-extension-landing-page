@@ -17,7 +17,6 @@ import { Button } from "@/components/ui/button"
 import { trackEvent } from "@/lib/analytics"
 import { useTranslations } from "next-intl"
 
-const EXTENSION_URL = "https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd"
 
 interface ExtensionModalContextValue {
   open: () => void
