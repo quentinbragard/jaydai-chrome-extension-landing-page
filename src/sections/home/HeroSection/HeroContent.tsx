@@ -66,7 +66,7 @@ const HeroContent: React.FC<HeroContentProps> = ({
       <ShimmerButton
         data-extension
         onClick={() => {
-          trackEvent('Button Clicked', {
+          trackEvent(`${isMobile ? 'Mobile Download Extension' : 'Download Extension'}`, {
             button_name: 'homeHeroDownloadExtension',
             page_location: window.location.pathname,
             source: 'homeHeroSection',

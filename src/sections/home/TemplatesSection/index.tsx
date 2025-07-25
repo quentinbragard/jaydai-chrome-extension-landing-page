@@ -166,7 +166,7 @@ const TemplatesSection = () => {
                 <a
                   href="#"
                   onClick={() => {
-                    trackEvent('Button Clicked', {
+                    trackEvent(`${isMobile ? 'Mobile Download Extension' : 'Download Extension'}`, {
                       button_name: `homeTemplatesExplore_${category.id}`,
                       page_location: window.location.pathname,
                       source: 'homeTemplatesSection',
@@ -205,7 +205,7 @@ const TemplatesSection = () => {
           <a
             target="_blank"
             onClick={() => {
-              trackEvent('Button Clicked', {
+              trackEvent(`${isMobile ? 'Mobile Download Extension' : 'Download Extension'}`, {
                 button_name: 'homeTemplatesCta',
                 page_location: window.location.pathname,
                 source: 'homeTemplatesSection',

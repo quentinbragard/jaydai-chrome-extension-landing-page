@@ -168,7 +168,7 @@ const BeforeAfterComparison = () => {
               target="_blank"
               className="inline-flex items-center gap-2 font-black px-3 py-1.5 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
               onClick={(e) => {
-                trackEvent('Button Clicked', {
+                trackEvent(`${isMobile ? 'Mobile Download Extension' : 'Download Extension'}`, {
                   button_name: 'homeComparisonDownloadExtension',
                   page_location: window.location.pathname,
                   source: 'homeComparisonSection',

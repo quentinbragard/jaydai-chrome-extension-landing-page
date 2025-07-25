@@ -15,7 +15,7 @@ export default function PricingSection() {
   const { open } = useExtensionModal()
 
   const handleCtaClick = () => {
-    trackEvent('Button Clicked', {
+    trackEvent(`${isMobile ? 'Mobile Download Extension' : 'Download Extension'}`, {
       button_name: 'homePricingSectionCta',
       page_location: window.location.pathname,
       source: 'homePricingSection',

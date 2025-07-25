@@ -243,8 +243,8 @@ const Footer = () => {
           <div className="mt-4 md:mt-0">
             <a 
               onClick={() => {
-                trackEvent('Button Clicked', {
-                  button_name: 'footerDownloadExtension',
+                trackEvent(`${isMobile ? 'Mobile Download Extension' : 'Download Extension'}`, {
+                  button_name: 'footerLink_downloadExtension',
                   page_location: window.location.pathname,
                   source: 'footer',
                   timestamp: new Date().toISOString()
