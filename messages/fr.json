@@ -20,7 +20,7 @@
     "badge": "Maximisez votre potentiel IA avec Jaydai",
     "title": "Tous les meilleurs prompts directement dans",
     "titleHighlight": "ChatGPT",
-    "subtitle": " Libérez tout le potentiel de ChatGPT avec notre extension : prompts d’experts, création de vos propres modèles, et suivi intelligent de votre utilisation.",
+    "subtitle": "Libérez tout le potentiel de ChatGPT, Claude, Mistral, Copilot, etc. avec notre extension chrome : Retrouvez + de 1000 prompts experts, créez vos propres modèles et analysez votre utilisation ",
     "ctaExtension": "Obtenir l'extension Chrome",
     "ctaDemo": "Regarder la démo",
     "stats": [
@@ -29,12 +29,12 @@
         "label": "Réponses plus efficaces"
       },
       {
-        "value": "70%",
+        "value": "90%",
         "label": "Temps économisé en rédigeant des prompts"
       },
       {
-        "value": "100%",
-        "label": "Contrôle de vos statistiques d'utilisation"
+        "value": "1000+",
+        "label": "Prompts experts"
       }
     ]
   },
@@ -46,23 +46,19 @@
       "description": "Accédez à des collections de prompts experts organisés par cas d'usage et secteur d'activité. Nos bibliothèques sont constamment mises à jour avec les dernières techniques et meilleures pratiques."
     },
     "companyTemplates": {
-      "title": "Modèles d'Entreprise",
-      "description": "Partagez une banque de prompts personnalisée avec toute votre équipe pour des cas d'utilisation spécifiques. Standardisez les interactions IA dans votre organisation et assurez des résultats cohérents."
+      "title": "Plu de 1000 prompts officiels",
+      "description": "Accédez à des collections de prompts experts organisés par cas d'usage et secteur d'activité."
     },
     "customTemplates": {
-      "title": "Créer des Modèles Personnalisés",
+      "title": "Votre propre bibliothèque en un clic",
       "description": "Construisez et enregistrez vos propres modèles de prompts pour gagner du temps sur des projets récurrents. Organisez-les par catégorie et accédez-y en un seul clic."
     },
     "analytics": {
-      "title": "Analytiques Détaillées",
-      "description": "Suivez votre utilisation de l'IA avec des analytiques complètes. Surveillez le temps économisé, l'empreinte énergétique et l'efficacité des différents types de prompts pour optimiser votre workflow."
+      "title": "Analytiques détaillées ",
+      "description": "Suivez vos statistiques d’utilisation de vos outils d’IA préférés. Nombre de messages, efficacité de vos prompts empreinte énergétique. Toute la Data pour progresser rapidement !"
     },
     "aiUpdates": {
-      "title": "Newsletter IA",
-      "description": "Restez informé des derniers développements en IA et comment les exploiter. Nous mettons continuellement à jour nos bibliothèques de prompts pour intégrer de nouvelles capacités et techniques."
-    },
-    "learningSchool": {
-      "title": "Plateforme d’apprentissage",
+      "title": "Plateforme d’apprentissage (à venir)",
       "description": "Accédez à notre plateforme d'apprentissage en ligne avec des simulations en conditions réelles pour maîtriser l'ingénierie des prompts IA. Apprenez à créer des prompts efficaces pour toutes les situations."
     },
     "cta": {
@@ -129,8 +125,8 @@
         "description": "Cliquez sur \"Commencer\" et créez votre compte. Vous pouvez vous inscrire avec Google ou par e-mail."
       },
       "3": {
-        "title": "Accédez à ChatGPT",
-        "description": "Vous verrez un nouveau bouton pour accéder à Jaydai dans le coin inférieur droit de l'interface ChatGPT."
+        "title": "Connectez-vous sur votre IA préférée",
+        "description": "Vous verrez un nouveau bouton pour accéder à Jaydai dans le coin inférieur de l’interface de ChatGPT, Claude, Mistral et tous les autres outils d’IA."
       },
       "4": {
         "title": "Choisissez Votre Prompt",
