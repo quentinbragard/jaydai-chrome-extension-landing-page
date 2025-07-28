@@ -74,9 +74,9 @@ export const RotatingTools = () => {
       </AnimatePresence>
       {/* Logos orbiting around */}
       <span
-        className="absolute inset-0 flex items-center justify-center"
+        className="absolute inset-0 flex items-center justify-center animate-spin"
         aria-hidden="true"
-        style={{ animation: "spin 20s linear infinite" }}
+        style={{ animationDuration: "20s" }}
       >
         {TOOLS.map((tool, idx) => {
           const angle = (idx / TOOLS.length) * 360;
