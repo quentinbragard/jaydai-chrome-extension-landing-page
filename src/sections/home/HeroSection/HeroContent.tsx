@@ -7,6 +7,7 @@ import { trackEvent } from '@/lib/analytics'
 import { motion } from "framer-motion"
 import { Play } from "lucide-react"
 import { ShimmerButton } from "@/components/ui/shimmer-button"
+import RotatingTools from "./RotatingTools"
 
 interface HeroContentProps {
   openVideoDialog: () => void
@@ -40,8 +41,8 @@ const HeroContent: React.FC<HeroContentProps> = ({
         className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground max-w-4xl"
       >
         {translations('title')}{" "}
-        <span className="text-primary relative">
-          {translations('titleHighlight')}
+        <span className="text-primary relative inline-block">
+          <RotatingTools />
           <span className="absolute -bottom-2 left-0 right-0 h-1 bg-primary/50 rounded-full"></span>
         </span>
       </motion.h1>
