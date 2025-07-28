@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 // Simple list of tools with their logo URLs
@@ -29,6 +29,8 @@ const TOOLS = [
 
 export const RotatingTools = () => {
   const [index, setIndex] = useState(0);
+  const [radius, setRadius] = useState(40)
+  const containerRef = useRef<HTMLSpanElement>(null)
 
   useEffect(() => {
     const id = setInterval(() => {
@@ -37,10 +39,28 @@ export const RotatingTools = () => {
     return () => clearInterval(id);
   }, []);
 
-  const radius = 40;
+  // Update the radius based on text size so the circle always
+  // surrounds the full content on any screen size
+  const updateRadius = () => {
+    if (containerRef.current) {
+      const rect = containerRef.current.getBoundingClientRect()
+      // Add some extra space around the text for the logos
+      setRadius(Math.max(rect.width, rect.height) / 2 + 20)
+    }
+  }
+
+  useEffect(() => {
+    updateRadius()
+    window.addEventListener('resize', updateRadius)
+    return () => window.removeEventListener('resize', updateRadius)
+  }, [])
+
+  useEffect(() => {
+    updateRadius()
+  }, [index])
 
   return (
-    <span className="relative inline-block">
+    <span ref={containerRef} className="relative inline-block">
       <AnimatePresence mode="wait">
         <motion.span
           key={TOOLS[index].name}
