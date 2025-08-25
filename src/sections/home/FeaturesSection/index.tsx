@@ -68,15 +68,6 @@ const FeaturesSection = () => {
       color: "bg-red-500/10",
       iconColor: "text-red-500",
       delay: 0.5
-    },
-    {
-      id: 6,
-      title: t('learningSchool.title'),
-      description: t('learningSchool.description'),
-      icon: GraduationCap,
-      color: "bg-teal-500/10",
-      iconColor: "text-teal-500",
-      delay: 0.6
     }
   ]
 

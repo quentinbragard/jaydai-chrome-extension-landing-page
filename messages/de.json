@@ -21,7 +21,7 @@
        "badge": "Maximieren Sie Ihr KI-Potenzial mit Jaydai",
        "title": "Die besten Prompts direkt in",
        "titleHighlight": "ChatGPT",
-       "subtitle": "Verändern Sie Ihre ChatGPT-Nutzung mit unserer Bibliothek von Experten-Prompts, benutzerdefinierten Vorlagen und detaillierten Analysen.",
+       "subtitle": "Verändern Sie Ihre ChatGPT-Nutzung mit unserer Bibliothek von Experten-Prompts, benutzerdefinierten Vorlagen und detaillierten Analysen. Entdecken Sie +1000 Experten-Prompts, erstellen Sie Ihre eigenen Vorlagen und verfolgen Sie Ihre Nutzung.",
        "ctaExtension": "Chrome-Erweiterung holen",
        "ctaDemo": "Demo ansehen",
        "stats": [
@@ -30,12 +30,12 @@
            "label": "Effektivere Antworten"
          },
          {
-           "value": "70%",
+           "value": "90%",
            "label": "Zeitersparnis beim Schreiben von Prompts"
          },
          {
-           "value": "100%",
-           "label": "Kontrolle über Nutzungsstatistiken"
+           "value": "1000+",
+           "label": "Experten-Prompts"
          }
        ]
      },
@@ -47,24 +47,20 @@
          "description": "Greifen Sie auf kuratierte Sammlungen von Experten-Prompts zu, organisiert nach Anwendungsfall und Branche. Unsere Bibliotheken werden ständig mit den neuesten Techniken und bewährten Methoden aktualisiert."
        },
        "companyTemplates": {
-         "title": "Unternehmensvorlagen",
-         "description": "Teilen Sie eine angepasste Prompt-Bank mit Ihrem gesamten Team für spezifische Geschäftsanwendungen. Standardisieren Sie KI-Interaktionen in Ihrer Organisation und stellen Sie konsistente Ergebnisse sicher."
+         "title": "Mehr als 1000 offizielle Prompts",
+         "description": "Greifen Sie auf kuratierte Sammlungen von Experten-Prompts zu, organisiert nach Anwendungsfall und Branche. Unsere Bibliotheken werden ständig mit den neuesten Techniken und bewährten Methoden aktualisiert."
        },
        "customTemplates": {
-         "title": "Erstellen Sie benutzerdefinierte Vorlagen",
-         "description": "Erstellen und speichern Sie Ihre eigenen Prompt-Vorlagen, um Zeit bei wiederkehrenden Projekten zu sparen. Organisieren Sie sie nach Kategorien und greifen Sie mit einem einzigen Klick darauf zu."
+         "title": "Ihre eigene Bibliothek in einem Klick",
+         "description": "Build and save your own prompt templates to save time when working on recurring projects. Organize them by category and access them with a single click."
        },
        "analytics": {
          "title": "Detaillierte Analysen",
-         "description": "Verfolgen Sie Ihre KI-Nutzung mit umfassenden Analysen. Überwachen Sie eingesparte Zeit, Energieverbrauch und Effektivität verschiedener Prompt-Typen, um Ihren Arbeitsablauf zu optimieren."
+         "description": "Track your AI usage with comprehensive analytics. Monitor time saved, energy footprint, and effectiveness of different prompt types to optimize your workflow."
        },
        "aiUpdates": {
-         "title": "KI-Fortschritts-Updates",
-         "description": "Bleiben Sie über die neuesten KI-Entwicklungen informiert und erfahren Sie, wie Sie diese nutzen können. Wir aktualisieren kontinuierlich unsere Prompt-Bibliotheken, um neue Fähigkeiten und Techniken zu integrieren."
-       },
-       "learningSchool": {
-         "title": "Lernplattform",
-         "description": "Greifen Sie auf unsere Online-Lernplattform mit praxisnahen Simulationen zu, um KI-Prompt-Engineering zu meistern. Lernen Sie, wie Sie effektive Prompts für jede Situation erstellen."
+         "title": "AI Advancement Updates",
+         "description": "Stay informed about the latest AI developments and how to leverage them. We continuously update our prompt libraries to incorporate new capabilities and techniques."
        },
        "cta": {
          "description": "Erleben Sie all diese Funktionen und mehr mit unserer kostenlosen Chrome-Erweiterung.",
@@ -130,8 +126,8 @@
            "description": "Klicken Sie auf \"Jetzt starten\" und erstellen Sie Ihr Konto. Sie können sich mit Google oder E-Mail anmelden."
          },
          "3": {
-           "title": "Gehen Sie zu ChatGPT",
-           "description": "Sie sehen einen neuen Button, um in der unteren rechten Ecke der ChatGPT-Oberfläche auf Jaydai zuzugreifen."
+           "title": "Verbinden Sie sich mit Ihrer bevorzugten KI",
+           "description": "Sie werden einen neuen Button sehen, um in der unteren rechten Ecke der ChatGPT, Claude, Mistral und allen anderen KI-Oberflächen auf Jaydai zuzugreifen."
          },
          "4": {
            "title": "Wählen Sie Ihren Prompt",
