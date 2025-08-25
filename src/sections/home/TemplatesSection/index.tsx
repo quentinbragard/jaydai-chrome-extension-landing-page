@@ -4,7 +4,7 @@ import React, { useRef } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { useTranslations } from "next-intl"
 import { ArrowRight } from "lucide-react"
-import { trackEvent } from '@/lib/analytics'
+import { trackEvent, gtagSendEvent } from '@/lib/analytics'
 import { useIsMobile } from '@/hooks/use-mobile'
 import { useExtensionModal } from "@/components/common/ExtensionModalContext"
 
@@ -165,7 +165,7 @@ const TemplatesSection = () => {
                 <p className="text-foreground/70 mb-4">{category.description}</p>
                 <a
                   href="#"
-                  onClick={() => {
+                  onClick={(e) => {
                     trackEvent(`${isMobile ? 'Mobile Download Extension' : 'Download Extension'}`, {
                       button_name: `homeTemplatesExplore_${category.id}`,
                       page_location: window.location.pathname,
@@ -173,9 +173,11 @@ const TemplatesSection = () => {
                       timestamp: new Date().toISOString()
                     })
                     if (isMobile) {
+                      e.preventDefault()
                       open()
                     } else {
-                      window.open("https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd", "_blank")
+                      e.preventDefault()
+                      gtagSendEvent('https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd')
                     }
                   }}
                   className={`inline-flex items-center ${category.textColor} hover:underline`}
@@ -204,7 +206,7 @@ const TemplatesSection = () => {
           
           <a
             target="_blank"
-            onClick={() => {
+            onClick={(e) => {
               trackEvent(`${isMobile ? 'Mobile Download Extension' : 'Download Extension'}`, {
                 button_name: 'homeTemplatesCta',
                 page_location: window.location.pathname,
@@ -212,14 +214,16 @@ const TemplatesSection = () => {
                 timestamp: new Date().toISOString()
               })
               if (isMobile) {
+                e.preventDefault()
                 open()
               } else {
-                window.open("https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd", "_blank")
+                e.preventDefault()
+                gtagSendEvent('https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd')
               }
             }}
             className="px-8 py-3 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium"
           >
-            {t('ctaButtonText')} 
+            {t('ctaButtonText')}
           </a>
         </motion.div>
       </div>
