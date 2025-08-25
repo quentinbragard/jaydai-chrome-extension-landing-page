@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Check, ArrowRight, Building2 } from "lucide-react";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { useTranslations } from "next-intl";
-import { trackEvent } from '@/lib/analytics'
+import { trackEvent, gtagSendEvent } from '@/lib/analytics'
 import { useIsMobile } from '@/hooks/use-mobile'
 import { useExtensionModal } from '@/components/common/ExtensionModalContext'
 
@@ -24,10 +24,7 @@ export default function PricingSection() {
     if (isMobile) {
       open()
     } else {
-      window.open(
-        "https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd",
-        "_blank"
-      )
+      gtagSendEvent('https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd')
     }
   }
 

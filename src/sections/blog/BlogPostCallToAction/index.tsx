@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import { ArrowRight, Star, ChevronRight } from 'lucide-react'
-import { trackEvent } from '@/lib/analytics'
+import { trackEvent, gtagSendEvent } from '@/lib/analytics'
 import { useIsMobile } from '@/hooks/use-mobile'
 import { useExtensionModal } from '@/components/common/ExtensionModalContext'
 
@@ -101,6 +101,9 @@ const BlogPostCallToAction: React.FC<BlogPostCallToActionProps> = ({
                     if (isMobile) {
                       e.preventDefault()
                       open()
+                    } else {
+                      e.preventDefault()
+                      gtagSendEvent(href)
                     }
                   }}
                   className={`inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-colors ${

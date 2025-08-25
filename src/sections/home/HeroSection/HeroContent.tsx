@@ -3,7 +3,7 @@
 import React from "react"
 import { useIsMobile } from '@/hooks/use-mobile'
 import { useExtensionModal } from '@/components/common/ExtensionModalContext'
-import { trackEvent } from '@/lib/analytics'
+import { trackEvent, gtagSendEvent } from '@/lib/analytics'
 import { motion } from "framer-motion"
 import { Play } from "lucide-react"
 import { ShimmerButton } from "@/components/ui/shimmer-button"
@@ -76,7 +76,7 @@ const HeroContent: React.FC<HeroContentProps> = ({
           if (isMobile) {
             open()
           } else {
-            window.open("https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd", "_blank")
+            gtagSendEvent('https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd')
           }
         }}
           className="px-8 py-3 rounded-md text-primary-foreground font-black"

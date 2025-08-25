@@ -14,11 +14,17 @@ import { trackEvent } from "@/lib/analytics"
 function StripeCheckoutContent() {
   const searchParams = useSearchParams()
   const t = useTranslations('payment')
-  
+
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [success, setSuccess] = useState(false)
-  
+
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'manual_event_PURCHASE', {})
+    }
+  }, [])
+
   useEffect(() => {
     const verifySession = async () => {
       try {

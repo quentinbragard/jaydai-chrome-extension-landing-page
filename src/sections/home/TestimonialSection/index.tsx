@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import { useTranslations } from "next-intl"
 import { Star, Quote, ArrowUpRight } from "lucide-react"
-import { trackEvent } from '@/lib/analytics'
+import { trackEvent, gtagSendEvent } from '@/lib/analytics'
 import { useIsMobile } from '@/hooks/use-mobile'
 import { useExtensionModal } from "@/components/common/ExtensionModalContext"
 
@@ -161,7 +161,7 @@ const TestimonialsSection = () => {
           </p>
           
           <a
-            onClick={() => {
+            onClick={(e) => {
               trackEvent(`${isMobile ? 'Mobile Download Extension' : 'Download Extension'}`, {
                 button_name: 'homeTestimonialsSectionCta',
                 page_location: window.location.pathname,
@@ -169,16 +169,18 @@ const TestimonialsSection = () => {
                 timestamp: new Date().toISOString()
               })
               if (isMobile) {
+                e.preventDefault()
                 open()
               } else {
-                window.open("https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd", "_blank")
+                e.preventDefault()
+                gtagSendEvent('https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd')
               }
             }}
             target="_blank"
             className="px-8 py-3 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium"
-            style={{ 
-              backgroundColor: "rgb(99, 102, 241)", 
-              color: "white" 
+            style={{
+              backgroundColor: "rgb(99, 102, 241)",
+              color: "white"
             }} // Explicit styling for button
           >
             {t('cta.buttonText')}
