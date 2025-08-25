@@ -72,34 +72,6 @@ export const RotatingTools = () => {
           {TOOLS[index].name}
         </motion.span>
       </AnimatePresence>
-      {/* Logos orbiting around */}
-      <span
-        className="absolute inset-0 flex items-center justify-center animate-spin"
-        aria-hidden="true"
-        style={{ animationDuration: "20s" }}
-      >
-        {TOOLS.map((tool, idx) => {
-          const angle = (idx / TOOLS.length) * 360;
-          const transform = `rotate(${angle}deg) translate(${radius}px) rotate(-${angle}deg)`;
-          return (
-            <span
-              key={tool.name}
-              className="absolute h-5 w-5"
-              style={{ transform }}
-            >
-              <img
-                src={tool.logo}
-                alt={tool.name}
-                className="h-full w-full rounded-full"
-              />
-            </span>
-          );
-        })}
-        <span
-          className="absolute rounded-full border border-primary/40"
-          style={{ width: radius * 2, height: radius * 2 }}
-        />
-      </span>
     </span>
   );
 };

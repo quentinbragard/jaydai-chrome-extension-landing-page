@@ -7,7 +7,7 @@ import { trackEvent } from '@/lib/analytics'
 import { motion } from "framer-motion"
 import { Play } from "lucide-react"
 import { ShimmerButton } from "@/components/ui/shimmer-button"
-import RotatingTools from "./RotatingTools"
+import { RotatingTools } from "./RotatingTools"
 
 interface HeroContentProps {
   openVideoDialog: () => void
