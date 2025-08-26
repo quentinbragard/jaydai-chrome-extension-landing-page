@@ -18,36 +18,36 @@ const HeroSection = ({ openVideoDialog }: { openVideoDialog: () => void }) => {
               openVideoDialog={openVideoDialog} 
               translations={t} 
             />
-             <InfiniteSlider gap={100} reverse className="w-1/2 mt-8">
+             <InfiniteSlider gap={40} reverse className="w-full sm:w-3/4 md:w-1/2 mt-8">
               <img
                 src="https://vetoswvwgsebhxetqppa.supabase.co/storage/v1/object/public/images/ai_tools/chatgpt_logo.png"
                 alt="ChatGPT"
-                className="h-16 w-16"
+                className="h-12 w-12 md:h-16 md:w-16"
               />
               <img
                 src="https://vetoswvwgsebhxetqppa.supabase.co/storage/v1/object/public/images/ai_tools/copilot_logo.png"
                 alt="Copilot"
-                className="h-16 w-16"
+                className="h-12 w-12 md:h-16 md:w-16"
               />
               <img
                 src="https://vetoswvwgsebhxetqppa.supabase.co/storage/v1/object/public/images/ai_tools/mistral_logo.png"
                 alt="Mistral"
-                className="h-16 w-16"
+                className="h-12 w-12 md:h-16 md:w-16"
               />
               <img
                 src="https://vetoswvwgsebhxetqppa.supabase.co/storage/v1/object/public/images/ai_tools/claude_logo.png"
                 alt="Claude"
-                className="h-16 w-16"
+                className="h-12 w-12 md:h-16 md:w-16"
               />
               <img
                 src="https://vetoswvwgsebhxetqppa.supabase.co/storage/v1/object/public/images/ai_tools/gemini_logo.png"
                 alt="Gemini"
-                className="h-16 w-16"
+                className="h-12 w-12 md:h-16 md:w-16"
               />
               <img
                 src="https://vetoswvwgsebhxetqppa.supabase.co/storage/v1/object/public/images/ai_tools/perplexity_logo.png"
                 alt="Perplexity"
-                className="h-16 w-16"
+                className="h-12 w-12 md:h-16 md:w-16"
               />
             </InfiniteSlider>
             <HeroStats translations={t.raw('stats')} />
