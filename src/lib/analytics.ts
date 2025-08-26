@@ -31,6 +31,29 @@ export function trackPageView(path: string) {
   }
 }
 
+/**
+ * Send a Google Analytics event and delay navigation until it's recorded
+ * @param url - URL to open after the event is sent
+ */
+export function gtagSendEvent(url: string) {
+  const callback = () => {
+    if (typeof url === 'string') {
+      window.open(url, '_blank')
+    }
+  }
+
+  if (typeof window !== 'undefined' && window.gtag) {
+    window.gtag('event', 'Download Extension', {
+      event_callback: callback,
+      event_timeout: 2000,
+    })
+  } else {
+    callback()
+  }
+
+  return false
+}
+
 // Extend gtag typing for client-side tracking
 declare global {
   interface Window {

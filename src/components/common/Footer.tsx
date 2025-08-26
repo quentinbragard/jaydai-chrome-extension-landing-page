@@ -8,7 +8,7 @@ import { useTranslations } from 'next-intl'
 import { useTheme } from "next-themes"
 import { useIsMobile } from "@/hooks/use-mobile"
 import { useExtensionModal } from '@/components/common/ExtensionModalContext'
-import { trackEvent } from '@/lib/analytics'
+import { trackEvent, gtagSendEvent } from '@/lib/analytics'
 
 const Footer = () => {
   const t = useTranslations('footer')
@@ -241,8 +241,8 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} Jaydai. {t('allRightsReserved')}
           </p>
           <div className="mt-4 md:mt-0">
-            <a 
-              onClick={() => {
+            <a
+              onClick={(e) => {
                 trackEvent(`${isMobile ? 'Mobile Download Extension' : 'Download Extension'}`, {
                   button_name: 'footerLink_downloadExtension',
                   page_location: window.location.pathname,
@@ -250,9 +250,11 @@ const Footer = () => {
                   timestamp: new Date().toISOString()
                 })
                 if (isMobile) {
+                  e.preventDefault()
                   open()
                 } else {
-                  window.open("https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd", "_blank")
+                  e.preventDefault()
+                  gtagSendEvent('https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd')
                 }
               }}
             >

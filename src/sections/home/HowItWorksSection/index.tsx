@@ -17,7 +17,7 @@ import {
   X
 } from "lucide-react"
 import Link from "next/link"
-import { trackEvent } from '@/lib/analytics'
+import { trackEvent, gtagSendEvent } from '@/lib/analytics'
 import { useIsMobile } from '@/hooks/use-mobile'
 import { useExtensionModal } from '@/components/common/ExtensionModalContext'
 const HowItWorksSection = () => {
@@ -327,6 +327,9 @@ const HowItWorksSection = () => {
               if (isMobile) {
                 e.preventDefault()
                 open()
+              } else {
+                e.preventDefault()
+                gtagSendEvent('https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd')
               }
             }}
             className="px-8 py-3 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium inline-flex items-center gap-2"

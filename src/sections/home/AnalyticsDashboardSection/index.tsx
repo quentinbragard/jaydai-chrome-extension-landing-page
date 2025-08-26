@@ -8,7 +8,7 @@ import DashboardViewer from "./DashboardViewer"
 import SectionHeader from "./SectionHeader"
 import Link from "next/link"
 import Image from "next/image"
-import { trackEvent } from '@/lib/analytics'
+import { trackEvent, gtagSendEvent } from '@/lib/analytics'
 import { useIsMobile } from '@/hooks/use-mobile'
 import { useExtensionModal } from '@/components/common/ExtensionModalContext'
 
@@ -73,6 +73,9 @@ const AnalyticsDashboardSection = () => {
             if (isMobile) {
               e.preventDefault()
               open()
+            } else {
+              e.preventDefault()
+              gtagSendEvent('https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd')
             }
           }}
         >

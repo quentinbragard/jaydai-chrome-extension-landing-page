@@ -12,7 +12,7 @@ import {
 } from "lucide-react"
 import { useTranslations } from "next-intl"
 import Link from "next/link"
-import { trackEvent } from '@/lib/analytics'
+import { trackEvent, gtagSendEvent } from '@/lib/analytics'
 import { useIsMobile } from '@/hooks/use-mobile'
 import { useExtensionModal } from "@/components/common/ExtensionModalContext"
 
@@ -113,7 +113,7 @@ const FeaturesSection = () => {
             <a
               target="_blank"
               className="px-8 py-3 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium"
-              onClick={() => {
+              onClick={(e) => {
                 trackEvent(`${isMobile ? 'Mobile Download Extension' : 'Download Extension'}`, {
                   button_name: 'homeFeaturesDownloadExtension',
                   page_location: window.location.pathname,
@@ -121,9 +121,11 @@ const FeaturesSection = () => {
                   timestamp: new Date().toISOString()
                 })
                 if (isMobile) {
+                  e.preventDefault()
                   open()
                 } else {
-                  window.open("https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd", "_blank")
+                  e.preventDefault()
+                  gtagSendEvent('https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd')
                 }
               }}
             >
