@@ -1,25 +1,25 @@
 'use client';
 
-import React from "react"
-import { useIsMobile } from '@/hooks/use-mobile'
-import { useExtensionModal } from '@/components/common/ExtensionModalContext'
-import { trackEvent, gtagSendEvent } from '@/lib/analytics'
-import { motion } from "framer-motion"
-import { Play } from "lucide-react"
-import { ShimmerButton } from "@/components/ui/shimmer-button"
-import { RotatingTools } from "./RotatingTools"
+import React from "react";
+import { useIsMobile } from '@/hooks/use-mobile';
+import { useExtensionModal } from '@/components/common/ExtensionModalContext';
+import { trackEvent, gtagSendEvent } from '@/lib/analytics';
+import { motion } from "framer-motion";
+import { Play } from "lucide-react";
+import { ShimmerButton } from "@/components/ui/shimmer-button";
+import { RotatingTools } from "./RotatingTools";
 
 interface HeroContentProps {
-  openVideoDialog: () => void
-  translations: any
+  openVideoDialog: () => void;
+  translations: any;
 }
 
-const HeroContent: React.FC<HeroContentProps> = ({ 
-  openVideoDialog, 
-  translations 
+const HeroContent: React.FC<HeroContentProps> = ({
+  openVideoDialog,
+  translations
 }) => {
-  const isMobile = useIsMobile()
-  const { open } = useExtensionModal()
+  const isMobile = useIsMobile();
+  const { open } = useExtensionModal();
   return (
     <>
       {/* Animated badge */}
@@ -32,21 +32,21 @@ const HeroContent: React.FC<HeroContentProps> = ({
         <span className="flex h-2 w-2 rounded-full bg-primary mr-2 animate-pulse-glow"></span>
         {translations('badge')}
       </motion.div>
-      
+
       {/* Main heading */}
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.1 }}
-        className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground max-w-4xl"
+        className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground max-w-4xl"
       >
-        {translations('title')}{" "}
-        <span className="text-primary relative inline-block">
+        {translations('title')}{' '}
+        <span className="text-primary relative block sm:inline-block">
           <RotatingTools />
           <span className="absolute -bottom-2 left-0 right-0 h-1 bg-primary/50 rounded-full"></span>
         </span>
       </motion.h1>
-      
+
       {/* Subheading */}
       <motion.p
         initial={{ opacity: 0, y: 20 }}
@@ -56,7 +56,7 @@ const HeroContent: React.FC<HeroContentProps> = ({
       >
         {translations('subtitle')}
       </motion.p>
-      
+
       {/* CTA buttons */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -64,21 +64,21 @@ const HeroContent: React.FC<HeroContentProps> = ({
         transition={{ duration: 0.6, delay: 0.3 }}
         className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
       >
-      <ShimmerButton
-        data-extension
-        onClick={() => {
-          trackEvent(`${isMobile ? 'Mobile Download Extension' : 'Download Extension'}`, {
-            button_name: 'homeHeroDownloadExtension',
-            page_location: window.location.pathname,
-            source: 'homeHeroSection',
-            timestamp: new Date().toISOString()
-          })
-          if (isMobile) {
-            open()
-          } else {
-            gtagSendEvent('https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd')
-          }
-        }}
+        <ShimmerButton
+          data-extension
+          onClick={() => {
+            trackEvent(`${isMobile ? 'Mobile Download Extension' : 'Download Extension'}`, {
+              button_name: 'homeHeroDownloadExtension',
+              page_location: window.location.pathname,
+              source: 'homeHeroSection',
+              timestamp: new Date().toISOString()
+            });
+            if (isMobile) {
+              open();
+            } else {
+              gtagSendEvent('https://chromewebstore.google.com/detail/jaydai-chrome-extension/enfcjmbdbldomiobfndablekgdkmcipd');
+            }
+          }}
           className="px-8 py-3 rounded-md text-primary-foreground font-black"
           shimmerColor="#FFCD00"
           shimmerSize="0.05em"
@@ -97,7 +97,8 @@ const HeroContent: React.FC<HeroContentProps> = ({
         </button>
       </motion.div>
     </>
-  )
-}
+  );
+};
 
-export default HeroContent
+export default HeroContent;
+
