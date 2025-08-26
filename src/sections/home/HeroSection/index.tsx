@@ -17,7 +17,7 @@ const HeroSection = ({ openVideoDialog }: { openVideoDialog: () => void }) => {
             openVideoDialog={openVideoDialog}
             translations={t}
           />
-          <InfiniteSlider gap={40} reverse className="w-full sm:w-3/4 md:w-1/2 mt-8">
+          <InfiniteSlider gap={20} reverse className="w-full sm:w-3/4 md:w-1/2 mt-8">
             <img
               src="https://vetoswvwgsebhxetqppa.supabase.co/storage/v1/object/public/images/ai_tools/chatgpt_logo.png"
               alt="ChatGPT"
