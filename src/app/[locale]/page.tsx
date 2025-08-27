@@ -61,7 +61,7 @@ export default function Home() {
               <iframe 
                 width="100%" 
                 height="100%" 
-                src="https://www.youtube.com/embed/vUAbWXIa2EA" 
+                src="https://www.youtube.com/embed/Igf3FxmZpJw?si=W0NgY61ylxEVYM-M" 
                 title={t('videoDialog.title')} 
                 frameBorder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
