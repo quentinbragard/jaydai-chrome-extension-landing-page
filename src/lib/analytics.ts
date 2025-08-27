@@ -43,7 +43,7 @@ export function gtagSendEvent(url: string) {
   }
 
   if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', 'Download Extension', {
+    window.gtag('event', 'conversion_event_signup', {
       event_callback: callback,
       event_timeout: 2000,
     })
